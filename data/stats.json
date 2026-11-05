@@ -1,0 +1,62 @@
+{
+  "generated": "2026-11-06",
+  "version": "2026.11.06",
+  "incidents": 79,
+  "companies": 78,
+  "records_total": 452027755,
+  "records_note": "重複を含む延べ件数。公表値の単純合計で、実人数ではない。",
+  "by_status": {
+    "possible": 56,
+    "confirmed": 15,
+    "investigating": 8
+  },
+  "by_cause": {
+    "unauthorized_access": 58,
+    "unknown": 1,
+    "saas": 4,
+    "vulnerability": 6,
+    "vendor": 5,
+    "api": 1,
+    "credential": 2,
+    "misconfiguration": 1,
+    "ransomware": 1
+  },
+  "by_sector": {
+    "小売": 12,
+    "物流": 1,
+    "SaaS・共通基盤": 9,
+    "IT・ソフトウェア": 7,
+    "旅行": 3,
+    "通信": 3,
+    "ゲーム": 1,
+    "飲食": 5,
+    "娯楽": 1,
+    "モビリティ": 2,
+    "交通": 4,
+    "物流・決済": 1,
+    "電子書籍": 1,
+    "EC": 6,
+    "人材": 1,
+    "メディア": 3,
+    "決済": 3,
+    "アパレル": 1,
+    "金融・保険": 3,
+    "医療・ヘルスケア": 4,
+    "リサーチ": 2,
+    "メディア・予約": 1,
+    "予約・チケット": 1,
+    "公共": 1,
+    "マーケットプレイス": 1,
+    "食品": 1,
+    "開発ツール": 1
+  },
+  "by_ai_link": {
+    "unconfirmed": 78,
+    "supply_chain": 1
+  },
+  "high_severity": 18,
+  "matchable": 79,
+  "domains": 127,
+  "earliest": "2026-07-06",
+  "latest": "2026-10-31"
+}

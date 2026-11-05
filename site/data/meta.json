@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "name": "LeakScan 国内情報漏洩データベース",
+  "version": "2026.11.06",
+  "updated": "2026-11-06",
+  "license": "CC BY 4.0",
+  "homepage": "https://leakscan.matsunai.com/",
+  "disclaimer": "本データベースは各社の公表資料および報道をもとに編集した二次情報です。件数・漏洩項目は公表時点のもので、各社の続報により変動します。「漏洩の可能性」段階の案件も含みます。最終的な事実は必ず各社の公式発表でご確認ください。掲載企業を非難する目的はありません。",
+  "ai_note": "2026年秋の大量漏洩について、国内の案件でAIの使用が公式に確認されたものは現時点でありません。専門家が「AIの関与が疑われる」と指摘した事例、海外でAIツール（ARTEX等）の使用が当局・ベンダーにより確認された事例はありますが、国内各案件の侵入経路は認証情報の悪用・委託先/SaaSの侵害・API悪用など従来型が中心です。本サイトでは案件ごとに ai_link でその区別を明示します。",
+  "categories": {
+    "name": "氏名",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "address": "住所",
+    "dob": "生年月日",
+    "gender": "性別",
+    "password": "パスワード（平文・可逆）",
+    "password_hash": "パスワード（ハッシュ化）",
+    "card": "クレジットカード情報",
+    "bank": "銀行口座情報",
+    "id_document": "本人確認書類の画像",
+    "purchase_history": "購入・予約・利用履歴",
+    "member_id": "会員ID・会員番号",
+    "login_credential": "ログイン認証情報",
+    "point_balance": "ポイント・残高情報",
+    "medical": "医療・健康に関する情報",
+    "employment": "勤務先・人事情報",
+    "identifier": "内部識別子のみ",
+    "unknown": "公表されていない／調査中"
+  },
+  "status_labels": {
+    "confirmed": "漏洩を確認",
+    "possible": "漏洩の可能性",
+    "investigating": "調査中"
+  },
+  "ai_link_labels": {
+    "confirmed": "AIの使用が公式に確認",
+    "suspected": "AIの関与が指摘（未確認）",
+    "unconfirmed": "AIの関与は未確認",
+    "supply_chain": "AI関連ソフトのサプライチェーン侵害"
+  },
+  "cause_labels": {
+    "unauthorized_access": "不正アクセス",
+    "vendor": "委託先・サプライヤの侵害",
+    "saas": "SaaS・共通基盤の侵害",
+    "credential": "認証情報の悪用・不正ログイン",
+    "api": "APIの悪用",
+    "vulnerability": "脆弱性の悪用",
+    "malware": "マルウェア感染",
+    "ransomware": "ランサムウェア",
+    "misconfiguration": "設定不備",
+    "unknown": "公表されていない／調査中"
+  }
+}

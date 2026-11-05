@@ -1,0 +1,39 @@
+name: 事案の追加・訂正
+description: 未収録の漏洩事案の報告、または掲載内容の訂正
+title: "[データ] "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        掲載企業からの訂正依頼も歓迎します。公式発表と食い違う記載は速やかに直します。
+  - type: input
+    id: company
+    attributes:
+      label: 企業・団体名
+    validations:
+      required: true
+  - type: input
+    id: service
+    attributes:
+      label: サービス名（利用者から見た名称）
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 出典URL（公式発表を優先）
+    validations:
+      required: true
+  - type: input
+    id: disclosed
+    attributes:
+      label: 公表日（YYYY-MM-DD）
+  - type: textarea
+    id: detail
+    attributes:
+      label: 件数・漏洩項目・原因など
+  - type: textarea
+    id: correction
+    attributes:
+      label: 訂正の場合、現在の記載のどこが誤っているか

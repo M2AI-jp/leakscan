@@ -1,0 +1,2671 @@
+[
+  {
+    "id": "ryohin-keikaku-muji-2026-10",
+    "company": "良品計画",
+    "service": "MUJI passport / 無印良品ネットストア",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "muji.com",
+        "muji.net"
+      ],
+      "names": [
+        "無印良品",
+        "MUJI"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "最大約2,726万件",
+    "records_num": 27260000,
+    "categories": [
+      "email",
+      "dob",
+      "gender"
+    ],
+    "status": "possible",
+    "scope": "退会済みの利用者を含む",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "sagawa-2026-10",
+    "company": "佐川急便",
+    "service": "お荷物問い合わせサービス",
+    "sector": "物流",
+    "match": {
+      "domains": [
+        "sagawa-exp.co.jp"
+      ],
+      "names": [
+        "佐川急便",
+        "SAGAWA"
+      ]
+    },
+    "disclosed": "2026-10-23",
+    "records": "最大約5,323万件（重複を含む件数で実人数ではない）",
+    "records_num": 53230000,
+    "categories": [
+      "unknown"
+    ],
+    "status": "possible",
+    "scope": "重複を含む延べ件数。実人数は公表されていない",
+    "cause": "unknown",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "佐川急便 公式お知らせ（第5報）",
+        "url": "https://www2.sagawa-exp.co.jp/information/detail/430/"
+      },
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "arara-message-2026-10",
+    "company": "アララ",
+    "service": "アララ メッセージ（メール配信基盤）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "arara.com"
+      ],
+      "names": [
+        "アララ"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "最大約7,700万件のメールアドレス",
+    "records_num": 77000000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "同社のメール配信基盤を利用する多数の企業の配信先アドレス。利用企業側で個別に公表が続いている",
+    "cause": "saas",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "ymirlink-cuenote-2026-10",
+    "company": "ユミルリンク",
+    "service": "Cuenote FC（メール配信基盤）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "cuenote.jp",
+        "ymir.co.jp"
+      ],
+      "names": [
+        "Cuenote",
+        "キューノート",
+        "ユミルリンク"
+      ]
+    },
+    "disclosed": "2026-10-19",
+    "records": "延べ約5,262万件（49システム累計／第2報）",
+    "records_num": 52628280,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "同基盤を使う顧客企業のメール配信データ。ライフカード（約33.9万件）、アニメイトなど利用企業側の公表が続く",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "Cuenote 不正アクセスに関するお知らせ",
+        "url": "https://www.cuenote.jp/information/news/unauthorizedaccess.html"
+      },
+      {
+        "title": "ユミルリンク お知らせ",
+        "url": "https://www.ymir.co.jp/info/ymir-information20261027.html"
+      }
+    ]
+  },
+  {
+    "id": "sourcenext-2026-10",
+    "company": "ソースネクスト",
+    "service": "会員情報（ソースネクスト・eSIM等）",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "sourcenext.com",
+        "sourcenext.co.jp"
+      ],
+      "names": [
+        "ソースネクスト",
+        "SOURCENEXT"
+      ]
+    },
+    "disclosed": "2026-10-15",
+    "records": "最大22,519,960件",
+    "records_num": 22519960,
+    "categories": [
+      "unknown"
+    ],
+    "status": "possible",
+    "scope": "CATV事業者など提供先の情報も含む",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "estore-shopserve-2026-10",
+    "company": "Eストアー",
+    "service": "ショップサーブ（ECプラットフォーム）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "estore.jp",
+        "shopserve.jp"
+      ],
+      "names": [
+        "ショップサーブ",
+        "Eストアー",
+        "ShopServe"
+      ]
+    },
+    "disclosed": "2026-10-16",
+    "records": "約2,335.6万人・7,858店舗",
+    "records_num": 23356000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "同プラットフォームを使う各ECショップの顧客データベース。2026年5月21日〜8月1日に脆弱性が悪用された",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "Eストアー プレスリリース（最終報）",
+        "url": "https://www.estore.jp/press/20261016/"
+      }
+    ]
+  },
+  {
+    "id": "skyticket-2026-10",
+    "company": "アドベンチャー",
+    "service": "skyticket（スカイチケット）",
+    "sector": "旅行",
+    "match": {
+      "domains": [
+        "skyticket.jp",
+        "skyticket.com"
+      ],
+      "names": [
+        "skyticket",
+        "スカイチケット"
+      ]
+    },
+    "disclosed": "2026-10-09",
+    "records": "約1,464万件（3件の別個のインシデント合計）",
+    "records_num": 14640000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "card",
+      "bank"
+    ],
+    "status": "possible",
+    "scope": "銀行口座32,341件、クレジットカード約93.6万件、旅行保険約11.8万件を含む",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "kddi-isp-mail-2026-07",
+    "company": "KDDI",
+    "service": "ISPメールシステム（au one net 等）",
+    "sector": "通信",
+    "match": {
+      "domains": [
+        "au.com",
+        "kddi.com",
+        "auone-net.jp"
+      ],
+      "names": [
+        "KDDI",
+        "au one net",
+        "auひかり"
+      ]
+    },
+    "disclosed": "2026-07-06",
+    "records": "12,233,087件のアドレス（うちパスワード7,616,173件）",
+    "records_num": 12233087,
+    "categories": [
+      "email",
+      "password"
+    ],
+    "status": "confirmed",
+    "scope": "メールアドレスとパスワードの組み合わせが含まれる。同一パスワードの使い回しは特に危険",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "capcom-id-2026-10",
+    "company": "カプコン",
+    "service": "CAPCOM ID",
+    "sector": "ゲーム",
+    "match": {
+      "domains": [
+        "capcom.com",
+        "capcom.co.jp"
+      ],
+      "names": [
+        "カプコン",
+        "CAPCOM"
+      ]
+    },
+    "disclosed": "2026-10-22",
+    "records": "11,774,247件（全世界合計）",
+    "records_num": 11774247,
+    "categories": [
+      "member_id",
+      "email",
+      "login_credential"
+    ],
+    "status": "confirmed",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "burgerking-jp-2026-10",
+    "company": "ビーケー・ジャパン",
+    "service": "バーガーキング公式アプリ",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "burgerking.co.jp"
+      ],
+      "names": [
+        "バーガーキング",
+        "BURGER KING",
+        "Burger King"
+      ]
+    },
+    "disclosed": "2026-10-15",
+    "records": "約1,118万件",
+    "records_num": 11180000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "dob"
+    ],
+    "status": "confirmed",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "yakinikuking-2026-10",
+    "company": "物語コーポレーション",
+    "service": "焼肉きんぐ公式アプリ",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "monogatari.co.jp"
+      ],
+      "names": [
+        "焼肉きんぐ",
+        "物語コーポレーション"
+      ]
+    },
+    "disclosed": "2026-10-05",
+    "records": "10,788,963件",
+    "records_num": 10788963,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "dob"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "daiichikosho-2026-10",
+    "company": "第一興商",
+    "service": "ビッグエコー / 第一興商 会員サービス",
+    "sector": "娯楽",
+    "match": {
+      "domains": [
+        "big-echo.jp",
+        "dkkaraoke.co.jp"
+      ],
+      "names": [
+        "ビッグエコー",
+        "第一興商",
+        "BIG ECHO"
+      ]
+    },
+    "disclosed": "2026-10-08",
+    "records": "約872万4,000件",
+    "records_num": 8724000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "employment"
+    ],
+    "status": "possible",
+    "scope": "顧客および従業員情報。外部への流出は未確認",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "第一興商 お知らせ",
+        "url": "https://big-echo.jp/info20261008/"
+      }
+    ]
+  },
+  {
+    "id": "murauchi-2026-09",
+    "company": "村内ファニチャーアクセス",
+    "service": "MURAUCHI.com",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "murauchi.com",
+        "murauchi.co.jp"
+      ],
+      "names": [
+        "MURAUCHI",
+        "村内"
+      ]
+    },
+    "disclosed": "2026-09-15",
+    "records": "約771.7万件",
+    "records_num": 7717000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "timescar-2026-09",
+    "company": "タイムズモビリティ",
+    "service": "タイムズカー / タイムズカーシェア",
+    "sector": "モビリティ",
+    "match": {
+      "domains": [
+        "timescar.jp",
+        "times-info.net",
+        "park24.co.jp"
+      ],
+      "names": [
+        "タイムズ",
+        "TIMES CAR",
+        "Times Car"
+      ]
+    },
+    "disclosed": "2026-09-28",
+    "records": "約660万アカウント（うち約146〜160万件は本人確認書類画像）",
+    "records_num": 6600000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "dob",
+      "id_document"
+    ],
+    "status": "possible",
+    "scope": "運転免許証などの本人確認書類画像が含まれる。暗号化されており復号は未確認",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "bookoff-2026-10",
+    "company": "ブックオフグループホールディングス",
+    "service": "ブックオフ 会員サービス",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "bookoff.co.jp",
+        "bookoffonline.co.jp"
+      ],
+      "names": [
+        "ブックオフ",
+        "BOOKOFF"
+      ]
+    },
+    "disclosed": "2026-10-09",
+    "records": "最大約643万件の会員番号",
+    "records_num": 6430000,
+    "categories": [
+      "member_id"
+    ],
+    "status": "confirmed",
+    "scope": "第三者による取得を確認。漏洩したのは会員番号",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "jreast-2026-10",
+    "company": "東日本旅客鉄道（JR東日本）",
+    "service": "JRE POINT / えきねっと 関連",
+    "sector": "交通",
+    "match": {
+      "domains": [
+        "jreast.co.jp",
+        "jrepoint.jp",
+        "eki-net.com"
+      ],
+      "names": [
+        "JR東日本",
+        "JRE POINT",
+        "えきねっと"
+      ]
+    },
+    "disclosed": "2026-10-09",
+    "records": "最大約609万件",
+    "records_num": 6090000,
+    "categories": [
+      "unknown"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "joshin-2026-10",
+    "company": "上新電機",
+    "service": "Joshin web / ジョーシン会員",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "joshin.co.jp"
+      ],
+      "names": [
+        "Joshin",
+        "ジョーシン",
+        "上新電機"
+      ]
+    },
+    "disclosed": "2026-10-26",
+    "records": "最大約600万件",
+    "records_num": 6000000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "yamato-atobarai-2026-10",
+    "company": "ヤマト運輸",
+    "service": "クロネコあと払い",
+    "sector": "物流・決済",
+    "match": {
+      "domains": [
+        "kuronekoyamato.co.jp",
+        "yamato-hd.co.jp"
+      ],
+      "names": [
+        "ヤマト運輸",
+        "クロネコ",
+        "YAMATO"
+      ]
+    },
+    "disclosed": "2026-10-16",
+    "records": "約526万件",
+    "records_num": 5260000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "不正なエクスポートによる持ち出し",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "pizzahut-jp-2026-10",
+    "company": "日本ピザハット",
+    "service": "ピザハットオンライン",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "pizzahut.jp",
+        "pizzahut.co.jp"
+      ],
+      "names": [
+        "ピザハット",
+        "Pizza Hut",
+        "PIZZA HUT"
+      ]
+    },
+    "disclosed": "2026-10-23",
+    "records": "最大約448万件（報道値）",
+    "records_num": 4480000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "login_credential"
+    ],
+    "status": "possible",
+    "scope": "決済APIを経由した不正取得。セッショントークンが含まれる",
+    "cause": "api",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "club-tourism-2026-10",
+    "company": "クラブツーリズム",
+    "service": "クラブツーリズム インターネット会員",
+    "sector": "旅行",
+    "match": {
+      "domains": [
+        "club-t.com"
+      ],
+      "names": [
+        "クラブツーリズム",
+        "Club Tourism"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "約432万件",
+    "records_num": 4320000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "scope": "同社はログインパスワードとカード情報は含まれないとしている",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "nttsolmare-cmoa-2026-10",
+    "company": "NTTソルマーレ",
+    "service": "コミックシーモア",
+    "sector": "電子書籍",
+    "match": {
+      "domains": [
+        "cmoa.jp",
+        "nttsolmare.com"
+      ],
+      "names": [
+        "コミックシーモア",
+        "シーモア",
+        "cmoa"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "システムログ上 最大約420万件 / 会員DB登録情報 319件",
+    "records_num": 4200000,
+    "categories": [
+      "email",
+      "identifier"
+    ],
+    "status": "confirmed",
+    "scope": "会員データベースからの流出が確認されたのは319件。ログ上の情報は最大約420万件（重複を含む可能性）",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "NTTソルマーレ プレスリリース（第4報）",
+        "url": "https://www.nttsolmare.com/press/2026/1021.html"
+      }
+    ]
+  },
+  {
+    "id": "hanacupid-2026-10",
+    "company": "日本フローラルネットワーク",
+    "service": "花キューピット",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "i879.com",
+        "jfnc.co.jp"
+      ],
+      "names": [
+        "花キューピット",
+        "イーハナ"
+      ]
+    },
+    "disclosed": "2026-10-28",
+    "records": "4,238,242件",
+    "records_num": 4238242,
+    "categories": [
+      "member_id",
+      "password_hash",
+      "email"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "dip-baitoru-2026-10",
+    "company": "ディップ",
+    "service": "バイトル / バイトルNEXT",
+    "sector": "人材",
+    "match": {
+      "domains": [
+        "baitoru.com",
+        "dip-net.co.jp"
+      ],
+      "names": [
+        "バイトル",
+        "ディップ"
+      ]
+    },
+    "disclosed": "2026-10-09",
+    "records": "最大3,885,771件",
+    "records_num": 3885771,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "dob",
+      "employment"
+    ],
+    "status": "confirmed",
+    "scope": "一部の流出を確認。求職者の登録情報",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "recruit-carsensor-2026-10",
+    "company": "リクルート",
+    "service": "カーセンサーnet / C-MATCH",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "carsensor.net",
+        "recruit.co.jp"
+      ],
+      "names": [
+        "カーセンサー",
+        "Carsensor",
+        "リクルート"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "最大3,709,551件",
+    "records_num": 3709551,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "scope": "問い合わせ情報および販売店関連情報",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "arcadia-raiden-2026-10",
+    "company": "アルカディア",
+    "service": "SpeeCAN RAIDEN（自治体の防災・防犯メール配信）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "ktaiwork.jp",
+        "arcadia.co.jp"
+      ],
+      "names": [
+        "SpeeCAN",
+        "RAIDEN",
+        "アルカディア",
+        "防災メール",
+        "安心メール"
+      ]
+    },
+    "disclosed": "2026-10-13",
+    "records": "メールアドレス最大約313万6,000件、電話番号約10万5,000件",
+    "records_num": 3136000,
+    "categories": [
+      "email",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "241自治体の防災・防犯メール登録者が対象。流出アドレス宛に1,423,428通の不正メール（フィッシング）が配信された",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "SpeeCAN RAIDEN お知らせ",
+        "url": "https://raiden.site.ktaiwork.jp/archives/4597"
+      },
+      {
+        "title": "アルカディア お知らせ",
+        "url": "https://www.arcadia.co.jp/info/4076"
+      }
+    ]
+  },
+  {
+    "id": "lindt-jp-2026-10",
+    "company": "リンツ＆シュプルングリー ジャパン",
+    "service": "リンツ オンラインショップ",
+    "sector": "EC",
+    "match": {
+      "domains": [],
+      "names": [
+        "リンツ",
+        "Lindt",
+        "LINDT"
+      ]
+    },
+    "disclosed": "2026-10-23",
+    "records": "3,147,469件",
+    "records_num": 3147469,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "password_hash"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "sonet-plala-2026-10",
+    "company": "ソニーネットワークコミュニケーションズ",
+    "service": "So-net / plala",
+    "sector": "通信",
+    "match": {
+      "domains": [
+        "so-net.ne.jp",
+        "plala.or.jp",
+        "sonynetwork.co.jp"
+      ],
+      "names": [
+        "So-net",
+        "ソネット",
+        "plala",
+        "ぷらら"
+      ]
+    },
+    "disclosed": "2026-10-27",
+    "records": "So-net 2,141,986件 / plala 443,495件",
+    "records_num": 2585481,
+    "categories": [
+      "name",
+      "email",
+      "address",
+      "phone",
+      "login_credential"
+    ],
+    "status": "confirmed",
+    "scope": "会員情報。うち54,401件にはメールの認証情報が含まれる",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "So-net 公式お知らせ",
+        "url": "https://www.so-net.ne.jp/info/2026/20261027_0001.html"
+      }
+    ]
+  },
+  {
+    "id": "andesti-2026-10",
+    "company": "アンデスティホールディングス",
+    "service": "顧客・取引先情報",
+    "sector": "小売",
+    "match": {
+      "domains": [],
+      "names": [
+        "アンデスティ",
+        "アンデルセン"
+      ]
+    },
+    "disclosed": "2026-10-23",
+    "records": "顧客約250万人・取引先約1万件",
+    "records_num": 2500000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "matsuyafoods-2026-10",
+    "company": "松屋フーズ",
+    "service": "松屋フーズ公式アプリ / オンラインサービス",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "matsuyafoods.co.jp"
+      ],
+      "names": [
+        "松屋フーズ",
+        "松屋"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "2,377,127件",
+    "records_num": 2377127,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "lawson-id-2026-10",
+    "company": "ローソン",
+    "service": "ローソンID / ローソンアプリ",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "lawson.co.jp"
+      ],
+      "names": [
+        "ローソン",
+        "LAWSON"
+      ]
+    },
+    "disclosed": "2026-10-08",
+    "records": "2,155,345件",
+    "records_num": 2155345,
+    "categories": [
+      "name",
+      "phone",
+      "dob"
+    ],
+    "status": "confirmed",
+    "scope": "10月24日の訂正で、メールアドレスは漏洩しておらず、生年月日に漏洩の可能性があると発表された",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "ローソン 公式お知らせ",
+        "url": "https://www.lawson.co.jp/contents/cont07/1533174_3310.html"
+      }
+    ]
+  },
+  {
+    "id": "paycloud-valuecard-2026-10",
+    "company": "バリューデザイン（Paycloud）",
+    "service": "Value Card / ハウス電子マネー",
+    "sector": "決済",
+    "match": {
+      "domains": [
+        "valuedesign.jp",
+        "paycloud.jp"
+      ],
+      "names": [
+        "Paycloud",
+        "バリューデザイン",
+        "Value Card"
+      ]
+    },
+    "disclosed": "2026-10-22",
+    "records": "1,424,748件",
+    "records_num": 1424748,
+    "categories": [
+      "member_id",
+      "point_balance"
+    ],
+    "status": "possible",
+    "scope": "ID・PIN・残高情報。発行企業は個人情報の漏洩はないとしている",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "jrkyushu-2026-10",
+    "company": "九州旅客鉄道（JR九州）",
+    "service": "JR九州 会員サービス",
+    "sector": "交通",
+    "match": {
+      "domains": [
+        "jrkyushu.co.jp"
+      ],
+      "names": [
+        "JR九州"
+      ]
+    },
+    "disclosed": "2026-10-09",
+    "records": "最大約130万件",
+    "records_num": 1300000,
+    "categories": [
+      "unknown"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "hankyu-hanshin-dept-2026-10",
+    "company": "阪急阪神百貨店",
+    "service": "H2O ID / 阪急百貨店・阪神百貨店 会員",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "hankyu-hanshin-dept.co.jp",
+        "h2o-kaiin.com"
+      ],
+      "names": [
+        "阪急百貨店",
+        "阪神百貨店",
+        "H2O ID",
+        "阪急阪神"
+      ]
+    },
+    "disclosed": "2026-10-19",
+    "records": "約126万件",
+    "records_num": 1260000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "world-ragtag-2026-10",
+    "company": "ワールド子会社（ティンパンアレイ）",
+    "service": "RAGTAG / Tin Pan Alley",
+    "sector": "アパレル",
+    "match": {
+      "domains": [
+        "ragtag.jp",
+        "world.co.jp"
+      ],
+      "names": [
+        "RAGTAG",
+        "ラグタグ",
+        "ティンパンアレイ"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "約120万件",
+    "records_num": 1200000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "10月17日に侵入、10月28日に検知",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "dai-ichi-life-2026-10",
+    "company": "第一生命保険",
+    "service": "人事システム（従業員・関係者情報）",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "dai-ichi-life.co.jp"
+      ],
+      "names": [
+        "第一生命"
+      ]
+    },
+    "disclosed": "2026-10-02",
+    "records": "約12万件",
+    "records_num": 120000,
+    "categories": [
+      "name",
+      "employment"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "whiteessence-2026-10",
+    "company": "ホワイトエッセンス",
+    "service": "ホワイトエッセンス 会員",
+    "sector": "医療・ヘルスケア",
+    "match": {
+      "domains": [
+        "whiteessence.com"
+      ],
+      "names": [
+        "ホワイトエッセンス",
+        "WHITE ESSENCE"
+      ]
+    },
+    "disclosed": "2026-10-01",
+    "records": "約105万アカウント",
+    "records_num": 1050000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "login_credential"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "gmo-research-infoq-2026-10",
+    "company": "GMOリサーチ&AI",
+    "service": "infoQ（アンケートモニター）",
+    "sector": "リサーチ",
+    "match": {
+      "domains": [
+        "infoq.jp",
+        "gmo-research.ai",
+        "gmo-research.jp"
+      ],
+      "names": [
+        "infoQ",
+        "GMOリサーチ"
+      ]
+    },
+    "disclosed": "2026-10-05",
+    "records": "最大948,498件",
+    "records_num": 948498,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "dob",
+      "point_balance"
+    ],
+    "status": "confirmed",
+    "scope": "データの持ち出しに加え、ポイント交換の不正が発生",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "aena-2026-10",
+    "company": "アエナ",
+    "service": "アエナ オンラインショップ",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "aena.co.jp"
+      ],
+      "names": [
+        "アエナ",
+        "AENA"
+      ]
+    },
+    "disclosed": "2026-10-14",
+    "records": "最大817,215件",
+    "records_num": 817215,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "medley-atlink-2026-10",
+    "company": "メドレー",
+    "service": "＠link（医療機関向け）",
+    "sector": "医療・ヘルスケア",
+    "match": {
+      "domains": [
+        "medley.jp",
+        "medley.life"
+      ],
+      "names": [
+        "メドレー",
+        "Medley"
+      ]
+    },
+    "disclosed": "2026-10-23",
+    "records": "最大787医療機関が影響",
+    "records_num": null,
+    "categories": [
+      "medical",
+      "name"
+    ],
+    "status": "possible",
+    "scope": "患者情報が外部から取得された可能性",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "treasure-factory-2026-10",
+    "company": "トレジャー・ファクトリー",
+    "service": "トレファク 会員・オンラインストア",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "treasure-f.com"
+      ],
+      "names": [
+        "トレジャーファクトリー",
+        "トレファク",
+        "TREASURE FACTORY"
+      ]
+    },
+    "disclosed": "2026-10-23",
+    "records": "746,277件",
+    "records_num": 746277,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "purchase_history"
+    ],
+    "status": "confirmed",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "scala-iask-2026-10",
+    "company": "スカラコミュニケーションズ",
+    "service": "i-ask（企業向け問い合わせフォーム基盤）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "i-ask.jp",
+        "scalacom.jp"
+      ],
+      "names": [
+        "i-ask",
+        "スカラコミュニケーションズ"
+      ]
+    },
+    "disclosed": "2026-10-06",
+    "records": "最大713,126件",
+    "records_num": 713126,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "scope": "利用企業側で大和証券（約11万人）、シチズン時計（約10万名）、損保ジャパン（延べ約6万件）などが公表",
+    "cause": "saas",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "seicomart-2026-09",
+    "company": "セコマ",
+    "service": "セイコーマート 会員サービス",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "seicomart.co.jp"
+      ],
+      "names": [
+        "セイコーマート",
+        "セコマ",
+        "Secoma"
+      ]
+    },
+    "disclosed": "2026-09-29",
+    "records": "約57万件",
+    "records_num": 570000,
+    "categories": [
+      "name",
+      "email",
+      "phone"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "nifty-2026-10",
+    "company": "ニフティ",
+    "service": "＠nifty 回線申込・受付システム",
+    "sector": "通信",
+    "match": {
+      "domains": [
+        "nifty.com",
+        "nifty.ne.jp"
+      ],
+      "names": [
+        "nifty",
+        "ニフティ"
+      ]
+    },
+    "disclosed": "2026-10-19",
+    "records": "最大542,513件",
+    "records_num": 542513,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "asahikasei-pharmadigital-2026-10",
+    "company": "旭化成ファーマ（旭化成セラピューティクス）",
+    "service": "Pharma DIGITAL（医療従事者向け）",
+    "sector": "医療・ヘルスケア",
+    "match": {
+      "domains": [
+        "asahi-kasei.co.jp",
+        "pharma-digital.jp"
+      ],
+      "names": [
+        "旭化成ファーマ",
+        "Pharma DIGITAL"
+      ]
+    },
+    "disclosed": "2026-10-06",
+    "records": "医療従事者約51万4,000件・従業員約700件",
+    "records_num": 514000,
+    "categories": [
+      "name",
+      "email",
+      "employment"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "ozmall-2026-09",
+    "company": "スターツ出版",
+    "service": "OZmall（オズモール）",
+    "sector": "メディア・予約",
+    "match": {
+      "domains": [
+        "ozmall.co.jp",
+        "starts-pub.jp"
+      ],
+      "names": [
+        "OZmall",
+        "オズモール"
+      ]
+    },
+    "disclosed": "2026-09-26",
+    "records": "442,779件",
+    "records_num": 442779,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "kripton-sonicwire-2026-10",
+    "company": "クリプトン・フューチャー・メディア",
+    "service": "SONICWIRE / D2R",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "sonicwire.com",
+        "crypton.co.jp"
+      ],
+      "names": [
+        "SONICWIRE",
+        "ソニックワイヤ",
+        "クリプトン"
+      ]
+    },
+    "disclosed": "2026-10-19",
+    "records": "最大約42万件",
+    "records_num": 420000,
+    "categories": [
+      "name",
+      "email",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "monitas-qzoo-2026-10",
+    "company": "モニタス",
+    "service": "Qzoo（アンケートモニター）",
+    "sector": "リサーチ",
+    "match": {
+      "domains": [
+        "monitas.co.jp",
+        "qzoo.jp"
+      ],
+      "names": [
+        "モニタス",
+        "Qzoo"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "約40万件（上限）",
+    "records_num": 400000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "dob"
+    ],
+    "status": "possible",
+    "scope": "SQLインジェクションによる会員データの取得",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "lifecard-2026-10",
+    "company": "ライフカード",
+    "service": "ライフカード（Cuenote FC経由）",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "lifecard.co.jp"
+      ],
+      "names": [
+        "ライフカード",
+        "LIFE CARD"
+      ]
+    },
+    "disclosed": "2026-10-28",
+    "records": "339,610契約",
+    "records_num": 339610,
+    "categories": [
+      "name",
+      "email"
+    ],
+    "status": "possible",
+    "scope": "ユミルリンク Cuenote FC の侵害に起因（同社独自のシステム侵害ではない）",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "newspicks-2026-10",
+    "company": "ユーザベース",
+    "service": "NewsPicks",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "newspicks.com",
+        "uzabase.com"
+      ],
+      "names": [
+        "NewsPicks",
+        "ニューズピックス",
+        "ユーザベース"
+      ]
+    },
+    "disclosed": "2026-10-08",
+    "records": "メールアドレス約32万3,000件・カード情報約36万2,000件（可能性）",
+    "records_num": 362000,
+    "categories": [
+      "email",
+      "card"
+    ],
+    "status": "possible",
+    "scope": "確定値と上限値が分けて公表されていない",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "tsukutsuku-2026-10",
+    "company": "つくつく",
+    "service": "つくつく!!!",
+    "sector": "EC",
+    "match": {
+      "domains": [],
+      "names": [
+        "つくつく"
+      ]
+    },
+    "disclosed": "2026-10-26",
+    "records": "一般情報362,750件 / カード情報19,115件",
+    "records_num": 362750,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "card"
+    ],
+    "status": "possible",
+    "scope": "カード情報19,115件に外部送信の痕跡",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "nippon-kotsu-2026-10",
+    "company": "日本交通",
+    "service": "日本交通 関連サービス",
+    "sector": "モビリティ",
+    "match": {
+      "domains": [
+        "nihon-kotsu.co.jp"
+      ],
+      "names": [
+        "日本交通"
+      ]
+    },
+    "disclosed": "2026-10-01",
+    "records": "約29万件（対象範囲）",
+    "records_num": 290000,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "japanticket-2026-10",
+    "company": "ジャパンチケット",
+    "service": "Japanticket",
+    "sector": "予約・チケット",
+    "match": {
+      "domains": [
+        "japanticket.com"
+      ],
+      "names": [
+        "Japanticket",
+        "ジャパンチケット"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "最大約26万4,000件",
+    "records_num": 264000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "外部の解析ツールへの不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "digital-agency-gss-2026-09",
+    "company": "デジタル庁",
+    "service": "GSS（政府共通システム）",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "digital.go.jp"
+      ],
+      "names": [
+        "デジタル庁"
+      ]
+    },
+    "disclosed": "2026-09-11",
+    "records": "約24万6,000件",
+    "records_num": 246000,
+    "categories": [
+      "name",
+      "email",
+      "employment"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "taiki-suisan-2026-10",
+    "company": "大起水産",
+    "service": "大起水産 公式アプリ",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "daiki-suisan.co.jp"
+      ],
+      "names": [
+        "大起水産"
+      ]
+    },
+    "disclosed": "2026-10-05",
+    "records": "最大174,933件",
+    "records_num": 174933,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "dob"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "mrmax-2026-10",
+    "company": "ミスターマックス",
+    "service": "ミスターマックス 会員・アプリ",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "mrmax.co.jp"
+      ],
+      "names": [
+        "ミスターマックス",
+        "MrMax",
+        "MrMax"
+      ]
+    },
+    "disclosed": "2026-10-06",
+    "records": "最大1,735,154件",
+    "records_num": 1735154,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "confirmed",
+    "scope": "一部の流出を確認",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "nikkei-devcloud-2026-10",
+    "company": "日本経済新聞社",
+    "service": "日経ID 関連（開発用クラウド）",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "nikkei.com",
+        "nikkei.co.jp",
+        "nikkeibp.co.jp"
+      ],
+      "names": [
+        "日経",
+        "日本経済新聞",
+        "NIKKEI"
+      ]
+    },
+    "disclosed": "2026-10-16",
+    "records": "約183万件（うち約168万件は単体では個人を特定できない識別子）",
+    "records_num": 1830000,
+    "categories": [
+      "identifier",
+      "email"
+    ],
+    "status": "confirmed",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "gyazo-2026-09",
+    "company": "Helpfeel",
+    "service": "Gyazo",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "gyazo.com",
+        "helpfeel.com",
+        "nota.jp"
+      ],
+      "names": [
+        "Gyazo",
+        "ギャザ",
+        "Helpfeel"
+      ]
+    },
+    "disclosed": "2026-09-16",
+    "records": "約2,362万ユーザー / 画像メタデータ約4.9億件",
+    "records_num": 23620000,
+    "categories": [
+      "email",
+      "identifier"
+    ],
+    "status": "confirmed",
+    "scope": "10月21日の第3報で一部の画像ファイル自体の閲覧・取得も判明",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "sakura-internet-2026-09",
+    "company": "さくらインターネット",
+    "service": "さくらのレンタルサーバ 等",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "sakura.ad.jp",
+        "sakura.ne.jp"
+      ],
+      "names": [
+        "さくらインターネット",
+        "サクラインターネット"
+      ]
+    },
+    "disclosed": "2026-09-10",
+    "records": "最大1,360,563アカウント",
+    "records_num": 1360563,
+    "categories": [
+      "name",
+      "email",
+      "login_credential"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "aflac-2026-08",
+    "company": "アフラック生命保険",
+    "service": "アフラック 契約者情報",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "aflac.co.jp"
+      ],
+      "names": [
+        "アフラック",
+        "Aflac"
+      ]
+    },
+    "disclosed": "2026-08-01",
+    "records": "約440万件（うち銀行口座約22万件）",
+    "records_num": 4400000,
+    "categories": [
+      "name",
+      "address",
+      "dob",
+      "bank",
+      "medical"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "gmo-onamae-desktopcloud-2026-10",
+    "company": "GMOインターネットグループ",
+    "service": "お名前.com デスクトップクラウド",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "onamae.com",
+        "gmo.jp",
+        "gmo-pg.com"
+      ],
+      "names": [
+        "お名前.com",
+        "GMOインターネット",
+        "onamae"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "影響可能性のあるサーバー26,739台（人数ではない）",
+    "records_num": null,
+    "categories": [
+      "login_credential"
+    ],
+    "status": "investigating",
+    "scope": "顧客サーバー上に不正プログラムが設置され、FX取引口座のログイン情報などが対象。全利用者への見舞金支払いが発表された",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "GMOインターネットグループ お知らせ",
+        "url": "https://internet.gmo/news/article/249/"
+      },
+      {
+        "title": "お名前.com お知らせ",
+        "url": "https://www.onamae.com/news/article/11584"
+      }
+    ]
+  },
+  {
+    "id": "rakuten-travel-2026-10",
+    "company": "楽天グループ",
+    "service": "楽天トラベル（海外ホテル・多言語サイト）",
+    "sector": "旅行",
+    "match": {
+      "domains": [
+        "travel.rakuten.co.jp"
+      ],
+      "names": [
+        "楽天トラベル",
+        "Rakuten Travel"
+      ]
+    },
+    "disclosed": "2026-10-26",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "login_credential"
+    ],
+    "status": "investigating",
+    "scope": "海外ホテルサイトおよび多言語サイトのログイン関連情報",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "楽天トラベル お知らせ",
+        "url": "https://travel.rakuten.co.jp/info/announce/20261026.html"
+      }
+    ]
+  },
+  {
+    "id": "rakuten-drive-2026-10",
+    "company": "楽天グループ",
+    "service": "Rakuten Drive",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [],
+      "names": [
+        "Rakuten Drive",
+        "楽天ドライブ"
+      ]
+    },
+    "disclosed": "2026-10-06",
+    "records": "15,382アカウント",
+    "records_num": 15382,
+    "categories": [
+      "login_credential",
+      "email"
+    ],
+    "status": "possible",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "animate-2026-10",
+    "company": "アニメイト",
+    "service": "アニメイト（Cuenote FC経由）",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "animate.co.jp",
+        "animate-onlineshop.jp"
+      ],
+      "names": [
+        "アニメイト",
+        "animate"
+      ]
+    },
+    "disclosed": "2026-10-28",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "ユミルリンク Cuenote FC の侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "coconala-2026-10",
+    "company": "ココナラ",
+    "service": "ココナラ",
+    "sector": "マーケットプレイス",
+    "match": {
+      "domains": [
+        "coconala.com"
+      ],
+      "names": [
+        "ココナラ",
+        "coconala"
+      ]
+    },
+    "disclosed": "2026-10-09",
+    "records": "2,294件",
+    "records_num": 2294,
+    "categories": [
+      "name",
+      "email"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "jr-central-market-2026-10",
+    "company": "東海旅客鉄道（JR東海）",
+    "service": "JR東海MARKET",
+    "sector": "交通",
+    "match": {
+      "domains": [
+        "jr-central.co.jp"
+      ],
+      "names": [
+        "JR東海"
+      ]
+    },
+    "disclosed": "2026-10-13",
+    "records": "約15,000件",
+    "records_num": 15000,
+    "categories": [
+      "name",
+      "email",
+      "address",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "tokyometro-metpo-2026-09",
+    "company": "東京メトロ",
+    "service": "メトポ（Tokyo Metro ポイント）",
+    "sector": "交通",
+    "match": {
+      "domains": [
+        "tokyometro.jp",
+        "metpo.jp"
+      ],
+      "names": [
+        "東京メトロ",
+        "メトポ"
+      ]
+    },
+    "disclosed": "2026-09-30",
+    "records": "約59,000件",
+    "records_num": 59000,
+    "categories": [
+      "name",
+      "email",
+      "point_balance"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "AIハッキングで情報漏洩が相次ぐ？主な被害一覧（crystal-method）",
+        "url": "https://crystal-method.com/blog/ai-hacking-data-breach-2026/"
+      }
+    ]
+  },
+  {
+    "id": "yakult-2026-10",
+    "company": "ヤクルト本社",
+    "service": "ヤクルト 問い合わせ窓口",
+    "sector": "食品",
+    "match": {
+      "domains": [
+        "yakult.co.jp"
+      ],
+      "names": [
+        "ヤクルト",
+        "Yakult"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "約40,000件",
+    "records_num": 40000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "scope": "Webサイトへの不正アクセスによる問い合わせ関連情報",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "np-atobarai-2026-10",
+    "company": "ネットプロテクションズ",
+    "service": "NP後払い（請求書再発行システム）",
+    "sector": "決済",
+    "match": {
+      "domains": [
+        "np-atobarai.jp",
+        "netprotections.co.jp"
+      ],
+      "names": [
+        "NP後払い",
+        "ネットプロテクションズ",
+        "atobarai"
+      ]
+    },
+    "disclosed": "2026-10-22",
+    "records": "28,884件",
+    "records_num": 28884,
+    "categories": [
+      "name",
+      "address",
+      "phone",
+      "purchase_history"
+    ],
+    "status": "confirmed",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "komoju-2026-10",
+    "company": "DEGICA",
+    "service": "KOMOJU",
+    "sector": "決済",
+    "match": {
+      "domains": [
+        "komoju.com",
+        "degica.com"
+      ],
+      "names": [
+        "KOMOJU",
+        "DEGICA",
+        "コモジュ"
+      ]
+    },
+    "disclosed": "2026-10-22",
+    "records": "約4,100件",
+    "records_num": 4100,
+    "categories": [
+      "name",
+      "email",
+      "login_credential"
+    ],
+    "status": "possible",
+    "scope": "加盟店のAPI認証情報も影響を受けた",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "dhc-2026-10",
+    "company": "DHC",
+    "service": "DHC オンラインショップ",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "dhc.co.jp"
+      ],
+      "names": [
+        "DHCオンラインショップ"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "5,096アカウントが改ざん",
+    "records_num": 5096,
+    "categories": [
+      "login_credential",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "アカウント改ざん。不審な注文27件、不正登録71件。情報の外部流出は未確認",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "goodsmile-2026-10",
+    "company": "グッドスマイルカンパニー",
+    "service": "グッドスマイルオンラインショップ",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "goodsmile.com",
+        "goodsmileshop.com"
+      ],
+      "names": [
+        "グッドスマイル",
+        "GOOD SMILE",
+        "グッスマ"
+      ]
+    },
+    "disclosed": "2026-10-01",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "card",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "既存案件の追加判明分",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "studio-design-2026-10",
+    "company": "STUDIO",
+    "service": "STUDIO（ノーコードCMS・フォーム）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "studio.design"
+      ],
+      "names": [
+        "STUDIO",
+        "Studio"
+      ]
+    },
+    "disclosed": "2026-10-16",
+    "records": "利用企業ごと（LUUP 21,368件、Link-U 7,663件、ラクスル 6,412件 等）",
+    "records_num": null,
+    "categories": [
+      "name",
+      "email",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "同サービスで作られたサイトのフォーム送信データ。利用企業側で個別に公表",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "STUDIO 不正アクセスに関するお知らせ",
+        "url": "https://studio.design/ja/whats-new/unauthorized-access-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "commune-2026-10",
+    "company": "コミューン",
+    "service": "commune / commune for work（企業コミュニティ）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "communeinc.com",
+        "commmune.com"
+      ],
+      "names": [
+        "コミューン",
+        "commune",
+        "commmune"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "延べ166,505人（第一報の推計は約30.7万人）",
+    "records_num": 166505,
+    "categories": [
+      "name",
+      "email"
+    ],
+    "status": "possible",
+    "scope": "スズキ、青森県など利用組織側でも公表",
+    "cause": "saas",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "コミューン お知らせ",
+        "url": "https://communeinc.com/ja/news/2026oct21"
+      }
+    ]
+  },
+  {
+    "id": "blastmail-2026-10",
+    "company": "ラクスライトクラウド",
+    "service": "ブラストメール（BlastMail）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "blastmail.jp",
+        "raksul.com"
+      ],
+      "names": [
+        "ブラストメール",
+        "BlastMail"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "APIサーバー2台への侵入。契約者情報と配信先リストが対象",
+    "cause": "saas",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "gmo-trustlogin-2026-10",
+    "company": "GMOグローバルサイン・ホールディングス",
+    "service": "トラスト・ログイン",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "trustlogin.com",
+        "gmogshd.com"
+      ],
+      "names": [
+        "トラスト・ログイン",
+        "TrustLogin",
+        "トラストログイン"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "45,030人 / 2,492社",
+    "records_num": 45030,
+    "categories": [
+      "name",
+      "email",
+      "employment"
+    ],
+    "status": "possible",
+    "scope": "公開ストレージの設定不備。攻撃によるものではない",
+    "cause": "misconfiguration",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "idc-frontier-2026-10",
+    "company": "IDCフロンティア",
+    "service": "IDCFクラウド（東日本リージョン1）",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "idcf.jp"
+      ],
+      "names": [
+        "IDCフロンティア",
+        "IDCF"
+      ]
+    },
+    "disclosed": "2026-10-07",
+    "records": "495の企業・自治体に影響（件数未公表）",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "ランサムウェアによるクラウド基盤障害",
+    "cause": "ransomware",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃・情報漏えいまとめ（CVE Registry）",
+        "url": "https://cvejp.com/blog/post/cyberattack-roundup-2026-10"
+      }
+    ]
+  },
+  {
+    "id": "nec-vendor-2026-10",
+    "company": "日本電気（NEC）",
+    "service": "委託先端末経由の不正アクセス",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "nec.com",
+        "nec.co.jp"
+      ],
+      "names": [
+        "日本電気"
+      ]
+    },
+    "disclosed": "2026-10-20",
+    "records": "調査中",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "大阪公立大学などの再委託先経由のシステム障害にも波及",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "個人情報漏洩事件・被害事例ニュースまとめ（Cacco）",
+        "url": "https://cacco.co.jp/frauddetection/media/news/3522/"
+      }
+    ]
+  },
+  {
+    "id": "m3-mrkun-2026-10",
+    "company": "エムスリー",
+    "service": "MR君（医師向けプラットフォーム）",
+    "sector": "医療・ヘルスケア",
+    "match": {
+      "domains": [
+        "m3.com"
+      ],
+      "names": [
+        "エムスリー",
+        "m3.com",
+        "MR君"
+      ]
+    },
+    "disclosed": "2026-10-23",
+    "records": "医師25,775件・製薬担当者2,260件",
+    "records_num": 25775,
+    "categories": [
+      "name",
+      "email",
+      "employment"
+    ],
+    "status": "possible",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年10月のサイバー攻撃の事例（セキュリティ対策Lab）",
+        "url": "https://rocket-boys.co.jp/security-measures-lab/https-rocket-boys-co-jp-security-measures-lab-2026-10-latest-cyber-attack-cases/"
+      }
+    ]
+  },
+  {
+    "id": "litellm-supplychain-2026-10",
+    "company": "LiteLLM（BerriAI）",
+    "service": "LiteLLM v1.107.0（PyPI配布）",
+    "sector": "開発ツール",
+    "match": {
+      "domains": [],
+      "names": [
+        "LiteLLM"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "該当バージョンを導入した開発環境",
+    "records_num": null,
+    "categories": [
+      "login_credential"
+    ],
+    "status": "confirmed",
+    "scope": "ブラック・オクトーバーで唯一AI関連ソフトが直接関与した案件。開発元の認証情報が盗まれ、情報窃取コードを含むv1.107.0が公式配布経路に載った。Pythonを起動するだけで実行される設計で、PyPIは約2時間後に削除。アンインストールだけでは不十分で、環境の再構築と認証情報の変更が推奨されている",
+    "cause": "vulnerability",
+    "ai_link": "supply_chain",
+    "sources": [
+      {
+        "title": "10月のハッキングの嵐に名前がつきました。その名も「ブラック・オクトーバー」（ギズモード・ジャパン）",
+        "url": "https://www.gizmodo.jp/article/2611-black-october-cyber-security-2026/"
+      }
+    ]
+  }
+]

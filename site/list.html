@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>漏洩データベース — LeakScan</title>
+<meta name="description" content="2026年の国内情報漏洩事案の一覧。企業名・サービス名・公表件数・漏洩項目・原因・出典を検索できます。">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      LeakScan
+    </a>
+    <nav class="nav">
+      <a href="list" aria-current="page">漏洩データベース</a>
+      <a href="./#how">仕組み</a>
+      <a href="./#install">拡張機能</a>
+      <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+
+<section style="padding-top:40px">
+  <div class="wrap">
+    <h2>国内情報漏洩データベース</h2>
+    <p class="sec-lead">2026年に公表された事案。各社の公表資料・報道をもとに編集した二次情報です。最終更新 <span id="updated">—</span>。</p>
+
+    <div class="toolbar">
+      <label class="sr-only" for="q">検索</label>
+      <input type="search" id="q" placeholder="企業名・サービス名・ドメインで検索（例: ローソン, muji.com, カード）">
+      <label class="sr-only" for="sector">業種</label>
+      <select id="sector"><option value="">すべての業種</option></select>
+      <label class="sr-only" for="sev">危険度</label>
+      <select id="sev">
+        <option value="">危険度すべて</option>
+        <option value="3">高（カード・口座・パスワード等）</option>
+        <option value="2">中（氏名・住所・電話等）</option>
+        <option value="1">低（識別子のみ）</option>
+      </select>
+      <label class="sr-only" for="sort">並び順</label>
+      <select id="sort">
+        <option value="date">公表日が新しい順</option>
+        <option value="records">件数が多い順</option>
+        <option value="sev">危険度が高い順</option>
+      </select>
+      <span class="count" id="count">—</span>
+    </div>
+
+    <div class="entries" id="entries"><div class="empty">読み込み中…</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>件数・漏洩項目は公表時点のものです。「漏洩の可能性」「調査中」段階の事案を含みます。確定した事実は各社の公式発表をご確認ください。</div>
+    <div><a href="./">LeakScanについて</a> ・ <a href="data/breaches.json">breaches.json</a> ・ データ: CC BY 4.0</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/list.js"></script>
+<script>window.LeakScan.initThemeToggle(document.getElementById('theme'));</script>
+</body>
+</html>

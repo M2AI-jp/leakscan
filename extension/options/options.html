@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>LeakScan の設定</title>
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="../ui/style.css">
+</head>
+<body class="ext">
+<section style="border:0">
+  <div class="wrap narrow">
+    <h2>LeakScan の設定</h2>
+    <p class="sec-lead">変更は自動で保存されます。</p>
+
+    <div class="opt">
+      <div class="row">
+        <label class="lb" for="account">Gmailのアカウント番号</label>
+        <div class="hint">複数のGoogleアカウントにログインしている場合、調べたいアカウントの番号を指定します。Gmailを開いたときのURL <code>mail.google.com/mail/u/<b>0</b>/</code> の数字です。</div>
+        <input type="number" id="account" min="0" max="9" step="1">
+      </div>
+
+      <div class="row">
+        <label class="lb">迷惑メール・ゴミ箱も対象にする</label>
+        <div class="hint">検出範囲は広がりますが、ブランドを騙ったフィッシングメールを「利用中」と誤判定する原因になります。通常はオフのままを推奨します。</div>
+        <div class="check">
+          <input type="checkbox" id="spam">
+          <label for="spam">迷惑メールとゴミ箱を含めて検索する（<code>in:anywhere</code>）</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="lb" for="batch">1回の検索でまとめるサービス数</label>
+        <div class="hint">多くするとスキャンは速くなりますが、メールの多い人は分割再検索が増えます。既定は8です。</div>
+        <input type="number" id="batch" min="1" max="12" step="1">
+      </div>
+
+      <div class="row">
+        <label class="lb" for="dburl">漏洩データベースの取得元</label>
+        <div class="hint">既定は <code>https://leakscan.matsunai.com/data/</code> です。取得に失敗した場合は拡張機能に同梱されたコピーが使われます。</div>
+        <input type="text" id="dburl" spellcheck="false">
+        <div style="margin-top:12px">
+          <button class="btn btn-ghost" id="refresh" type="button">今すぐ更新する</button>
+          <span class="saved" id="dbinfo"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="lb">動作チェック（セルフテスト）</label>
+        <div class="hint">Gmailのタブを一瞬だけ開き、LeakScanが画面を正しく読めるかを確認します。<b>差出人やメールの中身は一切記録しません</b>（件数だけを確認します）。スキャンがうまくいかないときは、まずこれを実行してください。</div>
+        <button class="btn btn-ghost" id="selftest" type="button">セルフテストを実行</button>
+        <div id="stresult" style="margin-top:14px"></div>
+      </div>
+
+      <div class="row">
+        <label class="lb">保存されているデータ</label>
+        <div class="hint">スキャン結果はこのブラウザのローカルストレージにのみ保存され、外部には送信されません。</div>
+        <button class="btn btn-ghost" id="clear" type="button">スキャン結果を削除する</button>
+        <span class="saved" id="cleared"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="options.js"></script>
+</body>
+</html>

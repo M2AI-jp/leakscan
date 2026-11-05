@@ -1,0 +1,35 @@
+{
+  "note": "日次ジョブが更新を監視する情報源。ここが更新されたらIssueが立つので、人間が新規事案を確認して data/breaches.json に追記する。自動で事案を追加することはしない（誤った企業名の公開を防ぐため）。",
+  "watch": [
+    {
+      "name": "個人情報保護委員会 漏えい等の報告",
+      "url": "https://www.ppc.go.jp/personalinfo/legal/leakAction/",
+      "kind": "official",
+      "weight": "high"
+    },
+    {
+      "name": "セキュリティ対策Lab（ロケットボーイズ）",
+      "url": "https://rocket-boys.co.jp/security-measures-lab/",
+      "kind": "roundup",
+      "weight": "high"
+    },
+    {
+      "name": "CVE Registry ブログ",
+      "url": "https://cvejp.com/blog",
+      "kind": "roundup",
+      "weight": "high"
+    },
+    {
+      "name": "Cacco 個人情報漏洩事件まとめ",
+      "url": "https://cacco.co.jp/frauddetection/media/news/3522/",
+      "kind": "roundup",
+      "weight": "medium"
+    },
+    {
+      "name": "サイバーセキュリティラボ（gate02）",
+      "url": "https://www.gate02.ne.jp/lab/",
+      "kind": "roundup",
+      "weight": "medium"
+    }
+  ]
+}

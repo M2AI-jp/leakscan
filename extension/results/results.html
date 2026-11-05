@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>スキャン結果 — LeakScan</title>
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="../ui/style.css">
+</head>
+<body class="ext">
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      LeakScan
+    </span>
+    <nav class="nav">
+      <a href="#services">該当サービス</a>
+      <a href="#actions">やること</a>
+      <a href="https://leakscan.matsunai.com/list.html" target="_blank" rel="noopener">全データベース</a>
+      <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+
+<div class="ext-hero">
+  <div class="wrap">
+    <div class="verdict">
+      <div>
+        <div class="big" id="headline">読み込み中…</div>
+        <div class="verdict-meta" id="meta"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="actions">
+  <div class="wrap">
+    <h2>いま、やること</h2>
+    <p class="sec-lead" id="actions-lead">漏洩した項目から機械的に導いた対応リストです（AIによる判断ではありません）。</p>
+    <div class="actions" id="action-list"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>該当したサービス</h2>
+    <p class="sec-lead">Gmailに届いているメールの差出人が、漏洩を公表したサービスと一致したものです。</p>
+    <div class="entries" id="list"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="note">
+      <h3>この結果の読み方</h3>
+      <ul>
+        <li>一致は<b>「あなたがそのサービスを使っていた可能性が高い」</b>ことを示すだけで、<b>あなた個人のデータが流出対象に含まれていたかは示しません</b>。確定情報は各社の公式発表・個別通知で確認してください。</li>
+        <li>件数・漏洩項目は公表時点のもので、続報で変わります。「漏洩の可能性」「調査中」段階の事案も含みます。</li>
+        <li>別のメールアドレスで登録したサービス、メールを受け取っていないサービスは検出できません。<b>「該当なし」は安全の証明ではありません。</b></li>
+        <li>差出人の表示名のみで一致した項目（<span class="badge">表示名一致</span>）は、なりすましメールの可能性があります。アドレスを確認してください。</li>
+      </ul>
+    </div>
+    <div class="cta-row">
+      <button class="btn btn-primary" id="rescan" type="button">もう一度スキャンする</button>
+      <a class="btn btn-ghost" href="https://leakscan.matsunai.com/list.html" target="_blank" rel="noopener">全事案を見る</a>
+      <button class="btn btn-ghost" id="clear" type="button">この結果を削除する</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>LeakScan — Scan your inbox. Find your leaks. ／ 照合はすべてこのブラウザ内で行われ、メールの内容も結果も外部に送信されません。</div>
+    <div>データ出典: <a href="https://leakscan.matsunai.com/" target="_blank" rel="noopener">leakscan.matsunai.com</a>（CC BY 4.0）</div>
+  </div>
+</footer>
+
+<script src="../lib/advice.js"></script>
+<script src="results.js"></script>
+</body>
+</html>

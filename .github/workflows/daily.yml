@@ -1,0 +1,87 @@
+name: Daily update
+
+on:
+  schedule:
+    - cron: '0 23 * * *'   # 08:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 情報源の更新を検出
+        id: watch
+        run: |
+          node scripts/watch-sources.mjs | tee /tmp/watch.txt
+          echo "changed=$(grep -c '^CHANGED' /tmp/watch.txt || true)" >> "$GITHUB_OUTPUT"
+
+      - name: 出典リンクの生存確認
+        id: links
+        continue-on-error: true
+        run: node scripts/check-sources.mjs | tee /tmp/links.txt
+
+      - name: データセットを検証して生成物を更新
+        run: |
+          node scripts/validate.mjs
+          node scripts/build.mjs
+
+      - name: 変更をコミット
+        run: |
+          git config user.name  "leakscan-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "変更なし"
+          else
+            git add -A
+            git commit -m "chore: 日次更新（情報源の状態・生成物）"
+            git push
+          fi
+
+      - name: 要確認のIssueを作成・更新
+        if: steps.watch.outputs.changed != '0' || steps.links.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="要確認: 情報源の更新 / リンク切れ ($(TZ=Asia/Tokyo date +%Y-%m-%d))"
+          {
+            echo "日次ジョブが人の確認を必要とする変化を検出しました。"
+            echo
+            echo "> **重要**: 新しい事案の追加は必ず人間が公式発表を読んでから行ってください。"
+            echo "> 自動抽出はしません（誤った企業名の公開を防ぐため）。"
+            echo
+            echo "## 更新された情報源"
+            echo '```'
+            grep -E '^(CHANGED|FAILED)' /tmp/watch.txt || echo "（なし）"
+            echo '```'
+            echo
+            echo "## 出典リンクの生存確認"
+            echo '```'
+            tail -40 /tmp/links.txt 2>/dev/null || echo "（実行できませんでした）"
+            echo '```'
+            echo
+            echo "## 手順"
+            echo "1. 上記の情報源を開き、未収録の事案がないか確認する"
+            echo "2. あれば各社の公式発表で件数・漏洩項目・公表日を確認する"
+            echo "3. \`data/breaches.json\` に追記し、\`node scripts/validate.mjs && node scripts/build.mjs\` を実行"
+            echo "4. リンク切れがあれば出典URLを差し替える（魚拓も可）"
+          } > /tmp/body.md
+          EXISTING=$(gh issue list --label triage --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file /tmp/body.md
+          else
+            gh label create triage --color FBCA04 --description "人の確認待ち" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label triage --body-file /tmp/body.md
+          fi
