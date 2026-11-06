@@ -316,8 +316,6 @@ footer a { color: var(--fg-muted); }
   background: var(--bg-elev); border: 1px solid var(--border-strong); border-radius: 999px;
   padding: 6px 15px; margin-bottom: 22px; }
 .fv .kicker b { color: var(--danger); font-size: 14px; }
-.fv h1 { font-size: clamp(38px, 7.2vw, 66px); letter-spacing: -.04em; line-height: 1.12;
-  margin: 0 0 26px; font-weight: 800; }
 .fv .one { font-size: clamp(16px, 2.2vw, 19px); color: var(--fg-muted); line-height: 1.75; margin: 0 0 26px; }
 .fv .one b { color: var(--fg); }
 .fv .cta-row { margin: 0 0 18px; }
@@ -462,7 +460,6 @@ section > .wrap > .sec-lead { color: var(--fg-dim); font-size: 14.5px; margin: 0
   border-color: var(--hair-strong); color: var(--fg-muted);
   font-size: 12px; letter-spacing: .06em; padding: 7px 16px;
 }
-.fv h1 { font-weight: 800; }
 .fv .trust { gap: 10px 18px; font-size: 12px; letter-spacing: .01em; }
 
 /* --- buttons: crisper --- */
@@ -573,7 +570,6 @@ section > .wrap > h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.3; le
 section { padding: 96px 0; }
 .fv .trust { gap: 8px 22px; }
 .fv .trust span { font-size: 13.5px; color: var(--fg-muted); font-weight: 600; }
-.fv h1 { color: var(--fg-strong); }
 section > .wrap > h2 { color: var(--fg-strong); }
 
 /* 非対称の2カラム（左に主張、右に仕様） */
@@ -754,18 +750,16 @@ section > .wrap > h2 { color: var(--fg-strong); }
 /* ---- 見出し ----
    問いかけは入口なので、数字と同じ大きさで張り合わせない。
    一段落として、視線が「問い → 何の数字か → 数字」と流れるようにする。 */
-.fv h1 {
-  margin: 0 0 26px; font-weight: 800; color: var(--fg-strong);
-  font-size: clamp(27px, 4.9vw, 44px); line-height: 1.14; letter-spacing: -.04em;
-}
 
 /* ---- 主役の数字 ---- */
 .bignum { margin: 0; }
 /* 数字が何の数字なのかを言っているのはこの行なので、ここを一番強く置く。
    小さく字間を広げた薄いラベルだと、大きい数字の前で消えてしまっていた。 */
+/* 見出し。問いかけの h1 を外したので、この行がファーストビューの主役。
+   下の数字が何の数字かを言っているのもここ。 */
 .bn-k {
-  margin: 0 0 10px; line-height: 1.2;
-  font-size: clamp(16px, 2.3vw, 23px); font-weight: 800; letter-spacing: -.015em;
+  margin: 0 0 14px; line-height: 1.22;
+  font-size: clamp(24px, 4.0vw, 38px); font-weight: 800; letter-spacing: -.03em;
   color: var(--fg-strong);
 }
 .bn-v {
@@ -824,7 +818,7 @@ section > .wrap > h2 { color: var(--fg-strong); }
 /* 狭い画面では罫線の区切りを縦に畳み、全体を詰めて主要部を画面内に収める */
 @media (max-width: 560px) {
   .fv { padding: 26px 0 40px; }
-  .fv h1 { margin-bottom: 22px; }
+  .bn-k { margin-bottom: 11px; }
   .hrow { margin-top: 24px; }
   .hrow .hs { flex: 1 1 100%; padding: 12px 0; }
   .hrow .hs + .hs { padding-left: 0; border-left: 0; border-top: 1px solid var(--hair); }
