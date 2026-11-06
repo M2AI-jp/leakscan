@@ -29,13 +29,39 @@
     });
   };
 
-  /* ---------- data ---------- */
+  /* ---------- data ----------
+     このサイトの配信物は、デプロイしたときにしか変わらない。
+     一方で日次の収集結果は毎朝GitHubのリポジトリに入る。
+     そこで、配信物を読むのと同時にGitHub側の更新日も見にいき、
+     あちらが新しければそちらを使う。こうしておくと、
+     デプロイが止まっていても表示は毎朝新しくなる。
+     費用はかからない（公開リポジトリの読み取りだけ）。       */
+  const GH_DATA = 'https://raw.githubusercontent.com/M2AI-jp/leakscan/main/data/';
+  const GH_WAIT = 2500;   // GitHubが遅い・塞がれている時に表示を待たせない
+
+  function ghFetch(name) {
+    const opt = { cache: 'no-cache' };
+    if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) {
+      opt.signal = AbortSignal.timeout(GH_WAIT);
+    }
+    return fetch(GH_DATA + name, opt)
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null);
+  }
+
   LeakScan.load = async function () {
-    const [meta, entries] = await Promise.all([
+    const [meta, entries, ghMeta] = await Promise.all([
       fetch('data/meta.json', { cache: 'no-cache' }).then((r) => r.json()),
-      fetch('data/breaches.json', { cache: 'no-cache' }).then((r) => r.json())
+      fetch('data/breaches.json', { cache: 'no-cache' }).then((r) => r.json()),
+      ghFetch('meta.json')
     ]);
-    return { meta, entries };
+    if (ghMeta && ghMeta.updated && String(ghMeta.updated) > String(meta.updated)) {
+      const ghEntries = await ghFetch('breaches.json');
+      if (Array.isArray(ghEntries) && ghEntries.length) {
+        return { meta: ghMeta, entries: ghEntries, from: 'github' };
+      }
+    }
+    return { meta, entries, from: 'site' };
   };
 
   /* ---------- severity ----------

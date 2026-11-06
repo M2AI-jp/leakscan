@@ -276,16 +276,43 @@ GmailのDOMが変わった場合、どこが壊れたかが分かります。
 [`store/`](store/) に用意しています。デベロッパー登録料の支払いとGoogleアカウントでの
 ログインのみ、人間の操作が必要です。
 
-## サイトへの自動反映に必要な設定
+## 毎日の更新が、無料で、人手なしに回るしくみ
 
-日次ジョブは事案の追記・検証・コミットまでを毎朝実行しますが、
-**Cloudflareへの配信は `CLOUDFLARE_API_TOKEN` が設定されているときだけ**走ります。
-未設定の場合、データはGitHubに入りますがサイトには出ません（ジョブは警告を出して成功します）。
+費用のかかるものは使っていません。AIのAPIも、有料のサービスも使いません。
+日次ジョブがやるのはJSONを1本取ってきて差分を書き足すことだけで、
+GitHub Actionsは公開リポジトリなら無料、配信はCloudflareの静的アセット
+（Workerスクリプトを持たないので無料・無制限）です。
 
-設定する場合は、Cloudflareダッシュボードで `Edit Cloudflare Workers` テンプレートの
+残る唯一の穴は**配信のタイミング**でした。日次ジョブはGitHubにコミットできますが、
+Cloudflareへ配信するにはAPIトークンが要ります。トークンは無料ですが、
+作るのはダッシュボードでの人の操作です。そこで二重にしてあります。
+
+| | 何が起きるか | 必要なもの |
+|---|---|---|
+| **① GitHubにコミット** | 毎朝8時、事案を追記して `data/` を更新 | なし（公開リポジトリなら無料） |
+| **② サイトが新しい方を読む** | ページ表示時にGitHub側の更新日を見て、配信物より新しければそちらを使う | なし |
+| **③ Cloudflareへ配信** | HTML/CSSごと差し替わる | `CLOUDFLARE_API_TOKEN` |
+
+②があるので、**③を設定しなくてもサイトの中身は毎朝新しくなります**。
+配信物とGitHubの `meta.json` の `updated` を見比べ、GitHubが新しいときだけ
+`breaches.json` を取りにいきます（`site/assets/app.js` の `LeakScan.load`）。
+GitHubが遅いときは2.5秒で諦めて配信物をそのまま使うので、表示は待たされません。
+
+③まで設定すると、HTMLやCSSの変更も自動で反映され、②は出番がなくなります。
+設定するには、Cloudflareダッシュボードで `Edit Cloudflare Workers` テンプレートの
 APIトークンを作り、リポジトリの Settings → Secrets → Actions に
 `CLOUDFLARE_API_TOKEN` として登録します（`CLOUDFLARE_ACCOUNT_ID` は設定済み）。
-設定しない場合は `npx wrangler deploy` を手元で実行すれば反映されます。
+手元から出すなら `npx wrangler deploy` でも反映されます。
+
+なお**拡張機能**が読むのは配信物（`https://leakscan.matsunai.com/data/`）だけなので、
+拡張機能の利用者にデータを届けるには③が要ります。
+
+## 審査待ちの間の配布
+
+ウェブストアの審査中でも自分で入れられるよう、[手順書](site/install.html)と
+ストア提出物と同一のzipを `site/download/` に置いています。
+`node scripts/package.mjs` がzipと `latest.json`（版・サイズ・SHA-256）を
+同時に吐くので、手順書に出るハッシュは常に配布物と一致します。
 
 ## 開発
 
