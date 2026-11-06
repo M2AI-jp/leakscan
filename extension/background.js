@@ -10,7 +10,7 @@ const DEFAULTS = {
   dbBase: 'https://leakscan.matsunai.com/data/',
   accountIndex: 0,
   includeSpamTrash: false,
-  batchSize: 8
+  batchSize: 16
 };
 
 const DB_TTL_MS = 12 * 60 * 60 * 1000;

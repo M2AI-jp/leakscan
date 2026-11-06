@@ -14,7 +14,7 @@
         patch: {
           accountIndex: Math.max(0, Math.min(9, Number($('#account').value) || 0)),
           includeSpamTrash: $('#spam').checked,
-          batchSize: Math.max(1, Math.min(12, Number($('#batch').value) || 8)),
+          batchSize: Math.max(1, Math.min(24, Number($('#batch').value) || 16)),
           dbBase: ($('#dburl').value || '').trim() || 'https://leakscan.matsunai.com/data/'
         }
       });

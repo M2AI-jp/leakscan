@@ -31,8 +31,8 @@ window.chrome = {
     openOptionsPage(){},
     sendMessage: async (msg, cb) => {
       let res;
-      if (msg.type === 'LEAKSCAN_GET_VIEW') res = { state:{status:'done'}, options:{}, db:{count:79,version:'2026.11.06',source:'remote',stale:false},
-        report:{generatedAt:Date.now(),dbVersion:'2026.11.06',dbSource:'remote',accountIndex:0,scanned:79,queries:14,matches:FAKE} };
+      if (msg.type === 'LEAKSCAN_GET_VIEW') res = { state:{status:'done'}, options:{}, db:{count:574,version:'2026.11.06',source:'remote',stale:false},
+        report:{generatedAt:Date.now(),dbVersion:'2026.11.06',dbSource:'remote',accountIndex:0,scanned:574,queries:37,matches:FAKE} };
       else if (msg.type === 'LEAKSCAN_GET_DB') res = { meta:await fetch('/extension/data/meta.json').then(r=>r.json()), entries:maskEntries(await fetch('/extension/data/breaches.json').then(r=>r.json())) };
       else res = { ok:true };
       if (cb) cb(res); return res;
