@@ -1044,8 +1044,23 @@ section > .wrap > h2 { color: var(--fg-strong); }
    広い順に：全部 → 見出しへの links を隠す → 2次的なリンクも隠す。
    最後まで残すのは「自分でダウンロード」と明暗の切り替え。 */
 .nav a { white-space: nowrap; }
+
+/* 主導線（拡張機能を入れる）は、いちばん狭い画面まで残す。
+   畳む順は 漏洩データ → 企業一覧 → 自分でダウンロード。
+   「自分でダウンロード」は中身を確かめたい人向けなので、主導線より先に消す。 */
+.nav a.nav-cta {
+  color: var(--accent); font-weight: 800;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: 999px; padding: 6px 14px;
+}
+.nav a.nav-cta:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); }
 @media (max-width: 900px) { .nav a.anchor-nav { display: none; } }
+@media (max-width: 700px) { .nav a.nav-sub { display: none; } }
 @media (max-width: 560px) {
-  .nav a.nav-sub { display: none; }
-  .nav { gap: 12px; }
+  .nav a.nav-sub2 { display: none; }
+  .nav { gap: 10px; }
+  /* 主導線とロゴを少し詰めて、横にはみ出さないようにする */
+  .nav a.nav-cta { font-size: 12px; padding: 5px 11px; }
+  .site-header .brand { font-size: 15px; letter-spacing: .04em; gap: 7px; }
+  .site-header .brand .logo { width: 19px; height: 19px; }
 }

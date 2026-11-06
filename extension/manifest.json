@@ -1,9 +1,12 @@
 {
   "manifest_version": 3,
   "name": "LeakScan — 個人情報流出チェッカー",
-  "short_name": "LeakScan",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "公表された国内の情報漏洩事案とGmailの送信元だけをブラウザ内で照合し、自分が使っているサービスの漏洩を特定します。外部送信なし。",
+  "minimum_chrome_version": "102",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
+  },
   "permissions": [
     "storage"
   ],
@@ -26,12 +29,7 @@
       "128": "icons/icon128.png"
     }
   },
-  "icons": {
-    "16": "icons/icon16.png",
-    "32": "icons/icon32.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
+  "options_page": "options/options.html",
   "content_scripts": [
     {
       "matches": [
@@ -45,6 +43,11 @@
       "all_frames": false
     }
   ],
-  "options_page": "options/options.html",
-  "minimum_chrome_version": "102"
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "short_name": "LeakScan"
 }

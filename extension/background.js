@@ -3,6 +3,92 @@
  * Never sees mail content: the content script returns only matched sender data.
  */
 
+/* 受け取ったデータの検査。
+ *
+ * 配信元が乗っ取られて中身を差し替えられても、画面や検索式に悪い文字列が
+ * 流れ込まないようにする。ここを通った後の値しか使わない。
+ *
+ * ・ドメインはホスト名に使える文字だけ。Gmailの検索式に演算子を混ぜられないようにする
+ * ・出典のURLは http/https のみ。javascript: や data: を弾く
+ * ・文字列は長さで切る。件数にも上限を置く（描画やGmail照会が終わらなくなるのを防ぐ）
+ * 捨てた件数は meta に残して、設定画面から見えるようにしている。 */
+const MAX_ENTRIES = 5000;
+const MAX_PER_FIELD = 40;
+const MAX_TEXT = 200;
+
+const text = (v, n) => (typeof v === 'string' ? v.slice(0, n || MAX_TEXT) : '');
+const textList = (v, n) =>
+  (Array.isArray(v) ? v : []).filter((x) => typeof x === 'string').slice(0, MAX_PER_FIELD)
+    .map((x) => x.slice(0, n || MAX_TEXT)).filter(Boolean);
+
+/** ホスト名に使える文字だけ。ここを緩めるとGmailの検索式に演算子を入れられる。 */
+const DOMAIN_OK = /^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/;
+/** 画面のリンクに入れてよいのは http/https だけ。 */
+function safeUrl(u) {
+  if (typeof u !== 'string' || u.length > 500) return '';
+  try {
+    const x = new URL(u);
+    return (x.protocol === 'http:' || x.protocol === 'https:') ? x.href : '';
+  } catch (_) { return ''; }
+}
+
+function sanitizeEntries(raw) {
+  if (!Array.isArray(raw)) return { entries: [], dropped: 0 };
+  let dropped = 0;
+  const entries = [];
+  for (const e of raw.slice(0, MAX_ENTRIES)) {
+    if (!e || typeof e !== 'object') { dropped++; continue; }
+    const id = text(e.id, 80);
+    const service = text(e.service, 120);
+    if (!id || !service) { dropped++; continue; }
+    const domains = textList(e.domains, 253).map((d) => d.toLowerCase()).filter((d) => DOMAIN_OK.test(d));
+    const sources = (Array.isArray(e.sources) ? e.sources : []).slice(0, MAX_PER_FIELD)
+      .map((x) => ({ url: safeUrl(x && x.url), title: text(x && x.title, 200) }))
+      .filter((x) => x.url);
+    entries.push({
+      id, service,
+      company: text(e.company, 120),
+      domains,
+      names: textList(e.names, 120),
+      categories: textList(e.categories, 40),
+      status: text(e.status, 40),
+      cause: text(e.cause, 40),
+      ai_link: text(e.ai_link, 40),
+      sector: text(e.sector, 80),
+      disclosed: text(e.disclosed, 20),
+      records: text(e.records, 80),
+      records_num: typeof e.records_num === 'number' && isFinite(e.records_num) ? e.records_num : 0,
+      scope: text(e.scope, 400),
+      auto: e.auto === true,
+      sources
+    });
+  }
+  dropped += Math.max(0, raw.length - MAX_ENTRIES);
+  return { entries, dropped };
+}
+
+/** meta も画面に出るので同じように通す。 */
+function sanitizeMeta(m) {
+  if (!m || typeof m !== 'object') return {};
+  const dict = (o) => {
+    const out = {};
+    if (o && typeof o === 'object') {
+      for (const k of Object.keys(o).slice(0, 80)) {
+        if (typeof o[k] === 'string') out[text(k, 40)] = text(o[k], 120);
+      }
+    }
+    return out;
+  };
+  return {
+    schema: typeof m.schema === 'number' ? m.schema : 1,
+    name: text(m.name, 120), version: text(m.version, 40), updated: text(m.updated, 20),
+    license: text(m.license, 40), homepage: safeUrl(m.homepage),
+    disclaimer: text(m.disclaimer, 1000), ai_note: text(m.ai_note, 1000),
+    categories: dict(m.categories), status_labels: dict(m.status_labels),
+    ai_link_labels: dict(m.ai_link_labels), cause_labels: dict(m.cause_labels)
+  };
+}
+
 /* データの入手先。どれも届かなければ同梱のコピーを使う。
  *
  * 配信サイトの中身はデプロイしたときにしか変わらないが、収集結果は毎朝
@@ -79,7 +165,10 @@ async function loadBundled() {
     fetchJson(chrome.runtime.getURL('data/meta.json')),
     fetchJson(chrome.runtime.getURL('data/breaches.json'))
   ]);
-  return { meta, entries, source: 'bundled', fetchedAt: Date.now() };
+  /* 同梱物も遠隔のものと同じ検査を通す。展開して入れた場合に中身を
+     書き換えられても、通る値が変わらないようにするため。 */
+  return { meta: sanitizeMeta(meta), entries: sanitizeEntries(entries).entries,
+           source: 'bundled', fetchedAt: Date.now() };
 }
 
 async function loadDb(force) {
@@ -111,9 +200,12 @@ async function loadDb(force) {
   let fresh = null;
   for (const cand of ranked) {
     try {
-      const entries = await fetchJson(cand.base + 'breaches.json', DB_FETCH_TIMEOUT_MS);
-      if (!Array.isArray(entries) || !entries.length) throw new Error('empty dataset');
-      fresh = { meta: cand.meta, entries, source: 'remote', origin: cand.base, fetchedAt: Date.now() };
+      const raw = await fetchJson(cand.base + 'breaches.json', DB_FETCH_TIMEOUT_MS);
+      const { entries, dropped } = sanitizeEntries(raw);
+      if (!entries.length) throw new Error('empty dataset');
+      const meta = sanitizeMeta(cand.meta);
+      if (dropped) meta.dropped = dropped;
+      fresh = { meta, entries, source: 'remote', origin: cand.base, fetchedAt: Date.now() };
       break;
     } catch (e) { err = e; }
   }

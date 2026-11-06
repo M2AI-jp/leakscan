@@ -1,8 +1,8 @@
 {
-  "version": "0.1.6",
-  "file": "leakscan-0.1.6.zip",
-  "size": 110778,
-  "sha256": "b65ca2fe8507cbbb5c6453facffce4cd1a9815b969e9cbf45b72afaf4da7bbe5",
+  "version": "0.1.7",
+  "file": "leakscan-0.1.7.zip",
+  "size": 112333,
+  "sha256": "20f92c3426790e3d68445c1fbaf8b05f087fa3dd7e4a817159e5d92d954e4340",
   "entries": 574,
   "built": "2026-11-06"
 }

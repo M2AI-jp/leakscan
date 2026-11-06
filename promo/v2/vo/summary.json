@@ -4,39 +4,37 @@
   {
    "id": "n_scale",
    "narrator": "Speaker/f5",
-   "corrected": true,
-   "max_abs_delta_st": 0.55,
-   "n_morae_changed": 4,
-   "n_morae": 38,
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 44,
    "rules": {
     "peak_cap": 1
    },
-   "flags": [
-    "low_alignment_confidence (confidence 0.28 < 0.3) in 「2026年に公表された情報漏洩は、ごひゃくななじゅうよん件。」: ヒョ→聞こえ「sho」"
-   ],
-   "notes": "出典：data/stats.json incidents=574。読みを明示（「570よけん」に聞こえたため）。延べ6.22億件は重複を含むので人数として言わない",
+   "flags": [],
+   "notes": "出典：data/stats.json records_total=622,074,796（574件・540社の公表値の合計）。「のべ」と言い、画面にも重複を含む旨を出す。実人数ではないため人数として言わない",
    "accent_repaired": false,
    "accent_words": [],
-   "contour_rmse_changed_max": 0.041,
+   "contour_rmse_changed_max": null,
    "identity_lsd_db": [
-    4.579
+    4.877
    ],
    "identity_mcd_db": [
-    0.855
+    1.177
    ],
    "corrected_mcd_db": [
-    0.299
+    0.0
    ],
-   "default_peak_dbfs": -5.748,
-   "corrected_peak_dbfs": -5.742,
-   "identity_mora_err_st_max": 0.21,
+   "default_peak_dbfs": -3.684,
+   "corrected_peak_dbfs": -3.684,
+   "identity_mora_err_st_max": 0.302,
    "align_max_margin": null,
-   "align_min_confidence": 0.2755,
-   "level_delta_db": -0.002,
+   "align_min_confidence": 0.4076,
+   "level_delta_db": 0.0,
    "variants_changed": {
-    "standard": true,
+    "standard": false,
     "weak": false,
-    "strong": true
+    "strong": false
    }
   },
   {
@@ -197,33 +195,32 @@
    "corrected": false,
    "max_abs_delta_st": 0.0,
    "n_morae_changed": 0,
-   "n_morae": 26,
+   "n_morae": 31,
    "rules": {},
    "flags": [
-    "low_alignment_confidence (confidence 0.10 < 0.3) in 「クロームウェブストアで、リークスキャン。」: リ→聞こえ「ni」、キェ→聞こえ「ke」",
-    "reading differs from Open JTalk (aligner repaired キャ→キェ) in 「クロームウェブストアで、リークスキャン。」"
+    "low_alignment_confidence (confidence 0.04 < 0.3) in 「リークスキャンは、クロームの拡張機能です。」: リ→聞こえ「gi」、キャ→聞こえ「ke」"
    ],
-   "notes": "出典：site/index.html「完全無料」「登録不要」。ストア公開済み",
+   "notes": "出典：site/index.html「完全無料」「登録不要」。名前を主語に置く言い方。「リークスキャン」を文末に置くと「ス」が無声化して山が「ク」で終わり、「スキャン」が5.7半音落ちて潰れる。この形だと落差2.0半音（promo/v2/try で11通り実測して選んだ）",
    "accent_repaired": false,
    "accent_words": [],
    "contour_rmse_changed_max": null,
    "identity_lsd_db": [
     4.922,
-    4.673
+    4.468
    ],
    "identity_mcd_db": [
     0.93,
-    0.739
+    0.807
    ],
    "corrected_mcd_db": [
     0.0,
     0.0
    ],
-   "default_peak_dbfs": -3.711,
-   "corrected_peak_dbfs": -3.711,
-   "identity_mora_err_st_max": 0.479,
+   "default_peak_dbfs": -3.667,
+   "corrected_peak_dbfs": -3.667,
+   "identity_mora_err_st_max": 0.219,
    "align_max_margin": null,
-   "align_min_confidence": 0.0972,
+   "align_min_confidence": 0.0428,
    "level_delta_db": 0.0,
    "variants_changed": {
     "standard": false,

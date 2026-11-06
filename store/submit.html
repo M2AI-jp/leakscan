@@ -79,39 +79,27 @@ footer{margin:56px 0 70px;padding-top:26px;border-top:1px solid var(--line);
 
 <header>
   <h1>Chrome ウェブストア 申請シート</h1>
-  <p class="sub">LeakScan v0.1.6 ／ 各項目の<b>コピー</b>を押してフォームに貼ってください。画像は <b>Downloads/leakscan-store</b> にあります。</p>
+  <p class="sub">LeakScan v0.1.7 ／ 各項目の<b>コピー</b>を押してフォームに貼ってください。画像は <b>Downloads/leakscan-store</b> にあります。</p>
 </header>
 
-<h2><span class="num">1</span>審査中の0.1.2を0.1.6に差し替える</h2>
-<p class="h2n">審査中のパッケージは中身だけを入れ替えられない。いったん審査を取り消してから出し直す。</p>
+<h2><span class="num">1</span>公開中の拡張機能を 0.1.7 に更新する</h2>
+<p class="h2n">0.1.2 は公開済み。新しいパッケージを上げると、審査を経て差し替わる。</p>
 
 <div class="note">
-  <b>先に知っておくこと：</b>
-  Googleの公式ドキュメントにある差し替えの手段は「審査をキャンセル」だけで、
-  説明は「審査待ちのときに使う。審査が取り消され、下書きを編集できるようになる」。
-  Chrome拡張の担当者もフォーラムで「審査中のものに新しいコードを入れる方法はない。
-  キャンセルするか、終わるまで待つかのどちらか」と答えている。
-  つまり<b>いま待っている時間は戻らず、審査は最初からやり直し</b>になる。
-  Google自身も「審査を早めるためにキャンセルして出し直すのはやめてほしい」と告知している。
-  急ぐなら待つ方が早い。それでも中身を新しくしたいなら、以下の手順。
+  <b>利用者に起きること：</b>
+  ホスト権限が1つ増えている（<code>raw.githubusercontent.com</code>）ので、
+  公式ドキュメントの記述どおり、利用者には
+  「追加の権限を許可するか、拡張機能を無効にするか」の確認が出る。
+  審査の間、いまの利用者には何も起きない。
 </div>
 
 <ol class="steps">
   <li><b>ダッシュボードを開く</b><span class="sn">https://chrome.google.com/webstore/devconsole → LeakScan のアイテム</span></li>
-  <li><b>「審査をキャンセル」を押す</b><span class="sn">アイテム画面の右上のメニュー、または「パッケージ」タブに出る。英語表示なら Cancel review。押すと下書きに戻る</span></li>
-  <li><b>新しいパッケージをアップロード</b><span class="sn">「パッケージ」タブ → <code>dist/leakscan-0.1.6.zip</code>（108KB / sha256 の先頭は <code>b65ca2fe</code>）</span></li>
-  <li><b>権限の理由をもう1つ貼る</b><span class="sn">ホスト権限が1つ増えるので、「プライバシーへの取り組み」タブに <code>raw.githubusercontent.com</code> の欄が新しく出る。下の3番からコピー</span></li>
-  <li><b>動画URLを入れる</b><span class="sn">「商品の詳細」タブ → <code>https://www.youtube.com/watch?v=egvdaCWUtCw</code></span></li>
-  <li><b>「審査のために送信」</b><span class="sn">0.1.2のときより審査は長引きやすい。ホスト権限が増えていて、その分も見られるため</span></li>
+  <li><b>新しいパッケージをアップロード</b><span class="sn">「パッケージ」タブ → <code>Downloads/leakscan-0.1.7.zip</code>（110KB / sha256 の先頭は <code>20f92c34</code>）</span></li>
+  <li><b>権限の理由をもう1つ貼る</b><span class="sn">「プライバシーへの取り組み」タブに <code>raw.githubusercontent.com</code> の欄が出る。下の3番からコピー</span></li>
+  <li><b>動画URLを入れる</b><span class="sn">「商品の詳細」タブ →「プロモーション動画」</span></li>
+  <li><b>「審査のために送信」</b><span class="sn">ホスト権限が増えているぶん、前より時間がかかることがある</span></li>
 </ol>
-
-<div class="note">
-  <b>待つ場合にどうなるか：</b>
-  0.1.2が通ってから0.1.6を出すと、ホスト権限が1つ増えるので、
-  利用者には「追加の権限を許可するか、無効にするか」の確認が出る（公式ドキュメントの記述）。
-  ただし<b>いまストアからの利用者は0人</b>（0.1.2はまだ公開されていない）なので、
-  これに当たるのは0.1.2が公開されてから0.1.6が通るまでの間に入れた人だけ。
-</div>
 
 <h2><span class="num">2</span>ストアの掲載情報</h2>
 <p class="h2n">「商品の詳細」タブ</p>
@@ -274,7 +262,7 @@ Gmail APIおよびOAuthは使用しておらず、ユーザーの認証情報を
 </div>
 
 <footer>
-  アップロードするファイル: <code style="font-family:var(--mono)">dist/leakscan-0.1.6.zip</code>（v0.1.6 / 574件・最新2026-11-06のデータ同梱 / permissions は storage のみ・ホストは Gmail とデータ取得先2つ / 108KB）<br>
+  アップロードするファイル: <code style="font-family:var(--mono)">dist/leakscan-0.1.7.zip</code>（v0.1.7 / 574件・最新2026-11-06のデータ同梱 / permissions は storage のみ・ホストは Gmail とデータ取得先2つ / 108KB）<br>
   差し戻された場合は理由をそのまま共有してください。文面を調整します。
 </footer>
 

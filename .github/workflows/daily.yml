@@ -68,6 +68,7 @@ jobs:
           node test/domains.test.mjs
           node test/feed.test.mjs
           node test/db-mirror.test.mjs
+          node test/sanitize.test.mjs
 
       - name: 検証に失敗したら自動追記を取り消す
         if: failure()

@@ -5,10 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>自分でダウンロード — LeakScan</title>
 <meta name="description" content="LeakScanを自分でダウンロードしてChromeに入れる手順。ウェブストアに出したものと同一のzipを展開し、デベロッパーモードで読み込むだけです。">
-<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://leakscan.matsunai.com/install">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LeakScan">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://leakscan.matsunai.com/install">
 <meta property="og:title" content="自分でダウンロード — LeakScan">
 <meta property="og:description" content="LeakScanを自分でダウンロードしてChromeに入れる手順。">
-<meta name="color-scheme" content="dark light">
+<meta property="og:image" content="https://leakscan.matsunai.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="2026年に漏洩した個人情報 622,074,796件">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
@@ -21,9 +31,10 @@
       LeakScan
     </a>
     <nav class="nav">
-      <a href="install" aria-current="page">自分でダウンロード</a>
-      <a class="nav-sub" href="list">漏洩企業一覧</a>
       <a class="anchor-nav" href="./#data">漏洩データ</a>
+      <a class="nav-sub" href="list">漏洩企業一覧</a>
+      <a class="nav-sub2" href="install" aria-current="page">自分でダウンロード</a>
+      <a class="nav-cta" href="./#use">Chrome拡張機能を入れる</a>
       <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
     </nav>
   </div>
@@ -44,14 +55,14 @@
 
     <div class="dl-card">
       <div class="dl-l">
-        <div class="dl-v">LeakScan <b id="dl-ver">v0.1.6</b></div>
+        <div class="dl-v">LeakScan <b id="dl-ver">v0.1.7</b></div>
         <div class="dl-m">
           <span>漏洩データ <b id="dl-entries">574</b>件 同梱（起動時に最新を取得）</span>
           <span class="dot">・</span><span id="dl-size">107 KB</span>
           <span class="dot">・</span><span>依存ライブラリなし</span>
         </div>
       </div>
-      <a class="btn btn-primary" id="dl-link" href="download/leakscan-0.1.6.zip" download>zipをダウンロード</a>
+      <a class="btn btn-primary" id="dl-link" href="download/leakscan-0.1.7.zip" download>zipをダウンロード</a>
     </div>
     <div class="dl-sha">
       <span class="dl-sha-k">SHA-256</span>
@@ -86,7 +97,7 @@
         <div class="st-h"><span class="st-n">1</span><h3>zipをダウンロードして展開する</h3></div>
         <p>上のボタンでzipを保存し、展開します。</p>
         <div class="os-g">
-          <div class="os"><b>macOS</b><p>zipをダブルクリックすると、同じ場所に <code class="dl-dir">leakscan-0.1.6</code> フォルダができます。</p></div>
+          <div class="os"><b>macOS</b><p>zipをダブルクリックすると、同じ場所に <code class="dl-dir">leakscan-0.1.7</code> フォルダができます。</p></div>
           <div class="os"><b>Windows</b><p>zipを右クリック →「すべて展開」。展開先のフォルダを覚えておきます。</p></div>
         </div>
         <p class="st-warn">展開してできた<b>フォルダ</b>を使います。zipのままでは読み込めません。
@@ -154,7 +165,7 @@
               <svg viewBox="0 0 32 32"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div class="uc-b">
-              <div class="uc-t">LeakScan — 個人情報流出チェッカー <span class="uc-v">0.1.6</span></div>
+              <div class="uc-t">LeakScan — 個人情報流出チェッカー <span class="uc-v">0.1.7</span></div>
               <div class="uc-d">公表された国内の情報漏洩事案とGmailの送信元だけをブラウザ内で照合します。</div>
               <div class="uc-id">ID: 端末ごとに変わります</div>
             </div>
@@ -199,7 +210,7 @@
     <h2 class="ins-h2">うまくいかないとき</h2>
     <dl class="faq">
       <dt>「マニフェスト ファイルがないか読み取れません」と出る</dt>
-      <dd>選んだフォルダに <code>manifest.json</code> が直接入っていません。1つ下の階層（<code class="dl-dir">leakscan-0.1.6</code> の中）を選び直してください。</dd>
+      <dd>選んだフォルダに <code>manifest.json</code> が直接入っていません。1つ下の階層（<code class="dl-dir">leakscan-0.1.7</code> の中）を選び直してください。</dd>
 
       <dt>Chromeを起動するたびに警告が出る</dt>
       <dd>デベロッパー モードで入れた拡張機能に対するChromeの仕様です。「×」で閉じれば、その回は消えます。ウェブストア版に入れ替えれば出なくなります。</dd>
@@ -230,8 +241,8 @@
       </ul>
     </div>
     <div class="cmds">
-      <div class="cmd"><span class="cmd-k">macOS / Linux</span><code>shasum -a 256 leakscan-0.1.6.zip</code></div>
-      <div class="cmd"><span class="cmd-k">Windows (PowerShell)</span><code>Get-FileHash leakscan-0.1.6.zip -Algorithm SHA256</code></div>
+      <div class="cmd"><span class="cmd-k">macOS / Linux</span><code>shasum -a 256 leakscan-0.1.7.zip</code></div>
+      <div class="cmd"><span class="cmd-k">Windows (PowerShell)</span><code>Get-FileHash leakscan-0.1.7.zip -Algorithm SHA256</code></div>
     </div>
     <div class="cta-row">
       <a class="btn btn-ghost" href="https://github.com/M2AI-jp/leakscan">ソースを読む</a>
