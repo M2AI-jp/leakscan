@@ -1,0 +1,450 @@
+{
+ "id": "p08",
+ "narrator": "Speaker/f5",
+ "say": "リークスキャン、です。",
+ "display": "08 読点を挟む",
+ "shipped": null,
+ "input_flags": [],
+ "notes": "",
+ "sentences": [
+  {
+   "text": "リークスキャン、です。",
+   "median_st": 19.71,
+   "morae": [
+    {
+     "kana": "リ",
+     "ph": "ri",
+     "phones": [
+      "r",
+      "i"
+     ],
+     "token_text": "リークスキャン",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 1,
+     "acc_type": 4,
+     "high": 0,
+     "rel_nucleus": -3,
+     "after_pause": true,
+     "final": false,
+     "t0": 0.05,
+     "t1": 0.235,
+     "vowel_t0": 0.12,
+     "vowel_t1": 0.235,
+     "quality": 126.4,
+     "ojt_phones": [
+      "r",
+      "i"
+     ],
+     "heard_kana": "リ",
+     "unaligned": null,
+     "D": 19.536,
+     "T": 19.536,
+     "delta": 0.0,
+     "after": 19.536,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ー",
+     "ph": "i",
+     "phones": [
+      "i"
+     ],
+     "token_text": "リークスキャン",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 2,
+     "acc_type": 4,
+     "high": 1,
+     "rel_nucleus": -2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.235,
+     "t1": 0.3,
+     "vowel_t0": 0.235,
+     "vowel_t1": 0.3,
+     "quality": 0.0,
+     "ojt_phones": [
+      "i"
+     ],
+     "heard_kana": "イ",
+     "unaligned": null,
+     "D": 22.7,
+     "T": 22.7,
+     "delta": 0.0,
+     "after": 22.7,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ク",
+     "ph": "ku",
+     "phones": [
+      "k",
+      "u"
+     ],
+     "token_text": "リークスキャン",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 3,
+     "acc_type": 4,
+     "high": 1,
+     "rel_nucleus": -1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.3,
+     "t1": 0.44,
+     "vowel_t0": 0.4,
+     "vowel_t1": 0.44,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "u"
+     ],
+     "heard_kana": "ク",
+     "unaligned": null,
+     "D": 21.807,
+     "T": 21.807,
+     "delta": 0.0,
+     "after": 21.807,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ス",
+     "ph": "su",
+     "phones": [
+      "s",
+      "u"
+     ],
+     "token_text": "リークスキャン",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 4,
+     "acc_type": 4,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.44,
+     "t1": 0.56,
+     "vowel_t0": 0.535,
+     "vowel_t1": 0.56,
+     "quality": 0.0,
+     "ojt_phones": [
+      "s",
+      "u"
+     ],
+     "heard_kana": "ス",
+     "unaligned": null,
+     "D": null,
+     "T": null,
+     "delta": 0.0,
+     "after": null,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "キャ",
+     "ph": "kya",
+     "phones": [
+      "ky",
+      "a"
+     ],
+     "token_text": "リークスキャン",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 5,
+     "acc_type": 4,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.56,
+     "t1": 0.755,
+     "vowel_t0": 0.63,
+     "vowel_t1": 0.755,
+     "quality": 166.8,
+     "ojt_phones": [
+      "ky",
+      "a"
+     ],
+     "heard_kana": "キャ",
+     "unaligned": null,
+     "D": 19.884,
+     "T": 19.884,
+     "delta": 0.0,
+     "after": 19.884,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ン",
+     "ph": "N",
+     "phones": [
+      "N"
+     ],
+     "token_text": "リークスキャン",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 6,
+     "acc_type": 4,
+     "high": 0,
+     "rel_nucleus": 2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.755,
+     "t1": 0.84,
+     "vowel_t0": 0.755,
+     "vowel_t1": 0.84,
+     "quality": 0.0,
+     "ojt_phones": [
+      "N"
+     ],
+     "heard_kana": "ン",
+     "unaligned": null,
+     "D": 14.292,
+     "T": 14.292,
+     "delta": 0.0,
+     "after": 14.292,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "デ",
+     "ph": "de",
+     "phones": [
+      "d",
+      "e"
+     ],
+     "token_text": "です",
+     "pos": 4103,
+     "ap": 1,
+     "mora_in_ap": 1,
+     "acc_type": 1,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": true,
+     "final": false,
+     "t0": 1.075,
+     "t1": 1.25,
+     "vowel_t0": 1.15,
+     "vowel_t1": 1.25,
+     "quality": 0.0,
+     "ojt_phones": [
+      "d",
+      "e"
+     ],
+     "heard_kana": "デ",
+     "unaligned": null,
+     "D": 14.033,
+     "T": 14.033,
+     "delta": 0.0,
+     "after": 14.033,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ス",
+     "ph": "su",
+     "phones": [
+      "s",
+      "u"
+     ],
+     "token_text": "です",
+     "pos": 4103,
+     "ap": 1,
+     "mora_in_ap": 2,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": true,
+     "t0": 1.25,
+     "t1": 1.43,
+     "vowel_t0": 1.405,
+     "vowel_t1": 1.43,
+     "quality": 0.0,
+     "ojt_phones": [
+      "s",
+      "u"
+     ],
+     "heard_kana": "ス",
+     "unaligned": null,
+     "D": null,
+     "T": null,
+     "delta": 0.0,
+     "after": null,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    }
+   ],
+   "phrases": [
+    {
+     "ap": 0,
+     "morae": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "text": "リークスキャン",
+     "position": "utterance_initial",
+     "kind": "accented",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 6.74,
+     "cap_st": 26.45,
+     "peak_re_median": 2.99
+    },
+    {
+     "ap": 1,
+     "morae": [
+      6,
+      7
+     ],
+     "text": "デス",
+     "position": "utterance_final",
+     "kind": "head_high",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 3.65,
+     "cap_st": 23.35,
+     "peak_re_median": -5.68
+    }
+   ],
+   "rules": [],
+   "capped_morae": [],
+   "align": {
+    "engine": "okoads.align.text",
+    "reading_source": "openjtalk",
+    "confidence": 0.062,
+    "confidence_threshold": 0.3,
+    "low_confidence": true,
+    "max_margin": null,
+    "qc": "confidence (< 0.3 = likely reading mismatch)",
+    "suspects": [
+     {
+      "index": 0,
+      "kana": "リ",
+      "deficit": 126.4,
+      "heard": [
+       "n",
+       "i"
+      ]
+     },
+     {
+      "index": 4,
+      "kana": "キャ",
+      "deficit": 166.8,
+      "heard": [
+       "k",
+       "a"
+      ]
+     }
+    ],
+    "repairs": [],
+    "note": null,
+    "unaligned_morae": [],
+    "words_ok": true,
+    "reading": "Open JTalk",
+    "reading_diffs": [],
+    "features": "Open JTalk"
+   },
+   "psola": {
+    "anchor": "plateau",
+    "share_resynthesised": 0.0,
+    "identity_mora_err_st_max": 0.251,
+    "identity_mora_err_st_mean": 0.096,
+    "identity_lsd_db": 3.821,
+    "identity_mcd_db": 0.476,
+    "corrected_mcd_db": 0.0,
+    "identity_mora_errs_st": [
+     0.251,
+     0.036,
+     0.016,
+     0.015,
+     0.159,
+     0.101
+    ],
+    "corrected_lsd_db": 0.0
+   },
+   "contour": {
+    "rmse_all_st": 0.0,
+    "rmse_changed_st": null,
+    "maxerr_changed_st": null,
+    "n_changed": 0
+   },
+   "i_fit": {
+    "rmse_st": 0.0,
+    "n_nonzero": 0
+   },
+   "variants": {}
+  }
+ ],
+ "renders": [
+  ".cache/voicepeak-cli/f5/4b1b95dcbacf06f55b08.wav"
+ ],
+ "variants": {
+  "standard": {
+   "wav": "p08.wav",
+   "params": {
+    "k_peak": 0.7,
+    "q_classA": "p25",
+    "q_other": "p90",
+    "k_late": 0.7,
+    "late_morae": 2
+   },
+   "changed": false
+  }
+ },
+ "corrected": false,
+ "wav": "p08.wav",
+ "default_wav": "p08.default.wav",
+ "max_abs_delta_st": 0.0,
+ "n_morae": 8,
+ "n_morae_changed": 0,
+ "rules_count": {},
+ "level": {
+  "default_rms_db": -22.338,
+  "corrected_rms_db": -22.338,
+  "default_peak_dbfs": -5.93,
+  "corrected_peak_dbfs": -5.93,
+  "same_length": true,
+  "headroom_gain_db": 0.0
+ },
+ "flags": [
+  "low_alignment_confidence (confidence 0.06 < 0.3) in 「リークスキャン、です。」: リ→聞こえ「ni」、キャ→聞こえ「ka」"
+ ],
+ "params": {
+  "corrector": {
+   "k_peak": 0.7,
+   "q_classA": "p25",
+   "q_other": "p90",
+   "k_late": 0.7,
+   "late_morae": 2
+  },
+  "i_solver": {
+   "l1": 0.15,
+   "l2": 0.3,
+   "cap": 3.0,
+   "deadband": 0.3
+  },
+  "gates": {
+   "max_delta_st": 4.0,
+   "big_correction_st": 3.0,
+   "align_margin_max": 8.0,
+   "contour_rmse_st": 0.3,
+   "contour_maxerr_st": 0.6,
+   "loudness_db": 0.5,
+   "peak_rise_db": 1.5,
+   "peak_max_dbfs": -1.0
+  },
+  "anchor": "plateau"
+ }
+}

@@ -1,0 +1,13 @@
+[
+ {"id":"p01","narrator":"Speaker/f5","say":"リークスキャン。","display":"01 そのまま","notes":"いまの言い方"},
+ {"id":"p02","narrator":"Speaker/f5","say":"リーク・スキャン。","display":"02 中黒で区切る","notes":""},
+ {"id":"p03","narrator":"Speaker/f5","say":"リーク スキャン。","display":"03 空白で区切る","notes":""},
+ {"id":"p04","narrator":"Speaker/f5","say":"リークスキャンです。","display":"04 ですを付ける","notes":""},
+ {"id":"p05","narrator":"Speaker/f5","say":"リークスキャンは。","display":"05 はを付ける","notes":""},
+ {"id":"p06","narrator":"Speaker/f5","say":"りーくすきゃん。","display":"06 ひらがな","notes":"辞書の引き方が変わる可能性"},
+ {"id":"p07","narrator":"Speaker/f5","say":"リークスキャーン。","display":"07 最後を伸ばす","notes":""},
+ {"id":"p08","narrator":"Speaker/f5","say":"リークスキャン、です。","display":"08 読点を挟む","notes":""},
+ {"id":"p09","narrator":"Speaker/f5","say":"リークスキャンを、どうぞ。","display":"09 文末から外す","notes":""},
+ {"id":"p10","narrator":"Speaker/f5","say":"拡張機能の、リークスキャン。","display":"10 前に句を置く","notes":""},
+ {"id":"p11","narrator":"Speaker/f5","say":"リークスキャンは、クロームの拡張機能です。","display":"11 いま採用しているもの","notes":"比較用"}
+]

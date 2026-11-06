@@ -1,0 +1,680 @@
+{
+ "id": "p10",
+ "narrator": "Speaker/f5",
+ "say": "拡張機能の、リークスキャン。",
+ "display": "10 前に句を置く",
+ "shipped": null,
+ "input_flags": [],
+ "notes": "",
+ "sentences": [
+  {
+   "text": "拡張機能の、リークスキャン。",
+   "median_st": 19.408,
+   "morae": [
+    {
+     "kana": "カ",
+     "ph": "ka",
+     "phones": [
+      "k",
+      "a"
+     ],
+     "token_text": "拡張",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 1,
+     "acc_type": 5,
+     "high": 0,
+     "rel_nucleus": -4,
+     "after_pause": true,
+     "final": false,
+     "t0": 0.05,
+     "t1": 0.21,
+     "vowel_t0": 0.13,
+     "vowel_t1": 0.21,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "a"
+     ],
+     "heard_kana": "カ",
+     "unaligned": null,
+     "D": 15.528,
+     "T": 15.528,
+     "delta": 0.0,
+     "after": 15.528,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ク",
+     "ph": "ku",
+     "phones": [
+      "k",
+      "u"
+     ],
+     "token_text": "拡張",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 2,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": -3,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.21,
+     "t1": 0.315,
+     "vowel_t0": 0.285,
+     "vowel_t1": 0.315,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "u"
+     ],
+     "heard_kana": "ク",
+     "unaligned": null,
+     "D": null,
+     "T": null,
+     "delta": 0.0,
+     "after": null,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "チョ",
+     "ph": "cho",
+     "phones": [
+      "ch",
+      "o"
+     ],
+     "token_text": "拡張",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 3,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": -2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.315,
+     "t1": 0.47,
+     "vowel_t0": 0.4,
+     "vowel_t1": 0.47,
+     "quality": 0.0,
+     "ojt_phones": [
+      "ch",
+      "o"
+     ],
+     "heard_kana": "チョ",
+     "unaligned": null,
+     "D": 22.302,
+     "T": 22.302,
+     "delta": 0.0,
+     "after": 22.302,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ー",
+     "ph": "o",
+     "phones": [
+      "o"
+     ],
+     "token_text": "拡張",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 4,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": -1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.47,
+     "t1": 0.545,
+     "vowel_t0": 0.47,
+     "vowel_t1": 0.545,
+     "quality": 0.0,
+     "ojt_phones": [
+      "o"
+     ],
+     "heard_kana": "オ",
+     "unaligned": null,
+     "D": 22.634,
+     "T": 22.634,
+     "delta": 0.0,
+     "after": 22.634,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "キ",
+     "ph": "ki",
+     "phones": [
+      "k",
+      "i"
+     ],
+     "token_text": "機能",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 5,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.545,
+     "t1": 0.69,
+     "vowel_t0": 0.63,
+     "vowel_t1": 0.69,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "i"
+     ],
+     "heard_kana": "キ",
+     "unaligned": null,
+     "D": 22.732,
+     "T": 22.732,
+     "delta": 0.0,
+     "after": 22.732,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ノ",
+     "ph": "no",
+     "phones": [
+      "n",
+      "o"
+     ],
+     "token_text": "機能",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 6,
+     "acc_type": 5,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.69,
+     "t1": 0.81,
+     "vowel_t0": 0.73,
+     "vowel_t1": 0.81,
+     "quality": 0.0,
+     "ojt_phones": [
+      "n",
+      "o"
+     ],
+     "heard_kana": "ノ",
+     "unaligned": null,
+     "D": 22.491,
+     "T": 22.491,
+     "delta": 0.0,
+     "after": 22.491,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ー",
+     "ph": "o",
+     "phones": [
+      "o"
+     ],
+     "token_text": "機能",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 7,
+     "acc_type": 5,
+     "high": 0,
+     "rel_nucleus": 2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.81,
+     "t1": 0.885,
+     "vowel_t0": 0.81,
+     "vowel_t1": 0.885,
+     "quality": 0.0,
+     "ojt_phones": [
+      "o"
+     ],
+     "heard_kana": "オ",
+     "unaligned": null,
+     "D": 19.23,
+     "T": 19.23,
+     "delta": 0.0,
+     "after": 19.23,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ノ",
+     "ph": "no",
+     "phones": [
+      "n",
+      "o"
+     ],
+     "token_text": "の",
+     "pos": 4104,
+     "ap": 0,
+     "mora_in_ap": 8,
+     "acc_type": 5,
+     "high": 0,
+     "rel_nucleus": 3,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.885,
+     "t1": 1.085,
+     "vowel_t0": 0.93,
+     "vowel_t1": 1.085,
+     "quality": 0.0,
+     "ojt_phones": [
+      "n",
+      "o"
+     ],
+     "heard_kana": "ノ",
+     "unaligned": null,
+     "D": 12.584,
+     "T": 12.584,
+     "delta": 0.0,
+     "after": 12.584,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "リ",
+     "ph": "ri",
+     "phones": [
+      "r",
+      "i"
+     ],
+     "token_text": "リーク",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 1,
+     "acc_type": 5,
+     "high": 0,
+     "rel_nucleus": -4,
+     "after_pause": true,
+     "final": false,
+     "t0": 1.39,
+     "t1": 1.565,
+     "vowel_t0": 1.45,
+     "vowel_t1": 1.565,
+     "quality": 112.3,
+     "ojt_phones": [
+      "r",
+      "i"
+     ],
+     "heard_kana": "リ",
+     "unaligned": null,
+     "D": 15.936,
+     "T": 15.936,
+     "delta": 0.0,
+     "after": 15.936,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ー",
+     "ph": "i",
+     "phones": [
+      "i"
+     ],
+     "token_text": "リーク",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 2,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": -3,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.565,
+     "t1": 1.62,
+     "vowel_t0": 1.565,
+     "vowel_t1": 1.62,
+     "quality": 0.0,
+     "ojt_phones": [
+      "i"
+     ],
+     "heard_kana": "イ",
+     "unaligned": null,
+     "D": 19.586,
+     "T": 19.586,
+     "delta": 0.0,
+     "after": 19.586,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ク",
+     "ph": "ku",
+     "phones": [
+      "k",
+      "u"
+     ],
+     "token_text": "リーク",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 3,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": -2,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.62,
+     "t1": 1.755,
+     "vowel_t0": 1.705,
+     "vowel_t1": 1.755,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "u"
+     ],
+     "heard_kana": "ク",
+     "unaligned": null,
+     "D": 20.591,
+     "T": 20.591,
+     "delta": 0.0,
+     "after": 20.591,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ス",
+     "ph": "su",
+     "phones": [
+      "s",
+      "u"
+     ],
+     "token_text": "スキャン",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 4,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": -1,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.755,
+     "t1": 1.86,
+     "vowel_t0": 1.835,
+     "vowel_t1": 1.86,
+     "quality": 0.0,
+     "ojt_phones": [
+      "s",
+      "u"
+     ],
+     "heard_kana": "ス",
+     "unaligned": null,
+     "D": null,
+     "T": null,
+     "delta": 0.0,
+     "after": null,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "キャ",
+     "ph": "kye",
+     "phones": [
+      "ky",
+      "e"
+     ],
+     "token_text": "スキャン",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 5,
+     "acc_type": 5,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.86,
+     "t1": 2.02,
+     "vowel_t0": 1.93,
+     "vowel_t1": 2.02,
+     "quality": 139.9,
+     "ojt_phones": [
+      "ky",
+      "a"
+     ],
+     "heard_kana": "キェ",
+     "unaligned": null,
+     "D": 15.554,
+     "T": 15.554,
+     "delta": 0.0,
+     "after": 15.554,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ン",
+     "ph": "N",
+     "phones": [
+      "N"
+     ],
+     "token_text": "スキャン",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 6,
+     "acc_type": 5,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": true,
+     "t0": 2.02,
+     "t1": 2.1,
+     "vowel_t0": 2.02,
+     "vowel_t1": 2.1,
+     "quality": 0.0,
+     "ojt_phones": [
+      "N"
+     ],
+     "heard_kana": "ン",
+     "unaligned": null,
+     "D": 12.847,
+     "T": 12.847,
+     "delta": 0.0,
+     "after": 12.847,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    }
+   ],
+   "phrases": [
+    {
+     "ap": 0,
+     "morae": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "text": "カクチョーキノーノ",
+     "position": "utterance_initial",
+     "kind": "accented",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 6.74,
+     "cap_st": 26.15,
+     "peak_re_median": 3.32
+    },
+    {
+     "ap": 1,
+     "morae": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+     ],
+     "text": "リークスキャン",
+     "position": "utterance_final",
+     "kind": "accented",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 3.51,
+     "cap_st": 22.92,
+     "peak_re_median": 1.18
+    }
+   ],
+   "rules": [],
+   "capped_morae": [],
+   "align": {
+    "engine": "okoads.align.text",
+    "reading_source": "openjtalk+repaired",
+    "confidence": 0.0971,
+    "confidence_threshold": 0.3,
+    "low_confidence": true,
+    "max_margin": null,
+    "qc": "confidence (< 0.3 = likely reading mismatch)",
+    "suspects": [
+     {
+      "index": 9,
+      "kana": "リ",
+      "deficit": 112.3,
+      "heard": [
+       "n",
+       "i"
+      ]
+     },
+     {
+      "index": 13,
+      "kana": "キェ",
+      "deficit": 139.9,
+      "heard": [
+       "k",
+       "e"
+      ]
+     }
+    ],
+    "repairs": [
+     {
+      "mora": 13,
+      "sentence": 0,
+      "from_kana": "キャ",
+      "from_phones": [
+       "ky",
+       "a"
+      ],
+      "to_kana": "キェ",
+      "to_phones": [
+       "ky",
+       "e"
+      ],
+      "gain": 112.8,
+      "deficit_before": 239.5
+     }
+    ],
+    "note": null,
+    "unaligned_morae": [],
+    "words_ok": true,
+    "reading": "Open JTalk",
+    "reading_diffs": [],
+    "features": "Open JTalk"
+   },
+   "psola": {
+    "anchor": "plateau",
+    "share_resynthesised": 0.0,
+    "identity_mora_err_st_max": 0.796,
+    "identity_mora_err_st_mean": 0.106,
+    "identity_lsd_db": 4.77,
+    "identity_mcd_db": 0.606,
+    "corrected_mcd_db": 0.0,
+    "identity_mora_errs_st": [
+     0.017,
+     0.027,
+     0.001,
+     0.024,
+     0.002,
+     0.011,
+     0.012,
+     0.796,
+     0.0,
+     0.009,
+     0.017,
+     0.355
+    ],
+    "corrected_lsd_db": 0.0
+   },
+   "contour": {
+    "rmse_all_st": 0.0,
+    "rmse_changed_st": null,
+    "maxerr_changed_st": null,
+    "n_changed": 0
+   },
+   "i_fit": {
+    "rmse_st": 0.0,
+    "n_nonzero": 0
+   },
+   "variants": {}
+  }
+ ],
+ "renders": [
+  ".cache/voicepeak-cli/f5/7754d1f7579fef844e25.wav"
+ ],
+ "variants": {
+  "standard": {
+   "wav": "p10.wav",
+   "params": {
+    "k_peak": 0.7,
+    "q_classA": "p25",
+    "q_other": "p90",
+    "k_late": 0.7,
+    "late_morae": 2
+   },
+   "changed": false
+  }
+ },
+ "corrected": false,
+ "wav": "p10.wav",
+ "default_wav": "p10.default.wav",
+ "max_abs_delta_st": 0.0,
+ "n_morae": 14,
+ "n_morae_changed": 0,
+ "rules_count": {},
+ "level": {
+  "default_rms_db": -20.566,
+  "corrected_rms_db": -20.566,
+  "default_peak_dbfs": -4.842,
+  "corrected_peak_dbfs": -4.842,
+  "same_length": true,
+  "headroom_gain_db": 0.0
+ },
+ "flags": [
+  "low_alignment_confidence (confidence 0.10 < 0.3) in 「拡張機能の、リークスキャン。」: リ→聞こえ「ni」、キェ→聞こえ「ke」",
+  "reading differs from Open JTalk (aligner repaired キャ→キェ) in 「拡張機能の、リークスキャン。」"
+ ],
+ "params": {
+  "corrector": {
+   "k_peak": 0.7,
+   "q_classA": "p25",
+   "q_other": "p90",
+   "k_late": 0.7,
+   "late_morae": 2
+  },
+  "i_solver": {
+   "l1": 0.15,
+   "l2": 0.3,
+   "cap": 3.0,
+   "deadband": 0.3
+  },
+  "gates": {
+   "max_delta_st": 4.0,
+   "big_correction_st": 3.0,
+   "align_margin_max": 8.0,
+   "contour_rmse_st": 0.3,
+   "contour_maxerr_st": 0.6,
+   "loudness_db": 0.5,
+   "peak_rise_db": 1.5,
+   "peak_max_dbfs": -1.0
+  },
+  "anchor": "plateau"
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "batch": "vo",
+ "lines": [
+  {
+   "id": "p01",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 6,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.05 < 0.3) in 「リークスキャン。」: リ→聞こえ「ni」、キャ→聞こえ「ka」"
+   ],
+   "notes": "いまの言い方",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.039
+   ],
+   "identity_mcd_db": [
+    0.336
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -5.723,
+   "corrected_peak_dbfs": -5.723,
+   "identity_mora_err_st_max": 0.187,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0489,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p02",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 6,
+   "rules": {
+    "late_peak_skipped": 1
+   },
+   "flags": [
+    "low_alignment_confidence (confidence 0.05 < 0.3) in 「リーク・スキャン。」: リ→聞こえ「ni」、キャ→聞こえ「ka」",
+    "accent_disagreement: 「リーク」: 山が核（リ）の2拍後だが、核の拍が山より4.6 st 低い（> 3.3 st）。アクセントの解析がVOICEPEAKと食い違うとみて、遅れた山の規則は使わない"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.531
+   ],
+   "identity_mcd_db": [
+    0.412
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -6.408,
+   "corrected_peak_dbfs": -6.408,
+   "identity_mora_err_st_max": 0.368,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0468,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p03",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 6,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.05 < 0.3) in 「リーク スキャン。」: リ→聞こえ「ni」、キャ→聞こえ「ka」"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.039
+   ],
+   "identity_mcd_db": [
+    0.336
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -5.723,
+   "corrected_peak_dbfs": -5.723,
+   "identity_mora_err_st_max": 0.187,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0489,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p04",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 8,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.07 < 0.3) in 「リークスキャンです。」: リ→聞こえ「ni」、キャ→聞こえ「ka」"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    3.632
+   ],
+   "identity_mcd_db": [
+    0.447
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -6.539,
+   "corrected_peak_dbfs": -6.539,
+   "identity_mora_err_st_max": 0.307,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0671,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p05",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 7,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.04 < 0.3) in 「リークスキャンは。」: リ→聞こえ「ni」、キャ→聞こえ「ke」"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.077
+   ],
+   "identity_mcd_db": [
+    0.438
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -6.55,
+   "corrected_peak_dbfs": -6.55,
+   "identity_mora_err_st_max": 0.09,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0367,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p06",
+   "narrator": "Speaker/f5",
+   "corrected": true,
+   "max_abs_delta_st": 0.57,
+   "n_morae_changed": 1,
+   "n_morae": 6,
+   "rules": {
+    "late_peak": 1
+   },
+   "flags": [
+    "low_alignment_confidence (confidence 0.01 < 0.3) in 「りーくすきゃん。」: リ→聞こえ「ni」、ッ→聞こえ「cl」、キャ→聞こえ「ka」",
+    "reading differs from Open JTalk (aligner repaired イ→ッ) in 「りーくすきゃん。」"
+   ],
+   "notes": "辞書の引き方が変わる可能性",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": 0.008,
+   "identity_lsd_db": [
+    3.63
+   ],
+   "identity_mcd_db": [
+    0.557
+   ],
+   "corrected_mcd_db": [
+    0.281
+   ],
+   "default_peak_dbfs": -9.461,
+   "corrected_peak_dbfs": -9.304,
+   "identity_mora_err_st_max": 0.291,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0081,
+   "level_delta_db": 0.002,
+   "variants_changed": {
+    "standard": true
+   }
+  },
+  {
+   "id": "p07",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 7,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.10 < 0.3) in 「リークスキャーン。」: キェ→聞こえ「ke」",
+    "reading differs from Open JTalk (aligner repaired キャ→キェ) in 「リークスキャーン。」"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.394
+   ],
+   "identity_mcd_db": [
+    0.641
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -6.508,
+   "corrected_peak_dbfs": -6.508,
+   "identity_mora_err_st_max": 0.489,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0962,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p08",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 8,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.06 < 0.3) in 「リークスキャン、です。」: リ→聞こえ「ni」、キャ→聞こえ「ka」"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    3.821
+   ],
+   "identity_mcd_db": [
+    0.476
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -5.93,
+   "corrected_peak_dbfs": -5.93,
+   "identity_mora_err_st_max": 0.251,
+   "align_max_margin": null,
+   "align_min_confidence": 0.062,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p09",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 10,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.06 < 0.3) in 「リークスキャンを、どうぞ。」: リ→聞こえ「ni」、キャ→聞こえ「ka」、オ→聞こえ「o」"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.248
+   ],
+   "identity_mcd_db": [
+    0.584
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -5.653,
+   "corrected_peak_dbfs": -5.653,
+   "identity_mora_err_st_max": 0.247,
+   "align_max_margin": null,
+   "align_min_confidence": 0.057,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p10",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 14,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.10 < 0.3) in 「拡張機能の、リークスキャン。」: リ→聞こえ「ni」、キェ→聞こえ「ke」",
+    "reading differs from Open JTalk (aligner repaired キャ→キェ) in 「拡張機能の、リークスキャン。」"
+   ],
+   "notes": "",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.77
+   ],
+   "identity_mcd_db": [
+    0.606
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -4.842,
+   "corrected_peak_dbfs": -4.842,
+   "identity_mora_err_st_max": 0.796,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0971,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  },
+  {
+   "id": "p11",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 21,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.04 < 0.3) in 「リークスキャンは、クロームの拡張機能です。」: リ→聞こえ「gi」、キャ→聞こえ「ke」"
+   ],
+   "notes": "比較用",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.468
+   ],
+   "identity_mcd_db": [
+    0.807
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -3.667,
+   "corrected_peak_dbfs": -3.667,
+   "identity_mora_err_st_max": 0.219,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0428,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false
+   }
+  }
+ ],
+ "gates": {
+  "max_delta_st": 4.0,
+  "big_correction_st": 3.0,
+  "align_margin_max": 8.0,
+  "contour_rmse_st": 0.3,
+  "contour_maxerr_st": 0.6,
+  "loudness_db": 0.5,
+  "peak_rise_db": 1.5,
+  "peak_max_dbfs": -1.0
+ },
+ "corrector_params": {
+  "k_peak": 0.7,
+  "q_classA": "p25",
+  "q_other": "p90",
+  "k_late": 0.7,
+  "late_morae": 2
+ },
+ "anchor": "plateau"
+}

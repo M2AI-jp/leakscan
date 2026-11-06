@@ -1,0 +1,391 @@
+{
+ "id": "p02",
+ "narrator": "Speaker/f5",
+ "say": "リーク・スキャン。",
+ "display": "02 中黒で区切る",
+ "shipped": null,
+ "input_flags": [],
+ "notes": "",
+ "sentences": [
+  {
+   "text": "リーク・スキャン。",
+   "median_st": 19.149,
+   "morae": [
+    {
+     "kana": "リ",
+     "ph": "ri",
+     "phones": [
+      "r",
+      "i"
+     ],
+     "token_text": "リーク",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 1,
+     "acc_type": 1,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": true,
+     "final": false,
+     "t0": 0.05,
+     "t1": 0.23,
+     "vowel_t0": 0.115,
+     "vowel_t1": 0.23,
+     "quality": 99.3,
+     "ojt_phones": [
+      "r",
+      "i"
+     ],
+     "heard_kana": "リ",
+     "unaligned": null,
+     "D": 18.248,
+     "T": 18.248,
+     "delta": 0.0,
+     "after": 18.248,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ー",
+     "ph": "i",
+     "phones": [
+      "i"
+     ],
+     "token_text": "リーク",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 2,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.23,
+     "t1": 0.305,
+     "vowel_t0": 0.23,
+     "vowel_t1": 0.305,
+     "quality": 0.0,
+     "ojt_phones": [
+      "i"
+     ],
+     "heard_kana": "イ",
+     "unaligned": null,
+     "D": 21.943,
+     "T": 21.943,
+     "delta": 0.0,
+     "after": 21.943,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ク",
+     "ph": "ku",
+     "phones": [
+      "k",
+      "u"
+     ],
+     "token_text": "リーク",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 3,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.305,
+     "t1": 0.46,
+     "vowel_t0": 0.395,
+     "vowel_t1": 0.46,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "u"
+     ],
+     "heard_kana": "ク",
+     "unaligned": null,
+     "D": 22.823,
+     "T": 22.823,
+     "delta": 0.0,
+     "after": 22.823,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ス",
+     "ph": "su",
+     "phones": [
+      "s",
+      "u"
+     ],
+     "token_text": "スキャン",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 1,
+     "acc_type": 2,
+     "high": 0,
+     "rel_nucleus": -1,
+     "after_pause": true,
+     "final": false,
+     "t0": 0.465,
+     "t1": 0.57,
+     "vowel_t0": 0.545,
+     "vowel_t1": 0.57,
+     "quality": 0.0,
+     "ojt_phones": [
+      "s",
+      "u"
+     ],
+     "heard_kana": "ス",
+     "unaligned": null,
+     "D": null,
+     "T": null,
+     "delta": 0.0,
+     "after": null,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "キャ",
+     "ph": "kya",
+     "phones": [
+      "ky",
+      "a"
+     ],
+     "token_text": "スキャン",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 2,
+     "acc_type": 2,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.57,
+     "t1": 0.76,
+     "vowel_t0": 0.645,
+     "vowel_t1": 0.76,
+     "quality": 183.7,
+     "ojt_phones": [
+      "ky",
+      "a"
+     ],
+     "heard_kana": "キャ",
+     "unaligned": null,
+     "D": 19.149,
+     "T": 19.149,
+     "delta": 0.0,
+     "after": 19.149,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ン",
+     "ph": "N",
+     "phones": [
+      "N"
+     ],
+     "token_text": "スキャン",
+     "pos": 4096,
+     "ap": 1,
+     "mora_in_ap": 3,
+     "acc_type": 2,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": true,
+     "t0": 0.76,
+     "t1": 0.845,
+     "vowel_t0": 0.76,
+     "vowel_t1": 0.845,
+     "quality": 0.0,
+     "ojt_phones": [
+      "N"
+     ],
+     "heard_kana": "ン",
+     "unaligned": null,
+     "D": 13.834,
+     "T": 13.834,
+     "delta": 0.0,
+     "after": 13.834,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    }
+   ],
+   "phrases": [
+    {
+     "ap": 0,
+     "morae": [
+      0,
+      1,
+      2
+     ],
+     "text": "リーク",
+     "position": "utterance_initial",
+     "kind": "head_high",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 6.82,
+     "cap_st": 25.97,
+     "peak_re_median": 3.67
+    },
+    {
+     "ap": 1,
+     "morae": [
+      3,
+      4,
+      5
+     ],
+     "text": "スキャン",
+     "position": "utterance_final",
+     "kind": "accented",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 3.51,
+     "cap_st": 22.66,
+     "peak_re_median": 0.0
+    }
+   ],
+   "rules": [
+    {
+     "rule": "late_peak_skipped",
+     "ap": 0,
+     "morae": [],
+     "nucleus_mora": 0,
+     "peak_mora": 2,
+     "reason": "「リーク」: 山が核（リ）の2拍後だが、核の拍が山より4.6 st 低い（> 3.3 st）。アクセントの解析がVOICEPEAKと食い違うとみて、遅れた山の規則は使わない"
+    }
+   ],
+   "capped_morae": [],
+   "align": {
+    "engine": "okoads.align.text",
+    "reading_source": "openjtalk",
+    "confidence": 0.0468,
+    "confidence_threshold": 0.3,
+    "low_confidence": true,
+    "max_margin": null,
+    "qc": "confidence (< 0.3 = likely reading mismatch)",
+    "suspects": [
+     {
+      "index": 0,
+      "kana": "リ",
+      "deficit": 99.3,
+      "heard": [
+       "n",
+       "i"
+      ]
+     },
+     {
+      "index": 5,
+      "kana": "キャ",
+      "deficit": 183.7,
+      "heard": [
+       "k",
+       "a"
+      ]
+     }
+    ],
+    "repairs": [],
+    "note": null,
+    "unaligned_morae": [],
+    "words_ok": true,
+    "reading": "Open JTalk",
+    "reading_diffs": [],
+    "features": "Open JTalk"
+   },
+   "psola": {
+    "anchor": "plateau",
+    "share_resynthesised": 0.0,
+    "identity_mora_err_st_max": 0.368,
+    "identity_mora_err_st_mean": 0.092,
+    "identity_lsd_db": 4.531,
+    "identity_mcd_db": 0.412,
+    "corrected_mcd_db": 0.0,
+    "identity_mora_errs_st": [
+     0.025,
+     0.014,
+     0.035,
+     0.017,
+     0.368
+    ],
+    "corrected_lsd_db": 0.0
+   },
+   "contour": {
+    "rmse_all_st": 0.0,
+    "rmse_changed_st": null,
+    "maxerr_changed_st": null,
+    "n_changed": 0
+   },
+   "i_fit": {
+    "rmse_st": 0.0,
+    "n_nonzero": 0
+   },
+   "variants": {}
+  }
+ ],
+ "renders": [
+  ".cache/voicepeak-cli/f5/78288d0148dbb6185e50.wav"
+ ],
+ "variants": {
+  "standard": {
+   "wav": "p02.wav",
+   "params": {
+    "k_peak": 0.7,
+    "q_classA": "p25",
+    "q_other": "p90",
+    "k_late": 0.7,
+    "late_morae": 2
+   },
+   "changed": false
+  }
+ },
+ "corrected": false,
+ "wav": "p02.wav",
+ "default_wav": "p02.default.wav",
+ "max_abs_delta_st": 0.0,
+ "n_morae": 6,
+ "n_morae_changed": 0,
+ "rules_count": {
+  "late_peak_skipped": 1
+ },
+ "level": {
+  "default_rms_db": -21.176,
+  "corrected_rms_db": -21.176,
+  "default_peak_dbfs": -6.408,
+  "corrected_peak_dbfs": -6.408,
+  "same_length": true,
+  "headroom_gain_db": 0.0
+ },
+ "flags": [
+  "low_alignment_confidence (confidence 0.05 < 0.3) in 「リーク・スキャン。」: リ→聞こえ「ni」、キャ→聞こえ「ka」",
+  "accent_disagreement: 「リーク」: 山が核（リ）の2拍後だが、核の拍が山より4.6 st 低い（> 3.3 st）。アクセントの解析がVOICEPEAKと食い違うとみて、遅れた山の規則は使わない"
+ ],
+ "params": {
+  "corrector": {
+   "k_peak": 0.7,
+   "q_classA": "p25",
+   "q_other": "p90",
+   "k_late": 0.7,
+   "late_morae": 2
+  },
+  "i_solver": {
+   "l1": 0.15,
+   "l2": 0.3,
+   "cap": 3.0,
+   "deadband": 0.3
+  },
+  "gates": {
+   "max_delta_st": 4.0,
+   "big_correction_st": 3.0,
+   "align_margin_max": 8.0,
+   "contour_rmse_st": 0.3,
+   "contour_maxerr_st": 0.6,
+   "loudness_db": 0.5,
+   "peak_rise_db": 1.5,
+   "peak_max_dbfs": -1.0
+  },
+  "anchor": "plateau"
+ }
+}

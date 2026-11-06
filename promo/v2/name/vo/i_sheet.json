@@ -1,0 +1,1018 @@
+{
+ "batch": "vo",
+ "params": {
+  "l1": 0.15,
+  "l2": 0.3,
+  "cap": 3.0,
+  "deadband": 0.3
+ },
+ "order": [
+  "p01",
+  "p02",
+  "p03",
+  "p04",
+  "p05",
+  "p06",
+  "p07",
+  "p08",
+  "p09",
+  "p10",
+  "p11"
+ ],
+ "note": "VOICEPEAK i offsets per mora, solved from delta with the measured response kernel (okoads.intonation.i_solver). Use okoads.voicepeak.inject_i on the GUI-saved dummy_input.vpp.",
+ "blocks": [
+  {
+   "id": "p01",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャン。",
+   "sentences": [
+    {
+     "text": "リークスキャン。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p02",
+   "narrator": "Speaker/f5",
+   "text": "リーク・スキャン。",
+   "sentences": [
+    {
+     "text": "リーク・スキャン。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p03",
+   "narrator": "Speaker/f5",
+   "text": "リーク スキャン。",
+   "sentences": [
+    {
+     "text": "リーク スキャン。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p04",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャンです。",
+   "sentences": [
+    {
+     "text": "リークスキャンです。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "デ",
+       "phones": [
+        "d",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p05",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャンは。",
+   "sentences": [
+    {
+     "text": "リークスキャンは。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ワ",
+       "phones": [
+        "w",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p06",
+   "narrator": "Speaker/f5",
+   "text": "りーくすきゃん。",
+   "sentences": [
+    {
+     "text": "りーくすきゃん。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "cl"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": -0.19,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": -0.2,
+       "delta_st": -0.5745
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p07",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャーン。",
+   "sentences": [
+    {
+     "text": "リークスキャーン。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p08",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャン、です。",
+   "sentences": [
+    {
+     "text": "リークスキャン、です。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "デ",
+       "phones": [
+        "d",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p09",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャンを、どうぞ。",
+   "sentences": [
+    {
+     "text": "リークスキャンを、どうぞ。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ヲ",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ド",
+       "phones": [
+        "d",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ゾ",
+       "phones": [
+        "z",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p10",
+   "narrator": "Speaker/f5",
+   "text": "拡張機能の、リークスキャン。",
+   "sentences": [
+    {
+     "text": "拡張機能の、リークスキャン。",
+     "morae": [
+      {
+       "kana": "カ",
+       "phones": [
+        "k",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "チョ",
+       "phones": [
+        "ch",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キ",
+       "phones": [
+        "k",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ノ",
+       "phones": [
+        "n",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ノ",
+       "phones": [
+        "n",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p11",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャンは、クロームの拡張機能です。",
+   "sentences": [
+    {
+     "text": "リークスキャンは、クロームの拡張機能です。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ワ",
+       "phones": [
+        "w",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ロ",
+       "phones": [
+        "r",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ム",
+       "phones": [
+        "m",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ノ",
+       "phones": [
+        "n",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "カ",
+       "phones": [
+        "k",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "チョ",
+       "phones": [
+        "ch",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キ",
+       "phones": [
+        "k",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ノ",
+       "phones": [
+        "n",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "デ",
+       "phones": [
+        "d",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
