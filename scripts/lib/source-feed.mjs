@@ -61,6 +61,12 @@ const TYPE_CAUSE = {
 
 const ja = (n) => Number(n).toLocaleString('ja-JP');
 
+/** 2026-10-30 → 2026年10月30日 */
+function jaDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ''));
+  return m ? `${m[1]}年${Number(m[2])}月${Number(m[3])}日` : String(iso || '');
+}
+
 const HAS_CJK = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/;
 
 /** 法人格などを落として企業名を比べられる形にする */
@@ -123,7 +129,7 @@ export function scopeOf(inc, meta) {
   const parts = [`${inc.organization.name}が公表した${cause}による事案`];
   if (cats.length) parts.push(`${sure ? '漏洩した情報は' : '漏洩した可能性がある情報は'}${cats.join('、')}`);
   if (r.num != null) parts.push(`公表件数は${r.text}`);
-  if (inc.dates && inc.dates.discovered) parts.push(`発覚は${inc.dates.discovered}`);
+  if (inc.dates && inc.dates.discovered) parts.push(`発覚は${jaDate(inc.dates.discovered)}`);
   parts.push('詳細は出典の公式発表を参照');
   return parts.join('。') + '。';
 }
