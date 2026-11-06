@@ -1,0 +1,253 @@
+{
+ "batch": "vo",
+ "lines": [
+  {
+   "id": "n_scale",
+   "narrator": "Speaker/f5",
+   "corrected": true,
+   "max_abs_delta_st": 0.55,
+   "n_morae_changed": 4,
+   "n_morae": 38,
+   "rules": {
+    "peak_cap": 1
+   },
+   "flags": [
+    "low_alignment_confidence (confidence 0.28 < 0.3) in 「2026年に公表された情報漏洩は、ごひゃくななじゅうよん件。」: ヒョ→聞こえ「sho」"
+   ],
+   "notes": "出典：data/stats.json incidents=574。読みを明示（「570よけん」に聞こえたため）。延べ6.22億件は重複を含むので人数として言わない",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": 0.041,
+   "identity_lsd_db": [
+    4.579
+   ],
+   "identity_mcd_db": [
+    0.855
+   ],
+   "corrected_mcd_db": [
+    0.299
+   ],
+   "default_peak_dbfs": -5.748,
+   "corrected_peak_dbfs": -5.742,
+   "identity_mora_err_st_max": 0.21,
+   "align_max_margin": null,
+   "align_min_confidence": 0.2755,
+   "level_delta_db": -0.002,
+   "variants_changed": {
+    "standard": true,
+    "weak": false,
+    "strong": true
+   }
+  },
+  {
+   "id": "n_yours",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 25,
+   "rules": {},
+   "flags": [],
+   "notes": "問いかけにとどめ、断定しない",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.465
+   ],
+   "identity_mcd_db": [
+    0.864
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -4.749,
+   "corrected_peak_dbfs": -4.749,
+   "identity_mora_err_st_max": 0.191,
+   "align_max_margin": null,
+   "align_min_confidence": 0.9427,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false,
+    "weak": false,
+    "strong": false
+   }
+  },
+  {
+   "id": "n_how",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 31,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.03 < 0.3) in 「リークスキャンは、ジーメールのさしだしにんだけを見て照合します。」: リ→聞こえ「ni」、キャ→聞こえ「ke」",
+    "reading differs from Open JTalk (aligner repaired ジ→ジュ) in 「リークスキャンは、ジーメールのさしだしにんだけを見て照合します。」"
+   ],
+   "notes": "出典：extension/content/gmail.js は span[email] のみ読む。読みを明示（「さしだしじん」に聞こえたため）",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.323
+   ],
+   "identity_mcd_db": [
+    0.987
+   ],
+   "corrected_mcd_db": [
+    0.0
+   ],
+   "default_peak_dbfs": -2.909,
+   "corrected_peak_dbfs": -2.909,
+   "identity_mora_err_st_max": 0.241,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0275,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false,
+    "weak": false,
+    "strong": false
+   }
+  },
+  {
+   "id": "n_safe",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 21,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.28 < 0.3) in 「外部にも送りません。」: ガ→聞こえ「ka」"
+   ],
+   "notes": "出典：site/index.html「通信は漏洩データを受け取る1種類だけ。送信する処理がなく…」",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    5.053,
+    4.675
+   ],
+   "identity_mcd_db": [
+    1.118,
+    0.934
+   ],
+   "corrected_mcd_db": [
+    0.0,
+    0.0
+   ],
+   "default_peak_dbfs": -3.753,
+   "corrected_peak_dbfs": -3.753,
+   "identity_mora_err_st_max": 0.228,
+   "align_max_margin": null,
+   "align_min_confidence": 0.2769,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false,
+    "weak": false,
+    "strong": false
+   }
+  },
+  {
+   "id": "n_what",
+   "narrator": "Speaker/f5",
+   "corrected": true,
+   "max_abs_delta_st": 1.86,
+   "n_morae_changed": 5,
+   "n_morae": 24,
+   "rules": {
+    "peak_cap": 1,
+    "late_peak": 1
+   },
+   "flags": [
+    "low_alignment_confidence (confidence 0.08 < 0.3) in 「1、2分でわかります。」: フ→聞こえ「ku」"
+   ],
+   "notes": "出典：site/index.html「1〜2分で結果が出ます」",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": 0.052,
+   "identity_lsd_db": [
+    4.761,
+    4.667
+   ],
+   "identity_mcd_db": [
+    0.671,
+    1.097
+   ],
+   "corrected_mcd_db": [
+    0.266,
+    0.701
+   ],
+   "default_peak_dbfs": -1.339,
+   "corrected_peak_dbfs": -1.136,
+   "identity_mora_err_st_max": 0.179,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0821,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": true,
+    "weak": true,
+    "strong": true
+   }
+  },
+  {
+   "id": "n_cta",
+   "narrator": "Speaker/f5",
+   "corrected": false,
+   "max_abs_delta_st": 0.0,
+   "n_morae_changed": 0,
+   "n_morae": 26,
+   "rules": {},
+   "flags": [
+    "low_alignment_confidence (confidence 0.10 < 0.3) in 「クロームウェブストアで、リークスキャン。」: リ→聞こえ「ni」、キェ→聞こえ「ke」",
+    "reading differs from Open JTalk (aligner repaired キャ→キェ) in 「クロームウェブストアで、リークスキャン。」"
+   ],
+   "notes": "出典：site/index.html「完全無料」「登録不要」。ストア公開済み",
+   "accent_repaired": false,
+   "accent_words": [],
+   "contour_rmse_changed_max": null,
+   "identity_lsd_db": [
+    4.922,
+    4.673
+   ],
+   "identity_mcd_db": [
+    0.93,
+    0.739
+   ],
+   "corrected_mcd_db": [
+    0.0,
+    0.0
+   ],
+   "default_peak_dbfs": -3.711,
+   "corrected_peak_dbfs": -3.711,
+   "identity_mora_err_st_max": 0.479,
+   "align_max_margin": null,
+   "align_min_confidence": 0.0972,
+   "level_delta_db": 0.0,
+   "variants_changed": {
+    "standard": false,
+    "weak": false,
+    "strong": false
+   }
+  }
+ ],
+ "gates": {
+  "max_delta_st": 4.0,
+  "big_correction_st": 3.0,
+  "align_margin_max": 8.0,
+  "contour_rmse_st": 0.3,
+  "contour_maxerr_st": 0.6,
+  "loudness_db": 0.5,
+  "peak_rise_db": 1.5,
+  "peak_max_dbfs": -1.0
+ },
+ "corrector_params": {
+  "k_peak": 0.7,
+  "q_classA": "p25",
+  "q_other": "p90",
+  "k_late": 0.7,
+  "late_morae": 2
+ },
+ "anchor": "plateau"
+}

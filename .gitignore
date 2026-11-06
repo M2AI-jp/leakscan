@@ -6,3 +6,10 @@ node_modules/
 .cf-dns-token
 .wrangler/
 dist/
+
+# 動画の中間生成物（promo/v2/build.sh が作り直す）
+promo/v2/frames/
+promo/v2/audio.wav
+promo/v2/vo/*.default.wav
+promo/v2/vo/*.weak.wav
+promo/v2/vo/*.strong.wav

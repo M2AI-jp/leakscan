@@ -1,0 +1,1550 @@
+{
+ "batch": "vo",
+ "params": {
+  "l1": 0.15,
+  "l2": 0.3,
+  "cap": 3.0,
+  "deadband": 0.3
+ },
+ "order": [
+  "n_scale",
+  "n_yours",
+  "n_how",
+  "n_safe",
+  "n_what",
+  "n_cta"
+ ],
+ "note": "VOICEPEAK i offsets per mora, solved from delta with the measured response kernel (okoads.intonation.i_solver). Use okoads.voicepeak.inject_i on the GUI-saved dummy_input.vpp.",
+ "blocks": [
+  {
+   "id": "n_scale",
+   "narrator": "Speaker/f5",
+   "text": "2026年に公表された情報漏洩は、ごひゃくななじゅうよん件。",
+   "sentences": [
+    {
+     "text": "2026年に公表された情報漏洩は、ごひゃくななじゅうよん件。",
+     "morae": [
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "セ",
+       "phones": [
+        "s",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ジュ",
+       "phones": [
+        "j",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ロ",
+       "phones": [
+        "r",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ネ",
+       "phones": [
+        "n",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "コ",
+       "phones": [
+        "k",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ヒョ",
+       "phones": [
+        "hy",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "サ",
+       "phones": [
+        "s",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "レ",
+       "phones": [
+        "r",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "タ",
+       "phones": [
+        "t",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ジョ",
+       "phones": [
+        "j",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ホ",
+       "phones": [
+        "h",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ロ",
+       "phones": [
+        "r",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "エ",
+       "phones": [
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ワ",
+       "phones": [
+        "w",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ゴ",
+       "phones": [
+        "g",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ヒャ",
+       "phones": [
+        "hy",
+        "a"
+       ],
+       "i": -0.29,
+       "delta_st": -0.5494
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": -0.16,
+       "delta_st": -0.5452
+      },
+      {
+       "kana": "ナ",
+       "phones": [
+        "n",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ナ",
+       "phones": [
+        "n",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": -0.1596
+      },
+      {
+       "kana": "ジュ",
+       "phones": [
+        "j",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": -0.1628
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ヨ",
+       "phones": [
+        "y",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ケ",
+       "phones": [
+        "k",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n_yours",
+   "narrator": "Speaker/f5",
+   "text": "あなたが使っているサービスは、その中にありますか。",
+   "sentences": [
+    {
+     "text": "あなたが使っているサービスは、その中にありますか。",
+     "morae": [
+      {
+       "kana": "ア",
+       "phones": [
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ナ",
+       "phones": [
+        "n",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "タ",
+       "phones": [
+        "t",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ガ",
+       "phones": [
+        "g",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ツ",
+       "phones": [
+        "ts",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "カ",
+       "phones": [
+        "k",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ッ",
+       "phones": [
+        "cl"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "テ",
+       "phones": [
+        "t",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "イ",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ル",
+       "phones": [
+        "r",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "サ",
+       "phones": [
+        "s",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ビ",
+       "phones": [
+        "b",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ワ",
+       "phones": [
+        "w",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ソ",
+       "phones": [
+        "s",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ノ",
+       "phones": [
+        "n",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ナ",
+       "phones": [
+        "n",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "カ",
+       "phones": [
+        "k",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ア",
+       "phones": [
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "マ",
+       "phones": [
+        "m",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "カ",
+       "phones": [
+        "k",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n_how",
+   "narrator": "Speaker/f5",
+   "text": "リークスキャンは、ジーメールのさしだしにんだけを見て照合します。",
+   "sentences": [
+    {
+     "text": "リークスキャンは、ジーメールのさしだしにんだけを見て照合します。",
+     "morae": [
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ワ",
+       "phones": [
+        "w",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ジ",
+       "phones": [
+        "j",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "メ",
+       "phones": [
+        "m",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ル",
+       "phones": [
+        "r",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ノ",
+       "phones": [
+        "n",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "サ",
+       "phones": [
+        "s",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "シ",
+       "phones": [
+        "sh",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ダ",
+       "phones": [
+        "d",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "シ",
+       "phones": [
+        "sh",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ダ",
+       "phones": [
+        "d",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ケ",
+       "phones": [
+        "k",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ヲ",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ミ",
+       "phones": [
+        "m",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "テ",
+       "phones": [
+        "t",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ショ",
+       "phones": [
+        "sh",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ゴ",
+       "phones": [
+        "g",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "シ",
+       "phones": [
+        "sh",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "マ",
+       "phones": [
+        "m",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n_safe",
+   "narrator": "Speaker/f5",
+   "text": "本文は読みません。外部にも送りません。",
+   "sentences": [
+    {
+     "text": "本文は読みません。",
+     "morae": [
+      {
+       "kana": "ホ",
+       "phones": [
+        "h",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ブ",
+       "phones": [
+        "b",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ワ",
+       "phones": [
+        "w",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ヨ",
+       "phones": [
+        "y",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ミ",
+       "phones": [
+        "m",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "マ",
+       "phones": [
+        "m",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "セ",
+       "phones": [
+        "s",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    },
+    {
+     "text": "外部にも送りません。",
+     "morae": [
+      {
+       "kana": "ガ",
+       "phones": [
+        "g",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "イ",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ブ",
+       "phones": [
+        "b",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "モ",
+       "phones": [
+        "m",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "オ",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "マ",
+       "phones": [
+        "m",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "セ",
+       "phones": [
+        "s",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n_what",
+   "narrator": "Speaker/f5",
+   "text": "何が漏れて、何をすべきか。1、2分でわかります。",
+   "sentences": [
+    {
+     "text": "何が漏れて、何をすべきか。",
+     "morae": [
+      {
+       "kana": "ナ",
+       "phones": [
+        "n",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ガ",
+       "phones": [
+        "g",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "モ",
+       "phones": [
+        "m",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "レ",
+       "phones": [
+        "r",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "テ",
+       "phones": [
+        "t",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ナ",
+       "phones": [
+        "n",
+        "a"
+       ],
+       "i": -0.24,
+       "delta_st": -0.395
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": -0.22,
+       "delta_st": -0.6775
+      },
+      {
+       "kana": "ヲ",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ベ",
+       "phones": [
+        "b",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キ",
+       "phones": [
+        "k",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "カ",
+       "phones": [
+        "k",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    },
+    {
+     "text": "1、2分でわかります。",
+     "morae": [
+      {
+       "kana": "イ",
+       "phones": [
+        "i"
+       ],
+       "i": 0.07,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "チ",
+       "phones": [
+        "ch",
+        "i"
+       ],
+       "i": -0.07,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ニ",
+       "phones": [
+        "n",
+        "i"
+       ],
+       "i": -0.93,
+       "delta_st": -1.808
+      },
+      {
+       "kana": "フ",
+       "phones": [
+        "h",
+        "u"
+       ],
+       "i": -0.73,
+       "delta_st": -1.8597
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": -0.28,
+       "delta_st": -0.8269
+      },
+      {
+       "kana": "デ",
+       "phones": [
+        "d",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ワ",
+       "phones": [
+        "w",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "カ",
+       "phones": [
+        "k",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "マ",
+       "phones": [
+        "m",
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "n_cta",
+   "narrator": "Speaker/f5",
+   "text": "無料、登録不要。クロームウェブストアで、リークスキャン。",
+   "sentences": [
+    {
+     "text": "無料、登録不要。",
+     "morae": [
+      {
+       "kana": "ム",
+       "phones": [
+        "m",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "リョ",
+       "phones": [
+        "ry",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ト",
+       "phones": [
+        "t",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ロ",
+       "phones": [
+        "r",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "フ",
+       "phones": [
+        "h",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ヨ",
+       "phones": [
+        "y",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    },
+    {
+     "text": "クロームウェブストアで、リークスキャン。",
+     "morae": [
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ロ",
+       "phones": [
+        "r",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ム",
+       "phones": [
+        "m",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ウェ",
+       "phones": [
+        "w",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ブ",
+       "phones": [
+        "b",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ト",
+       "phones": [
+        "t",
+        "o"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ア",
+       "phones": [
+        "a"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "デ",
+       "phones": [
+        "d",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "リ",
+       "phones": [
+        "r",
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ー",
+       "phones": [
+        "i"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ク",
+       "phones": [
+        "k",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ス",
+       "phones": [
+        "s",
+        "u"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "キャ",
+       "phones": [
+        "ky",
+        "e"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      },
+      {
+       "kana": "ン",
+       "phones": [
+        "N"
+       ],
+       "i": 0.0,
+       "delta_st": 0.0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

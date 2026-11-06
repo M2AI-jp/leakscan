@@ -1,0 +1,31 @@
+[
+ {"id": "n_scale", "narrator": "Speaker/f5",
+  "say": "2026年に公表された情報漏洩は、ごひゃくななじゅうよん件。",
+  "display": "2026年に公表された情報漏洩 574件",
+  "notes": "出典：data/stats.json incidents=574。読みを明示（「570よけん」に聞こえたため）。延べ6.22億件は重複を含むので人数として言わない"},
+
+ {"id": "n_yours", "narrator": "Speaker/f5",
+  "say": "あなたが使っているサービスは、その中にありますか。",
+  "display": "あなたのサービスは、その中に？",
+  "notes": "問いかけにとどめ、断定しない"},
+
+ {"id": "n_how",   "narrator": "Speaker/f5",
+  "say": "リークスキャンは、ジーメールのさしだしにんだけを見て照合します。",
+  "display": "Gmailの差出人だけを見て照合",
+  "notes": "出典：extension/content/gmail.js は span[email] のみ読む。読みを明示（「さしだしじん」に聞こえたため）"},
+
+ {"id": "n_safe",  "narrator": "Speaker/f5",
+  "say": "本文は読みません。外部にも送りません。",
+  "display": "本文は読まない／外部送信なし",
+  "notes": "出典：site/index.html「通信は漏洩データを受け取る1種類だけ。送信する処理がなく…」"},
+
+ {"id": "n_what",  "narrator": "Speaker/f5",
+  "say": "何が漏れて、何をすべきか。1、2分でわかります。",
+  "display": "何が漏れて、何をすべきか",
+  "notes": "出典：site/index.html「1〜2分で結果が出ます」"},
+
+ {"id": "n_cta",   "narrator": "Speaker/f5",
+  "say": "無料、登録不要。クロームウェブストアで、リークスキャン。",
+  "display": "無料・登録不要",
+  "notes": "出典：site/index.html「完全無料」「登録不要」。ストア公開済み"}
+]

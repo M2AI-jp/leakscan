@@ -1,0 +1,1353 @@
+{
+ "id": "n_what",
+ "narrator": "Speaker/f5",
+ "say": "何が漏れて、何をすべきか。1、2分でわかります。",
+ "display": "何が漏れて、何をすべきか",
+ "shipped": null,
+ "input_flags": [],
+ "notes": "出典：site/index.html「1〜2分で結果が出ます」",
+ "sentences": [
+  {
+   "text": "何が漏れて、何をすべきか。",
+   "median_st": 16.895,
+   "morae": [
+    {
+     "kana": "ナ",
+     "ph": "na",
+     "phones": [
+      "n",
+      "a"
+     ],
+     "token_text": "何",
+     "pos": 4097,
+     "ap": 0,
+     "mora_in_ap": 1,
+     "acc_type": 1,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": true,
+     "final": false,
+     "t0": 0.05,
+     "t1": 0.235,
+     "vowel_t0": 0.13,
+     "vowel_t1": 0.235,
+     "quality": 0.0,
+     "ojt_phones": [
+      "n",
+      "a"
+     ],
+     "heard_kana": "ナ",
+     "unaligned": null,
+     "D": 20.641,
+     "T": 20.641,
+     "delta": 0.0,
+     "after": 20.641,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ニ",
+     "ph": "ni",
+     "phones": [
+      "n",
+      "i"
+     ],
+     "token_text": "何",
+     "pos": 4097,
+     "ap": 0,
+     "mora_in_ap": 2,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.235,
+     "t1": 0.35,
+     "vowel_t0": 0.27,
+     "vowel_t1": 0.35,
+     "quality": 0.0,
+     "ojt_phones": [
+      "n",
+      "i"
+     ],
+     "heard_kana": "ニ",
+     "unaligned": null,
+     "D": 23.023,
+     "T": 23.023,
+     "delta": 0.0,
+     "after": 23.023,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ガ",
+     "ph": "ga",
+     "phones": [
+      "g",
+      "a"
+     ],
+     "token_text": "が",
+     "pos": 4104,
+     "ap": 0,
+     "mora_in_ap": 3,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.35,
+     "t1": 0.475,
+     "vowel_t0": 0.39,
+     "vowel_t1": 0.475,
+     "quality": 0.0,
+     "ojt_phones": [
+      "g",
+      "a"
+     ],
+     "heard_kana": "ガ",
+     "unaligned": null,
+     "D": 18.191,
+     "T": 18.191,
+     "delta": 0.0,
+     "after": 18.191,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "モ",
+     "ph": "mo",
+     "phones": [
+      "m",
+      "o"
+     ],
+     "token_text": "漏れ",
+     "pos": 4101,
+     "ap": 1,
+     "mora_in_ap": 1,
+     "acc_type": 1,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.475,
+     "t1": 0.61,
+     "vowel_t0": 0.535,
+     "vowel_t1": 0.61,
+     "quality": 0.0,
+     "ojt_phones": [
+      "m",
+      "o"
+     ],
+     "heard_kana": "モ",
+     "unaligned": null,
+     "D": 16.47,
+     "T": 16.47,
+     "delta": 0.0,
+     "after": 16.47,
+     "i": 0.0,
+     "i_pred_st": 0.009
+    },
+    {
+     "kana": "レ",
+     "ph": "re",
+     "phones": [
+      "r",
+      "e"
+     ],
+     "token_text": "漏れ",
+     "pos": 4101,
+     "ap": 1,
+     "mora_in_ap": 2,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.61,
+     "t1": 0.705,
+     "vowel_t0": 0.635,
+     "vowel_t1": 0.705,
+     "quality": 0.0,
+     "ojt_phones": [
+      "r",
+      "e"
+     ],
+     "heard_kana": "レ",
+     "unaligned": null,
+     "D": 17.319,
+     "T": 17.319,
+     "delta": 0.0,
+     "after": 17.319,
+     "i": 0.0,
+     "i_pred_st": -0.005
+    },
+    {
+     "kana": "テ",
+     "ph": "te",
+     "phones": [
+      "t",
+      "e"
+     ],
+     "token_text": "て",
+     "pos": 4104,
+     "ap": 1,
+     "mora_in_ap": 3,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.705,
+     "t1": 0.92,
+     "vowel_t0": 0.78,
+     "vowel_t1": 0.92,
+     "quality": 0.0,
+     "ojt_phones": [
+      "t",
+      "e"
+     ],
+     "heard_kana": "テ",
+     "unaligned": null,
+     "D": 12.538,
+     "T": 12.538,
+     "delta": 0.0,
+     "after": 12.538,
+     "i": 0.0,
+     "i_pred_st": -0.065
+    },
+    {
+     "kana": "ナ",
+     "ph": "na",
+     "phones": [
+      "n",
+      "a"
+     ],
+     "token_text": "何",
+     "pos": 4097,
+     "ap": 2,
+     "mora_in_ap": 1,
+     "acc_type": 1,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": true,
+     "final": false,
+     "t0": 1.25,
+     "t1": 1.43,
+     "vowel_t0": 1.33,
+     "vowel_t1": 1.43,
+     "quality": 0.0,
+     "ojt_phones": [
+      "n",
+      "a"
+     ],
+     "heard_kana": "ナ",
+     "unaligned": null,
+     "D": 19.584,
+     "T": 19.189,
+     "delta": -0.395,
+     "after": 19.174,
+     "i": -0.24,
+     "i_pred_st": -0.381
+    },
+    {
+     "kana": "ニ",
+     "ph": "ni",
+     "phones": [
+      "n",
+      "i"
+     ],
+     "token_text": "何",
+     "pos": 4097,
+     "ap": 2,
+     "mora_in_ap": 2,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.43,
+     "t1": 1.575,
+     "vowel_t0": 1.465,
+     "vowel_t1": 1.575,
+     "quality": 2.6,
+     "ojt_phones": [
+      "n",
+      "i"
+     ],
+     "heard_kana": "ニ",
+     "unaligned": null,
+     "D": 21.508,
+     "T": 20.83,
+     "delta": -0.6775,
+     "after": 20.793,
+     "i": -0.22,
+     "i_pred_st": -0.493
+    },
+    {
+     "kana": "ヲ",
+     "ph": "o",
+     "phones": [
+      "o"
+     ],
+     "token_text": "を",
+     "pos": 4104,
+     "ap": 2,
+     "mora_in_ap": 3,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 2,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.575,
+     "t1": 1.655,
+     "vowel_t0": 1.575,
+     "vowel_t1": 1.655,
+     "quality": 0.0,
+     "ojt_phones": [
+      "o"
+     ],
+     "heard_kana": "オ",
+     "unaligned": null,
+     "D": 16.1,
+     "T": 16.1,
+     "delta": 0.0,
+     "after": 16.13,
+     "i": 0.0,
+     "i_pred_st": -0.135
+    },
+    {
+     "kana": "ス",
+     "ph": "su",
+     "phones": [
+      "s",
+      "u"
+     ],
+     "token_text": "す",
+     "pos": 4101,
+     "ap": 2,
+     "mora_in_ap": 4,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 3,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.655,
+     "t1": 1.81,
+     "vowel_t0": 1.765,
+     "vowel_t1": 1.81,
+     "quality": 0.0,
+     "ojt_phones": [
+      "s",
+      "u"
+     ],
+     "heard_kana": "ス",
+     "unaligned": null,
+     "D": 14.971,
+     "T": 14.971,
+     "delta": 0.0,
+     "after": 14.971,
+     "i": 0.0,
+     "i_pred_st": 0.06
+    },
+    {
+     "kana": "ベ",
+     "ph": "be",
+     "phones": [
+      "b",
+      "e"
+     ],
+     "token_text": "べき",
+     "pos": 4103,
+     "ap": 2,
+     "mora_in_ap": 5,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 4,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.81,
+     "t1": 1.915,
+     "vowel_t0": 1.845,
+     "vowel_t1": 1.915,
+     "quality": 59.0,
+     "ojt_phones": [
+      "b",
+      "e"
+     ],
+     "heard_kana": "ベ",
+     "unaligned": null,
+     "D": 16.269,
+     "T": 16.269,
+     "delta": 0.0,
+     "after": 16.269,
+     "i": 0.0,
+     "i_pred_st": 0.023
+    },
+    {
+     "kana": "キ",
+     "ph": "ki",
+     "phones": [
+      "k",
+      "i"
+     ],
+     "token_text": "べき",
+     "pos": 4103,
+     "ap": 2,
+     "mora_in_ap": 6,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 5,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.915,
+     "t1": 2.015,
+     "vowel_t0": 1.995,
+     "vowel_t1": 2.015,
+     "quality": 4.1,
+     "ojt_phones": [
+      "k",
+      "i"
+     ],
+     "heard_kana": "キ",
+     "unaligned": null,
+     "D": null,
+     "T": null,
+     "delta": 0.0,
+     "after": null,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "カ",
+     "ph": "ka",
+     "phones": [
+      "k",
+      "a"
+     ],
+     "token_text": "か",
+     "pos": 4104,
+     "ap": 2,
+     "mora_in_ap": 7,
+     "acc_type": 1,
+     "high": 0,
+     "rel_nucleus": 6,
+     "after_pause": false,
+     "final": true,
+     "t0": 2.015,
+     "t1": 2.215,
+     "vowel_t0": 2.08,
+     "vowel_t1": 2.215,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "a"
+     ],
+     "heard_kana": "カ",
+     "unaligned": null,
+     "D": 13.035,
+     "T": 13.035,
+     "delta": 0.0,
+     "after": 13.039,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    }
+   ],
+   "phrases": [
+    {
+     "ap": 0,
+     "morae": [
+      0,
+      1,
+      2
+     ],
+     "text": "ナニガ",
+     "position": "utterance_initial",
+     "kind": "head_high",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 6.82,
+     "cap_st": 23.72,
+     "peak_re_median": 6.13
+    },
+    {
+     "ap": 1,
+     "morae": [
+      3,
+      4,
+      5
+     ],
+     "text": "モレテ",
+     "position": "mid_breath_group",
+     "kind": "head_high",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 5.7,
+     "cap_st": 22.59,
+     "peak_re_median": 0.42
+    },
+    {
+     "ap": 2,
+     "morae": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "text": "ナニヲスベキカ",
+     "position": "utterance_final",
+     "kind": "head_high",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 3.65,
+     "cap_st": 20.54,
+     "peak_re_median": 4.61
+    }
+   ],
+   "rules": [
+    {
+     "rule": "peak_cap",
+     "ap": 2,
+     "morae": [
+      6,
+      7
+     ],
+     "peak_mora": 7,
+     "excess_st": 0.97,
+     "lowered_by_st": 0.68,
+     "reason": "一般の句「ナニヲスベキカ」: 山 +4.6 st（文の中央値比）> 上限 +3.6 st（人の読み上げ p90、文末の句・頭高）→ 山を 0.7 st 下げる"
+    }
+   ],
+   "capped_morae": [],
+   "align": {
+    "engine": "okoads.align.text",
+    "reading_source": "openjtalk",
+    "confidence": 0.3741,
+    "confidence_threshold": 0.3,
+    "low_confidence": false,
+    "max_margin": null,
+    "qc": "confidence (< 0.3 = likely reading mismatch)",
+    "suspects": [
+     {
+      "index": 11,
+      "kana": "ベ",
+      "deficit": 59.0,
+      "heard": [
+       "d",
+       "e"
+      ]
+     }
+    ],
+    "repairs": [],
+    "note": null,
+    "unaligned_morae": [],
+    "words_ok": true,
+    "reading": "Open JTalk",
+    "reading_diffs": [],
+    "features": "Open JTalk"
+   },
+   "psola": {
+    "anchor": "plateau",
+    "share_resynthesised": 0.2848,
+    "identity_mora_err_st_max": 0.179,
+    "identity_mora_err_st_mean": 0.038,
+    "identity_lsd_db": 4.761,
+    "identity_mcd_db": 0.671,
+    "corrected_mcd_db": 0.266,
+    "identity_mora_errs_st": [
+     0.042,
+     0.005,
+     0.013,
+     0.005,
+     0.043,
+     0.043,
+     0.01,
+     0.053,
+     0.179,
+     0.007,
+     0.032,
+     0.02
+    ],
+    "corrected_lsd_db": 2.327
+   },
+   "contour": {
+    "rmse_all_st": 0.015,
+    "rmse_changed_st": 0.028,
+    "maxerr_changed_st": 0.037,
+    "n_changed": 2
+   },
+   "i_fit": {
+    "rmse_st": 0.068,
+    "n_nonzero": 2
+   },
+   "variants": {
+    "weak": {
+     "params": {
+      "k_peak": 0.4,
+      "q_classA": "p50",
+      "q_other": "p90",
+      "k_late": 0.7,
+      "late_morae": 2
+     },
+     "delta": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.2257,
+      -0.3871,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "capped_morae": [],
+     "rules": [
+      {
+       "rule": "peak_cap",
+       "ap": 2,
+       "morae": [
+        6,
+        7
+       ],
+       "peak_mora": 7,
+       "excess_st": 0.97,
+       "lowered_by_st": 0.39,
+       "reason": "一般の句「ナニヲスベキカ」: 山 +4.6 st（文の中央値比）> 上限 +3.6 st（人の読み上げ p90、文末の句・頭高）→ 山を 0.4 st 下げる"
+      }
+     ],
+     "max_abs_delta_st": 0.387,
+     "n_changed": 2,
+     "contour_rmse_changed_st": 0.03,
+     "share_resynthesised": 0.2815
+    },
+    "strong": {
+     "params": {
+      "k_peak": 1.0,
+      "q_classA": "p10",
+      "q_other": "p90",
+      "k_late": 0.7,
+      "late_morae": 2
+     },
+     "delta": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.5642,
+      -0.9678,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "capped_morae": [],
+     "rules": [
+      {
+       "rule": "peak_cap",
+       "ap": 2,
+       "morae": [
+        6,
+        7
+       ],
+       "peak_mora": 7,
+       "excess_st": 0.97,
+       "lowered_by_st": 0.97,
+       "reason": "一般の句「ナニヲスベキカ」: 山 +4.6 st（文の中央値比）> 上限 +3.6 st（人の読み上げ p90、文末の句・頭高）→ 山を 1.0 st 下げる"
+      }
+     ],
+     "max_abs_delta_st": 0.968,
+     "n_changed": 2,
+     "contour_rmse_changed_st": 0.027,
+     "share_resynthesised": 0.2861
+    }
+   }
+  },
+  {
+   "text": "1、2分でわかります。",
+   "median_st": 18.089,
+   "morae": [
+    {
+     "kana": "イ",
+     "ph": "i",
+     "phones": [
+      "i"
+     ],
+     "token_text": "一",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 1,
+     "acc_type": 2,
+     "high": 0,
+     "rel_nucleus": -1,
+     "after_pause": true,
+     "final": false,
+     "t0": 0.05,
+     "t1": 0.13,
+     "vowel_t0": 0.05,
+     "vowel_t1": 0.13,
+     "quality": 0.7,
+     "ojt_phones": [
+      "i"
+     ],
+     "heard_kana": "イ",
+     "unaligned": null,
+     "D": 13.633,
+     "T": 13.633,
+     "delta": 0.0,
+     "after": 13.633,
+     "i": 0.07,
+     "i_pred_st": 0.086
+    },
+    {
+     "kana": "チ",
+     "ph": "chi",
+     "phones": [
+      "ch",
+      "i"
+     ],
+     "token_text": "一",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 2,
+     "acc_type": 2,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.13,
+     "t1": 0.285,
+     "vowel_t0": 0.225,
+     "vowel_t1": 0.285,
+     "quality": 0.0,
+     "ojt_phones": [
+      "ch",
+      "i"
+     ],
+     "heard_kana": "チ",
+     "unaligned": null,
+     "D": 20.746,
+     "T": 20.746,
+     "delta": 0.0,
+     "after": 20.813,
+     "i": -0.07,
+     "i_pred_st": -0.277
+    },
+    {
+     "kana": "ニ",
+     "ph": "ni",
+     "phones": [
+      "n",
+      "i"
+     ],
+     "token_text": "二",
+     "pos": 4096,
+     "ap": 0,
+     "mora_in_ap": 3,
+     "acc_type": 2,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.285,
+     "t1": 0.39,
+     "vowel_t0": 0.32,
+     "vowel_t1": 0.39,
+     "quality": 0.0,
+     "ojt_phones": [
+      "n",
+      "i"
+     ],
+     "heard_kana": "ニ",
+     "unaligned": null,
+     "D": 23.328,
+     "T": 21.52,
+     "delta": -1.808,
+     "after": 21.607,
+     "i": -0.93,
+     "i_pred_st": -1.532
+    },
+    {
+     "kana": "フ",
+     "ph": "hu",
+     "phones": [
+      "h",
+      "u"
+     ],
+     "token_text": "分",
+     "pos": 4106,
+     "ap": 0,
+     "mora_in_ap": 4,
+     "acc_type": 2,
+     "high": 0,
+     "rel_nucleus": 2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.39,
+     "t1": 0.545,
+     "vowel_t0": 0.465,
+     "vowel_t1": 0.545,
+     "quality": 150.0,
+     "ojt_phones": [
+      "f",
+      "u"
+     ],
+     "heard_kana": "フ",
+     "unaligned": null,
+     "D": 23.402,
+     "T": 21.543,
+     "delta": -1.8597,
+     "after": 21.566,
+     "i": -0.73,
+     "i_pred_st": -1.8
+    },
+    {
+     "kana": "ン",
+     "ph": "N",
+     "phones": [
+      "N"
+     ],
+     "token_text": "分",
+     "pos": 4106,
+     "ap": 0,
+     "mora_in_ap": 5,
+     "acc_type": 2,
+     "high": 0,
+     "rel_nucleus": 3,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.545,
+     "t1": 0.615,
+     "vowel_t0": 0.545,
+     "vowel_t1": 0.615,
+     "quality": 0.0,
+     "ojt_phones": [
+      "N"
+     ],
+     "heard_kana": "ン",
+     "unaligned": null,
+     "D": 21.927,
+     "T": 21.1,
+     "delta": -0.8269,
+     "after": 21.111,
+     "i": -0.28,
+     "i_pred_st": -0.807
+    },
+    {
+     "kana": "デ",
+     "ph": "de",
+     "phones": [
+      "d",
+      "e"
+     ],
+     "token_text": "で",
+     "pos": 4104,
+     "ap": 0,
+     "mora_in_ap": 6,
+     "acc_type": 2,
+     "high": 0,
+     "rel_nucleus": 4,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.615,
+     "t1": 0.735,
+     "vowel_t0": 0.65,
+     "vowel_t1": 0.735,
+     "quality": 2.2,
+     "ojt_phones": [
+      "d",
+      "e"
+     ],
+     "heard_kana": "デ",
+     "unaligned": null,
+     "D": 19.035,
+     "T": 19.035,
+     "delta": 0.0,
+     "after": 19.016,
+     "i": 0.0,
+     "i_pred_st": -0.008
+    },
+    {
+     "kana": "ワ",
+     "ph": "wa",
+     "phones": [
+      "w",
+      "a"
+     ],
+     "token_text": "わかり",
+     "pos": 4101,
+     "ap": 1,
+     "mora_in_ap": 1,
+     "acc_type": 4,
+     "high": 0,
+     "rel_nucleus": -3,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.735,
+     "t1": 0.83,
+     "vowel_t0": 0.76,
+     "vowel_t1": 0.83,
+     "quality": 0.0,
+     "ojt_phones": [
+      "w",
+      "a"
+     ],
+     "heard_kana": "ワ",
+     "unaligned": null,
+     "D": 14.36,
+     "T": 14.36,
+     "delta": 0.0,
+     "after": 14.387,
+     "i": 0.0,
+     "i_pred_st": 0.12
+    },
+    {
+     "kana": "カ",
+     "ph": "ka",
+     "phones": [
+      "k",
+      "a"
+     ],
+     "token_text": "わかり",
+     "pos": 4101,
+     "ap": 1,
+     "mora_in_ap": 2,
+     "acc_type": 4,
+     "high": 1,
+     "rel_nucleus": -2,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.83,
+     "t1": 0.965,
+     "vowel_t0": 0.9,
+     "vowel_t1": 0.965,
+     "quality": 0.0,
+     "ojt_phones": [
+      "k",
+      "a"
+     ],
+     "heard_kana": "カ",
+     "unaligned": null,
+     "D": 16.746,
+     "T": 16.746,
+     "delta": 0.0,
+     "after": 16.746,
+     "i": 0.0,
+     "i_pred_st": 0.029
+    },
+    {
+     "kana": "リ",
+     "ph": "ri",
+     "phones": [
+      "r",
+      "i"
+     ],
+     "token_text": "わかり",
+     "pos": 4101,
+     "ap": 1,
+     "mora_in_ap": 3,
+     "acc_type": 4,
+     "high": 1,
+     "rel_nucleus": -1,
+     "after_pause": false,
+     "final": false,
+     "t0": 0.965,
+     "t1": 1.055,
+     "vowel_t0": 0.99,
+     "vowel_t1": 1.055,
+     "quality": 0.0,
+     "ojt_phones": [
+      "r",
+      "i"
+     ],
+     "heard_kana": "リ",
+     "unaligned": null,
+     "D": 16.946,
+     "T": 16.946,
+     "delta": 0.0,
+     "after": 16.946,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "マ",
+     "ph": "ma",
+     "phones": [
+      "m",
+      "a"
+     ],
+     "token_text": "ます",
+     "pos": 4103,
+     "ap": 1,
+     "mora_in_ap": 4,
+     "acc_type": 4,
+     "high": 1,
+     "rel_nucleus": 0,
+     "after_pause": false,
+     "final": false,
+     "t0": 1.055,
+     "t1": 1.18,
+     "vowel_t0": 1.1,
+     "vowel_t1": 1.18,
+     "quality": 0.0,
+     "ojt_phones": [
+      "m",
+      "a"
+     ],
+     "heard_kana": "マ",
+     "unaligned": null,
+     "D": 17.143,
+     "T": 17.143,
+     "delta": 0.0,
+     "after": 17.143,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    },
+    {
+     "kana": "ス",
+     "ph": "su",
+     "phones": [
+      "s",
+      "u"
+     ],
+     "token_text": "ます",
+     "pos": 4103,
+     "ap": 1,
+     "mora_in_ap": 5,
+     "acc_type": 4,
+     "high": 0,
+     "rel_nucleus": 1,
+     "after_pause": false,
+     "final": true,
+     "t0": 1.18,
+     "t1": 1.355,
+     "vowel_t0": 1.325,
+     "vowel_t1": 1.355,
+     "quality": 0.0,
+     "ojt_phones": [
+      "s",
+      "u"
+     ],
+     "heard_kana": "ス",
+     "unaligned": null,
+     "D": null,
+     "T": null,
+     "delta": 0.0,
+     "after": null,
+     "i": 0.0,
+     "i_pred_st": 0.0
+    }
+   ],
+   "phrases": [
+    {
+     "ap": 0,
+     "morae": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "text": "イチニフンデ",
+     "position": "utterance_initial",
+     "kind": "accented",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 6.74,
+     "cap_st": 24.83,
+     "peak_re_median": 5.31
+    },
+    {
+     "ap": 1,
+     "morae": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "text": "ワカリマス",
+     "position": "utterance_final",
+     "kind": "accented",
+     "class": "other",
+     "class_reason": null,
+     "quantile": "p90",
+     "cap_re_median": 3.51,
+     "cap_st": 21.6,
+     "peak_re_median": -0.95
+    }
+   ],
+   "rules": [
+    {
+     "rule": "late_peak",
+     "ap": 0,
+     "morae": [
+      2,
+      3,
+      4
+     ],
+     "nucleus_mora": 1,
+     "peak_mora": 3,
+     "reason": "「イチニフンデ」: 山がアクセント核（チ）の2拍後（フ）→ 核より後の拍を核の高さへ70%寄せる（人は中央値1.1拍）"
+    }
+   ],
+   "capped_morae": [],
+   "align": {
+    "engine": "okoads.align.text",
+    "reading_source": "openjtalk",
+    "confidence": 0.0821,
+    "confidence_threshold": 0.3,
+    "low_confidence": true,
+    "max_margin": null,
+    "qc": "confidence (< 0.3 = likely reading mismatch)",
+    "suspects": [
+     {
+      "index": 3,
+      "kana": "フ",
+      "deficit": 150.0,
+      "heard": [
+       "k",
+       "u"
+      ]
+     }
+    ],
+    "repairs": [],
+    "note": null,
+    "unaligned_morae": [],
+    "words_ok": true,
+    "reading": "Open JTalk",
+    "reading_diffs": [],
+    "features": "Open JTalk"
+   },
+   "psola": {
+    "anchor": "plateau",
+    "share_resynthesised": 0.3429,
+    "identity_mora_err_st_max": 0.069,
+    "identity_mora_err_st_mean": 0.032,
+    "identity_lsd_db": 4.667,
+    "identity_mcd_db": 1.097,
+    "corrected_mcd_db": 0.701,
+    "identity_mora_errs_st": [
+     0.053,
+     0.069,
+     0.028,
+     0.004,
+     0.008,
+     0.01,
+     0.04,
+     0.014,
+     0.039,
+     0.05
+    ],
+    "corrected_lsd_db": 4.399
+   },
+   "contour": {
+    "rmse_all_st": 0.037,
+    "rmse_changed_st": 0.052,
+    "maxerr_changed_st": 0.086,
+    "n_changed": 3
+   },
+   "i_fit": {
+    "rmse_st": 0.128,
+    "n_nonzero": 5
+   },
+   "variants": {
+    "weak": {
+     "params": {
+      "k_peak": 0.4,
+      "q_classA": "p50",
+      "q_other": "p90",
+      "k_late": 0.7,
+      "late_morae": 2
+     },
+     "delta": [
+      0.0,
+      0.0,
+      -1.808,
+      -1.8597,
+      -0.8269,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "capped_morae": [],
+     "rules": [
+      {
+       "rule": "late_peak",
+       "ap": 0,
+       "morae": [
+        2,
+        3,
+        4
+       ],
+       "nucleus_mora": 1,
+       "peak_mora": 3,
+       "reason": "「イチニフンデ」: 山がアクセント核（チ）の2拍後（フ）→ 核より後の拍を核の高さへ70%寄せる（人は中央値1.1拍）"
+      }
+     ],
+     "max_abs_delta_st": 1.86,
+     "n_changed": 3,
+     "contour_rmse_changed_st": 0.052,
+     "share_resynthesised": 0.3429
+    },
+    "strong": {
+     "params": {
+      "k_peak": 1.0,
+      "q_classA": "p10",
+      "q_other": "p90",
+      "k_late": 0.7,
+      "late_morae": 2
+     },
+     "delta": [
+      0.0,
+      0.0,
+      -1.808,
+      -1.8597,
+      -0.8269,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "capped_morae": [],
+     "rules": [
+      {
+       "rule": "late_peak",
+       "ap": 0,
+       "morae": [
+        2,
+        3,
+        4
+       ],
+       "nucleus_mora": 1,
+       "peak_mora": 3,
+       "reason": "「イチニフンデ」: 山がアクセント核（チ）の2拍後（フ）→ 核より後の拍を核の高さへ70%寄せる（人は中央値1.1拍）"
+      }
+     ],
+     "max_abs_delta_st": 1.86,
+     "n_changed": 3,
+     "contour_rmse_changed_st": 0.052,
+     "share_resynthesised": 0.3429
+    }
+   }
+  }
+ ],
+ "renders": [
+  ".cache/voicepeak-cli/f5/a0fc2e44c00501e4a63f.wav",
+  ".cache/voicepeak-cli/f5/76b2441381420dc46395.wav"
+ ],
+ "variants": {
+  "standard": {
+   "wav": "n_what.wav",
+   "params": {
+    "k_peak": 0.7,
+    "q_classA": "p25",
+    "q_other": "p90",
+    "k_late": 0.7,
+    "late_morae": 2
+   },
+   "changed": true
+  },
+  "weak": {
+   "params": {
+    "k_peak": 0.4,
+    "q_classA": "p50",
+    "q_other": "p90",
+    "k_late": 0.7,
+    "late_morae": 2
+   },
+   "changed": true,
+   "identical_to_standard": false,
+   "max_abs_delta_st": 1.86,
+   "n_morae_changed": 5,
+   "rules_count": {
+    "peak_cap": 1,
+    "late_peak": 1
+   },
+   "wav": "n_what.weak.wav"
+  },
+  "strong": {
+   "params": {
+    "k_peak": 1.0,
+    "q_classA": "p10",
+    "q_other": "p90",
+    "k_late": 0.7,
+    "late_morae": 2
+   },
+   "changed": true,
+   "identical_to_standard": false,
+   "max_abs_delta_st": 1.86,
+   "n_morae_changed": 5,
+   "rules_count": {
+    "peak_cap": 1,
+    "late_peak": 1
+   },
+   "wav": "n_what.strong.wav"
+  }
+ },
+ "corrected": true,
+ "wav": "n_what.wav",
+ "default_wav": "n_what.default.wav",
+ "max_abs_delta_st": 1.86,
+ "n_morae": 24,
+ "n_morae_changed": 5,
+ "rules_count": {
+  "peak_cap": 1,
+  "late_peak": 1
+ },
+ "level": {
+  "default_rms_db": -20.344,
+  "corrected_rms_db": -20.344,
+  "default_peak_dbfs": -1.339,
+  "corrected_peak_dbfs": -1.136,
+  "same_length": true,
+  "headroom_gain_db": 0.0
+ },
+ "flags": [
+  "low_alignment_confidence (confidence 0.08 < 0.3) in 「1、2分でわかります。」: フ→聞こえ「ku」"
+ ],
+ "params": {
+  "corrector": {
+   "k_peak": 0.7,
+   "q_classA": "p25",
+   "q_other": "p90",
+   "k_late": 0.7,
+   "late_morae": 2
+  },
+  "i_solver": {
+   "l1": 0.15,
+   "l2": 0.3,
+   "cap": 3.0,
+   "deadband": 0.3
+  },
+  "gates": {
+   "max_delta_st": 4.0,
+   "big_correction_st": 3.0,
+   "align_margin_max": 8.0,
+   "contour_rmse_st": 0.3,
+   "contour_maxerr_st": 0.6,
+   "loudness_db": 0.5,
+   "peak_rise_db": 1.5,
+   "peak_max_dbfs": -1.0
+  },
+  "anchor": "plateau"
+ }
+}
