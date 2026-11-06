@@ -70,9 +70,17 @@
   };
 
   /* ---------- entry card ---------- */
+  /** 出典に当該企業自身のドメインが含まれるか（＝公式発表を直接引いているか） */
+  LeakScan.hasOfficial = function (e) {
+    const doms = (e.match && e.match.domains) || [];
+    if (!doms.length) return false;
+    return (e.sources || []).some((s) => doms.some((d) => String(s.url).includes(d)));
+  };
+
   LeakScan.entryCard = function (e, meta) {
     const esc = LeakScan.esc;
     const sev = LeakScan.severity(e.categories);
+    const official = LeakScan.hasOfficial(e);
     const cats = (e.categories || [])
       .map((c) => `<span class="badge cat">${esc(meta.categories[c] || c)}</span>`)
       .join('');
@@ -89,13 +97,14 @@
         <div class="entry-rec"><b>${esc(e.records)}</b></div>
         <div class="badges">
           <span class="badge s-${esc(e.status)}">${esc(meta.status_labels[e.status] || e.status)}</span>
+          <span class="badge src-${official ? 'o' : 's'}">${official ? '公式発表あり' : '報道による'}</span>
           <span class="badge sev-${sev}">危険度 ${esc(LeakScan.sevLabel[sev])}</span>
           <span class="badge">${esc(meta.cause_labels[e.cause] || e.cause)}</span>
           <span class="badge">${esc(e.sector)}</span>
           ${cats}
         </div>
         ${e.scope ? `<div class="entry-scope">${esc(e.scope)}</div>` : ''}
-        ${srcs ? `<div class="entry-src">出典: ${srcs}</div>` : ''}
+        ${srcs ? `<div class="entry-src"><b>出典</b>${srcs}</div>` : ''}
       </article>`;
   };
 })();

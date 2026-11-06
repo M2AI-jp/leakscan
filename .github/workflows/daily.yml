@@ -33,10 +33,32 @@ jobs:
         continue-on-error: true
         run: node scripts/check-sources.mjs | tee /tmp/links.txt
 
+      - name: 未収録の事案を収集
+        id: collect
+        run: |
+          node scripts/collect.mjs | tee /tmp/collect.txt
+          echo "found=$(grep -c '^CAND' /tmp/collect.txt || true)" >> "$GITHUB_OUTPUT"
+
+      - name: 事案を自動追記
+        id: autoadd
+        env:
+          MAX_PER_RUN: '60'
+          MAX_AGE_DAYS: '45'
+        run: |
+          node scripts/autoadd.mjs | tee /tmp/autoadd.txt
+          echo "added=$(grep -oE '^[0-9]+ 件を自動追記' /tmp/autoadd.txt | grep -oE '^[0-9]+' || echo 0)" >> "$GITHUB_OUTPUT"
+
       - name: データセットを検証して生成物を更新
         run: |
           node scripts/validate.mjs
           node scripts/build.mjs
+          node test/match.test.js
+
+      - name: 検証に失敗したら自動追記を取り消す
+        if: failure()
+        run: |
+          echo "::warning::検証に失敗したため自動追記を破棄します"
+          git checkout -- data/breaches.json || true
 
       - name: 変更をコミット
         run: |
@@ -46,9 +68,28 @@ jobs:
             echo "変更なし"
           else
             git add -A
-            git commit -m "chore: 日次更新（情報源の状態・生成物）"
+            git commit -m "chore: 日次更新（事案 +${{ steps.autoadd.outputs.added }}件 / 情報源の状態 / 生成物）"
             git push
           fi
+
+      - name: サイトへ反映
+        id: deploy
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::warning::CLOUDFLARE_API_TOKEN が未設定のため、追記した事案はサイトに反映されません。"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Cloudflare へデプロイ
+        if: steps.deploy.outputs.ready == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: 要確認のIssueを作成・更新
         if: steps.watch.outputs.changed != '0' || steps.links.outcome == 'failure'
@@ -61,6 +102,11 @@ jobs:
             echo
             echo "> **重要**: 新しい事案の追加は必ず人間が公式発表を読んでから行ってください。"
             echo "> 自動抽出はしません（誤った企業名の公開を防ぐため）。"
+            echo
+            echo "## 自動追記"
+            echo '```'
+            cat /tmp/autoadd.txt 2>/dev/null | head -60 || echo "（なし）"
+            echo '```'
             echo
             echo "## 更新された情報源"
             echo '```'

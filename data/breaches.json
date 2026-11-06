@@ -4789,5 +4789,369 @@
         "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
       }
     ]
+  },
+  {
+    "id": "auto-20261106-3d2a92",
+    "company": "株式会社2りんかんイエローハット",
+    "service": "株式会社2りんかんイエローハット",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "2りんかんイエローハット",
+        "株式会社2りんかんイエローハット"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "株式会社2りんかんイエローハットは、「2りんかんロードサービス」などの業務委託先である株式会社プレステージ・コアソリューションのシステムが第三者による不正アクセスを受け、委託している顧客の一部個人情報が漏えいした可能性があると発表した。対象の情報項目は同社で特定・精査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-3d2a92/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-eaa951",
+    "company": "富山県",
+    "service": "富山県",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "富山県"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "247件",
+    "records_num": 247,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "富山県は、「とやま省エネ家電購入応援キャンペーン第4弾」で令和8年9月28日のメール送信に利用したアララ株式会社のメール配信サービス「アララメッセージ」が不正アクセスを受け、メールを送った利用者247件の氏名とメールアドレスが漏えいした可能性があると発表した。同社が調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-eaa951/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-e24209",
+    "company": "損害保険ジャパン株式会社",
+    "service": "損害保険ジャパン株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "損害保険ジャパン",
+        "損害保険ジャパン株式会社"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "card"
+    ],
+    "status": "possible",
+    "scope": "損害保険ジャパンは、一部の自動車保険の問い合わせ・受付管理業務の委託先である株式会社プレステージ・コアソリューションのシステムが第三者による不正アクセスを受け、契約情報や問い合わせ履歴など約6.5万件が漏えいした可能性があると発表した。クレジットカード情報は含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-e24209/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-cafc09",
+    "company": "株式会社十八親和銀行",
+    "service": "株式会社十八親和銀行",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "十八親和銀行",
+        "株式会社十八親和銀行"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "十八親和銀行は、運営に関わる電子地域通貨「MINAコイン」「ゆでぴ」のシステムベンダー株式会社フィノバレーがメール配信を委託するアララ株式会社のシステムが不正アクセスを受け、利用者が登録したメールアドレスが漏えいした可能性があると発表した。利用者の情報が対象に含まれるかは確認中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-cafc09/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-aeb3da",
+    "company": "東京海上ダイレクト損害保険株式会社",
+    "service": "東京海上ダイレクト損害保険株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "東京海上ダイレクト損害保険",
+        "東京海上ダイレクト損害保険株式会社"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "name",
+      "address",
+      "dob"
+    ],
+    "status": "investigating",
+    "scope": "東京海上ダイレクト損害保険は、契約者向け「マイページ」等のWebサービスに第三者による不正アクセスがあり、契約者の氏名・住所・生年月日・契約内容などの個人情報が漏えいしたと発表した。漏えいした可能性のある件数は現時点で74件としている。Webサイトでの手続きを一時停止し、原因と影響範囲を調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-aeb3da/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-94a515",
+    "company": "イプシロン",
+    "service": "イプシロン",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "イプシロン"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "24,645件",
+    "records_num": 24645,
+    "categories": [
+      "email",
+      "card"
+    ],
+    "status": "possible",
+    "scope": "クレジットカード決済代行のイプシロンは、利用するマーケティングツール(提供元:株式会社データX)がメール配信に使う「repica」(アララ株式会社)のサーバーへの不正アクセスで、2026年10月8日から31日にメールを送った加盟店のメールアドレス24,645件が漏洩したとの報告を受けたと発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-94a515/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-775bde",
+    "company": "NTTタウンページ株式会社",
+    "service": "NTTタウンページ株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "NTTタウンページ",
+        "NTTタウンページ株式会社"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "142,126件",
+    "records_num": 142126,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "NTTタウンページは、委託先が利用するアララ株式会社のメール配信サービス「repica」が不正アクセスを受け、10月8日から31日までにメールマガジンを配信したメールアドレス142,126件が流出したとの報告を受けたと発表した。当社システムへの不正アクセスは確認されていないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-775bde/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-3935d1",
+    "company": "GMOペイメントサービス株式会社",
+    "service": "GMOペイメントサービス株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "GMOペイメントサービス",
+        "GMOペイメントサービス株式会社"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大106,997件",
+    "records_num": 106997,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "possible",
+    "scope": "GMOペイメントサービスは、委託先の弁護士法人Martial Artsがメール配信に利用するアララ株式会社の「アララメッセージ」のサーバーが第三者から不正アクセスを受け、顧客のメールアドレス・氏名・請求金額・請求内容などが漏洩したとの報告を受けたと発表した。対象は最大106,997件としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-3935d1/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-31625b",
+    "company": "株式会社福岡銀行",
+    "service": "株式会社福岡銀行",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "福岡銀行",
+        "株式会社福岡銀行"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "福岡銀行は、カードローン等の保証業務を行うSMBCコンシューマーファイナンスの保証システムが第三者による不正アクセスを受け、外部に送信されたデータに同行の顧客の個人情報が含まれていたことが判明したと発表した。対象の顧客と人数はSMBCCFで調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-31625b/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-2eb8c9",
+    "company": "江戸川区",
+    "service": "江戸川区",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "江戸川区"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "id_document",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "江戸川区は、マイナンバーカード交付予約の委託事業で利用するアララ株式会社のメール配信サービス「アララメッセージ」が不正アクセスを受け、インターネットで受け取り予約をした人のメールアドレスが漏えいした可能性があると発表した。区の事業の情報が含まれるかは不明で、受託者が調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-2eb8c9/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-1278c3",
+    "company": "消防庁",
+    "service": "消防庁",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "消防庁"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "消防庁は、運用する「武力攻撃事態等における安否情報収集・提供システム」で、運用保守業務の委託事業者である富士ソフト株式会社から第三者による不正アクセスが確認されたとの報告を受けたと発表した。現時点で個人情報の漏えいは確認されておらず、サービスを停止して調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-1278c3/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261105-1191fa",
+    "company": "鈴鹿市",
+    "service": "鈴鹿市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "鈴鹿市"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "id_document",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "鈴鹿市は、マイナンバーカード交付予約・管理システムの提供事業者であるTKCが利用するアララ株式会社のメール配信サービスが不正アクセスを受け、申請・交付予約をした人のメールアドレスが漏えいした可能性があるとの報告を受けたと発表した。予約確認メールの送信を停止しているとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-1191fa/"
+      }
+    ]
   }
 ]

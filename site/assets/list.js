@@ -32,7 +32,9 @@
       return (b.disclosed || '').localeCompare(a.disclosed || '');
     });
 
-    $('#count').textContent = `${rows.length} / ${ALL.length} 件`;
+    const sum = rows.reduce((a, e) => a + (e.records_num || 0), 0);
+    $('#count').textContent =
+      `${rows.length} / ${ALL.length} 件 ・ ${window.LeakScan.fmtNum(sum)}`;
     $('#entries').innerHTML = rows.length
       ? rows.map((e) => window.LeakScan.entryCard(e, META)).join('')
       : '<div class="empty">該当する事案はありません。</div>';

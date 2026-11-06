@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LeakScan — あなたは何件漏洩した？</title>
-<meta name="description" content="Gmailの差出人を公表済みの漏洩事案と自動照合し、あなたが使っているサービスの漏洩だけを表示します。データは毎日更新。無料・登録不要・メール本文は読みません。">
+<meta name="description" content="Gmailの差出人を公表済みの漏洩事案と自動照合し、あなたが使っているサービスの漏洩だけを表示します。毎日自動で更新しています。無料・登録不要・メール本文は読みません。">
 <meta property="og:title" content="LeakScan — あなたは何件漏洩した？">
-<meta property="og:description" content="Gmailの差出人を公表済みの漏洩事案と自動照合。毎日更新・無料・登録不要。">
+<meta property="og:description" content="Gmailの差出人を公表済みの漏洩事案と自動照合。毎日自動更新・無料・登録不要。">
 <meta property="og:type" content="website">
 <meta name="color-scheme" content="dark light">
 <link rel="stylesheet" href="assets/style.css">
@@ -33,8 +33,24 @@
   <div class="wrap">
     <div class="grid one">
       <div>
-        <span class="kicker">2026年 国内で公表された漏洩 <b id="n-hero">79件</b></span>
+        <span class="kicker">2026年・国内で公表された情報漏洩</span>
         <h1>あなたは何件<br>漏洩した？</h1>
+        <div class="hstat">
+          <div class="hs main">
+            <div class="v" id="h-records">—</div>
+            <div class="k">漏洩した個人情報の合計</div>
+            <div class="n">日本の人口を超えています</div>
+          </div>
+          <div class="hs">
+            <div class="v" id="h-cases">—</div>
+            <div class="k">公表された事案</div>
+          </div>
+          <div class="hs">
+            <div class="v" id="h-cos">—</div>
+            <div class="k">企業・団体</div>
+          </div>
+        </div>
+
         <div class="cta-row">
           <a class="btn btn-primary" href="#use">無料で使う</a>
           <a class="btn btn-ghost" href="list">漏洩企業一覧</a>
@@ -43,7 +59,7 @@
           <span>メールの本文は読みません</span>
           <span>情報は外部に送信しません</span>
           <span>完全無料・登録不要・広告なし</span>
-          <span>漏洩データは毎日更新</span>
+          <span>漏洩データを毎日自動更新</span>
         </div>
       </div>
 
@@ -60,7 +76,7 @@
     </div>
     <div class="feed" id="feed"></div>
     <div class="data-foot">
-      各事案に出典を付けて毎日更新しています。
+      各事案に出典を付けています。毎朝8時に情報源から自動で収集・追記しています。
       <a href="data/breaches.json">JSON</a>・<a href="data/breaches.csv">CSV</a> で誰でも再利用できます（CC BY 4.0）。
       記載の誤りは<a href="https://github.com/M2AI-jp/leakscan/issues">こちら</a>へ。
     </div>
@@ -159,7 +175,7 @@
 
     <div class="foot-meta">
       <span id="count-line">—</span>
-      <span class="dot">・</span><span><b>毎日 8:00 更新</b></span>
+      <span class="dot">・</span><span><b>毎朝 8:00 自動更新</b></span>
       <span class="dot">・</span><span>最終更新 <span id="updated">—</span></span>
       <span class="dot">・</span><span>解析・Cookieなし</span>
     </div>
@@ -176,7 +192,9 @@
     const sum = entries.reduce((a, e) => a + (e.records_num || 0), 0);
     document.getElementById('count-line').textContent =
       `収録 ${entries.length}件 / ${window.LeakScan.fmtNum(sum)}`;
-    document.getElementById('n-hero').textContent = `${entries.length}件`;
+    document.getElementById('h-records').textContent = window.LeakScan.fmtNum(sum);
+    document.getElementById('h-cases').textContent = entries.length + '件';
+    document.getElementById('h-cos').textContent = new Set(entries.map((e) => e.company)).size + '社';
     document.getElementById('updated').textContent = window.LeakScan.fmtDate(meta.updated);
     document.getElementById('n-all').textContent = entries.length;
     var esc = window.LeakScan.esc;
