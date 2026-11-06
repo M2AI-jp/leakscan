@@ -296,6 +296,9 @@ node test/match.test.js          # 照合と誤検知
 node test/domains.test.mjs       # 照合ドメインの安全弁
 node test/feed.test.mjs          # 情報源データの変換
 node scripts/audit-domains.mjs   # 共用プラットフォームが照合に混じっていないか監査
+node scripts/package.mjs         # ストア提出用 zip を作って点検（dist/ に出力）
+node scripts/make-preview.mjs    # サイトの単体プレビュー（store/preview.html）
+sh   promo/build.sh              # プロモ動画を作り直す（数字は stats.json から）
 npx wrangler@4 deploy            # サイトのデプロイ
 python3 -m http.server 8731 -d site   # ローカルプレビュー
 ```
