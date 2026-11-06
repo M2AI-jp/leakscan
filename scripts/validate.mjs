@@ -8,6 +8,9 @@ import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const entries = JSON.parse(readFileSync(join(ROOT, 'data/breaches.json'), 'utf8'));
+const DENY = JSON.parse(readFileSync(join(ROOT, 'data/domain-denylist.json'), 'utf8')).domains;
+const { rejectReason } = await import('./lib/shared-domains.mjs');
+const { orgKey } = await import('./lib/source-feed.mjs');
 const meta = JSON.parse(readFileSync(join(ROOT, 'data/meta.json'), 'utf8'));
 
 const errors = [];
@@ -81,8 +84,16 @@ for (const e of entries) {
     if (d !== String(d).toLowerCase()) err(id, `domain は小文字で: ${d}`);
     if (!DOMAIN_RE.test(d)) err(id, `domain の書式が不正: ${d}`);
     if (FORBIDDEN_DOMAINS.has(d)) err(id, `共用/フリーメールのドメインは使用不可: ${d}`);
-    if (domainOwners.has(d)) err(id, `domain ${d} は ${domainOwners.get(d)} と重複`);
-    else domainOwners.set(d, e.id);
+    const shared = rejectReason(d, DENY, { auto: !!e.auto });
+    if (shared) err(id, `この企業だけのドメインではない: ${d}（${shared}）`);
+    /* 同じ企業が年内に複数回漏洩した場合、同じドメインを両方の事案に持たせる。
+       別企業と重複しているなら、どちらかが誤り。 */
+    const co = orgKey(e.company);
+    if (domainOwners.has(d) && domainOwners.get(d).co !== co) {
+      err(id, `domain ${d} は別企業 ${domainOwners.get(d).co}（${domainOwners.get(d).id}）と重複`);
+    } else if (!domainOwners.has(d)) {
+      domainOwners.set(d, { id: e.id, co });
+    }
   }
 
   for (const n of m.names) {
@@ -96,6 +107,19 @@ for (const e of entries) {
   /* An entry claiming confirmed AI involvement needs a source saying so. */
   if (e.ai_link === 'confirmed' && (!e.scope || !e.scope.length)) {
     err(id, 'ai_link=confirmed には根拠を scope に明記すること');
+  }
+}
+
+/* 片方がもう片方を飲み込むドメインの組み合わせを弾く。
+   例: metro.tokyo.lg.jp は waterworks.metro.tokyo.lg.jp に一致してしまい、
+   東京都全体のドメインが水道局の事案まで巻き込む。 */
+const allDomains = [];
+for (const e of entries) for (const d of e.match.domains || []) allDomains.push({ d, id: e.id, co: orgKey(e.company) });
+for (const a of allDomains) {
+  for (const b of allDomains) {
+    if (a.d === b.d || !b.d.endsWith('.' + a.d)) continue;
+    if (a.co === b.co) warn(a.id, `domain ${a.d} は ${b.d}（${b.id}）を含む。片方で足りる`);
+    else err(a.id, `domain ${a.d} が別企業のドメイン ${b.d}（${b.id} / ${b.co}）を飲み込む`);
   }
 }
 

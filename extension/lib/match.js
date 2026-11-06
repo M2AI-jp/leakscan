@@ -20,6 +20,32 @@
     'dev', 'site', 'shop', 'store', 'online', 'tokyo', 'work', 'life', 'design', 'page'
   ];
 
+  /** 都道府県の地域型JPドメイン。pref.X.jp と city.Y.X.jp が同じ下にぶら下がるため、
+   *  ブランド部分（= 県名）での照合をすると県と市区町村が混ざる。 */
+  const JP_GEO = [
+    'hokkaido', 'aomori', 'iwate', 'miyagi', 'akita', 'yamagata', 'fukushima',
+    'ibaraki', 'tochigi', 'gunma', 'saitama', 'chiba', 'tokyo', 'kanagawa',
+    'niigata', 'toyama', 'ishikawa', 'fukui', 'yamanashi', 'nagano', 'gifu',
+    'shizuoka', 'aichi', 'mie', 'shiga', 'kyoto', 'osaka', 'hyogo', 'nara',
+    'wakayama', 'tottori', 'shimane', 'okayama', 'hiroshima', 'yamaguchi',
+    'tokushima', 'kagawa', 'ehime', 'kochi', 'fukuoka', 'saga', 'nagasaki',
+    'kumamoto', 'oita', 'miyazaki', 'kagoshima', 'okinawa'
+  ].map(function (p) { return p + '.jp'; });
+
+  /** 自治体・政府系のドメインか。
+   *  これらは「完全一致とサブドメイン」だけで照合し、ブランド部分には広げない。
+   *  pref.yamanashi.jp と city.yamanashi.yamanashi.jp は別の組織だが
+   *  ブランド部分はどちらも yamanashi になってしまう。 */
+  function isGeoOrGov(domain) {
+    const d = String(domain || '').toLowerCase();
+    if (/^(www\d*\.)?(pref|city|town|village|metro|ward)\./.test(d)) return true;
+    if (/\.(lg|go)\.jp$/.test(d)) return true;
+    for (let i = 0; i < JP_GEO.length; i++) {
+      if (d === JP_GEO[i] || d.endsWith('.' + JP_GEO[i])) return true;
+    }
+    return false;
+  }
+
   /** 登録可能部分のラベル。example.co.jp → "example" / news.example.com → "example" */
   function brandLabel(domain) {
     const d = String(domain || '').toLowerCase().replace(/\.+$/, '');
@@ -91,11 +117,14 @@
         const dd = String(d).toLowerCase();
         if (domain === dd || domain.endsWith('.' + dd)) return 'domain';
       }
-      /* 完全一致しなかった場合のみ、ブランド部分で照合する */
+      /* 完全一致しなかった場合のみ、ブランド部分で照合する。
+         自治体・政府系はブランド部分が県名・市名になり別組織と混ざるので広げない。 */
       const sLabel = brandLabel(domain);
-      if (usableBrand(sLabel)) {
+      if (usableBrand(sLabel) && !isGeoOrGov(domain)) {
         for (const d of svc.domains || []) {
-          const brand = brandLabel(d);
+          const dd = String(d).toLowerCase();
+          if (isGeoOrGov(dd)) continue;
+          const brand = brandLabel(dd);
           if (!usableBrand(brand)) continue;
           if (labelRelated(sLabel, brand)) return 'related';
         }
@@ -133,6 +162,7 @@
         add(dd);
         /* 別ドメインや配信用サブドメインも拾えるよう、ブランド部分を素の語として足す。
            広く引いて、一致の判定は matchSender 側で厳密に行う。 */
+        if (isGeoOrGov(dd)) continue;   // 県名・市名を素の語で引くと別自治体まで拾う
         const b = brandLabel(dd);
         if (usableBrand(b)) add(b);
       }
@@ -147,7 +177,7 @@
 
   const api = {
     norm, buildQuery, matchSender, minNameLen,
-    brandLabel, usableBrand, labelRelated,
+    brandLabel, usableBrand, labelRelated, isGeoOrGov,
     MIN_BRAND, GENERIC, AFFIXES
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

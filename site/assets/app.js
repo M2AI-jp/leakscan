@@ -40,7 +40,7 @@
 
   /* ---------- severity ----------
      3 = 金銭・なりすまし直結 / 2 = 連絡先・属性 / 1 = 識別子のみ         */
-  const SEV3 = ['card', 'bank', 'password', 'id_document', 'login_credential'];
+  const SEV3 = ['card', 'bank', 'password', 'id_document', 'my_number', 'login_credential'];
   const SEV2 = ['name', 'address', 'phone', 'dob', 'password_hash', 'medical', 'point_balance', 'purchase_history', 'employment'];
   LeakScan.severity = function (cats) {
     if (!cats || !cats.length) return 0;
@@ -70,11 +70,14 @@
   };
 
   /* ---------- entry card ---------- */
-  /** 出典に当該企業自身のドメインが含まれるか（＝公式発表を直接引いているか） */
+  /** 公式発表を直接引いているか。
+   *  判定は scripts/lib/sources.mjs がビルド時に行い、official に入っている。
+   *  （照合ドメインの有無とは独立。ドメインを採用できなかった事案でも
+   *    公式発表を引いていれば「公式発表あり」と表示する） */
   LeakScan.hasOfficial = function (e) {
+    if (typeof e.official === 'boolean') return e.official;
     const doms = (e.match && e.match.domains) || [];
-    if (!doms.length) return false;
-    return (e.sources || []).some((s) => doms.some((d) => String(s.url).includes(d)));
+    return !!doms.length && (e.sources || []).some((s) => doms.some((d) => String(s.url).includes(d)));
   };
 
   LeakScan.entryCard = function (e, meta) {
@@ -91,7 +94,7 @@
       <article class="entry" id="${esc(e.id)}">
         <div class="entry-head">
           <span class="svc">${esc(e.service)}</span>
-          <span class="co">${esc(e.company)}</span>
+          ${e.company && e.company !== e.service ? `<span class="co">${esc(e.company)}</span>` : ''}
           <span class="date">公表 ${esc(LeakScan.fmtDate(e.disclosed))}</span>
         </div>
         <div class="entry-rec"><b>${esc(e.records)}</b></div>

@@ -1,147 +1,119 @@
 #!/usr/bin/env node
-/* LeakScan — collect.mjs が拾った候補から事案を自動生成して追記する。
+/* LeakScan — 情報源の公開JSONから未収録の事案を data/breaches.json に追記する。
  *
- * 自動追記するのは、出典URL・公表日・公表主体・原因が情報源に揃っているものだけ。
- * 判断を伴う項目（照合用ドメイン、AI関与）は埋めず、確度は保守側に倒す。
- * 自動生成した事案には auto: true を立て、サイト上も「報道による」として表示する。
+ * 守っていること:
+ *  - 情報源の要約文は転載しない。構造化された項目から自分の言葉で書く。
+ *  - 照合用ドメインは空のまま。公式発表のURLから取れるものだけを
+ *    scripts/resolve-domains.mjs が後で入れる。推測で埋めない。
+ *  - 確度は保守側に倒す。「漏洩を確認」と書くのは確定件数が公表されている場合だけ。
+ *  - 検証に通らない形のものは、その1件だけを捨てる（全体を落とさない）。
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import {
+  fetchFeed, isPersonal, knownIndex, isKnown, normCompany,
+  categoriesOf, causeOf, statusOf, recordsOf, scopeOf
+} from './lib/source-feed.mjs';
+import { guessSector } from './lib/sector.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const MAX_PER_RUN = Number(process.env.MAX_PER_RUN || 60);
-const MAX_AGE_DAYS = Number(process.env.MAX_AGE_DAYS || 45);
+const MAX_AGE_DAYS = Number(process.env.MAX_AGE_DAYS || 45);   // 0 = 制限なし
 
 const db = JSON.parse(readFileSync(join(ROOT, 'data/breaches.json'), 'utf8'));
-const { candidates } = JSON.parse(readFileSync(join(ROOT, 'data/candidates.json'), 'utf8'));
+const meta = JSON.parse(readFileSync(join(ROOT, 'data/meta.json'), 'utf8'));
 
-/* ── 要約文から漏洩項目を機械的に拾う ── */
-const CATS = [
-  [/メールアドレス|メール アドレス/, 'email'],
-  [/氏名|名前|会員名/, 'name'],
-  [/住所|郵便番号/, 'address'],
-  [/電話番号|連絡先電話/, 'phone'],
-  [/生年月日/, 'dob'],
-  [/性別/, 'gender'],
-  [/ハッシュ化されたパスワード|暗号化されたパスワード/, 'password_hash'],
-  [/パスワード/, 'password'],
-  [/クレジットカード|カード番号|セキュリティコード/, 'card'],
-  [/銀行口座|口座番号|金融機関/, 'bank'],
-  [/運転免許|本人確認書類|マイナンバーカード/, 'id_document'],
-  [/会員番号|会員ID|顧客番号/, 'member_id'],
-  [/ポイント|残高/, 'point_balance'],
-  [/購入履歴|注文|予約|利用履歴|申込/, 'purchase_history'],
-  [/従業員|社員|勤務先|人事|応募者/, 'employment'],
-  [/患者|診療|健康|医療/, 'medical'],
-  [/ログイン情報|認証情報|ID.{0,3}パスワード/, 'login_credential']
-];
-function categories(text) {
-  const out = [];
-  for (const [re, c] of CATS) if (re.test(text) && !out.includes(c)) out.push(c);
-  if (out.includes('password') && out.includes('password_hash')) {
-    out.splice(out.indexOf('password'), 1);
-  }
-  return out.length ? out : ['unknown'];
+const CJK = /[぀-ヿ一-鿿]/;
+/** 表示名として使うと誤検知するもの */
+const TOO_GENERIC = new Set([
+  'お客様', 'サービス', 'サポート', 'センター', '事務局', '会員', '情報', 'お知らせ',
+  'カスタマー', 'インフォメーション', 'ショップ', 'ストア', 'オンライン', 'ネット'
+]);
+
+/** 表示名パターンとして安全に使えるか（validate.mjs と同じ基準） */
+function usableName(n) {
+  const norm = String(n).normalize('NFKC').toLowerCase().replace(/[\s　・,，.。'"“”’`]/g, '');
+  if (norm.length < (CJK.test(norm) ? 2 : 4)) return false;
+  if (TOO_GENERIC.has(String(n).trim())) return false;
+  return true;
 }
 
-/* ── 原因タグの対応付け ── */
-const CAUSE = [
-  [/ランサム/, 'ransomware'], [/マルウェア|ウイルス/, 'malware'],
-  [/設定ミス|設定不備/, 'misconfiguration'],
-  [/脆弱性/, 'vulnerability'],
-  [/不正ログイン|認証情報/, 'credential'],
-  [/不正アクセス/, 'unauthorized_access']
-];
-function cause(tags, summary) {
-  const t = tags + ' ' + summary;
-  for (const [re, c] of CAUSE) if (re.test(t)) return c;
-  return 'unknown';
-}
-
-/* ── 確度 ── */
-function status(st, summary) {
-  if (/調査中/.test(st) || /調査(を)?(進めて|継続)/.test(summary)) return 'investigating';
-  if (/流出(が|を)確認|漏えい(が|を)確認|漏洩(が|を)確認|確認された/.test(summary)) return 'confirmed';
-  return 'possible';
-}
-
-/* ── 件数 ── */
-function recordsNum(s) {
-  const m = String(s || '').match(/([\d,]{3,})/);
-  if (!m) return null;
-  const n = Number(m[1].replace(/,/g, ''));
-  return Number.isFinite(n) && n > 0 ? n : null;
-}
-
-/* ── 照合用の表示名（社名から法人格を落とす） ──
- * validate.mjs と同じ長さの規則を適用する。日本語を含めば2文字以上、
- * 英字のみなら4文字以上。ここで弾いておかないと検証で全体が落ちる。 */
-const CJK = /[\u3040-\u30ff\u4e00-\u9fff]/;
-function okName(n) {
-  const norm = String(n).normalize('NFKC').toLowerCase()
-    .replace(/[\s\u3000・,，.。'"“”’`]/g, '');
-  return norm.length >= (CJK.test(norm) ? 2 : 4);
-}
-function displayNames(org) {
-  const base = String(org)
-    .replace(/株式会社|有限会社|合同会社|一般社団法人|公益財団法人|生活協同組合|地方独立行政法人/g, '')
+/** 法人格を外した呼び名。「株式会社ライフコーポレーション」→「ライフコーポレーション」 */
+function shortName(name) {
+  return String(name)
+    .replace(/^(株式会社|有限会社|合同会社|一般財団法人|公益財団法人|公益社団法人|一般社団法人|国立大学法人|公立大学法人|学校法人|医療法人|特定非営利活動法人)\s*/, '')
+    .replace(/\s*(株式会社|有限会社|合同会社)$/, '')
     .trim();
-  const out = [];
-  if (okName(base)) out.push(base);
-  if (org !== base && okName(org)) out.push(org);
-  return [...new Set(out)];
 }
 
-/* ── 業種は情報源にないので、原因から推定せず未分類にする ── */
-const SECTOR = '未分類';
+const feed = await fetchFeed();
+const idx = knownIndex(db);
+const cutoff = MAX_AGE_DAYS
+  ? new Date(Date.now() - MAX_AGE_DAYS * 86400000).toISOString().slice(0, 10)
+  : '0000-00-00';
 
-const haveIds = new Set(db.map((e) => e.id));
-const cutoff = new Date(Date.now() - MAX_AGE_DAYS * 86400000).toISOString().slice(0, 10);
+const cands = feed.incidents
+  .filter((inc) => isPersonal(inc))
+  .filter((inc) => String(inc.dates.first_published || '') >= cutoff)
+  .filter((inc) => !isKnown(inc, idx))
+  .sort((a, b) => String(b.dates.first_published).localeCompare(String(a.dates.first_published)));
 
 const added = [];
-for (const c of candidates) {
+const skipped = [];
+
+for (const inc of cands) {
   if (added.length >= MAX_PER_RUN) break;
-  if (!c.date || c.date < cutoff) continue;
-  if (!c.url || !c.org) continue;
 
-  const sid = (c.url.match(/incidents\/([0-9a-f-]+)/i) || [])[1];
-  if (!sid) continue;
-  const id = 'auto-' + sid.toLowerCase();
-  if (haveIds.has(id)) continue;
+  const company = String(inc.organization.name || '').trim();
+  const disclosed = String(inc.dates.first_published || '');
+  if (!company || !/^\d{4}-\d{2}-\d{2}$/.test(disclosed)) {
+    skipped.push(`${company || '(名称なし)'}: 必須項目が足りない`);
+    continue;
+  }
 
-  const names = displayNames(c.org);
-  if (!names.length) continue;
+  /* 連名の事案は先頭の1社を代表にする。名前は使える形のものだけ残す */
+  const names = [...new Set([company, shortName(company)])].filter(usableName);
+  if (!names.length) {
+    skipped.push(`${company}: 表示名として使える形にならない`);
+    continue;
+  }
 
-  const text = c.summary || '';
-  added.push({
-    id,
-    company: c.org,
-    service: c.org,
-    sector: SECTOR,
-    match: { domains: [], names },      // ドメインは判断を要するため自動では埋めない
-    disclosed: c.date,
-    records: c.records || '公表されていない',
-    records_num: recordsNum(c.records),
-    categories: categories(text),
-    status: status(c.status, text),
-    scope: text.slice(0, 400),
-    cause: cause(c.cause || '', text),
+  const r = recordsOf(inc);
+  const entry = {
+    id: `auto-${inc.id}`,
+    company,
+    service: company,
+    sector: guessSector(company),
+    match: { domains: [], names },
+    disclosed,
+    records: r.text,
+    records_num: r.num,
+    categories: categoriesOf(inc),
+    status: statusOf(inc),
+    scope: scopeOf(inc, meta),
+    cause: causeOf(inc),
     ai_link: 'unconfirmed',
     auto: true,
-    sources: [{ title: '不正アクセス・情報漏えい事案（seory）', url: c.url }]
-  });
-  haveIds.add(id);
+    sources: [{ title: `${shortName(company)}の事案（情報源の記録）`, url: inc.url }]
+  };
+
+  if (db.some((e) => e.id === entry.id)) { skipped.push(`${company}: ID重複`); continue; }
+
+  db.push(entry);
+  idx.byId.add(inc.id);
+  idx.named.push({ id: entry.id, day: Date.parse(disclosed) || 0, tokens: [normCompany(company)] });
+  added.push(entry);
 }
 
-if (!added.length) {
-  console.log('追記する候補はありません');
-  process.exit(0);
-}
-
-db.push(...added);
+db.sort((a, b) => String(b.disclosed).localeCompare(String(a.disclosed)) || a.id.localeCompare(b.id));
 writeFileSync(join(ROOT, 'data/breaches.json'), JSON.stringify(db, null, 2) + '\n');
-console.log(`${added.length} 件を自動追記（収録 ${db.length} 件）`);
-for (const a of added.slice(0, 50)) {
-  console.log(`  + ${a.disclosed}  ${a.company}  ${a.records}  [${a.status}/${a.cause}]`);
+
+console.log(`対象候補 ${cands.length} 件 / 今回の上限 ${MAX_PER_RUN} 件`);
+console.log(`${added.length} 件を自動追記`);
+for (const e of added) console.log(`  + ${e.disclosed}  ${e.sector.padEnd(12)} ${e.company}`);
+if (skipped.length) {
+  console.log(`\n追記しなかったもの ${skipped.length} 件`);
+  for (const s of skipped.slice(0, 15)) console.log(`  - ${s}`);
 }
+console.log(`\n合計 ${db.length} 件`);

@@ -48,11 +48,24 @@ jobs:
           node scripts/autoadd.mjs | tee /tmp/autoadd.txt
           echo "added=$(grep -oE '^[0-9]+ 件を自動追記' /tmp/autoadd.txt | grep -oE '^[0-9]+' || echo 0)" >> "$GITHUB_OUTPUT"
 
+      - name: 既存の自動追記分を情報源と同期
+        run: node scripts/refresh-auto.mjs
+
+      - name: 照合ドメインを公式発表から補完
+        id: resolve
+        env:
+          RESOLVE_LIMIT: '40'
+        run: |
+          node scripts/resolve-domains.mjs | tee /tmp/resolve.txt
+          echo "resolved=$(grep -oE 'ドメインを補完: [0-9]+' /tmp/resolve.txt | grep -oE '[0-9]+' || echo 0)" >> "$GITHUB_OUTPUT"
+
       - name: データセットを検証して生成物を更新
         run: |
           node scripts/validate.mjs
           node scripts/build.mjs
           node test/match.test.js
+          node test/domains.test.mjs
+          node test/feed.test.mjs
 
       - name: 検証に失敗したら自動追記を取り消す
         if: failure()

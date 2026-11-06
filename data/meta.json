@@ -19,6 +19,7 @@
     "card": "クレジットカード情報",
     "bank": "銀行口座情報",
     "id_document": "本人確認書類の画像",
+    "my_number": "マイナンバー",
     "purchase_history": "購入・予約・利用履歴",
     "member_id": "会員ID・会員番号",
     "login_credential": "ログイン認証情報",

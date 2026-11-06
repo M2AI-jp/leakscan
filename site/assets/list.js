@@ -8,6 +8,29 @@
     return [...new Set(entries.map((e) => e.sector))].sort((a, b) => a.localeCompare(b, 'ja'));
   }
 
+  /* 「集め方と限界」の数字。毎日変わるのでデータから出す。 */
+  function fillMethod(entries, meta) {
+    const n = entries.length;
+    const put = (cls, v) => document.querySelectorAll('.' + cls).forEach((el) => { el.textContent = v; });
+    const official = entries.filter((e) => window.LeakScan.hasOfficial(e)).length;
+    const byStatus = {};
+    for (const e of entries) byStatus[e.status] = (byStatus[e.status] || 0) + 1;
+    const byAi = {};
+    for (const e of entries) byAi[e.ai_link] = (byAi[e.ai_link] || 0) + 1;
+
+    put('m-total', n.toLocaleString('ja-JP'));
+    put('m-official', official.toLocaleString('ja-JP'));
+    put('m-official-pct', n ? Math.round((official / n) * 100) : 0);
+    put('m-auto', entries.filter((e) => e.auto).length.toLocaleString('ja-JP'));
+    put('m-ai-confirmed', (byAi.confirmed || 0).toLocaleString('ja-JP'));
+    put('m-ai-supply', (byAi.supply_chain || 0).toLocaleString('ja-JP'));
+    put('m-ai-unknown', ((byAi.unconfirmed || 0) + (byAi.suspected || 0)).toLocaleString('ja-JP'));
+    put('m-status', Object.entries(byStatus)
+      .sort((a, b) => b[1] - a[1])
+      .map(([k, v]) => `「${(meta.status_labels && meta.status_labels[k]) || k}」${v}件`)
+      .join('／'));
+  }
+
   function render() {
     const q = $('#q').value.trim().toLowerCase();
     const sec = $('#sector').value;
@@ -49,6 +72,7 @@
         sectors(entries).map((s) => `<option value="${window.LeakScan.esc(s)}">${window.LeakScan.esc(s)}</option>`).join('')
       );
       $('#updated').textContent = window.LeakScan.fmtDate(meta.updated);
+      fillMethod(entries, meta);
       ['input', 'change'].forEach((ev) => {
         $('#q').addEventListener(ev, render);
       });

@@ -19,7 +19,10 @@ jobs:
         run: node scripts/validate.mjs
 
       - name: 照合ロジックと誤検知のテスト
-        run: node test/match.test.js
+        run: |
+          node test/match.test.js
+          node test/domains.test.mjs
+          node test/feed.test.mjs
 
       - name: 生成物が最新か確認
         run: |

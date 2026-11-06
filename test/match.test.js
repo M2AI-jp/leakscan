@@ -8,6 +8,20 @@ const entries = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/br
 const meta = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/data/meta.json'), 'utf8'));
 const services = entries.map((e) => ({ id: e.id, label: e.service, domains: e.match.domains, names: e.match.names }));
 const byId = (id) => services.find((s) => s.id === id);
+/** 組織の同一性。自治体の局・課は同じ自治体として扱う
+ *  （scripts/lib/source-feed.mjs の orgKey と同じ規則） */
+const normCo = (s) => {
+  const c = String(s || '').normalize('NFKC');
+  const m = /^(.{1,8}?[都道府県])(?=[^都道府県]|$)/.exec(c) || /^(.{1,10}?[市区町村])(?=[^市区町村]|$)/.exec(c);
+  return m ? m[1] : normCorp(c);
+};
+/** 法人格・区切りを落として企業名を比べる（同一企業の別事案を区別しないため） */
+const normCorp = (s) => String(s || '')
+  .normalize('NFKC')
+  .replace(/株式会社|有限会社|合同会社|一般財団法人|公益財団法人|公益社団法人|一般社団法人|国立大学法人|学校法人|生活協同組合/g, '')
+  .replace(/[（(][^）)]*[）)]/g, '')
+  .replace(/[\s・＆&,，.。、]/g, '')
+  .toLowerCase();
 
 let pass = 0, fail = 0;
 function ok(name, cond, extra) {
@@ -66,29 +80,40 @@ for (const s of innocuous) {
   ok('無関係な差出人が一致しない: ' + s.email, h.length === 0, h.join(','));
 }
 
-section('5. 1差出人が複数サービスに一致しないか');
+section('5. 1差出人が別の企業の事案に一致しないか');
+/* 同じ企業が年内に複数回漏洩している場合、1つの差出人が複数の事案に
+   一致するのは正しい。問題なのは「別の企業の事案」に一致すること。 */
+const companyOf = new Map(entries.map((e) => [e.id, normCo(e.company)]));
+const sameCompany = (ids) => new Set(ids.map((i) => companyOf.get(i))).size === 1;
+
 let multi = [];
 for (const e of entries) {
   for (const d of e.match.domains) {
     const h = hits({ email: 'noreply@' + d, name: '' });
-    if (h.length > 1) multi.push(d + ' → ' + h.join(', '));
+    if (h.length > 1 && !sameCompany(h)) {
+      multi.push(d + ' → ' + h.map((i) => i + '(' + companyOf.get(i) + ')').join(', '));
+    }
   }
 }
-ok('ドメインの衝突なし', multi.length === 0, multi.join(' | '));
+ok('別企業への衝突なし', multi.length === 0, multi.join(' | '));
 
-ok('ブランドラベルが他サービスと衝突しない', (function () {
+ok('ブランドラベルが別企業と衝突しない', (function () {
   const owner = new Map(); const clash = [];
   for (const s2 of services) for (const d of s2.domains) {
-    const b = M.brandLabel(d).replace(/-/g, '');
+    if (M.isGeoOrGov(d)) continue;              // 自治体はブランド部分で広げない
     if (!M.usableBrand(M.brandLabel(d))) continue;
-    if (owner.has(b) && owner.get(b) !== s2.id) clash.push(b + ': ' + owner.get(b) + ' / ' + s2.id);
-    else owner.set(b, s2.id);
+    const b = M.brandLabel(d).replace(/-/g, '');
+    const co = companyOf.get(s2.id);
+    if (owner.has(b) && owner.get(b) !== co) clash.push(b + ': ' + owner.get(b) + ' / ' + co);
+    else owner.set(b, co);
   }
   return clash.length === 0 || (console.log('     衝突:', clash.join(' | ')), false);
 })());
 
 section('6. クエリ生成');
-const batch = services.slice(0, 8);
+/* 日本語の表示名を含む事案を必ず1つ入れる（引用符の確認のため） */
+const mujiSvc = byId('ryohin-keikaku-muji-2026-10');
+const batch = [mujiSvc, ...services.filter((s) => s.id !== mujiSvc.id).slice(0, 7)];
 const q = M.buildQuery(batch, {});
 ok('from:(...) 形式', /^from:\(.+\)$/.test(q));
 ok('OR 区切り', q.includes(' OR '));

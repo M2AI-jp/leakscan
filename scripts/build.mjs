@@ -10,6 +10,13 @@ const d = (p) => join(ROOT, p);
 
 const entries = JSON.parse(readFileSync(d('data/breaches.json'), 'utf8'));
 const meta = JSON.parse(readFileSync(d('data/meta.json'), 'utf8'));
+const { hasOfficialSource } = await import('./lib/sources.mjs');
+
+/* ---- derived: 公式発表を直接引いているか ----
+ * サイトのバッジ（公式発表あり / 報道による）と統計の根拠。
+ * 出典から機械的に決まるので、データを直す必要はない。 */
+for (const e of entries) e.official = hasOfficialSource(e);
+writeFileSync(d('data/breaches.json'), JSON.stringify(entries, null, 2) + '\n');
 
 const csvCell = (v) => {
   const s = v == null ? '' : String(v);
@@ -18,12 +25,12 @@ const csvCell = (v) => {
 
 /* ---- breaches.csv : one row per incident ---- */
 const COLS = ['id', 'company', 'service', 'sector', 'disclosed', 'records', 'records_num',
-  'status', 'cause', 'ai_link', 'categories', 'domains', 'names', 'scope', 'source_urls'];
+  'status', 'cause', 'ai_link', 'official', 'categories', 'domains', 'names', 'scope', 'source_urls'];
 const csv = [COLS.join(',')];
 for (const e of entries) {
   csv.push([
     e.id, e.company, e.service, e.sector, e.disclosed, e.records,
-    e.records_num ?? '', e.status, e.cause, e.ai_link,
+    e.records_num ?? '', e.status, e.cause, e.ai_link, e.official ? 'yes' : 'no',
     (e.categories || []).join('|'),
     (e.match.domains || []).join('|'),
     (e.match.names || []).join('|'),
@@ -44,7 +51,7 @@ rows.sort((a, b) => (a === rows[0] ? -1 : b === rows[0] ? 1 : a.localeCompare(b)
 writeFileSync(d('data/domains.tsv'), rows.join('\n') + '\n');
 
 /* ---- stats.json ---- */
-const sev3 = ['card', 'bank', 'password', 'id_document', 'login_credential'];
+const sev3 = ['card', 'bank', 'password', 'id_document', 'login_credential', 'my_number'];
 const stats = {
   generated: new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' }),
   version: meta.version,
@@ -57,6 +64,8 @@ const stats = {
   by_sector: {},
   by_ai_link: {},
   high_severity: entries.filter((e) => (e.categories || []).some((c) => sev3.includes(c))).length,
+  official_sources: entries.filter((e) => e.official).length,
+  auto_added: entries.filter((e) => e.auto).length,
   matchable: entries.filter((e) => (e.match.domains || []).length || (e.match.names || []).length).length,
   domains: entries.reduce((a, e) => a + (e.match.domains || []).length, 0),
   earliest: entries.map((e) => e.disclosed).sort()[0],

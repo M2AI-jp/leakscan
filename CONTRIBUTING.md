@@ -9,8 +9,10 @@
 2. **確証のないことを断定しない。** 「漏洩の可能性」は `status: possible`、
    調査中は `investigating`。AI関与は、公式に確認されていなければ `ai_link: unconfirmed`。
 3. **訂正は最優先で取り込む。** 掲載企業からの指摘を含め、公式発表と食い違う記載は速やかに直す。
-4. **自動抽出で事案を追加しない。** 日次ジョブは情報源の更新を検出してIssueを立てるだけで、
-   事案の追加は必ず人が公式発表を読んでから行う。
+4. **機械に判断させる範囲を決めておく。** 日次ジョブは事案を自動追記しますが、
+   情報源が公開している**列挙値**だけを対応表で変換し、文章からの推測はしません。
+   照合用ドメインは**公式発表が置かれているURLのホスト名**しか使わず、取れなければ空のままにします。
+   自動追記分には `"auto": true` が付きます。詳細は [README](README.md#自動追記で守っていること)。
 
 ## 事案を追加する
 
@@ -18,7 +20,9 @@
 $EDITOR data/breaches.json     # 1件追記
 node scripts/validate.mjs      # 構造と安全性の検証
 node scripts/build.mjs         # CSV/TSV/統計の再生成と同期
-node test/match.test.js        # 照合ロジックと誤検知のテスト
+node test/match.test.js        # 照合ロジックと誤検知
+node test/domains.test.mjs     # 照合ドメインの安全弁
+node test/feed.test.mjs        # 情報源データの変換
 ```
 
 1件の形式は [README](README.md#データ形式) と [schema/breaches.schema.json](schema/breaches.schema.json) を参照。
@@ -36,6 +40,14 @@ node test/match.test.js        # 照合ロジックと誤検知のテスト
 - `names`: 差出人の表示名に含まれる文字列。日本語を含むものは2文字以上、
   英字のみのものは4文字以上。`au` のような短い英字は `Paul` に一致してしまうため拒否されます。
 - 1つのドメインを複数の事案に重複して登録することはできません。
+- **その組織だけのものではないドメインは使えません。** 業界共用ドメイン（信用金庫の
+  `shinkin.co.jp` など）、都道府県の地域型ドメイン（`kanagawa.jp` は県内の全市町村を含む）、
+  配信基盤・CDN、プレスリリース配信サイトは `validate.mjs` が拒否します。
+  自治体は `pref.kanagawa.jp` / `city.kawasaki.jp` のように**ホスト名まるごと**で書いてください。
+- グループ会社・親会社のドメインを子会社の事案に使わないでください。公式発表が親会社の
+  サイトに置かれていることはよくありますが、親会社からのメールを受け取っている人まで
+  「あなたのサービスが漏洩した」と表示してしまいます。人が確認して除外したものは
+  [`data/domain-denylist.json`](data/domain-denylist.json) に理由付きで残してあります。
 
 ## 検証されること
 
@@ -45,11 +57,17 @@ node test/match.test.js        # 照合ロジックと誤検知のテスト
 - 未知の `status` / `cause` / `ai_link` / `categories`
 - 出典ゼロ、不正なURL
 - フリーメール・共用ドメインの登録、ドメインの重複
+- 業界共用・地域型・配信基盤のドメイン、除外リストに載っているドメイン
 - 短すぎる表示名パターン
 - 根拠の書かれていない `ai_link: confirmed`
 
-`node test/match.test.js` は、無関係な差出人（Gmail・GitHub・Stripe など）が
-どの事案にも一致しないことを確認します。
+テストは3つあります。
+
+```bash
+node test/match.test.js      # 照合ロジック。無関係な差出人（Gmail・GitHub 等）が一致しないこと
+node test/domains.test.mjs   # 照合ドメインの安全弁。本番データに危険なドメインが残っていないこと
+node test/feed.test.mjs      # 情報源データの変換。確度を強く書きすぎないこと、二重登録しないこと
+```
 
 ## 掲載企業の方へ
 

@@ -145,7 +145,28 @@
     cancelled = false;
     const opts = payload.options || {};
     const services = payload.services || [];
-    const batchSize = Math.max(1, Math.min(12, opts.batchSize || 8));
+    /* 1回のクエリに詰め込む上限。Gmailの検索は長いクエリも通るので、
+       件数ではなく文字数で詰める。収録件数が増えても照会回数が比例して
+       増えないようにするため（574件を8件ずつ引くと72回かかる）。 */
+    const QUERY_BUDGET = Math.max(200, opts.queryBudget || 900);
+    const BATCH_CAP = Math.max(1, Math.min(24, opts.batchSize || 16));
+
+    /** services を、クエリ長が予算を超えない塊に分ける */
+    function packBatches(list) {
+      const out = [];
+      let cur = [];
+      for (const svc of list) {
+        const next = cur.concat([svc]);
+        if (cur.length && (next.length > BATCH_CAP || buildQuery(next, opts).length > QUERY_BUDGET)) {
+          out.push(cur);
+          cur = [svc];
+        } else {
+          cur = next;
+        }
+      }
+      if (cur.length) out.push(cur);
+      return out;
+    }
 
     const ui = mountOverlay(services.length);
     const originalHash = location.hash || '#inbox';
@@ -220,8 +241,8 @@
 
     let error = null;
     try {
-      for (let i = 0; i < services.length; i += batchSize) {
-        await scanBatch(services.slice(i, i + batchSize));
+      for (const batch of packBatches(services)) {
+        await scanBatch(batch);
       }
     } catch (err) {
       error = String((err && err.message) || err);

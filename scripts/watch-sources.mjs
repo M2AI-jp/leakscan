@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-/* LeakScan — detect that a monitored source has changed.
+/* LeakScan — 監視対象の情報源が変わったことを検出する。
  *
- * Deliberately does NOT extract incidents automatically: publishing a company
- * name as a breach victim without a human reading the announcement is how you
- * libel someone. This only says "these pages changed, go look".
+ * ここは「変わった」ことだけを報告する。事案の取り込みは
+ * scripts/collect.mjs と scripts/autoadd.mjs が、情報源が公開している
+ * 構造化データ（incidents.json）の列挙値だけを使って行う。
+ * このスクリプトが見ているのは、構造化データを出していない情報源も含めた
+ * 「人が目で確認しに行くべき変化」。
  *
  *   node scripts/watch-sources.mjs          # report, update the lock file
  *   node scripts/watch-sources.mjs --check  # report only, exit 1 if changed
