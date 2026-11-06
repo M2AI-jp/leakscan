@@ -352,3 +352,13 @@ footer a { color: var(--fg-muted); }
 .howto.tight .step p { font-size: 14px; }
 .howto.tight .step .n { width: 28px; height: 28px; font-size: 14px; margin-bottom: 10px; }
 .howto.tight .step h3 { font-size: 15.5px; }
+
+/* AI-authored / no-warranty notice */
+.ai-note {
+  margin: 22px 0 6px; padding: 18px 20px; border-radius: var(--radius);
+  background: var(--warn-bg); border: 1px solid color-mix(in srgb, var(--warn) 34%, transparent);
+}
+.ai-note h3 { font-size: 15px; color: var(--warn); margin: 0 0 .6em; }
+.ai-note p { font-size: 13.5px; color: var(--fg-muted); margin: 0 0 .7em; line-height: 1.75; }
+.ai-note p:last-child { margin-bottom: 0; }
+.ai-note strong { color: var(--fg); }
