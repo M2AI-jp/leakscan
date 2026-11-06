@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>自分でダウンロード — LeakScan</title>
-<meta name="description" content="Chromeウェブストアの審査を待たずに、LeakScanを自分のChromeに入れる手順。zipをダウンロードして展開し、デベロッパーモードで読み込むだけです。">
+<meta name="description" content="LeakScanを自分でダウンロードしてChromeに入れる手順。ウェブストアに出したものと同一のzipを展開し、デベロッパーモードで読み込むだけです。">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="自分でダウンロード — LeakScan">
-<meta property="og:description" content="審査を待たずにLeakScanを自分のChromeに入れる手順。">
+<meta property="og:description" content="LeakScanを自分でダウンロードしてChromeに入れる手順。">
 <meta name="color-scheme" content="dark light">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -33,25 +33,25 @@
   <div class="wrap narrow">
     <p class="eyebrow">
       <span class="live" aria-hidden="true"></span>
-      <span>Chromeウェブストア 審査中</span>
+      <span>Chromeウェブストアで公開中</span>
     </p>
-    <h1>審査を待たずに、<br>自分で入れる</h1>
+    <h1>自分でダウンロードして<br>入れる</h1>
     <p class="ins-lead">
-      LeakScanはウェブストアの審査中です。審査は数日かかることがあります。
-      待たずに使いたい方のために、<b>ストアに提出したものと同一のファイル</b>を置いています。
-      ダウンロードして展開し、Chromeに読み込ませるだけで動きます。所要5分・費用ゼロです。
+      ふつうは<a href="https://chromewebstore.google.com/detail/anpkncehohlelmiccjmgchfamjhnfjoa">ウェブストア版</a>のほうが簡単です。自動で更新されますし、警告も出ません。
+      このページは、<b>入れる前に中身を自分で確かめたい方</b>のためのものです。
+      ストアに出したものと同一のファイルを置いています。展開してChromeに読み込ませるだけで、所要5分・費用ゼロです。
     </p>
 
     <div class="dl-card">
       <div class="dl-l">
-        <div class="dl-v">LeakScan <b id="dl-ver">v0.1.5</b></div>
+        <div class="dl-v">LeakScan <b id="dl-ver">v0.1.6</b></div>
         <div class="dl-m">
           <span>漏洩データ <b id="dl-entries">574</b>件 同梱（起動時に最新を取得）</span>
           <span class="dot">・</span><span id="dl-size">107 KB</span>
           <span class="dot">・</span><span>依存ライブラリなし</span>
         </div>
       </div>
-      <a class="btn btn-primary" id="dl-link" href="download/leakscan-0.1.5.zip" download>zipをダウンロード</a>
+      <a class="btn btn-primary" id="dl-link" href="download/leakscan-0.1.6.zip" download>zipをダウンロード</a>
     </div>
     <div class="dl-sha">
       <span class="dl-sha-k">SHA-256</span>
@@ -67,7 +67,7 @@
       <h2>先に読んでください</h2>
       <ul>
         <li><b>コードは100%AIが書いたものです。</b>人間による詳細なレビューを経ていません。動作・内容・安全性について一切保証しません。その代わり全文を公開しています（コード MIT / データ CC BY 4.0）。</li>
-        <li><b>この入れ方は「開発者向け」の機能を使います。</b>Chromeを起動するたびに「デベロッパー モードの拡張機能を無効にする」という警告が出ます。故障ではありません。気になる方は審査の完了をお待ちください。</li>
+        <li><b>この入れ方は「開発者向け」の機能を使います。</b>Chromeを起動するたびに「デベロッパー モードの拡張機能を無効にする」という警告が出ます。故障ではありません。気になる方はウェブストア版をお使いください。</li>
         <li><b>自動更新されません。</b>拡張機能本体は手動で入れ直すまで更新されません（漏洩データのほうは、このサイトと公開リポジトリの新しい方を毎回取得するので自動で新しくなります）。</li>
         <li><b>「該当なし」は安全の証明ではありません。</b>別のアドレスで登録したサービスは検出できません。</li>
       </ul>
@@ -154,7 +154,7 @@
               <svg viewBox="0 0 32 32"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div class="uc-b">
-              <div class="uc-t">LeakScan — 個人情報流出チェッカー <span class="uc-v">0.1.5</span></div>
+              <div class="uc-t">LeakScan — 個人情報流出チェッカー <span class="uc-v">0.1.6</span></div>
               <div class="uc-d">公表された国内の情報漏洩事案とGmailの送信元だけをブラウザ内で照合します。</div>
               <div class="uc-id">ID: 端末ごとに変わります</div>
             </div>
@@ -202,13 +202,13 @@
       <dd>選んだフォルダに <code>manifest.json</code> が直接入っていません。1つ下の階層（<code class="dl-dir">leakscan-0.1.6</code> の中）を選び直してください。</dd>
 
       <dt>Chromeを起動するたびに警告が出る</dt>
-      <dd>デベロッパー モードで入れた拡張機能に対するChromeの仕様です。「×」で閉じれば、その回は消えます。審査が通ってストア版に入れ替えれば出なくなります。</dd>
+      <dd>デベロッパー モードで入れた拡張機能に対するChromeの仕様です。「×」で閉じれば、その回は消えます。ウェブストア版に入れ替えれば出なくなります。</dd>
 
       <dt>アイコンを押しても何も起きない / 0件になる</dt>
       <dd>Gmailを開いたタブで押してください。それでも駄目なときは、拡張機能の「詳細」→「拡張機能のオプション」から<b>セルフテスト</b>を実行すると、どこで止まっているか分かります。</dd>
 
-      <dt>審査が通ったらどうすればいい？</dt>
-      <dd>ウェブストアから入れ直してください。そのあと、この手順で入れたほうを <code>chrome://extensions</code> から<b>削除</b>します。2つ入れたままだと結果が二重に出ます。</dd>
+      <dt>ウェブストア版に移りたい</dt>
+      <dd><a href="https://chromewebstore.google.com/detail/anpkncehohlelmiccjmgchfamjhnfjoa">ウェブストア</a>から入れ直してください。そのあと、この手順で入れたほうを <code>chrome://extensions</code> から<b>削除</b>します。2つ入れたままだと結果が二重に出ます。</dd>
 
       <dt>やめたい</dt>
       <dd><code>chrome://extensions</code> でLeakScanの「削除」を押し、展開したフォルダを捨ててください。保存先は端末内だけなので、消せば何も残りません。</dd>
@@ -230,8 +230,8 @@
       </ul>
     </div>
     <div class="cmds">
-      <div class="cmd"><span class="cmd-k">macOS / Linux</span><code>shasum -a 256 leakscan-0.1.5.zip</code></div>
-      <div class="cmd"><span class="cmd-k">Windows (PowerShell)</span><code>Get-FileHash leakscan-0.1.5.zip -Algorithm SHA256</code></div>
+      <div class="cmd"><span class="cmd-k">macOS / Linux</span><code>shasum -a 256 leakscan-0.1.6.zip</code></div>
+      <div class="cmd"><span class="cmd-k">Windows (PowerShell)</span><code>Get-FileHash leakscan-0.1.6.zip -Algorithm SHA256</code></div>
     </div>
     <div class="cta-row">
       <a class="btn btn-ghost" href="https://github.com/M2AI-jp/leakscan">ソースを読む</a>
