@@ -648,3 +648,10 @@ section > .wrap > h2 { color: #fff; }
   color: var(--fg-dim); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .fr { align-items: start; }
 .fd { padding-top: 2px; }
+
+/* ヒーローを1カラムに（結果モックを外した構成） */
+.fv .grid.one { grid-template-columns: 1fr !important; max-width: 760px; }
+.fv .grid.one h1 { font-size: clamp(42px, 8vw, 76px); }
+.fv .grid.one .one { max-width: 30em; }
+.fv .grid.one .trust { gap: 10px 26px; }
+@media (min-width: 900px) { .fv { padding: 96px 0 84px; } }
