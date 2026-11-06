@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LeakScan — 使っているサービスの情報漏洩を1分で特定</title>
+<title>LeakScan — あなたは何件？ 使っているサービスの情報漏洩を1分で</title>
 <meta name="description" content="Gmailの差出人を公表済みの漏洩事案と自動照合し、あなたが使っているサービスの漏洩だけを表示します。データは毎日更新。無料・登録不要・メール本文は読みません。">
-<meta property="og:title" content="LeakScan — 使っているサービスの情報漏洩を1分で特定">
+<meta property="og:title" content="LeakScan — あなたは何件？">
 <meta property="og:description" content="Gmailの差出人を公表済みの漏洩事案と自動照合。毎日更新・無料・登録不要。">
 <meta property="og:type" content="website">
 <meta name="color-scheme" content="dark light">
@@ -33,10 +33,10 @@
   <div class="wrap">
     <div class="grid">
       <div>
-        <h1>使っているサービスの<br>漏洩だけを1分で検出</h1>
+        <span class="kicker">2026年 国内で公表された漏洩 <b id="n-hero">79件</b></span>
+        <h1>あなたは<br>何件？</h1>
         <p class="one">
-          Gmailの差出人を<b id="n-hero">公表済み</b>の漏洩事案と自動照合します。
-          あなたに関係のある漏洩だけが表示されます。
+          Gmailの差出人を照合して、あなたが使っているサービスの漏洩だけを割り出します。
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#use">無料で使う</a>
@@ -380,7 +380,7 @@
     const sum = entries.reduce((a, e) => a + (e.records_num || 0), 0);
     document.getElementById('count-line').textContent =
       `収録 ${entries.length}件 / ${window.LeakScan.fmtNum(sum)}`;
-    document.getElementById('n-hero').textContent = `公表済み${entries.length}件`;
+    document.getElementById('n-hero').textContent = `${entries.length}件`;
     document.getElementById('updated').textContent = window.LeakScan.fmtDate(meta.updated);
   } catch (e) { console.error(e); }
 })();

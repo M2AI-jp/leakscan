@@ -310,7 +310,12 @@ footer a { color: var(--fg-muted); }
 .fv { padding: 44px 0 56px; border-bottom: 1px solid var(--border); }
 .fv .grid { display: grid; gap: 34px; align-items: center; }
 @media (min-width: 900px) { .fv .grid { grid-template-columns: 0.95fr 1.05fr; gap: 48px; } .fv { padding: 64px 0 72px; } }
-.fv h1 { font-size: clamp(30px, 5.2vw, 46px); letter-spacing: -.02em; line-height: 1.25; margin: 0 0 18px; }
+.fv .kicker { display: inline-block; font-size: 13px; letter-spacing: .04em; color: var(--fg-muted);
+  background: var(--bg-elev); border: 1px solid var(--border-strong); border-radius: 999px;
+  padding: 6px 15px; margin-bottom: 22px; }
+.fv .kicker b { color: var(--danger); font-size: 14px; }
+.fv h1 { font-size: clamp(56px, 11vw, 104px); letter-spacing: -.045em; line-height: 1.02;
+  margin: 0 0 22px; font-weight: 800; }
 .fv .one { font-size: clamp(16px, 2.2vw, 19px); color: var(--fg-muted); line-height: 1.75; margin: 0 0 26px; }
 .fv .one b { color: var(--fg); }
 .fv .cta-row { margin: 0 0 18px; }
