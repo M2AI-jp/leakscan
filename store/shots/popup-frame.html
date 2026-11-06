@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<title>LeakScan store shot</title>
+<style>
+  html,body{margin:0;height:800px;width:1280px;overflow:hidden;
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif;
+    background:radial-gradient(1200px 700px at 70% 20%, #16243a 0%, #0c0f14 60%);color:#e8ecf3;}
+  .wrap{display:flex;align-items:center;justify-content:center;gap:72px;height:100%;padding:0 80px;box-sizing:border-box;}
+  .copy{max-width:470px;}
+  h1{font-size:44px;line-height:1.25;letter-spacing:-.02em;margin:0 0 20px;}
+  h1 em{font-style:normal;color:#4da3ff;}
+  p{font-size:19px;line-height:1.75;color:#9aa5b8;margin:0 0 26px;}
+  ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;}
+  li{font-size:16px;color:#9aa5b8;padding-left:28px;position:relative;}
+  li::before{content:"✓";position:absolute;left:0;color:#5ddba4;font-weight:800;}
+  .shot{width:384px;border-radius:16px;overflow:hidden;border:1px solid #37425a;
+    box-shadow:0 40px 80px -30px rgba(0,0,0,.9);background:#0c0f14;}
+  iframe{width:384px;height:470px;border:0;display:block;}
+</style></head>
+<body><div class="wrap">
+  <div class="copy">
+    <h1>使っているサービスの<br><em>漏洩だけ</em>を1分で検出</h1>
+    <p>Gmailの差出人を、公表済みの国内漏洩事案と自動照合します。</p>
+    <ul>
+      <li>メールの本文・件名・添付は読みません</li>
+      <li>照合はブラウザ内で完結し、外部送信なし</li>
+      <li>Googleアカウントの連携・ログイン不要</li>
+      <li>完全無料・広告なし</li>
+    </ul>
+  </div>
+  <div class="shot"><iframe src="http://127.0.0.1:8761/test/popup-preview.html"></iframe></div>
+</div></body></html>
