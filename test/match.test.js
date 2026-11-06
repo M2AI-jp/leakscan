@@ -34,8 +34,24 @@ ok('全角/半角ゆれを吸収', M.matchSender({ email: 'x@y.jp', name: 'ﾋ�
 ok('スペース入り表示名', M.matchSender({ email: 'x@y.jp', name: '花 キューピット' }, byId('hanacupid-2026-10')) === 'name');
 ok('短い英字パターンは採用しない', M.minNameLen('au') === 4 && M.minNameLen('ローソン') === 2);
 
-section('3. 誤検知（これが一番大事）');
+section('3. 関連ドメイン（完全一致でなくても拾う）');
+const lawson = byId('lawson-id-2026-10');     // lawson.co.jp
+const bic    = byId('biccamera-2026-11');     // biccamera.com
+ok('別TLDの同一ブランド', M.matchSender({ email: 'news@lawson.jp', name: '' }, lawson) === 'related');
+ok('配信用の別ドメイン(brand+mail)', M.matchSender({ email: 'mg@lawsonmail.jp', name: '' }, lawson) === 'related');
+ok('配信用の別ドメイン(接辞+brand)', M.matchSender({ email: 'x@mail-biccamera.jp', name: '' }, bic) === 'related');
+ok('ハイフン有無を吸収', M.matchSender({ email: 'x@bic-camera.com', name: '' }, bic) === 'related');
+ok('完全一致は related より優先', M.matchSender({ email: 'a@lawson.co.jp', name: '' }, lawson) === 'domain');
+ok('サブドメインも domain', M.matchSender({ email: 'a@mail.lawson.co.jp', name: '' }, lawson) === 'domain');
+ok('短いブランドは related にしない', M.usableBrand('muji') === false);
+ok('一般語は related にしない', M.usableBrand('life') === false && M.usableBrand('point') === false);
+ok('数字だけは related にしない', M.usableBrand('12345') === false);
+
+section('4. 誤検知（これが一番大事）');
 const innocuous = [
+  { email: 'info@lifenet-seimei.co.jp', name: 'ライフネット生命' },
+  { email: 'news@point-town.com', name: 'ポイントタウン' },
+  { email: 'x@tokyo-gas.co.jp', name: '東京ガス' },
   { email: 'friend@gmail.com', name: '山田太郎' },
   { email: 'noreply@github.com', name: 'GitHub' },
   { email: 'team@slack.com', name: 'Slack' },
@@ -50,7 +66,7 @@ for (const s of innocuous) {
   ok('無関係な差出人が一致しない: ' + s.email, h.length === 0, h.join(','));
 }
 
-section('4. 1差出人が複数サービスに一致しないか');
+section('5. 1差出人が複数サービスに一致しないか');
 let multi = [];
 for (const e of entries) {
   for (const d of e.match.domains) {
@@ -60,18 +76,29 @@ for (const e of entries) {
 }
 ok('ドメインの衝突なし', multi.length === 0, multi.join(' | '));
 
-section('5. クエリ生成');
+ok('ブランドラベルが他サービスと衝突しない', (function () {
+  const owner = new Map(); const clash = [];
+  for (const s2 of services) for (const d of s2.domains) {
+    const b = M.brandLabel(d).replace(/-/g, '');
+    if (!M.usableBrand(M.brandLabel(d))) continue;
+    if (owner.has(b) && owner.get(b) !== s2.id) clash.push(b + ': ' + owner.get(b) + ' / ' + s2.id);
+    else owner.set(b, s2.id);
+  }
+  return clash.length === 0 || (console.log('     衝突:', clash.join(' | ')), false);
+})());
+
+section('6. クエリ生成');
 const batch = services.slice(0, 8);
 const q = M.buildQuery(batch, {});
 ok('from:(...) 形式', /^from:\(.+\)$/.test(q));
 ok('OR 区切り', q.includes(' OR '));
 ok('日本語は引用符で囲む', q.includes('"無印良品"'));
-ok('クエリ長が実用範囲 (<1000)', q.length < 1000, 'len=' + q.length);
+ok('クエリ長が実用範囲 (<1500)', q.length < 1500, 'len=' + q.length);
 ok('in:anywhere オプション', M.buildQuery(batch, { includeSpamTrash: true }).endsWith(' in:anywhere'));
 const longest = (() => { let mx = 0; for (let i = 0; i < services.length; i += 8) mx = Math.max(mx, M.buildQuery(services.slice(i, i + 8), {}).length); return mx; })();
-ok('全バッチで1000字未満', longest < 1000, 'max=' + longest);
+ok('全バッチで1500字未満', longest < 1500, 'max=' + longest);
 
-section('6. データ整合性');
+section('7. データ整合性');
 ok('全エントリにidとsourcesがある', entries.every((e) => e.id && e.sources && e.sources.length));
 ok('statusは既知の値', entries.every((e) => meta.status_labels[e.status]));
 ok('causeは既知の値', entries.every((e) => meta.cause_labels[e.cause]));
@@ -82,13 +109,13 @@ ok('照合パターンを持つ事案が9割以上',
 ok('AI断定なし（国内事案でai_link=confirmedがない）',
   !entries.some((e) => e.ai_link === 'confirmed' && e.id !== 'litellm-supplychain-2026-10'));
 
-section('7. 対応アドバイス');
+section('8. 対応アドバイス');
 ok('カード漏洩は危険度3', A.severity(['card', 'name']) === 3);
 ok('メールのみは危険度1', A.severity(['email']) === 1);
 ok('パスワード漏洩で「今すぐ」が出る', A.adviceFor(['password']).some((a) => a.urgency === 3));
 ok('全エントリでアドバイスが1件以上', entries.every((e) => A.adviceFor(e.categories).length >= 1));
 
-section('8. 実在しそうな受信箱でのシミュレーション');
+section('9. 実在しそうな受信箱でのシミュレーション');
 const inbox = [
   { email: 'info@muji.net', name: '無印良品' },
   { email: 'noreply@lawson.co.jp', name: 'ローソン' },

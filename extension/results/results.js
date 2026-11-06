@@ -35,8 +35,10 @@
 
   const send = (msg) => new Promise((res) => chrome.runtime.sendMessage(msg, res));
 
+  const HOW = { domain: 'アドレス一致', related: '関連ドメイン', name: '表示名一致' };
+
   function hitLine(h) {
-    const by = h.how === 'domain' ? 'アドレス一致' : '表示名一致';
+    const by = HOW[h.how] || h.how;
     return `<span class="h">${esc(h.name ? h.name + ' <' + h.email + '>' : h.email)}
       <span class="by">— ${by}${h.date ? ' / 最新 ' + esc(h.date) : ''}</span></span>`;
   }
@@ -47,7 +49,8 @@
       .map((c) => `<span class="badge cat">${esc((meta.categories && meta.categories[c]) || c)}</span>`).join('');
     const srcs = (e.sources || [])
       .map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>`).join(' / ');
-    const nameOnly = hits.every((h) => h.how === 'name');
+    const weak = hits.every((h) => h.how !== 'domain');
+    const weakLabel = hits.some((h) => h.how === 'related') ? '関連ドメイン一致' : '表示名一致';
     const advice = A.adviceFor(e.categories)
       .map((a) => `<div class="action"><span class="u u${a.urgency}">${esc(A.URGENCY_LABEL[a.urgency])}</span>
         <div><b>${esc(a.title)}</b><p>${esc(a.detail)}</p></div></div>`).join('');
@@ -64,7 +67,7 @@
           <span class="badge s-${esc(e.status)}">${esc((meta.status_labels && meta.status_labels[e.status]) || e.status)}</span>
           <span class="badge sev-${sev}">危険度 ${esc(A.SEV_LABEL[sev])}</span>
           <span class="badge">${esc((meta.cause_labels && meta.cause_labels[e.cause]) || e.cause)}</span>
-          ${nameOnly ? '<span class="badge">表示名一致</span>' : ''}
+          ${weak ? `<span class="badge">${esc(weakLabel)}</span>` : ''}
           ${cats}
         </div>
         ${e.scope ? `<div class="entry-scope">${esc(e.scope)}</div>` : ''}
