@@ -67,6 +67,7 @@ jobs:
           node test/match.test.js
           node test/domains.test.mjs
           node test/feed.test.mjs
+          node test/db-mirror.test.mjs
 
       - name: 検証に失敗したら自動追記を取り消す
         if: failure()
@@ -92,7 +93,7 @@ jobs:
           TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           if [ -z "$TOKEN" ]; then
-            echo "::warning::CLOUDFLARE_API_TOKEN が未設定のため、追記した事案はサイトに反映されません。"
+            echo "::warning::CLOUDFLARE_API_TOKEN が未設定のため、配信物は前回のデプロイのままです。サイトも拡張機能もGitHub側の新しいデータを読むので、追記した事案は利用者に届きます。"
             echo "ready=false" >> "$GITHUB_OUTPUT"
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"

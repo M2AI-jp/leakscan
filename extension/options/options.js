@@ -28,7 +28,10 @@
     $('#spam').checked = !!o.includeSpamTrash;
     $('#batch').value = o.batchSize;
     $('#dburl').value = o.dbBase;
-    $('#dbinfo').textContent = `収録 ${view.db.count} 事案 / ${view.db.source === 'remote' ? '最新取得' : '同梱版'}`;
+    const host = (view.db.origin || '').split('/')[2] || '';
+    $('#dbinfo').textContent =
+      `収録 ${view.db.count} 事案 / ` +
+      (view.db.source === 'remote' ? `最新取得${host ? `（${host}）` : ''}` : '同梱版');
 
     ['#account', '#batch', '#dburl'].forEach((s) => $(s).addEventListener('input', save));
     $('#spam').addEventListener('change', save);
@@ -37,7 +40,7 @@
       $('#dbinfo').textContent = '取得中…';
       const r = await send({ type: 'LEAKSCAN_REFRESH_DB' });
       $('#dbinfo').textContent = r && r.ok
-        ? `更新しました（${r.count} 事案 / ${r.source === 'remote' ? '最新取得' : '同梱版'}${r.lastError ? '・取得失敗のため同梱版' : ''}）`
+        ? `更新しました（${r.count} 事案 / ${r.source === 'remote' ? `最新取得${(r.origin || '').split('/')[2] ? `（${(r.origin || '').split('/')[2]}）` : ''}` : '同梱版'}${r.lastError && r.source !== 'remote' ? '・取得失敗のため同梱版' : ''}）`
         : '更新に失敗しました: ' + ((r && r.error) || '');
     });
 

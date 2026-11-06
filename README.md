@@ -304,8 +304,16 @@ APIトークンを作り、リポジトリの Settings → Secrets → Actions �
 `CLOUDFLARE_API_TOKEN` として登録します（`CLOUDFLARE_ACCOUNT_ID` は設定済み）。
 手元から出すなら `npx wrangler deploy` でも反映されます。
 
-なお**拡張機能**が読むのは配信物（`https://leakscan.matsunai.com/data/`）だけなので、
-拡張機能の利用者にデータを届けるには③が要ります。
+**拡張機能も②と同じ経路を持っています**（`extension/background.js` の `loadDb`）。
+配信物とGitHubの `meta.json` を並行で取り、`updated` の新しい方から `breaches.json` を
+取りにいきます。そのため③を設定しなくても、拡張機能の利用者にも毎朝のデータが届きます。
+取得先は `host_permissions` に宣言しています（`raw.githubusercontent.com` は
+`access-control-allow-origin: *` を返すのでCORSだけでも通りそうですが、
+サービスワーカーがCORSを免除されるのはマニフェストに書いた相手だけ、と
+[公式文書](https://developer.chrome.com/docs/extensions/develop/concepts/network-requests)が
+言っているので、確実な方を採っています）。
+
+③が効くのは、HTMLやCSSの変更と、拡張機能に同梱する予備のコピーです。
 
 ## 審査待ちの間の配布
 

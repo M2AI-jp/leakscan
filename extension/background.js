@@ -3,8 +3,24 @@
  * Never sees mail content: the content script returns only matched sender data.
  */
 
-/* Tried in order; the bundled copy is the last resort. */
-const DB_MIRRORS = ['https://leakscan.matsunai.com/data/'];
+/* データの入手先。どれも届かなければ同梱のコピーを使う。
+ *
+ * 配信サイトの中身はデプロイしたときにしか変わらないが、収集結果は毎朝
+ * GitHubのリポジトリに入る。そこで両方の meta.json を見て、新しい方を使う。
+ * これで配信が止まっていてもデータは古くならない。
+ *
+ * GitHub側は host_permissions に宣言して読む。access-control-allow-origin: * が
+ * 返るのでCORSだけでも通りそうだが、サービスワーカーがCORSを免除されるのは
+ * 「マニフェストに書いた相手」だけだと公式文書が言っているので、確実な方を採る。
+ * 宣言しておけばインストール時の権限表示にも出るので、通信先を隠さずに済む。
+ * どちらも公開リポジトリと静的配信なので、費用はかからない。 */
+const DB_MIRRORS = [
+  'https://leakscan.matsunai.com/data/',
+  'https://raw.githubusercontent.com/M2AI-jp/leakscan/main/data/'
+];
+
+/* 片方が遅いときにスキャン開始を待たせないための上限。 */
+const DB_FETCH_TIMEOUT_MS = 8000;
 
 const DEFAULTS = {
   dbBase: 'https://leakscan.matsunai.com/data/',
@@ -47,8 +63,13 @@ async function setState(next) {
 }
 
 /* ---------------------------------------------------------------------- db */
-async function fetchJson(url) {
-  const res = await fetch(url, { cache: 'no-cache' });
+async function fetchJson(url, timeoutMs) {
+  const init = { cache: 'no-cache' };
+  /* AbortSignal.timeout は Chrome 103 以降。102 では単に上限なしで動く。 */
+  if (timeoutMs && typeof AbortSignal !== 'undefined' && AbortSignal.timeout) {
+    init.signal = AbortSignal.timeout(timeoutMs);
+  }
+  const res = await fetch(url, init);
   if (!res.ok) throw new Error('HTTP ' + res.status);
   return res.json();
 }
@@ -72,16 +93,27 @@ async function loadDb(force) {
     const base = b.endsWith('/') ? b : b + '/';
     if (!bases.includes(base)) bases.push(base);
   }
-  let fresh = null;
+  /* まず meta.json だけを並行で取り、updated の新しい順に並べる。
+     日付が同じなら設定・既定の順をそのまま保つ（Array#sort は安定）。 */
   let err = null;
-  for (const base of bases) {
+  const probes = await Promise.all(
+    bases.map((base) =>
+      fetchJson(base + 'meta.json', DB_FETCH_TIMEOUT_MS).then(
+        (meta) => ({ base, meta }),
+        (e) => { err = e; return null; }
+      )
+    )
+  );
+  const ranked = probes
+    .filter(Boolean)
+    .sort((a, b) => String(b.meta.updated || '').localeCompare(String(a.meta.updated || '')));
+
+  let fresh = null;
+  for (const cand of ranked) {
     try {
-      const [meta, entries] = await Promise.all([
-        fetchJson(base + 'meta.json'),
-        fetchJson(base + 'breaches.json')
-      ]);
+      const entries = await fetchJson(cand.base + 'breaches.json', DB_FETCH_TIMEOUT_MS);
       if (!Array.isArray(entries) || !entries.length) throw new Error('empty dataset');
-      fresh = { meta, entries, source: 'remote', origin: base, fetchedAt: Date.now() };
+      fresh = { meta: cand.meta, entries, source: 'remote', origin: cand.base, fetchedAt: Date.now() };
       break;
     } catch (e) { err = e; }
   }
@@ -277,6 +309,7 @@ chrome.runtime.onMessage.addListener((msg, sender, respond) => {
             updated: (db.meta && db.meta.updated) || '',
             count: db.entries.length,
             source: db.source,
+            origin: db.origin || '',
             stale: !!db.stale,
             lastError: db.lastError || null
           }
@@ -290,7 +323,10 @@ chrome.runtime.onMessage.addListener((msg, sender, respond) => {
 
     case 'LEAKSCAN_REFRESH_DB':
       loadDb(true).then(
-        (db) => respond({ ok: true, count: db.entries.length, source: db.source, lastError: db.lastError || null }),
+        (db) => respond({
+          ok: true, count: db.entries.length, source: db.source,
+          origin: db.origin || '', lastError: db.lastError || null
+        }),
         (err) => respond({ ok: false, error: String(err.message || err) })
       );
       return true;

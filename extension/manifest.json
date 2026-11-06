@@ -2,14 +2,15 @@
   "manifest_version": 3,
   "name": "LeakScan — 個人情報流出チェッカー",
   "short_name": "LeakScan",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "公表された国内の情報漏洩事案とGmailの送信元だけをブラウザ内で照合し、自分が使っているサービスの漏洩を特定します。外部送信なし。",
   "permissions": [
     "storage"
   ],
   "host_permissions": [
     "https://mail.google.com/*",
-    "https://leakscan.matsunai.com/*"
+    "https://leakscan.matsunai.com/*",
+    "https://raw.githubusercontent.com/M2AI-jp/leakscan/*"
   ],
   "background": {
     "service_worker": "background.js",

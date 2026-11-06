@@ -68,7 +68,7 @@
       <ul>
         <li><b>コードは100%AIが書いたものです。</b>人間による詳細なレビューを経ていません。動作・内容・安全性について一切保証しません。その代わり全文を公開しています（コード MIT / データ CC BY 4.0）。</li>
         <li><b>この入れ方は「開発者向け」の機能を使います。</b>Chromeを起動するたびに「デベロッパー モードの拡張機能を無効にする」という警告が出ます。故障ではありません。気になる方は審査の完了をお待ちください。</li>
-        <li><b>自動更新されません。</b>拡張機能本体は手動で入れ直すまで更新されません（漏洩データのほうは毎朝このサイトから取得するので自動で新しくなります）。</li>
+        <li><b>自動更新されません。</b>拡張機能本体は手動で入れ直すまで更新されません（漏洩データのほうは、このサイトと公開リポジトリの新しい方を毎回取得するので自動で新しくなります）。</li>
         <li><b>「該当なし」は安全の証明ではありません。</b>別のアドレスで登録したサービスは検出できません。</li>
       </ul>
     </div>
@@ -86,7 +86,7 @@
         <div class="st-h"><span class="st-n">1</span><h3>zipをダウンロードして展開する</h3></div>
         <p>上のボタンでzipを保存し、展開します。</p>
         <div class="os-g">
-          <div class="os"><b>macOS</b><p>zipをダブルクリックすると、同じ場所に <code>leakscan-0.1.5</code> フォルダができます。</p></div>
+          <div class="os"><b>macOS</b><p>zipをダブルクリックすると、同じ場所に <code class="dl-dir">leakscan-0.1.6</code> フォルダができます。</p></div>
           <div class="os"><b>Windows</b><p>zipを右クリック →「すべて展開」。展開先のフォルダを覚えておきます。</p></div>
         </div>
         <p class="st-warn">展開してできた<b>フォルダ</b>を使います。zipのままでは読み込めません。
@@ -199,7 +199,7 @@
     <h2 class="ins-h2">うまくいかないとき</h2>
     <dl class="faq">
       <dt>「マニフェスト ファイルがないか読み取れません」と出る</dt>
-      <dd>選んだフォルダに <code>manifest.json</code> が直接入っていません。1つ下の階層（<code>leakscan-0.1.5</code> の中）を選び直してください。</dd>
+      <dd>選んだフォルダに <code>manifest.json</code> が直接入っていません。1つ下の階層（<code class="dl-dir">leakscan-0.1.6</code> の中）を選び直してください。</dd>
 
       <dt>Chromeを起動するたびに警告が出る</dt>
       <dd>デベロッパー モードで入れた拡張機能に対するChromeの仕様です。「×」で閉じれば、その回は消えます。審査が通ってストア版に入れ替えれば出なくなります。</dd>
@@ -226,7 +226,7 @@
         <li><b>zipが改ざんされていないか</b> … 下のコマンドの出力が、上のSHA-256と一致するか見てください</li>
         <li><b>コードそのもの</b> … <a href="https://github.com/M2AI-jp/leakscan/tree/main/extension">GitHub</a>（約1,200行・外部ライブラリゼロ）</li>
         <li><b>通信先</b> … <code>F12</code> のネットワークタブで、このサイト以外に通信していないこと</li>
-        <li><b>権限</b> … <code>storage</code> と Gmail と このサイト の3つだけ。「すべてのサイト」は要求していません</li>
+        <li><b>権限</b> … <code>storage</code>、Gmail、このサイト、データの置き場（GitHubの公開リポジトリ）の4つだけ。「すべてのサイト」は要求していません</li>
       </ul>
     </div>
     <div class="cmds">
@@ -294,6 +294,9 @@
     document.querySelectorAll('.cmd code').forEach(function (el) {
       el.textContent = el.textContent.replace(/leakscan-[\d.]+\.zip/, d.file);
     });
+    /* 展開してできるフォルダの名前は、どちらのOSもzipの名前から付ける */
+    var dir = d.file.replace(/\.zip$/, '');
+    document.querySelectorAll('.dl-dir').forEach(function (el) { el.textContent = dir; });
   } catch (e) { console.error(e); }
 })();
 </script>
