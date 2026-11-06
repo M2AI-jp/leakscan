@@ -141,6 +141,41 @@
       ? matched.map((m) => serviceCard(m.entry, m.hits, meta)).join('')
       : '<div class="empty">一致したサービスはありませんでした。別のメールアドレスで登録したサービスは検出できないため、安全の証明ではありません。</div>';
 
+    /* ── シェア：件数と危険度だけ。サービス名は絶対に含めない ── */
+    (function () {
+      const SITE = 'https://leakscan.matsunai.com';
+      let text;
+      if (n === 0) {
+        text = `LeakScanでGmailを調べたら、使っているサービスの漏洩は0件でした。`
+             + `（${report.scanned}件の公表事案と照合）`;
+      } else {
+        const hi = high ? `うち危険度「高」が${high}件。` : '';
+        text = `LeakScanでGmailを調べたら、使っているサービスのうち${n}件で情報漏洩が公表されていました。${hi}`
+             + `（${report.scanned}件の公表事案と照合）`;
+      }
+      const full = `${text}\n${SITE}`;
+      $('#share-text').textContent = text;
+      $('#share-x').href = 'https://x.com/intent/post?text=' + encodeURIComponent(text)
+        + '&url=' + encodeURIComponent(SITE);
+      $('#share').hidden = false;
+
+      $('#share-copy').addEventListener('click', async () => {
+        const btn = $('#share-copy');
+        try {
+          await navigator.clipboard.writeText(full);
+          btn.textContent = 'コピーしました';
+        } catch (e) {
+          const ta = document.createElement('textarea');
+          ta.value = full; ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); btn.textContent = 'コピーしました'; }
+          catch (e2) { btn.textContent = 'コピーできませんでした'; }
+          document.body.removeChild(ta);
+        }
+        setTimeout(() => { btn.textContent = 'テキストをコピー'; }, 1800);
+      });
+    })();
+
     $('#rescan').addEventListener('click', async () => {
       $('#rescan').disabled = true;
       $('#rescan').textContent = 'スキャンを開始しました…';
