@@ -28,11 +28,14 @@ jobs:
       - name: 生成物が最新か確認
         run: |
           node scripts/build.mjs
-          if ! git diff --quiet -- data site/data extension/data; then
+          if ! git diff --quiet -- data site/data extension/data site/_headers; then
             echo "::error::生成物が古くなっています。'node scripts/build.mjs' を実行してコミットしてください。"
-            git diff --stat -- data site/data extension/data
+            git diff --stat -- data site/data extension/data site/_headers
             exit 1
           fi
+
+      - name: ページ内スクリプトがCSPのハッシュと一致しているか
+        run: node scripts/csp.mjs --check
 
   deploy:
     needs: validate

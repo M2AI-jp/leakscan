@@ -1,13 +1,65 @@
+# HTMLのページだけ no-transform を付ける。
+# Cloudflareは配信の途中でHTMLに手を入れる機能（アクセス解析の埋め込みなど）を
+# 持っているが、no-transform は「中身をいじるな」という標準の指示なので、
+# これが効けばダッシュボードの設定に関係なく埋め込みが止まる。
+# /* に書くと下のデータ配布の Cache-Control とぶつかるので、ページを並べて書く。
+/
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
+/install
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
+/install.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
+/list
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
+/list.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
+/privacy
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
+/privacy.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+  NEL: {"max_age":0}
+
 /download/*
   Cache-Control: public, max-age=300
 
+# 誰でも再利用できるように、データだけは他のサイトからも読めるようにしておく
 /data/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=900
+
+# 拡張子ごとに型を指定する。nosniff を付けているので、
+# ブラウザは書いたとおりに扱う（間違っていても直してくれない）
+/data/*.json
   Content-Type: application/json; charset=utf-8
+
+/data/*.csv
+  Content-Type: text/csv; charset=utf-8
+
+/data/*.tsv
+  Content-Type: text/tab-separated-values; charset=utf-8
 
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
   X-Frame-Options: DENY
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: accelerometer=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()
+  # 次の行は node scripts/csp.mjs が書き換える（ページ内スクリプトのハッシュを含むため、手で直さない）
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-iHT+P7bdnn33v3SQ6zkQaX+nMWDjC52GTlb6VoNqMvg=' 'sha256-a/nXMhcu+7B3Y7bWTwwx7nxV0iIrXcgwEaAUZdSeNG0=' 'sha256-QT9vxYyipykBiIjbVgVonRhcgJnUjWB5syHZY5khfGA='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests

@@ -1036,3 +1036,13 @@ section > .wrap > h2 { color: var(--fg-strong); }
 }
 .review-now b { display: block; color: var(--warn); font-weight: 800; margin-bottom: 3px; }
 .review-now a { color: var(--fg); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+/* ---------- style属性から移してきたもの ----------
+   CSPから 'unsafe-inline' を外すため、HTMLに直接書いていた見た目をここへ移した。
+   値はそのままなので、表示は変わらない。 */
+.brand-sm { font-size: 16px; }
+.ico-x    { vertical-align: -1px; margin-right: 4px; }
+.pt-40    { padding-top: 40px; }
+.pt-44    { padding-top: 44px; }
+.mt-14    { margin-top: 14px; }
+.mb-30    { margin-bottom: 30px; }

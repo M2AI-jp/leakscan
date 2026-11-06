@@ -28,12 +28,12 @@
   </div>
 </header>
 
-<section style="padding-top:44px">
+<section class="pt-44">
   <div class="wrap narrow">
     <h2>プライバシーポリシー</h2>
     <p class="sec-lead">最終更新: 2026年11月6日</p>
 
-    <div class="note" style="margin-bottom:30px">
+    <div class="note mb-30">
       <h3>要約</h3>
       <p>
         <strong>LeakScanは、利用者の個人情報を一切収集しません。</strong>
@@ -50,6 +50,15 @@
       <strong>当社が収集する情報はありません。</strong>
       本サービスは、利用者登録、メールアドレスの入力、アカウント連携のいずれも求めません。
       ウェブサイトにはアクセス解析ツール、広告タグ、Cookieを設置していません。
+      配信経路による書き換え（アクセス解析の自動挿入を含む）も <code>no-transform</code> で停止しており、
+      配信されるHTMLは<a href="https://github.com/M2AI-jp/leakscan/tree/main/site">公開リポジトリのファイル</a>と
+      1バイトも違いません。
+    </p>
+    <p class="plain">
+      なお、ウェブサイトの最新件数の表示には、当社サイトに加えて公開リポジトリ
+      （<code>raw.githubusercontent.com</code>、GitHub, Inc. が運営）のデータを読み込みます。
+      この読み込みは閲覧者のブラウザから直接行われるため、同社に接続元のIPアドレスが伝わります。
+      利用者を識別する情報は送らず、リファラも送信しません（<code>Referrer-Policy: no-referrer</code>）。
     </p>
 
     <h3>3. 拡張機能がアクセスする情報</h3>

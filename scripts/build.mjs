@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync, copyFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { updateHeaders } from './csp.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const d = (p) => join(ROOT, p);
@@ -88,6 +89,13 @@ for (const f of ['breaches.csv', 'domains.tsv', 'stats.json']) {
   copyFileSync(d('data/' + f), d('site/data/' + f));
 }
 
+/* ---- CSPのハッシュもここで合わせる ----
+   ページ内スクリプトを直すとハッシュが変わる。手で写すと必ず忘れるので、
+   生成物の一つとして扱う。 */
+const csp = updateHeaders();
+
 console.log(`${entries.length} 件 / ${stats.companies} 社 / ドメイン ${stats.domains} 件`);
 console.log('生成: data/breaches.csv, data/domains.tsv, data/stats.json');
 console.log('同期: site/data/, extension/data/');
+console.log(`CSP: ページ内スクリプト ${csp.hashes.length} 件のハッシュ` +
+  (csp.changed ? ' → site/_headers を更新' : '（site/_headers は最新）'));

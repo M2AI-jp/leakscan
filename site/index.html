@@ -131,7 +131,7 @@
         <p class="split-lead">
           Gmailの検索結果一覧に本文は表示されません。読むのは行に埋め込まれた差出人のアドレスと表示名だけで、
           <b>メールを開く処理も本文を取得する処理もコードに存在しません</b>。
-          通信は漏洩データを取得する1種類のみ。アップロード処理がなく、受け取るサーバーも持っていません。
+          通信は漏洩データを受け取る1種類だけ。送信する処理がなく、受け取るサーバーも持っていません。
         </p>
         <div class="spec">
           <div class="spec-h">要求している権限</div>
@@ -139,13 +139,14 @@
             <dt>storage</dt><dd>結果と設定の保存（端末内）</dd>
             <dt>mail.google.com</dt><dd>検索結果の差出人の読み取り</dd>
             <dt>leakscan.matsunai.com</dt><dd>漏洩データの取得</dd>
+            <dt>raw.githubusercontent.com</dt><dd>同じ漏洩データの取得（配信が遅れているとき、新しい方を使う）</dd>
           </dl>
-          <div class="spec-n">「すべてのサイトのデータを読み取る」権限は要求していません。Gmail以外は仕組み上読めません。</div>
+          <div class="spec-n">「すべてのサイトのデータを読み取る」権限は要求していません。Gmailと上記2か所のデータ置き場以外は、仕組み上読めません。</div>
         </div>
         <div class="spec">
           <div class="spec-h">自分で確かめる</div>
           <ul class="spec-ul">
-            <li><code>F12</code> のネットワークタブ … 通信は1件だけ</li>
+            <li><code>F12</code> のネットワークタブ … 漏洩データの取得だけ</li>
             <li><code>chrome://extensions</code> の詳細 … 権限一覧</li>
             <li><a href="https://github.com/M2AI-jp/leakscan/tree/main/extension">GitHub</a> … 約1,200行・依存ゼロ</li>
             <li>オフラインでも動作 … 外部に依存していない</li>
@@ -160,7 +161,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <span class="brand" style="font-size:16px">
+        <span class="brand brand-sm">
           <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           LeakScan
         </span>
@@ -173,7 +174,7 @@
         <a href="https://github.com/M2AI-jp/leakscan">GitHub</a>
         <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・お問い合わせ</a>
         <a href="https://x.com/m2ai_jp" rel="noopener">
-          <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@m2ai_jp</a>
+          <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" class="ico-x"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@m2ai_jp</a>
       </nav>
     </div>
 
