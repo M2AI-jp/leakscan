@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LeakScan — 自分が使っているサービスの情報漏洩を、まとめて調べる</title>
-<meta name="description" content="2026年に日本で起きた大量の情報漏洩。自分が使っているサービスが含まれていないかを、Gmailと照らし合わせて1〜2分で調べる無料のChrome拡張機能です。メールの中身は読みません。">
-<meta property="og:title" content="LeakScan — 自分が使っているサービスの情報漏洩を、まとめて調べる">
-<meta property="og:description" content="2026年の国内情報漏洩データベースと照合して、あなたが使っているサービスの漏洩を見つけます。無料・メールの中身は読みません。">
+<title>LeakScan — 漏れたのは、どれ？</title>
+<meta name="description" content="Gmailを見て、あなたが使っているサービスの情報漏洩だけを1分で表示します。無料・登録不要・メールの本文は読みません。">
+<meta property="og:title" content="LeakScan — 漏れたのは、どれ？">
+<meta property="og:description" content="あなたが使っているサービスの情報漏洩だけを1分で。無料・登録不要。">
 <meta property="og:type" content="website">
 <meta name="color-scheme" content="dark light">
 <link rel="stylesheet" href="assets/style.css">
@@ -22,186 +22,106 @@
     </a>
     <nav class="nav">
       <a class="anchor-nav" href="#use">使い方</a>
-      <a class="anchor-nav" href="#safe">安全性</a>
-      <a class="anchor-nav" href="#faq">よくある質問</a>
-      <a href="list">漏洩した企業一覧</a>
+      <a class="anchor-nav" href="#faq">質問</a>
+      <a href="list">企業一覧</a>
       <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
     </nav>
   </div>
 </header>
 
-<div class="hero">
+<div class="fv">
   <div class="wrap">
-    <span class="eyebrow">無料・登録不要</span>
-    <h1>あなたが使っているサービスは、<br>情報を漏らしていませんか。</h1>
-    <p class="lede">
-      2026年、日本では<strong>人口を超える件数</strong>の個人情報が流出しました。
-      ニュースで企業名を見ても、<strong>「それ、自分が使ってるやつだっけ？」</strong>とはなかなか分かりません。
-      LeakScanは、漏洩を公表した企業の一覧と、あなたのGmailに届いているメールの<strong>差出人だけ</strong>を
-      見比べて、<strong>あなたに関係のある漏洩だけ</strong>を1〜2分で教えます。
-    </p>
-    <div class="pill-row">
-      <span class="pill good">完全無料</span>
-      <span class="pill good">登録不要</span>
-      <span class="pill good">メールの中身は読みません</span>
-      <span class="pill good">情報は外部に送りません</span>
-    </div>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#use">使い方を見る（5分）</a>
-      <a class="btn btn-ghost" href="list">漏洩した企業の一覧</a>
-    </div>
-  </div>
-</div>
-
-<div class="wrap">
-  <div class="stats" id="stats">
-    <div class="stat"><div class="v" id="s-entries">—</div><div class="k">公表された漏洩</div><div class="n">2026年・国内</div></div>
-    <div class="stat"><div class="v" id="s-records">—</div><div class="k">漏れた情報の件数</div><div class="n">各社の公表値の合計</div></div>
-    <div class="stat"><div class="v" id="s-companies">—</div><div class="k">企業・団体</div><div class="n">身近なサービスが多数</div></div>
-    <div class="stat"><div class="v" id="s-sev">—</div><div class="k">特に危ないもの</div><div class="n">カード・口座・パスワード</div></div>
-  </div>
-</div>
-
-<section id="what">
-  <div class="wrap narrow">
-    <h2>何をしてくれるの？</h2>
-    <p class="plain">
-      ボタンを1回押すと、LeakScanがGmailをざっと見て、<strong>漏洩を公表した企業からメールが届いていないか</strong>を確認します。
-      届いていれば「あなたはそのサービスを使っている」と考えられるので、その漏洩はあなたに関係があります。
-    </p>
-    <p class="plain">
-      そして、<strong>何が漏れたのか</strong>（メールアドレスだけなのか、クレジットカードまでなのか）と、
-      <strong>あなたが今すぐ何をすべきか</strong>を、サービスごとに表示します。
-    </p>
-
-    <div class="mock" aria-label="結果画面の例">
-      <div class="bar"><i></i><i></i><i></i><span>LeakScan — スキャン結果</span></div>
-      <div class="body">
-        <div class="verdict">あなたが使っている<em>6件</em>のサービスで<br>漏洩が公表されています</div>
-        <div class="sub">79件の公表事案と照合しました（例として表示しています）</div>
-
-        <div class="row">
-          <span class="nm">skyticket</span><span class="co">アドベンチャー</span>
-          <span class="bg sev-3">危険度 高</span>
-          <span class="what">クレジットカード・銀行口座・氏名・電話番号が対象</span>
+    <div class="grid">
+      <div>
+        <h1>漏れたのは、<br>どれ？</h1>
+        <p class="one">
+          Gmailを見て、<b>あなたが使っているサービス</b>の<br>
+          漏洩だけを<b>1分</b>で出します。
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#use">無料で使う</a>
+          <a class="btn btn-ghost" href="list">企業一覧</a>
         </div>
-        <div class="row">
-          <span class="nm">ISPメールシステム</span><span class="co">KDDI</span>
-          <span class="bg sev-3">危険度 高</span>
-          <span class="what">メールアドレスとパスワードの組み合わせが対象</span>
+        <div class="trust">
+          <span>無料</span>
+          <span>登録不要</span>
+          <span>本文は読まない</span>
+          <span>外部送信なし</span>
         </div>
-        <div class="row">
-          <span class="nm">MUJI passport</span><span class="co">良品計画</span>
-          <span class="bg sev-2">危険度 中</span>
-          <span class="what">メールアドレス・生年月日・性別が対象</span>
-        </div>
+      </div>
 
-        <div class="todo">
-          <b>今すぐ: カードの利用明細を確認する</b>
-          <p>直近3か月に見覚えのない請求がないか確認してください。少額のテスト決済から始まることが多いです。</p>
+      <div class="shot">
+        <span class="cap">こう出ます</span>
+        <div class="m2" aria-label="結果画面の例">
+          <div class="bar"><i></i><i></i><i></i><span>LeakScan</span></div>
+          <div class="body">
+            <div class="big">あなたが使っている<em>6件</em>で<br>漏洩が公表されています</div>
+            <div class="r">
+              <span class="nm">skyticket</span><span class="bg sev-3">危険度 高</span>
+              <span class="wh">クレジットカード・銀行口座</span>
+            </div>
+            <div class="r">
+              <span class="nm">KDDI</span><span class="bg sev-3">危険度 高</span>
+              <span class="wh">メールアドレスとパスワード</span>
+            </div>
+            <div class="r">
+              <span class="nm">MUJI passport</span><span class="bg sev-2">危険度 中</span>
+              <span class="wh">メールアドレス・生年月日</span>
+            </div>
+            <div class="act"><b>今すぐ:</b> カードの利用明細を確認する</div>
+          </div>
         </div>
       </div>
     </div>
-    <p class="sec-lead" style="margin-top:14px;font-size:13px">
-      ※ 表示例です。実際の結果はあなたのGmailの内容によって変わります。
-    </p>
   </div>
-</section>
+</div>
 
 <section id="use">
   <div class="wrap">
     <h2>使い方</h2>
-    <p class="sec-lead">3ステップ、だいたい5分です。</p>
-
-    <div class="howto">
+    <p class="sec-lead">3ステップ、5分。</p>
+    <div class="howto tight">
       <div class="step">
         <span class="n">1</span>
-        <h3>ダウンロードして展開</h3>
-        <p>
-          <a href="https://github.com/M2AI-jp/leakscan/releases/latest/download/leakscan-extension.zip"><strong>こちらからダウンロード</strong></a>して、
-          zipファイルをダブルクリックで展開します。<span class="kbd">leakscan-extension</span> というフォルダができます。
-        </p>
-        <div class="tip">展開した場所は覚えておいてください。次で使います。</div>
+        <h3>ダウンロード</h3>
+        <p><a href="https://github.com/M2AI-jp/leakscan/releases/latest/download/leakscan-extension.zip"><strong>zipを取得</strong></a>して、ダブルクリックで展開。</p>
       </div>
-
       <div class="step">
         <span class="n">2</span>
         <h3>Chromeに入れる</h3>
-        <p>
-          Chromeのアドレス欄に <span class="kbd">chrome://extensions</span> と入力して開きます。
-          右上の<strong>「デベロッパーモード」をオン</strong>にし、左上に出る
-          <strong>「パッケージ化されていない拡張機能を読み込む」</strong>から、さっき展開した
-          <span class="kbd">leakscan-extension</span> フォルダを選びます。
-        </p>
-        <div class="tip">まだChromeウェブストアに申請中のため、この手順が必要です。審査が通れば1クリックになります。</div>
+        <p><span class="kbd">chrome://extensions</span> を開く →「デベロッパーモード」をオン →「パッケージ化されていない拡張機能を読み込む」→ 展開したフォルダを選ぶ。</p>
       </div>
-
       <div class="step">
         <span class="n">3</span>
-        <h3>ボタンを押して待つ</h3>
-        <p>
-          Gmailにログインした状態で、ツールバーのLeakScanアイコンをクリックし
-          <strong>「スキャン開始」</strong>を押します。Gmailのタブが開いて検索が走り、
-          終わると結果が出ます。<strong>1〜2分</strong>ほどです。
-        </p>
-        <div class="tip">動いている間、そのGmailのタブは触らずに置いておいてください。</div>
+        <h3>ボタンを押す</h3>
+        <p>Gmailにログインした状態で、アイコン →「スキャン開始」。1〜2分で結果が出ます。</p>
       </div>
     </div>
-
-    <div class="note" style="margin-top:26px">
-      <h3>うまくいかないときは</h3>
-      <p>
-        設定画面に<strong>「セルフテスト」</strong>ボタンがあります。押すと、LeakScanがGmailの画面を
-        正しく読めているかを項目ごとに確認して教えてくれます。まずこれを試してください。
-      </p>
-      <ul>
-        <li>Googleアカウントを複数使っている場合は、設定の「アカウント番号」を調べたいアカウントに合わせてください（Gmailを開いたときのURLの <span class="kbd">u/0</span> の数字です）</li>
-        <li>それでも直らないときは、セルフテストの結果を添えて<a href="https://github.com/M2AI-jp/leakscan/issues">こちら</a>に教えてください</li>
-      </ul>
-    </div>
+    <p class="sec-lead" style="margin-top:16px;font-size:13.5px">
+      うまくいかないときは、設定画面の「セルフテスト」を押してください。
+    </p>
   </div>
 </section>
 
 <section id="safe">
   <div class="wrap">
-    <h2>安全性について</h2>
-    <p class="sec-lead">「漏洩を調べるために個人情報を渡す」をやらずに済む作りにしました。</p>
-
-    <div class="dd">
-      <div class="no">
-        <h3>LeakScanが<span>やらないこと</span></h3>
-        <ul>
-          <li>メールの<strong>件名・本文・添付ファイルを読む</strong>こと。一切見ません</li>
-          <li>あなたの情報を<strong>外部のサーバーに送る</strong>こと。送信は一切ありません</li>
-          <li><strong>Googleアカウントとの連携</strong>やパスワードの入力を求めること</li>
-          <li>会員登録・メールアドレスの入力・課金</li>
-          <li>結果をどこかに<strong>保存・共有</strong>すること</li>
-          <li>広告の表示やアクセス解析</li>
-        </ul>
+    <h2>安全です</h2>
+    <div class="three">
+      <div>
+        <span class="i">🔒</span>
+        <b>本文は読みません</b>
+        <p>見るのは差出人の名前とアドレスだけ。件名も本文も添付も触りません。</p>
       </div>
-      <div class="yes">
-        <h3>LeakScanが<span>やること</span></h3>
-        <ul>
-          <li>あなたが<strong>すでにログインしているGmailの画面</strong>を、検索機能でそのまま使う</li>
-          <li>検索結果の一覧に出ている<strong>差出人の名前とアドレスだけ</strong>を見る</li>
-          <li>それを<strong>あなたのパソコンの中だけ</strong>で、漏洩した企業の一覧と照合する</li>
-          <li>結果と、やるべき対応をその場に表示する</li>
-          <li>結果は<strong>あなたのブラウザの中にだけ</strong>残す（いつでも削除できます）</li>
-        </ul>
+      <div>
+        <span class="i">🚫</span>
+        <b>外部に送りません</b>
+        <p>照合はあなたのパソコンの中だけ。結果もどこにも送信されません。</p>
       </div>
-    </div>
-
-    <div class="note" style="margin-top:22px">
-      <h3>結果の読み方で、ひとつだけ</h3>
-      <p>
-        「◯件該当」と出ても、それは<strong>「あなたがそのサービスを使っていた可能性が高い」</strong>という意味であって、
-        <strong>あなた個人のデータが必ず流出したという意味ではありません</strong>。
-        対象かどうかは、各社の公式のお知らせや、あなた宛ての個別連絡で確認してください。
-      </p>
-      <p style="margin-top:.7em">
-        逆に「該当なし」も安全の証明ではありません。別のメールアドレスで登録したサービスや、
-        メールが届いていないサービスは見つけられないからです。
-      </p>
+      <div>
+        <span class="i">🔑</span>
+        <b>ログイン不要</b>
+        <p>Googleアカウントの連携もパスワード入力もありません。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -211,42 +131,28 @@
     <h2>よくある質問</h2>
     <div class="faq">
       <details>
-        <summary>本当に無料ですか？あとから請求されませんか？</summary>
-        <div class="a"><p>無料です。課金の仕組みがそもそもありません。登録もメールアドレスの入力も不要で、こちらはあなたが誰かも分かりません。</p></div>
+        <summary>本当に無料？</summary>
+        <div class="a"><p>無料です。課金の仕組みがありません。登録もメールアドレスの入力も不要です。</p></div>
       </details>
       <details>
-        <summary>メールを勝手に読まれるのでは？</summary>
-        <div class="a">
-          <p>件名も本文も読みません。見ているのは、Gmailで検索したときに一覧に出てくる<strong>差出人の名前とアドレスだけ</strong>です。</p>
-          <p>しかもその照合は、あなたのパソコンの中だけで行われます。差出人の情報も、結果も、どこにも送信されません。</p>
-        </div>
+        <summary>メールを読まれない？</summary>
+        <div class="a"><p>件名も本文も読みません。検索結果の一覧に出る差出人だけを見て、あなたのパソコンの中で照合します。</p></div>
       </details>
       <details>
-        <summary>Googleアカウントの連携やパスワードは必要ですか？</summary>
-        <div class="a"><p>不要です。あなたがすでに開いているGmailの画面をそのまま使うので、ログイン情報を預かる必要がありません。パスワードを入力する画面は一切出ません。</p></div>
+        <summary>該当が出たら何をすれば？</summary>
+        <div class="a"><p>やるべきことが優先順位つきで結果画面に出ます。パスワードが漏れたなら変更、カードなら明細確認、メールアドレスだけなら偽メールに警戒、が目安です。</p></div>
       </details>
       <details>
-        <summary>スキャン中、パソコンを触っていても大丈夫？</summary>
-        <div class="a"><p>他のタブやアプリは普通に使って大丈夫です。ただしLeakScanが開いたGmailのタブだけは、終わるまで操作しないでください。検索を次々に実行しているため、途中で触ると結果がずれます。</p></div>
+        <summary>「該当なし」なら安心？</summary>
+        <div class="a"><p>いいえ。別のアドレスで登録したサービスは見つけられません。安全の証明ではありません。</p></div>
       </details>
       <details>
-        <summary>Gmail以外のメールアドレスでも使えますか？</summary>
-        <div class="a"><p>今のところGmail専用です。別のアドレスで登録したサービスは検出できないので、「該当なし」が出ても安心しきらないでください。</p></div>
+        <summary>やめたいときは？</summary>
+        <div class="a"><p>Chromeから削除すれば、結果ごと完全に消えます。</p></div>
       </details>
       <details>
-        <summary>危険度が「高」と出ました。まず何をすれば？</summary>
-        <div class="a">
-          <p>結果画面に、漏れた情報の種類に応じた対応が優先順位つきで並びます。目安としては、<strong>パスワードが漏れたなら他サービスも含めて変更</strong>、<strong>カード情報なら明細の確認</strong>、<strong>メールアドレスだけならフィッシングメールへの警戒</strong>です。</p>
-          <p>漏洩直後は「漏洩のお知らせ」を装った偽メールが実際に出回ります。メール内のリンクは踏まず、必ず公式サイトやアプリから自分でアクセスしてください。</p>
-        </div>
-      </details>
-      <details>
-        <summary>掲載されている企業の情報が間違っています</summary>
-        <div class="a"><p>訂正のご依頼を歓迎します。<a href="https://github.com/M2AI-jp/leakscan/issues">こちら</a>からお知らせください。公式発表と食い違う記載は、確認でき次第直します。企業を非難する目的のサイトではありません。</p></div>
-      </details>
-      <details>
-        <summary>やめたくなったら？</summary>
-        <div class="a"><p>Chromeの拡張機能一覧から削除すれば完全に消えます。保存されていた結果も一緒に消えます。設定画面から結果だけを削除することもできます。</p></div>
+        <summary>掲載情報が間違っている（企業の方へ）</summary>
+        <div class="a"><p>訂正のご依頼を歓迎します。<a href="https://github.com/M2AI-jp/leakscan/issues">こちら</a>からお知らせください。公式発表と食い違う記載は確認でき次第直します。</p></div>
       </details>
     </div>
   </div>
@@ -257,24 +163,14 @@
     <div class="tech">
       <h2>技術的なことが気になる方へ</h2>
       <p>
-        やっていることは単純です。<strong>Gmail APIもOAuthも外部サーバーもAIも使いません。</strong>
-        ログイン済みのGmailの画面で検索を実行し、結果一覧の差出人要素だけを読んで、
-        ブラウザ内で静的なデータセットと突き合わせているだけです。
+        <strong>Gmail APIもOAuthも外部サーバーもAIも使いません。</strong>
+        ログイン済みのGmailで検索を実行し、結果一覧の差出人要素だけを読んで、ブラウザ内で静的データと照合しているだけです。
+        権限は <code>storage</code> と <code>mail.google.com</code> のみ。
       </p>
-      <ul class="facts">
-        <li>権限は <code>storage</code> と <code>mail.google.com</code> のみ。ネットワーク送信は漏洩データの取得（静的JSONのGET）だけ</li>
-        <li>照合は全てクライアントサイド。メール本文・件名・添付には一切アクセスしない</li>
-        <li>ドメイン一致は完全一致とサブドメインのみ。表示名のみの一致は結果に明示</li>
-        <li>データセットは出典必須・確度つき。AI関与は確証がなければ断定しない方針</li>
-        <li>サイトはWorkerスクリプトを持たない静的配信。運用コストは月額0円</li>
-      </ul>
-      <p>
-        <strong>ソースコードもデータも全て公開しています。</strong>
-        不安があれば、信じる前に読んでください。データは CC BY 4.0 で、そのまま再利用できます。
-      </p>
+      <p><strong>ソースもデータも全公開です。信じる前に読んでください。</strong></p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://github.com/M2AI-jp/leakscan">GitHubで全ソースを見る</a>
-        <a class="btn btn-ghost" href="data/breaches.json">データを直接見る</a>
+        <a class="btn btn-primary" href="https://github.com/M2AI-jp/leakscan">GitHub</a>
+        <a class="btn btn-ghost" href="data/breaches.json">データ</a>
       </div>
     </div>
   </div>
@@ -282,13 +178,14 @@
 
 <footer>
   <div class="wrap">
-    <div><strong>LeakScan</strong> — 自分に関係のある情報漏洩だけを見つける</div>
     <div>
-      掲載内容は各社の公表資料・報道をもとに編集した二次情報です。件数や漏洩項目は公表時点のもので、
-      続報により変わります。確定した事実は各社の公式発表をご確認ください。掲載企業を非難する目的ではありません。
+      掲載内容は各社の公表資料・報道をもとにした二次情報です。確定した事実は各社の公式発表をご確認ください。
+      掲載企業を非難する目的ではありません。
     </div>
-    <div>最終更新: <span id="updated">—</span> ／ このサイトはアクセス解析・Cookieを使用していません。</div>
-    <div><a href="list">漏洩した企業一覧</a> ・ <a href="https://github.com/M2AI-jp/leakscan">GitHub</a> ・ <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・ご連絡</a></div>
+    <div>
+      <span id="count-line">—</span> ／ 最終更新 <span id="updated">—</span> ／ 解析・Cookieなし
+    </div>
+    <div><a href="list">企業一覧</a> ・ <a href="https://github.com/M2AI-jp/leakscan">GitHub</a> ・ <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・連絡</a></div>
   </div>
 </footer>
 
@@ -299,11 +196,8 @@
   try {
     const { meta, entries } = await window.LeakScan.load();
     const sum = entries.reduce((a, e) => a + (e.records_num || 0), 0);
-    document.getElementById('s-entries').textContent = entries.length + '件';
-    document.getElementById('s-records').textContent = window.LeakScan.fmtNum(sum);
-    document.getElementById('s-companies').textContent = new Set(entries.map((e) => e.company)).size + '社';
-    document.getElementById('s-sev').textContent =
-      entries.filter((e) => window.LeakScan.severity(e.categories) === 3).length + '件';
+    document.getElementById('count-line').textContent =
+      `収録 ${entries.length}件 / ${window.LeakScan.fmtNum(sum)}`;
     document.getElementById('updated').textContent = window.LeakScan.fmtDate(meta.updated);
   } catch (e) { console.error(e); }
 })();
