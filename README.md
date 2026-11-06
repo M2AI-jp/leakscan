@@ -90,6 +90,36 @@ GitHub Actions が毎朝8時（JST）に実行されます。
 **事案の自動追加はしません。** 公式発表を人が読まずに企業名を漏洩元として公開するのは、
 誤報と名誉毀損の直接の原因になるためです。日次ジョブは「ここを見ろ」と言うまでが仕事です。
 
+## 運用コスト
+
+**月額 0円で動きます。** 有料APIもAI APIも使わず、課金対象の機能を一つも有効にしていません。
+
+| 項目 | 料金 | 根拠 |
+|---|---|---|
+| サイト配信（Cloudflare Workers 静的アセット） | **0円** | [静的アセットへのリクエストは無料・無制限](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/)（無料・有料プラン共通） |
+| アセットの保存 | **0円** | 保存容量への課金なし |
+| 独自ドメイン・SSL証明書 | **0円** | Cloudflareの標準機能 |
+| GitHub Actions（CI・日次更新） | **0円** | publicリポジトリは実行時間無料 |
+| Gmailの読み取り | **0円** | Gmail APIを使わず、利用者のブラウザ上の画面を読むだけ |
+| 漏洩データの配信 | **0円** | 静的JSONを置いているだけ |
+
+`wrangler.jsonc` に `main` を置いていないため **Workerスクリプトが存在せず**、
+全リクエストが「静的アセットへのリクエスト」として処理されます（存在しないパスは
+Workerではなく404が返ります）。利用者が何人増えても、リクエスト課金は発生しません。
+
+### 課金を発生させる変更（入れないこと）
+
+| 変更 | 何が起きるか |
+|---|---|
+| `main` でWorkerスクリプトを追加 | アセットに一致しないリクエストが[Workers料金](https://developers.cloudflare.com/workers/platform/pricing/)で課金対象に |
+| `assets.run_worker_first` | **全**リクエストがWorker呼び出しになり課金対象に。無料枠超過時は429 |
+| [Workers Cache](https://developers.cloudflare.com/workers/cache/) の有効化 | **本来無料の静的アセットへのリクエストまで**通常レートで課金される |
+| `observability` | Workers Logs は別枠の従量課金 |
+| リポジトリをprivateに変更 | GitHub Actions の実行時間が無料枠の消費対象に |
+
+無料プランの上限にも余裕があります（静的アセット **14ファイル** / 上限20,000、
+最大ファイル **71KB** / 上限25MiB）。
+
 ## AIについて
 
 この漏洩ラッシュは「AIによる攻撃」と紹介されることが多いですが、

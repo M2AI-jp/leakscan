@@ -8,6 +8,7 @@
 | 配信方式 | Cloudflare **Workers Static Assets**（Worker名 `leakscan`） |
 | 独自ドメイン | `wrangler deploy` が custom domain とDNSレコードを自動作成 |
 | `/data/*` のCORS | `access-control-allow-origin: *` 確認済み（`_headers` が有効） |
+| 月額コスト | **0円**（Workerスクリプトなし＝全リクエストが無料の静的アセット配信。詳細は [README](README.md#運用コスト)） |
 
 ## 1. サイト
 
@@ -27,6 +28,12 @@ npx wrangler@4 deploy
   "routes": [{ "pattern": "leakscan.matsunai.com", "custom_domain": true }]
 }
 ```
+
+### 構成を最小に保つ
+
+`wrangler.jsonc` には `assets` と `routes` しか書いていません。`main`（Workerスクリプト）、
+`run_worker_first`、Workers Cache、`observability` はいずれも課金のトリガーになるため、
+意図的に入れていません。詳細は [README の運用コスト](README.md#運用コスト)。
 
 ### なぜ Pages ではなく Workers なのか
 

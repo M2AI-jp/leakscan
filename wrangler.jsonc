@@ -2,16 +2,23 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "leakscan",
   "compatibility_date": "2026-11-04",
+
+  // 静的アセットのみ。"main" を置かない＝Workerスクリプトが存在しないため、
+  // 全リクエストが「静的アセットへのリクエスト」として無料・無制限で処理される。
+  //
+  // 課金が発生するようになる変更（入れないこと）:
+  //   - "main": Workerスクリプトを足すと、アセットに一致しないリクエストが課金対象になる
+  //   - "assets.run_worker_first": 全リクエストがWorker呼び出しになり課金対象
+  //   - Workers Cache の有効化: アセットへのリクエストまで通常レートで課金される
+  //   - "observability": Workers Logs は別枠の従量課金。スクリプトが無いので記録対象も無い
   "assets": {
     "directory": "./site"
   },
+
   "routes": [
     {
       "pattern": "leakscan.matsunai.com",
       "custom_domain": true
     }
-  ],
-  "observability": {
-    "enabled": true
-  }
+  ]
 }
