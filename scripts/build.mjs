@@ -54,7 +54,10 @@ writeFileSync(d('data/domains.tsv'), rows.join('\n') + '\n');
 /* ---- stats.json ---- */
 const sev3 = ['card', 'bank', 'password', 'id_document', 'login_credential', 'my_number'];
 const stats = {
-  generated: new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' }),
+  /* ここに「作った日」を入れていたが、中身と関係なく毎日変わるので、
+     ビルドし直しただけで差分が出てCIが止まっていた。しかも手元(JST)とCI(UTC)で
+     9時間ずれるため、日本の深夜に触ると必ず落ちる。読んでいる所もなかった。
+     データがいつのものかは下の version と meta.json の updated が言っている。 */
   version: meta.version,
   incidents: entries.length,
   companies: new Set(entries.map((e) => e.company)).size,
