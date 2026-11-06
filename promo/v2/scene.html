@@ -23,15 +23,17 @@ body{background:var(--bg);color:var(--fg);font-family:var(--sans);
 .in{width:1480px}
 
 /* ---------- 1. 件数 ---------- */
-#s1 .lbl{font-size:30px;color:var(--muted);font-weight:700;letter-spacing:.02em;margin-bottom:6px}
-#s1 .num{font-size:280px;font-weight:800;line-height:1;letter-spacing:-.045em;
-  color:var(--fg-strong);font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:18px}
-#s1 .num .k{font-size:84px;font-weight:800;color:var(--muted);letter-spacing:-.02em}
-#s1 .sub{margin-top:18px;font-size:34px;color:var(--muted);font-weight:600}
-#s1 .sub b{color:var(--fg);font-weight:800}
-#dots{position:absolute;right:120px;top:50%;transform:translateY(-50%);
-  width:560px;display:grid;grid-template-columns:repeat(28,1fr);gap:7px}
-#dots i{width:13px;height:13px;border-radius:3px;background:#1b2130;display:block}
+#s1 .in{text-align:center}
+#s1 .lbl{font-size:33px;color:var(--muted);font-weight:700;letter-spacing:.01em;margin-bottom:16px}
+/* 全桁を出す。桁区切りは薄くして、数字そのものを読ませる */
+#s1 .num{font-size:196px;font-weight:800;line-height:1;letter-spacing:-.035em;
+  color:var(--fg-strong);font-variant-numeric:tabular-nums;
+  display:flex;align-items:baseline;justify-content:center;gap:14px;white-space:nowrap}
+#s1 .num i{font-style:normal;color:#3d4a60;padding:0 2px}
+#s1 .num .k{font-size:62px;font-weight:800;color:var(--muted);letter-spacing:-.01em}
+#bar{width:1180px;height:5px;border-radius:3px;background:#1b2130;margin:40px auto 0;overflow:hidden}
+#bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#2d4a6b,#8fc6ff);border-radius:3px}
+#s1 .note{margin-top:26px;font-size:22px;color:var(--dim);line-height:1.6}
 
 /* ---------- 2. サービス ---------- */
 #s2 h2{font-size:62px;font-weight:800;letter-spacing:-.035em;color:var(--fg-strong);
@@ -127,11 +129,11 @@ body{background:var(--bg);color:var(--fg);font-family:var(--sans);
 
 <!-- 1 -->
 <div class="sc" id="s1">
-  <div id="dots"></div>
-  <div class="in" style="padding-left:40px">
-    <div class="lbl">2026年に公表された情報漏洩</div>
+  <div class="in">
+    <div class="lbl">2026年に公表された個人情報の漏洩</div>
     <div class="num"><span id="n1">0</span><span class="k">件</span></div>
-    <div class="sub"><b id="n1c">0</b> 社が公表</div>
+    <div id="bar"><i></i></div>
+    <div class="note">574件・540社の公表値の合計。重複を含むのべ件数で、実人数ではありません。</div>
   </div>
 </div>
 
@@ -192,7 +194,7 @@ body{background:var(--bg);color:var(--fg);font-family:var(--sans);
     <div class="wm">Leak<u>Scan</u></div>
     <div class="big">無料・登録不要</div>
     <div class="cs"><span>完全無料</span><span>広告なし</span><span>本文は読まない</span><span>外部送信なし</span></div>
-    <div class="store">Chrome ウェブストアで <b>「LeakScan」</b></div>
+    <div class="store">Chrome拡張機能 <b>「LeakScan」</b></div>
     <div class="url">leakscan.matsunai.com</div>
     <div class="dis">コードは100%AIが書いたものです。動作・内容・安全性について保証しません（MIT / データ CC BY 4.0）。</div>
   </div>
@@ -221,11 +223,6 @@ window.__cues = function (c) {
 };
 
 /* ---- 作り置き ---- */
-const DOTS = 574;
-(function buildDots(){
-  const w = E('#dots');
-  for (let i = 0; i < DOTS; i++) w.appendChild(document.createElement('i'));
-})();
 
 const CHIPS = ['○○トラベル','○○モバイル','○○ストア','○○ペイ','○○カード','○○銀行',
                '○○チケット','○○フーズ','○○ホテル','○○ゲームズ','○○クリニック','○○ブックス',
@@ -256,7 +253,6 @@ const MAILS = [
   }
 })();
 
-const dots  = [...document.querySelectorAll('#dots i')];
 const chips = [...document.querySelectorAll('#chips span')];
 const rows  = [...document.querySelectorAll('#mail .row')];
 const cards = [...document.querySelectorAll('#card .r')];
@@ -279,18 +275,14 @@ window.__seek = function (t) {
     el.style.transform = 'translateY(' + ((1 - inP) * 26 - outP * 18).toFixed(2) + 'px)';
   });
 
-  /* --- 1. 件数：数字は「574件」と言い終わるあたりで止まる --- */
+  /* --- 1. 件数：全桁をカウントし、下の帯も一緒に伸びる --- */
   {
-    const l = L(0), v = VO(0);
-    const p = easeOut(seg(v, 0.0, 4.35));
-    const n = Math.round(p * 574);
-    E('#n1').textContent = n.toLocaleString('ja-JP');
-    E('#n1c').textContent = Math.round(easeOut(seg(v, 0.5, 4.0)) * 540).toLocaleString('ja-JP');
-    for (let i = 0; i < DOTS; i++) {
-      const d = dots[i];
-      if (i < n) { d.style.background = (n - i) < 90 ? '#8fc6ff' : '#2d4a6b'; d.style.opacity = '1'; }
-      else { d.style.background = '#1b2130'; d.style.opacity = '.6'; }
-    }
+    const v = VO(0);
+    const p = easeOut(seg(v, 0.0, 4.6));
+    const n = Math.round(p * 622074796);
+    /* 桁区切りは <i> にして薄く見せる（サイトの見出しと同じ出し方） */
+    E('#n1').innerHTML = n.toLocaleString('en-US').replace(/,/g, '<i>,</i>');
+    E('#bar i').style.width = (p * 100).toFixed(2) + '%';
   }
 
   /* --- 2. サービス：終盤に3つだけ赤くなる（「その中に？」に合わせて） --- */
