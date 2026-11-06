@@ -1,0 +1,6 @@
+data/sources.lock.json linguist-generated=true merge=ours
+data/breaches.csv linguist-generated=true
+data/domains.tsv linguist-generated=true
+data/stats.json linguist-generated=true
+site/data/* linguist-generated=true
+extension/data/* linguist-generated=true

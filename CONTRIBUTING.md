@@ -56,3 +56,13 @@ node test/match.test.js        # 照合ロジックと誤検知のテスト
 訂正・削除のご依頼は [Issue](../../issues/new/choose) か Pull Request でお願いします。
 公式発表と食い違う記載、すでに訂正済みの内容、対象範囲の誤りは、確認でき次第直します。
 本データセットは注意喚起を目的としたもので、掲載企業を非難する意図はありません。
+
+## sources.lock.json について
+
+`data/sources.lock.json` は日次ジョブが所有する状態ファイルです。ローカルで
+`watch-sources.mjs` を実行すると衝突することがあります。その場合は origin 側
+（botのコミット）を採用してください。
+
+```bash
+git checkout --ours data/sources.lock.json && git add data/sources.lock.json
+```
