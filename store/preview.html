@@ -661,6 +661,13 @@ section > .wrap > h2 { color: #fff; }
 .fr { align-items: start; }
 .fd { padding-top: 2px; }
 
+/* ヒーローを1カラムに（結果モックを外した構成） */
+.fv .grid.one { grid-template-columns: 1fr !important; max-width: 760px; }
+.fv .grid.one h1 { font-size: clamp(42px, 8vw, 76px); }
+.fv .grid.one .one { max-width: 30em; }
+.fv .grid.one .trust { gap: 10px 26px; }
+@media (min-width: 900px) { .fv { padding: 96px 0 84px; } }
+
 </style>
 
 </head>
@@ -683,7 +690,7 @@ section > .wrap > h2 { color: #fff; }
 
 <div class="fv">
   <div class="wrap">
-    <div class="grid">
+    <div class="grid one">
       <div>
         <span class="kicker">2026年 国内で公表された漏洩 <b id="n-hero">79件</b></span>
         <h1>あなたは何件<br>漏洩した？</h1>
@@ -699,28 +706,6 @@ section > .wrap > h2 { color: #fff; }
         </div>
       </div>
 
-      <div class="shot">
-        <span class="cap">結果の表示例（社名は伏せています）</span>
-        <div class="m2" aria-label="結果画面の例">
-          <div class="bar"><i></i><i></i><i></i><span>LeakScan</span></div>
-          <div class="body">
-            <div class="big">あなたが使っている<em>6件</em>で<br>漏洩が公表されています</div>
-            <div class="r">
-              <span class="nm">○○トラベル</span><span class="bg sev-3">危険度 高</span>
-              <span class="wh">クレジットカード・銀行口座</span>
-            </div>
-            <div class="r">
-              <span class="nm">○○モバイル</span><span class="bg sev-3">危険度 高</span>
-              <span class="wh">メールアドレスとパスワード</span>
-            </div>
-            <div class="r">
-              <span class="nm">○○ストア</span><span class="bg sev-2">危険度 中</span>
-              <span class="wh">メールアドレス・生年月日</span>
-            </div>
-            <div class="todo"><span class="n">3</span>やるべき対応が3件<span class="ar">→</span></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

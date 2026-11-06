@@ -22,7 +22,7 @@
     </a>
     <nav class="nav">
       <a class="anchor-nav" href="#data">漏洩データ</a>
-      <a class="anchor-nav" href="#use">導入</a>
+      <a class="anchor-nav" href="#use">インストール</a>
       <a href="list">漏洩企業一覧</a>
       <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
     </nav>
@@ -75,25 +75,21 @@
         <h2>入れて、押すだけ</h2>
         <ol class="inst">
           <li>
-            <b>zipを取得して展開</b>
-            <a href="https://github.com/M2AI-jp/leakscan/releases/latest/download/leakscan-extension.zip">ダウンロード</a>
-          </li>
-          <li>
-            <b>Chromeに読み込む</b>
-            <code>chrome://extensions</code> → デベロッパーモードをオン →
-            「パッケージ化されていない拡張機能を読み込む」
+            <b>Chromeに追加</b>
+            ウェブストアから追加します。
           </li>
           <li>
             <b>スキャン開始</b>
-            Gmailにログインした状態でアイコンをクリック。1〜2分で結果が出ます。
+            Gmailにログインした状態でツールバーのアイコンをクリック。1〜2分で結果が出ます。
           </li>
         </ol>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://github.com/M2AI-jp/leakscan/releases/latest/download/leakscan-extension.zip">ダウンロード</a>
+          <!-- ▼▼ ウェブストアのリンクはここ1箇所だけ（data-store-url）▼▼ -->
+          <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/anpkncehohlelmiccjmgchfamjhnfjoa">Chromeに追加</a>
           <a class="btn btn-ghost" href="https://github.com/M2AI-jp/leakscan">ソースを読む</a>
         </div>
-        <p class="inst-n">
-          ウェブストア申請中のため、この手順が必要です。うまくいかないときは設定画面の「セルフテスト」で診断できます。
+        <p class="inst-n" id="store-note">
+          Gmail専用です。うまくいかないときは設定画面の「セルフテスト」で診断できます。
         </p>
       </div>
 

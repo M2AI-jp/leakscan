@@ -12,9 +12,9 @@
 
 1. ダッシュボードで **v0.1.3 の zip をアップロードして更新を申請**
    `gh release download v0.1.3 --repo M2AI-jp/leakscan`
-2. サイトの「使い方」をウェブストアからのインストールに差し替える
-   `site/index.html` の「ウェブストア申請中のため、この手順が必要です」の一文と、
-   ダウンロードリンク（`releases/latest/download/...`）をストアURLに変更
+2. サイトは既にウェブストア前提の構成に差し替え済み。リンクは
+   `https://chromewebstore.google.com/detail/anpkncehohlelmiccjmgchfamjhnfjoa`
+   （アイテムIDは確定済みのため、公開と同時に有効になる）
 3. 掲載情報のプロモーション動画URLが上のものになっているか確認
 
 
