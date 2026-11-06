@@ -763,17 +763,22 @@ section > .wrap > h2 { color: var(--fg-strong); }
   70%, 100% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--ok) 0%, transparent); }
 }
 
-/* ---- 見出し ---- */
+/* ---- 見出し ----
+   問いかけは入口なので、数字と同じ大きさで張り合わせない。
+   一段落として、視線が「問い → 何の数字か → 数字」と流れるようにする。 */
 .fv h1 {
-  margin: 0 0 30px; font-weight: 800; color: var(--fg-strong);
-  font-size: clamp(34px, 6.6vw, 60px); line-height: 1.1; letter-spacing: -.045em;
+  margin: 0 0 26px; font-weight: 800; color: var(--fg-strong);
+  font-size: clamp(27px, 4.9vw, 44px); line-height: 1.14; letter-spacing: -.04em;
 }
 
 /* ---- 主役の数字 ---- */
 .bignum { margin: 0; }
+/* 数字が何の数字なのかを言っているのはこの行なので、ここを一番強く置く。
+   小さく字間を広げた薄いラベルだと、大きい数字の前で消えてしまっていた。 */
 .bn-k {
-  margin: 0 0 8px; line-height: 1;
-  font-size: 11.5px; font-weight: 800; letter-spacing: .13em; color: var(--fg-dim);
+  margin: 0 0 10px; line-height: 1.2;
+  font-size: clamp(16px, 2.3vw, 23px); font-weight: 800; letter-spacing: -.015em;
+  color: var(--fg-strong);
 }
 .bn-v {
   display: flex; align-items: baseline; gap: .05em;
@@ -1059,6 +1064,17 @@ section > .wrap > h2 { color: var(--fg-strong); }
 .mt-14    { margin-top: 14px; }
 .mb-30    { margin-bottom: 30px; }
 
+/* ---------- ヘッダーのナビが折り返さないようにする ----------
+   文言を具体的にした分だけ横に伸びたので、畳む順番を決めておく。
+   広い順に：全部 → 見出しへの links を隠す → 2次的なリンクも隠す。
+   最後まで残すのは「自分でダウンロード」と明暗の切り替え。 */
+.nav a { white-space: nowrap; }
+@media (max-width: 900px) { .nav a.anchor-nav { display: none; } }
+@media (max-width: 560px) {
+  .nav a.nav-sub { display: none; }
+  .nav { gap: 12px; }
+}
+
 </style>
 
 </head>
@@ -1072,9 +1088,9 @@ section > .wrap > h2 { color: var(--fg-strong); }
     </a>
     <nav class="nav">
       <a class="anchor-nav" href="#data">漏洩データ</a>
-      <a class="anchor-nav" href="#use">インストール</a>
-      <a href="install">自分で入れる</a>
-      <a href="https://leakscan.matsunai.com/list">漏洩企業一覧</a>
+      <a class="anchor-nav" href="#use">Chrome拡張機能を入れる</a>
+      <a href="install">自分でダウンロード</a>
+      <a class="nav-sub" href="https://leakscan.matsunai.com/list">漏洩企業一覧</a>
       <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
     </nav>
   </div>
@@ -1155,7 +1171,7 @@ section > .wrap > h2 { color: var(--fg-strong); }
         <div class="review-now">
           <b>いまウェブストアの審査中です。</b>
           審査を待たずに使いたい方へ、提出したものと同じファイルと手順を置いています。
-          <a href="install">自分で入れる手順 →</a>
+          <a href="install">自分でダウンロードする手順 →</a>
         </div>
         <ol class="inst">
           <li>
@@ -1219,7 +1235,7 @@ section > .wrap > h2 { color: var(--fg-strong); }
       </div>
       <nav class="foot-links" aria-label="フッター">
         <a href="https://leakscan.matsunai.com/list">漏洩企業一覧</a>
-        <a href="install">自分で入れる</a>
+        <a href="install">自分でダウンロード</a>
         <a href="https://leakscan.matsunai.com/privacy">プライバシーポリシー</a>
         <a href="https://github.com/M2AI-jp/leakscan">GitHub</a>
         <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・お問い合わせ</a>
