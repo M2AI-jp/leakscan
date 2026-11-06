@@ -6,7 +6,7 @@
 |---|---|
 | ウェブストア | **v0.1.2 で審査中** |
 | 最新版 | v0.1.3（関連ドメイン照合）… [リリース](https://github.com/M2AI-jp/leakscan/releases/tag/v0.1.3) |
-| プロモ動画 | https://www.youtube.com/watch?v=Jkf5DzkRD-w （公開・34秒・ナレーション入り） |
+| プロモ動画 | https://www.youtube.com/watch?v=egvdaCWUtCw （公開・34秒・ナレーション入り） |
 
 ### 審査通過後にやること
 
