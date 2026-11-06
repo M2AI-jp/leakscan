@@ -9,7 +9,7 @@
  *  - 要らないものが混ざっていないこと（.DS_Store、ソースマップ、鍵など）
  *  - JavaScript が構文として読めること
  */
-import { readFileSync, existsSync, mkdirSync, rmSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, copyFileSync, existsSync, mkdirSync, rmSync, readdirSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
@@ -85,6 +85,24 @@ execFileSync('zip', ['-r', '-q', '-X', join(OUT, name), '.', '-x', '.*', '-x', '
 
 const size = statSync(join(OUT, name)).size;
 const entries = JSON.parse(readFileSync(join(EXT, 'data/breaches.json'), 'utf8')).length;
+
+/* ---- 手動インストール用に、同じ zip をサイトへ置く ----
+   審査待ちの間、技術が分かる人が自分で入れられるようにするため。
+   ストアに出すものと同一のファイルを配り、照合できるよう SHA-256 を併記する。 */
+const DL = join(ROOT, 'site/download');
+rmSync(DL, { recursive: true, force: true });
+mkdirSync(DL, { recursive: true });
+const bytes = readFileSync(join(OUT, name));
+copyFileSync(join(OUT, name), join(DL, name));
+const zipSha = createHash('sha256').update(bytes).digest('hex');
+writeFileSync(
+  join(DL, 'latest.json'),
+  JSON.stringify(
+    { version: mf.version, file: name, size, sha256: zipSha, entries, built: new Date().toISOString().slice(0, 10) },
+    null,
+    2
+  ) + '\n'
+);
 
 console.log(`${mf.name} v${mf.version}`);
 console.log(`ファイル ${files.length} 件 / 同梱事案 ${entries} 件`);

@@ -58,6 +58,42 @@
     if (n >= 10000) return Math.round(n / 10000).toLocaleString('ja-JP') + '万件';
     return n.toLocaleString('ja-JP') + '件';
   };
+  /** 大きな数は丸めず全桁で出す。桁区切りは <i> にして薄く見せる。 */
+  LeakScan.bigNum = function (n) {
+    const s = Math.round(Number(n) || 0).toLocaleString('en-US');
+    return LeakScan.esc(s).replace(/,/g, '<i>,</i>');
+  };
+  /** 0から実数までカウントアップする。動きを減らす設定なら即座に確定値を出す。 */
+  LeakScan.countUp = function (el, to, ms) {
+    const target = Number(to) || 0;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !target || typeof requestAnimationFrame !== 'function') {
+      el.innerHTML = LeakScan.bigNum(target);
+      return;
+    }
+    const dur = ms || 1600;
+    const t0 = performance.now();
+    (function step(t) {
+      const p = Math.min(1, (t - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 4);
+      el.innerHTML = LeakScan.bigNum(target * e);
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  };
+  /** 桁が増えても1行に収まるよう、実測して文字サイズを決める。
+   *  サイズ指定はすべて em 基準なので、幅は文字サイズに比例する。 */
+  LeakScan.fitBig = function (el) {
+    const box = el.parentElement;
+    const wrap = box && box.parentElement;
+    if (!box || !wrap) return;
+    box.style.fontSize = '';
+    const avail = wrap.clientWidth;
+    const base = parseFloat(getComputedStyle(box).fontSize) || 100;
+    const need = box.scrollWidth;
+    if (avail > 0 && need > avail) {
+      box.style.fontSize = Math.max(20, Math.floor(base * (avail / need) * 0.99)) + 'px';
+    }
+  };
   LeakScan.fmtDate = function (iso) {
     if (!iso) return '';
     const [y, m, d] = iso.split('-');

@@ -1,3 +1,6 @@
+/download/*
+  Cache-Control: public, max-age=300
+
 /data/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=900

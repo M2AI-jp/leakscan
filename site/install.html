@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自分で入れる — LeakScan</title>
+<meta name="description" content="Chromeウェブストアの審査を待たずに、LeakScanを自分のChromeに入れる手順。zipをダウンロードして展開し、デベロッパーモードで読み込むだけです。">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="自分で入れる — LeakScan">
+<meta property="og:description" content="審査を待たずにLeakScanを自分のChromeに入れる手順。">
+<meta name="color-scheme" content="dark light">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      LeakScan
+    </a>
+    <nav class="nav">
+      <a href="install" aria-current="page">自分で入れる</a>
+      <a href="list">漏洩企業一覧</a>
+      <a class="anchor-nav" href="./#data">漏洩データ</a>
+      <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
+    </nav>
+  </div>
+</header>
+
+<div class="ins-hd">
+  <div class="wrap narrow">
+    <p class="eyebrow">
+      <span class="live" aria-hidden="true"></span>
+      <span>Chromeウェブストア 審査中</span>
+    </p>
+    <h1>審査を待たずに、<br>自分で入れる</h1>
+    <p class="ins-lead">
+      LeakScanはウェブストアの審査中です。審査は数日かかることがあります。
+      待たずに使いたい方のために、<b>ストアに提出したものと同一のファイル</b>を置いています。
+      ダウンロードして展開し、Chromeに読み込ませるだけで動きます。所要5分・費用ゼロです。
+    </p>
+
+    <div class="dl-card">
+      <div class="dl-l">
+        <div class="dl-v">LeakScan <b id="dl-ver">v0.1.5</b></div>
+        <div class="dl-m">
+          <span>漏洩データ <b id="dl-entries">574</b>件 同梱</span>
+          <span class="dot">・</span><span id="dl-size">107 KB</span>
+          <span class="dot">・</span><span>依存ライブラリなし</span>
+        </div>
+      </div>
+      <a class="btn btn-primary" id="dl-link" href="download/leakscan-0.1.5.zip" download>zipをダウンロード</a>
+    </div>
+    <div class="dl-sha">
+      <span class="dl-sha-k">SHA-256</span>
+      <code id="dl-sha">—</code>
+      <span class="dl-sha-n">ダウンロードしたファイルが、ここに書かれたものと同じか確認できます。</span>
+    </div>
+  </div>
+</div>
+
+<section class="ins-warn-s">
+  <div class="wrap narrow">
+    <div class="ins-warn">
+      <h2>先に読んでください</h2>
+      <ul>
+        <li><b>コードは100%AIが書いたものです。</b>人間による詳細なレビューを経ていません。動作・内容・安全性について一切保証しません。その代わり全文を公開しています（コード MIT / データ CC BY 4.0）。</li>
+        <li><b>この入れ方は「開発者向け」の機能を使います。</b>Chromeを起動するたびに「デベロッパー モードの拡張機能を無効にする」という警告が出ます。故障ではありません。気になる方は審査の完了をお待ちください。</li>
+        <li><b>自動更新されません。</b>拡張機能本体は手動で入れ直すまで更新されません（漏洩データのほうは毎朝このサイトから取得するので自動で新しくなります）。</li>
+        <li><b>「該当なし」は安全の証明ではありません。</b>別のアドレスで登録したサービスは検出できません。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2 class="ins-h2">手順</h2>
+    <p class="ins-sub">画面はChromeのバージョンや言語設定によって多少変わります。図は配置を示すための再現です。</p>
+
+    <ol class="ins-steps">
+
+      <li>
+        <div class="st-h"><span class="st-n">1</span><h3>zipをダウンロードして展開する</h3></div>
+        <p>上のボタンでzipを保存し、展開します。</p>
+        <div class="os-g">
+          <div class="os"><b>macOS</b><p>zipをダブルクリックすると、同じ場所に <code>leakscan-0.1.5</code> フォルダができます。</p></div>
+          <div class="os"><b>Windows</b><p>zipを右クリック →「すべて展開」。展開先のフォルダを覚えておきます。</p></div>
+        </div>
+        <p class="st-warn">展開してできた<b>フォルダ</b>を使います。zipのままでは読み込めません。
+          フォルダを開いたとき <code>manifest.json</code> が直接見えていれば正解です。</p>
+      </li>
+
+      <li>
+        <div class="st-h"><span class="st-n">2</span><h3>拡張機能の管理画面を開く</h3></div>
+        <p>Chromeのアドレスバーに次を入力してEnterを押します。</p>
+        <div class="urlbar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 12h17M12 3.2c4.5 5 4.5 12.6 0 17.6-4.5-5-4.5-12.6 0-17.6" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span>chrome://extensions</span>
+        </div>
+        <p class="st-n2">メニューからは「拡張機能」→「拡張機能を管理」でも同じ画面に行けます。</p>
+      </li>
+
+      <li>
+        <div class="st-h"><span class="st-n">3</span><h3>右上の「デベロッパー モード」をオンにする</h3></div>
+        <div class="ui">
+          <div class="ui-bar">
+            <span class="ui-burger" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="ui-title">拡張機能</span>
+            <span class="ui-search">拡張機能を検索</span>
+            <span class="ui-dev mark">
+              <span class="ui-dev-t">デベロッパー モード</span>
+              <span class="ui-sw on" aria-hidden="true"><i></i></span>
+            </span>
+          </div>
+          <div class="ui-body"><span class="ui-ghost">インストール済みの拡張機能がここに並びます</span></div>
+        </div>
+        <p class="fig">右上の赤い枠のスイッチをオンにします。</p>
+      </li>
+
+      <li>
+        <div class="st-h"><span class="st-n">4</span><h3>「パッケージ化されていない拡張機能を読み込む」を押す</h3></div>
+        <p>オンにすると、すぐ下にボタンが3つ出ます。左端を押して、<b>手順1で展開したフォルダ</b>を選びます。</p>
+        <div class="ui">
+          <div class="ui-bar">
+            <span class="ui-burger" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="ui-title">拡張機能</span>
+            <span class="ui-search">拡張機能を検索</span>
+            <span class="ui-dev">
+              <span class="ui-dev-t">デベロッパー モード</span>
+              <span class="ui-sw on" aria-hidden="true"><i></i></span>
+            </span>
+          </div>
+          <div class="ui-acts">
+            <span class="ui-btn mark">パッケージ化されていない拡張機能を読み込む</span>
+            <span class="ui-btn">拡張機能をパッケージ化</span>
+            <span class="ui-btn">更新</span>
+          </div>
+          <div class="ui-body"><span class="ui-ghost">フォルダを選ぶとここにカードが増えます</span></div>
+        </div>
+        <p class="fig">左端の赤い枠のボタンです。押すとフォルダを選ぶ画面が開きます。</p>
+        <p class="st-warn">「マニフェスト ファイルがないか読み取れません」と出たら、1つ上か下の階層のフォルダを選んでいます。
+          <code>manifest.json</code> が直接入っているフォルダを選び直してください。</p>
+      </li>
+
+      <li>
+        <div class="st-h"><span class="st-n">5</span><h3>読み込まれたことを確かめる</h3></div>
+        <p>カードが追加されます。<b>ID</b>はこの入れ方だと端末ごとに変わるので、ストア版とは違う値になります。</p>
+        <div class="ui">
+          <div class="ui-card">
+            <div class="uc-ic" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="uc-b">
+              <div class="uc-t">LeakScan — 個人情報流出チェッカー <span class="uc-v">0.1.5</span></div>
+              <div class="uc-d">公表された国内の情報漏洩事案とGmailの送信元だけをブラウザ内で照合します。</div>
+              <div class="uc-id">ID: 端末ごとに変わります</div>
+            </div>
+            <span class="ui-sw on" aria-hidden="true"><i></i></span>
+          </div>
+        </div>
+        <p class="fig">こういうカードが増えていれば成功です。</p>
+      </li>
+
+      <li>
+        <div class="st-h"><span class="st-n">6</span><h3>ツールバーに固定して、Gmailで押す</h3></div>
+        <p>ツールバーのパズルのアイコンを押し、LeakScanのピンを押して固定します。
+          あとは<b>Gmailを開いた状態で</b>アイコンを押すだけです。1〜2分で結果が出ます。</p>
+        <div class="ui ui-tb">
+          <div class="tb">
+            <span class="tb-puzzle" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M10 4a2 2 0 1 1 4 0v1h3a1 1 0 0 1 1 1v3h1a2 2 0 1 1 0 4h-1v3a1 1 0 0 1-1 1h-3v-1a2 2 0 1 0-4 0v1H7a1 1 0 0 1-1-1v-3H5a2 2 0 1 1 0-4h1V6a1 1 0 0 1 1-1h3V4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </span>
+            <div class="tb-menu">
+              <div class="tb-mh">拡張機能</div>
+              <div class="tb-row">
+                <span class="tb-ic" aria-hidden="true">
+                  <svg viewBox="0 0 32 32"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="tb-nm">LeakScan</span>
+                <span class="tb-pin mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M9 3h6l-1 6 3 3v2h-5v6l-1 2-1-2v-6H5v-2l3-3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="fig">赤い枠のピンを押すと、ツールバーに出したままにできます。</p>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2 class="ins-h2">うまくいかないとき</h2>
+    <dl class="faq">
+      <dt>「マニフェスト ファイルがないか読み取れません」と出る</dt>
+      <dd>選んだフォルダに <code>manifest.json</code> が直接入っていません。1つ下の階層（<code>leakscan-0.1.5</code> の中）を選び直してください。</dd>
+
+      <dt>Chromeを起動するたびに警告が出る</dt>
+      <dd>デベロッパー モードで入れた拡張機能に対するChromeの仕様です。「×」で閉じれば、その回は消えます。審査が通ってストア版に入れ替えれば出なくなります。</dd>
+
+      <dt>アイコンを押しても何も起きない / 0件になる</dt>
+      <dd>Gmailを開いたタブで押してください。それでも駄目なときは、拡張機能の「詳細」→「拡張機能のオプション」から<b>セルフテスト</b>を実行すると、どこで止まっているか分かります。</dd>
+
+      <dt>審査が通ったらどうすればいい？</dt>
+      <dd>ウェブストアから入れ直してください。そのあと、この手順で入れたほうを <code>chrome://extensions</code> から<b>削除</b>します。2つ入れたままだと結果が二重に出ます。</dd>
+
+      <dt>やめたい</dt>
+      <dd><code>chrome://extensions</code> でLeakScanの「削除」を押し、展開したフォルダを捨ててください。保存先は端末内だけなので、消せば何も残りません。</dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2 class="ins-h2">入れる前に中身を確かめる</h2>
+    <p class="ins-sub">知らない人が書いたコードを自分のブラウザに入れるので、疑ってから入れてください。全文が読めます。</p>
+    <div class="spec">
+      <div class="spec-h">確かめかた</div>
+      <ul class="spec-ul">
+        <li><b>zipが改ざんされていないか</b> … 下のコマンドの出力が、上のSHA-256と一致するか見てください</li>
+        <li><b>コードそのもの</b> … <a href="https://github.com/M2AI-jp/leakscan/tree/main/extension">GitHub</a>（約1,200行・外部ライブラリゼロ）</li>
+        <li><b>通信先</b> … <code>F12</code> のネットワークタブで、このサイト以外に通信していないこと</li>
+        <li><b>権限</b> … <code>storage</code> と Gmail と このサイト の3つだけ。「すべてのサイト」は要求していません</li>
+      </ul>
+    </div>
+    <div class="cmds">
+      <div class="cmd"><span class="cmd-k">macOS / Linux</span><code>shasum -a 256 leakscan-0.1.5.zip</code></div>
+      <div class="cmd"><span class="cmd-k">Windows (PowerShell)</span><code>Get-FileHash leakscan-0.1.5.zip -Algorithm SHA256</code></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-ghost" href="https://github.com/M2AI-jp/leakscan">ソースを読む</a>
+      <a class="btn btn-ghost" href="privacy">何を読んでいるか</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="brand" style="font-size:16px">
+          <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          LeakScan
+        </span>
+        <p>Gmailの差出人を公表済みの漏洩事案と照合する無料ツール。マツナイ合同会社が運営しています。</p>
+      </div>
+      <nav class="foot-links" aria-label="フッター">
+        <a href="./">トップ</a>
+        <a href="list">漏洩企業一覧</a>
+        <a href="privacy">プライバシーポリシー</a>
+        <a href="https://github.com/M2AI-jp/leakscan">GitHub</a>
+        <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4>このツールの限界</h4>
+        <p>「該当なし」は安全の証明ではありません。別アドレスで登録したサービスは検出できません。該当＝流出確定でもなく、対象かは各社の公式発表でご確認ください。</p>
+      </div>
+      <div>
+        <h4>無保証について</h4>
+        <p>コードは100%AIが生成したもので、人間による詳細なレビューを経ていません。動作・内容・安全性について一切保証しません。その代わり全文を公開しています（コード MIT / データ CC BY 4.0）。</p>
+      </div>
+      <div>
+        <h4>掲載データについて</h4>
+        <p>各社の公表資料・報道をもとにした二次情報です。件数や漏洩項目は公表時点のもので、続報により変わります。掲載企業を非難する目的ではありません。</p>
+      </div>
+    </div>
+    <div class="copyright">© 2024 マツナイ合同会社</div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+(async function () {
+  window.LeakScan.initThemeToggle(document.getElementById('theme'));
+  try {
+    const r = await fetch('download/latest.json', { cache: 'no-cache' });
+    const d = await r.json();
+    document.getElementById('dl-ver').textContent = 'v' + d.version;
+    document.getElementById('dl-entries').textContent = d.entries;
+    document.getElementById('dl-size').textContent = Math.round(d.size / 1024) + ' KB';
+    document.getElementById('dl-sha').textContent = d.sha256;
+    var a = document.getElementById('dl-link');
+    a.href = 'download/' + d.file;
+    a.setAttribute('download', d.file);
+    document.querySelectorAll('[data-file]').forEach(function (el) { el.textContent = d.file; });
+    document.querySelectorAll('.cmd code').forEach(function (el) {
+      el.textContent = el.textContent.replace(/leakscan-[\d.]+\.zip/, d.file);
+    });
+  } catch (e) { console.error(e); }
+})();
+</script>
+</body>
+</html>

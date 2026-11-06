@@ -1,5 +1,7 @@
 node_modules/
 *.zip
+# 手動インストール用に配る zip は例外（site/download はサイトの一部）
+!site/download/*.zip
 .DS_Store
 .cf-dns-token
 .wrangler/

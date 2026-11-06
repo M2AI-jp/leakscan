@@ -23,6 +23,7 @@
     <nav class="nav">
       <a class="anchor-nav" href="#data">漏洩データ</a>
       <a class="anchor-nav" href="#use">インストール</a>
+      <a href="install">自分で入れる</a>
       <a href="list">漏洩企業一覧</a>
       <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
     </nav>
@@ -31,37 +32,49 @@
 
 <div class="fv">
   <div class="wrap">
-    <div class="grid one">
-      <div>
-        <span class="kicker">2026年・国内で公表された情報漏洩</span>
-        <h1>あなたは何件<br>漏洩した？</h1>
-        <div class="hstat">
-          <div class="hs main">
-            <div class="v" id="h-records">—</div>
-            <div class="k">漏洩した個人情報の合計</div>
-            <div class="n">日本の人口を超えています</div>
-          </div>
-          <div class="hs">
-            <div class="v" id="h-cases">—</div>
-            <div class="k">公表された事案</div>
-          </div>
-          <div class="hs">
-            <div class="v" id="h-cos">—</div>
-            <div class="k">企業・団体</div>
-          </div>
-        </div>
+    <div class="fv-in">
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#use">無料で使う</a>
-          <a class="btn btn-ghost" href="list">漏洩企業一覧</a>
+      <p class="eyebrow">
+        <span class="live" aria-hidden="true"></span>
+        <span class="eyebrow-t">2026年・国内で公表された情報漏洩</span>
+        <span class="eyebrow-u">毎朝 自動収集　最終更新 <b id="h-updated">—</b></span>
+      </p>
+
+      <h1>あなたは何件<br>漏洩した？</h1>
+
+      <div class="bignum">
+        <p class="bn-k">2026年に漏洩した個人情報</p>
+        <div class="bn-v">
+          <span class="bn-n" id="h-records">0</span><span class="bn-u">件</span>
         </div>
-        <div class="trust">
-          <span>メールの本文は読みません</span>
-          <span>情報は外部に送信しません</span>
-          <span>完全無料・登録不要・広告なし</span>
-          <span>漏洩データを毎朝自動収集</span>
+        <p class="bn-n2">日本の人口の<b id="h-mult">—</b>倍<span>　重複を含む延べ件数です</span></p>
+      </div>
+
+      <div class="hrow">
+        <div class="hs">
+          <div class="v" id="h-cases">—</div>
+          <div class="k">公表された事案</div>
+        </div>
+        <div class="hs">
+          <div class="v" id="h-cos">—</div>
+          <div class="k">企業・団体</div>
+        </div>
+        <div class="hs">
+          <div class="v" id="h-official">—</div>
+          <div class="k">公式発表を確認済み</div>
         </div>
       </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#use">無料で使う</a>
+        <a class="btn btn-ghost" href="list">漏洩企業一覧</a>
+      </div>
+
+      <ul class="trust">
+        <li>メールの本文は読みません</li>
+        <li>情報は外部に送信しません</li>
+        <li>完全無料・登録不要・広告なし</li>
+      </ul>
 
     </div>
   </div>
@@ -89,10 +102,15 @@
     <div class="split">
       <div class="split-l">
         <h2>入れて、押すだけ</h2>
+        <div class="review-now">
+          <b>いまウェブストアの審査中です。</b>
+          審査を待たずに使いたい方へ、提出したものと同じファイルと手順を置いています。
+          <a href="install">自分で入れる手順 →</a>
+        </div>
         <ol class="inst">
           <li>
             <b>Chromeに追加</b>
-            ウェブストアから追加します。
+            ウェブストアから追加します。審査中は<a href="install">手動で入れる</a>こともできます。
           </li>
           <li>
             <b>スキャン開始</b>
@@ -150,6 +168,7 @@
       </div>
       <nav class="foot-links" aria-label="フッター">
         <a href="list">漏洩企業一覧</a>
+        <a href="install">自分で入れる</a>
         <a href="privacy">プライバシーポリシー</a>
         <a href="https://github.com/M2AI-jp/leakscan">GitHub</a>
         <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・お問い合わせ</a>
@@ -192,9 +211,29 @@
     const sum = entries.reduce((a, e) => a + (e.records_num || 0), 0);
     document.getElementById('count-line').textContent =
       `収録 ${entries.length}件 / ${window.LeakScan.fmtNum(sum)}`;
-    document.getElementById('h-records').textContent = window.LeakScan.fmtNum(sum);
+    const bigEl = document.getElementById('h-records');
+    bigEl.innerHTML = window.LeakScan.bigNum(sum);   // 確定値で測ってから
+    window.LeakScan.fitBig(bigEl);
+    window.LeakScan.countUp(bigEl, sum);
+    let fitT;
+    window.addEventListener('resize', function () {
+      clearTimeout(fitT);
+      fitT = setTimeout(function () {
+        bigEl.innerHTML = window.LeakScan.bigNum(sum);
+        window.LeakScan.fitBig(bigEl);
+      }, 120);
+    });
     document.getElementById('h-cases').textContent = entries.length + '件';
     document.getElementById('h-cos').textContent = new Set(entries.map((e) => e.company)).size + '社';
+    // 日本の人口（概数）との比。延べ件数なので「倍」は規模の目安として出す。
+    const JP_POP = 124000000;
+    document.getElementById('h-mult').textContent =
+      (sum / JP_POP).toFixed(1).replace(/\.0$/, '');
+    const official = entries.filter((e) => window.LeakScan.hasOfficial(e)).length;
+    document.getElementById('h-official').textContent =
+      Math.round((official / entries.length) * 100) + '%';
+    document.getElementById('h-updated').textContent =
+      String(meta.updated || '').slice(5).replace('-', '/');
     document.getElementById('updated').textContent = window.LeakScan.fmtDate(meta.updated);
     document.getElementById('n-all').textContent = entries.length;
     var esc = window.LeakScan.esc;

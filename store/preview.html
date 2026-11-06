@@ -18,6 +18,7 @@
   --border: #262e3d;
   --border-strong: #37425a;
   --fg: #e8ecf3;
+  --fg-strong: #ffffff;
   --fg-muted: #9aa5b8;
   --fg-dim: #6b7688;
   --accent: #4da3ff;
@@ -43,6 +44,7 @@
     --border: #e1e5ec;
     --border-strong: #c7cedb;
     --fg: #141923;
+    --fg-strong: #05080e;
     --fg-muted: #5a6478;
     --fg-dim: #8a93a5;
     --accent: #0b63ce;
@@ -58,7 +60,7 @@
 :root[data-theme="light"] {
   --bg: #f7f8fa; --bg-elev: #ffffff; --bg-elev-2: #f0f2f6;
   --border: #e1e5ec; --border-strong: #c7cedb;
-  --fg: #141923; --fg-muted: #5a6478; --fg-dim: #8a93a5;
+  --fg: #141923; --fg-strong: #05080e; --fg-muted: #5a6478; --fg-dim: #8a93a5;
   --accent: #0b63ce; --accent-fg: #ffffff;
   --danger: #c92a2a; --danger-bg: #fdf0f0;
   --warn: #96600a; --warn-bg: #fdf6e8;
@@ -583,14 +585,14 @@ section > .wrap > h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.3; le
 section { padding: 96px 0; }
 .fv .trust { gap: 8px 22px; }
 .fv .trust span { font-size: 13.5px; color: var(--fg-muted); font-weight: 600; }
-.fv h1 { color: #fff; }
-section > .wrap > h2 { color: #fff; }
+.fv h1 { color: var(--fg-strong); }
+section > .wrap > h2 { color: var(--fg-strong); }
 
 /* 非対称の2カラム（左に主張、右に仕様） */
 .split { display: grid; gap: 44px; align-items: start; }
 @media (min-width: 940px) { .split { grid-template-columns: 1.05fr .95fr; gap: 72px; } }
 .split-l h2 { font-size: clamp(27px, 3.8vw, 42px); line-height: 1.32; letter-spacing: -.04em;
-  color: #fff; margin: 0 0 22px; }
+  color: var(--fg-strong); margin: 0 0 22px; }
 .split-lead { font-size: 15.5px; line-height: 1.95; color: var(--fg-muted); margin: 0 0 1.1em; }
 .split-lead b { color: var(--fg); font-weight: 700; }
 
@@ -675,7 +677,7 @@ section > .wrap > h2 { color: #fff; }
 .hstat .hs .k { font-size: 12.5px; color: var(--fg-dim); margin-top: 7px; font-weight: 600; }
 .hstat .hs .n { font-size: 12px; color: var(--fg-dim); margin-top: 3px; }
 .hstat .hs.main { flex: 1 1 100%; }
-.hstat .hs.main .v { font-size: clamp(64px, 11vw, 124px); letter-spacing: -.055em; color: #fff; }
+.hstat .hs.main .v { font-size: clamp(64px, 11vw, 124px); letter-spacing: -.055em; color: var(--fg-strong); }
 .hstat .hs.main .k { font-size: 14.5px; color: var(--fg-muted); margin-top: 10px; }
 @media (min-width: 620px) { .hstat .hs.main { flex: 0 0 100%; } }
 
@@ -716,6 +718,337 @@ section > .wrap > h2 { color: #fff; }
 .method dd b { color: var(--fg); font-weight: 700; }
 .method dd a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 
+/* ======================================================================
+   ファーストビュー
+   数字そのものを主役にする。桁区切りは薄く、数字は詰める。
+   装飾は「薄いヘアライン」と「背景のにじみ」だけに限定し、
+   囲みや丸ピルは置かない（ページ全体の線の使い方と揃えるため）。
+   ====================================================================== */
+.fv {
+  position: relative; overflow: hidden;
+  padding: 38px 0 50px;
+  border-bottom: 1px solid var(--hair);
+  background:
+    radial-gradient(1200px 640px at 78% -16%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 66%),
+    radial-gradient(780px 520px at -8% 114%, color-mix(in srgb, var(--danger) 9%, transparent), transparent 70%);
+}
+@media (min-width: 900px) { .fv { padding: 46px 0 56px; } }
+
+.fv-in { position: relative; z-index: 1; max-width: 840px; }
+
+/* ---- 上の小見出し：ピルをやめて、本文の罫線と同じ言葉づかいにする ---- */
+.fv .eyebrow {
+  display: flex; align-items: center; gap: 9px 13px; flex-wrap: wrap;
+  margin: 0 0 20px; line-height: 1;
+  font-size: 11.5px; font-weight: 800; letter-spacing: .13em; color: var(--fg-muted);
+}
+.fv .eyebrow-u {
+  display: inline-flex; align-items: center; gap: 7px;
+  color: var(--fg-dim); font-weight: 700; letter-spacing: .06em;
+}
+.fv .eyebrow-u::before {
+  content: ""; width: 3px; height: 3px; border-radius: 999px; background: var(--fg-dim); opacity: .7;
+}
+.fv .eyebrow-u b { color: var(--fg-muted); font-weight: 800; }
+.fv .eyebrow::after {
+  content: ""; flex: 1 1 40px; min-width: 20px; height: 1px;
+  background: linear-gradient(90deg, var(--hair-strong), transparent);
+}
+.fv .live {
+  flex: none; width: 7px; height: 7px; border-radius: 999px; background: var(--ok);
+  animation: lsPulse 2.6s ease-out infinite;
+}
+@keyframes lsPulse {
+  0%        { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 55%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--ok) 0%, transparent); }
+}
+
+/* ---- 見出し ---- */
+.fv h1 {
+  margin: 0 0 30px; font-weight: 800; color: var(--fg-strong);
+  font-size: clamp(34px, 6.6vw, 60px); line-height: 1.1; letter-spacing: -.045em;
+}
+
+/* ---- 主役の数字 ---- */
+.bignum { margin: 0; }
+.bn-k {
+  margin: 0 0 8px; line-height: 1;
+  font-size: 11.5px; font-weight: 800; letter-spacing: .13em; color: var(--fg-dim);
+}
+.bn-v {
+  display: flex; align-items: baseline; gap: .05em;
+  color: var(--fg-strong); font-weight: 800; line-height: 1;
+  font-size: clamp(30px, 14vw, 124px); letter-spacing: -.055em; white-space: nowrap;
+  font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1;
+}
+/* 桁区切り：この大きさだと「,」が太い斜線に見えるので、
+   一段小さく・一段薄くして、数字の塊を切る記号に徹してもらう */
+.bn-n i {
+  font-style: normal; font-size: .5em; font-weight: 700;
+  color: color-mix(in srgb, var(--fg-strong) 42%, transparent);
+  margin: 0 .01em 0 -.02em; letter-spacing: 0;
+}
+.bn-u { font-size: .2em; font-weight: 800; letter-spacing: .02em; color: var(--fg-muted); }
+.bn-n2 { margin: 14px 0 0; font-size: 14px; font-weight: 600; color: var(--fg-muted); }
+.bn-n2 b {
+  color: var(--danger); font-weight: 800; font-size: 1.3em;
+  letter-spacing: -.02em; padding: 0 .1em;
+}
+.bn-n2 span { font-size: 12.5px; font-weight: 500; color: var(--fg-dim); }
+
+/* ---- 3つの実数：罫線だけで区切る ---- */
+.hrow { display: flex; flex-wrap: wrap; margin: 32px 0 0; border-top: 1px solid var(--hair); }
+.hrow .hs { flex: 1 1 108px; padding: 17px 18px 0 0; }
+.hrow .hs + .hs { padding-left: 18px; border-left: 1px solid var(--hair); }
+.hrow .hs .v {
+  font-size: clamp(20px, 3.4vw, 26px); font-weight: 800; letter-spacing: -.03em;
+  line-height: 1.15; color: var(--fg); font-variant-numeric: tabular-nums;
+}
+.hrow .hs .k { margin-top: 6px; font-size: 11.5px; font-weight: 700; color: var(--fg-dim); }
+
+/* ---- 行動と約束 ---- */
+.fv .cta-row { margin: 32px 0 0; gap: 10px; }
+.fv .cta-row .btn { padding: 14px 26px; font-size: 15.5px; }
+.fv .trust {
+  display: flex; flex-wrap: wrap; gap: 9px 20px;
+  margin: 26px 0 0; padding: 0; list-style: none;
+}
+.fv .trust li {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 600; color: var(--fg-muted);
+}
+.fv .trust li::before {
+  content: "✓"; flex: none; width: 16px; height: 16px; border-radius: 999px;
+  display: inline-grid; place-items: center;
+  font-size: 9.5px; font-weight: 900; line-height: 1; color: var(--ok);
+  background: color-mix(in srgb, var(--ok) 16%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fv .live { animation: none; }
+}
+
+/* 狭い画面では罫線の区切りを縦に畳み、全体を詰めて主要部を画面内に収める */
+@media (max-width: 560px) {
+  .fv { padding: 26px 0 40px; }
+  .fv h1 { margin-bottom: 22px; }
+  .hrow { margin-top: 24px; }
+  .hrow .hs { flex: 1 1 100%; padding: 12px 0; }
+  .hrow .hs + .hs { padding-left: 0; border-left: 0; border-top: 1px solid var(--hair); }
+  .fv .cta-row { margin-top: 24px; }
+  .fv .cta-row .btn { flex: 1 1 100%; justify-content: center; }
+  .fv .trust { margin-top: 20px; gap: 7px 16px; }
+  .bn-n2 { margin-top: 11px; }
+}
+
+/* ======================================================================
+   手動インストールの手順書（install.html）
+   Chromeの画面は画像ではなくHTMLで再現している。
+   理由：拡大しても崩れない／明暗テーマに追従する／差し替えが要らない。
+   ====================================================================== */
+.ins-hd {
+  padding: 40px 0 44px; border-bottom: 1px solid var(--hair);
+  background: radial-gradient(900px 480px at 80% -20%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 68%);
+}
+.ins-hd .eyebrow {
+  display: flex; align-items: center; gap: 9px; margin: 0 0 18px; line-height: 1;
+  font-size: 11.5px; font-weight: 800; letter-spacing: .13em; color: var(--warn);
+}
+.ins-hd .eyebrow .live { background: var(--warn); }
+.ins-hd h1 {
+  margin: 0 0 20px; font-weight: 800; color: var(--fg-strong);
+  font-size: clamp(30px, 5.4vw, 50px); line-height: 1.16; letter-spacing: -.04em;
+}
+.ins-lead { font-size: 15.5px; line-height: 1.95; color: var(--fg-muted); margin: 0 0 30px; }
+.ins-lead b { color: var(--fg); font-weight: 700; }
+
+/* ダウンロード */
+.dl-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  padding: 20px 22px; border: 1px solid var(--border-strong); border-radius: var(--radius-lg);
+  background: var(--bg-elev);
+}
+.dl-v { font-size: 17px; font-weight: 800; color: var(--fg); letter-spacing: -.02em; }
+.dl-v b { color: var(--accent); }
+.dl-m { margin-top: 6px; font-size: 12.5px; color: var(--fg-dim); }
+.dl-m b { color: var(--fg-muted); }
+.dl-m .dot { opacity: .5; margin: 0 2px; }
+.dl-card .btn { white-space: nowrap; }
+.dl-sha {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  margin-top: 12px; padding-left: 13px; border-left: 2px solid var(--border-strong);
+  font-size: 12px; color: var(--fg-dim);
+}
+.dl-sha-k { font-weight: 800; letter-spacing: .1em; font-size: 10.5px; color: var(--fg-muted); }
+.dl-sha code { font-family: var(--mono); font-size: 11px; color: var(--fg-muted); word-break: break-all; }
+.dl-sha-n { flex-basis: 100%; }
+
+/* 注意書き */
+.ins-warn-s { padding: 34px 0; }
+.ins-warn {
+  padding: 22px 24px; border-radius: var(--radius-lg);
+  background: var(--warn-bg); border: 1px solid color-mix(in srgb, var(--warn) 34%, transparent);
+}
+.ins-warn h2 { margin: 0 0 14px; font-size: 15px; color: var(--warn); letter-spacing: .02em; }
+.ins-warn ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.ins-warn li {
+  font-size: 13.5px; line-height: 1.85; color: var(--fg-muted);
+  padding-left: 17px; position: relative;
+}
+.ins-warn li::before {
+  content: ""; position: absolute; left: 0; top: 11px;
+  width: 7px; height: 1px; background: var(--warn);
+}
+.ins-warn li b { color: var(--fg); font-weight: 700; }
+
+.ins-h2 { font-size: clamp(21px, 3vw, 28px); color: var(--fg-strong); margin: 0 0 8px; letter-spacing: -.03em; }
+.ins-sub { font-size: 13.5px; color: var(--fg-dim); margin: 0 0 28px; line-height: 1.8; }
+
+/* 手順 */
+.ins-steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; }
+.ins-steps > li { padding: 26px 0; border-top: 1px solid var(--hair); }
+.ins-steps > li:last-child { border-bottom: 1px solid var(--hair); }
+.st-h { display: flex; align-items: center; gap: 13px; margin-bottom: 12px; }
+.st-n {
+  flex: none; width: 27px; height: 27px; border-radius: 999px;
+  display: grid; place-items: center; font-size: 13px; font-weight: 800;
+  background: var(--accent); color: var(--accent-fg);
+}
+.st-h h3 { margin: 0; font-size: 16.5px; color: var(--fg); letter-spacing: -.02em; line-height: 1.45; }
+.ins-steps p { font-size: 14px; line-height: 1.9; color: var(--fg-muted); margin: 0 0 14px; }
+.ins-steps p b { color: var(--fg); font-weight: 700; }
+.ins-steps code {
+  font-family: var(--mono); font-size: 12px; background: var(--bg-elev-2);
+  border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; color: var(--fg);
+}
+.st-n2 { font-size: 12.5px !important; color: var(--fg-dim) !important; margin-bottom: 0 !important; }
+.st-warn {
+  margin: 14px 0 0 !important; padding: 12px 15px; border-radius: 8px;
+  background: var(--bg-elev); border: 1px solid var(--border);
+  font-size: 12.5px !important; line-height: 1.8 !important;
+}
+
+.os-g { display: grid; gap: 12px; margin-bottom: 4px; }
+@media (min-width: 620px) { .os-g { grid-template-columns: 1fr 1fr; } }
+.os { padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); }
+.os b { display: block; font-size: 12px; letter-spacing: .08em; color: var(--accent); margin-bottom: 6px; }
+.os p { margin: 0 !important; font-size: 13px !important; }
+
+/* アドレスバーの再現 */
+.urlbar {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 9px 16px 9px 12px; border-radius: 999px;
+  background: var(--bg-elev-2); border: 1px solid var(--border-strong);
+  font-family: var(--mono); font-size: 13.5px; color: var(--fg);
+}
+.urlbar svg { width: 16px; height: 16px; flex: none; color: var(--fg-dim); }
+
+/* Chromeの拡張機能ページの再現 */
+.ui {
+  position: relative; margin: 4px 0 2px;
+  border: 1px solid var(--border-strong); border-radius: 12px; overflow: hidden;
+  background: var(--bg-elev); box-shadow: 0 18px 40px -26px rgba(0,0,0,.55);
+}
+.ui-bar {
+  display: flex; align-items: center; gap: 12px; padding: 13px 16px;
+  background: var(--bg-elev-2); border-bottom: 1px solid var(--border);
+}
+.ui-burger { display: grid; gap: 3px; flex: none; }
+.ui-burger i { display: block; width: 14px; height: 1.5px; background: var(--fg-dim); border-radius: 2px; }
+.ui-title { font-size: 14px; font-weight: 700; color: var(--fg); white-space: nowrap; }
+.ui-search {
+  flex: 1 1 auto; min-width: 0; padding: 6px 12px; border-radius: 999px;
+  background: var(--bg); border: 1px solid var(--border);
+  font-size: 12px; color: var(--fg-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.ui-dev { display: inline-flex; align-items: center; gap: 9px; flex: none; padding: 4px 7px; border-radius: 7px; }
+.ui-dev-t { font-size: 12px; font-weight: 700; color: var(--fg-muted); white-space: nowrap; }
+.ui-sw {
+  flex: none; width: 30px; height: 16px; border-radius: 999px; position: relative;
+  background: var(--border-strong); transition: background .2s;
+}
+.ui-sw i { position: absolute; top: 2px; left: 2px; width: 12px; height: 12px; border-radius: 999px; background: #fff; }
+.ui-sw.on { background: var(--accent); }
+.ui-sw.on i { left: 16px; }
+.ui-acts { display: flex; gap: 9px; flex-wrap: wrap; padding: 13px 16px; border-bottom: 1px solid var(--border); }
+.ui-btn {
+  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border-strong);
+  font-size: 12px; font-weight: 700; color: var(--fg-muted); background: var(--bg); white-space: nowrap;
+}
+.ui-body { padding: 26px 16px; text-align: center; }
+.ui-ghost { font-size: 12px; color: var(--fg-dim); }
+
+/* 注目させたい部分 */
+.mark {
+  position: relative; outline: 2px solid var(--danger); outline-offset: 3px; border-radius: 8px;
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
+}
+.ui-btn.mark { color: var(--fg); border-color: var(--danger); }
+/* 図の説明。枠だけでは色が見えない人に伝わらないので、言葉でも示す */
+.fig {
+  margin: 10px 0 0 !important; padding-left: 15px; position: relative;
+  font-size: 12.5px !important; line-height: 1.8 !important; color: var(--fg-dim) !important;
+}
+.fig::before {
+  content: ""; position: absolute; left: 0; top: 10px;
+  width: 8px; height: 2px; border-radius: 2px; background: var(--danger);
+}
+
+/* 読み込まれた拡張機能のカード */
+.ui-card { display: flex; align-items: flex-start; gap: 14px; padding: 18px 18px; }
+.uc-ic {
+  flex: none; width: 38px; height: 38px; border-radius: 9px; display: grid; place-items: center;
+  background: var(--bg-elev-2); border: 1px solid var(--border); color: var(--accent);
+}
+.uc-ic svg { width: 22px; height: 22px; }
+.uc-b { flex: 1 1 auto; min-width: 0; }
+.uc-t { font-size: 13.5px; font-weight: 700; color: var(--fg); }
+.uc-v { font-size: 11.5px; font-weight: 600; color: var(--fg-dim); margin-left: 5px; }
+.uc-d { margin-top: 5px; font-size: 12.5px; color: var(--fg-muted); line-height: 1.7; }
+.uc-id { margin-top: 7px; font-family: var(--mono); font-size: 11px; color: var(--fg-dim); }
+
+/* ツールバーのピン留め */
+.ui-tb { background: var(--bg-elev-2); }
+.tb { padding: 16px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.tb-puzzle { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 7px;
+  background: var(--bg); border: 1px solid var(--border); color: var(--fg-muted); }
+.tb-puzzle svg { width: 17px; height: 17px; }
+.tb-menu { width: min(300px, 100%); border-radius: 10px; background: var(--bg-elev);
+  border: 1px solid var(--border-strong); box-shadow: 0 16px 36px -20px rgba(0,0,0,.6); overflow: hidden; }
+.tb-mh { padding: 11px 14px; font-size: 12px; font-weight: 800; color: var(--fg-muted); border-bottom: 1px solid var(--border); }
+.tb-row { display: flex; align-items: center; gap: 11px; padding: 11px 14px; }
+.tb-ic { flex: none; width: 22px; height: 22px; display: grid; place-items: center; color: var(--accent); }
+.tb-ic svg { width: 17px; height: 17px; }
+.tb-nm { flex: 1 1 auto; font-size: 13px; font-weight: 600; color: var(--fg); }
+.tb-pin { flex: none; width: 22px; height: 22px; display: grid; place-items: center; color: var(--fg-muted); }
+.tb-pin svg { width: 15px; height: 15px; }
+
+/* よくある詰まりどころ */
+.faq { margin: 0; display: grid; gap: 0; }
+.faq dt {
+  font-size: 14.5px; font-weight: 700; color: var(--fg); letter-spacing: -.01em;
+  padding: 20px 0 0; border-top: 1px solid var(--hair);
+}
+.faq dd { margin: 8px 0 20px; font-size: 13.5px; line-height: 1.9; color: var(--fg-muted); }
+.faq dd b { color: var(--fg); font-weight: 700; }
+.faq dd code { font-family: var(--mono); font-size: 12px; background: var(--bg-elev-2);
+  border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; }
+
+/* 検証コマンド */
+.cmds { display: grid; gap: 10px; margin: 22px 0 26px; }
+.cmd { padding: 13px 16px; border-radius: 9px; background: var(--bg-elev); border: 1px solid var(--border); }
+.cmd-k { display: block; font-size: 10.5px; font-weight: 800; letter-spacing: .1em; color: var(--fg-dim); margin-bottom: 7px; }
+.cmd code { font-family: var(--mono); font-size: 12.5px; color: var(--fg); word-break: break-all; }
+
+/* 審査中のお知らせ（トップのインストール節） */
+.review-now {
+  margin: 0 0 22px; padding: 15px 18px; border-radius: 10px;
+  background: var(--warn-bg); border: 1px solid color-mix(in srgb, var(--warn) 32%, transparent);
+  font-size: 13.5px; line-height: 1.85; color: var(--fg-muted);
+}
+.review-now b { display: block; color: var(--warn); font-weight: 800; margin-bottom: 3px; }
+.review-now a { color: var(--fg); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
 </style>
 
 </head>
@@ -730,6 +1063,7 @@ section > .wrap > h2 { color: #fff; }
     <nav class="nav">
       <a class="anchor-nav" href="#data">漏洩データ</a>
       <a class="anchor-nav" href="#use">インストール</a>
+      <a href="install">自分で入れる</a>
       <a href="https://leakscan.matsunai.com/list">漏洩企業一覧</a>
       <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
     </nav>
@@ -738,37 +1072,49 @@ section > .wrap > h2 { color: #fff; }
 
 <div class="fv">
   <div class="wrap">
-    <div class="grid one">
-      <div>
-        <span class="kicker">2026年・国内で公表された情報漏洩</span>
-        <h1>あなたは何件<br>漏洩した？</h1>
-        <div class="hstat">
-          <div class="hs main">
-            <div class="v" id="h-records">—</div>
-            <div class="k">漏洩した個人情報の合計</div>
-            <div class="n">日本の人口を超えています</div>
-          </div>
-          <div class="hs">
-            <div class="v" id="h-cases">—</div>
-            <div class="k">公表された事案</div>
-          </div>
-          <div class="hs">
-            <div class="v" id="h-cos">—</div>
-            <div class="k">企業・団体</div>
-          </div>
-        </div>
+    <div class="fv-in">
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#use">無料で使う</a>
-          <a class="btn btn-ghost" href="https://leakscan.matsunai.com/list">漏洩企業一覧</a>
+      <p class="eyebrow">
+        <span class="live" aria-hidden="true"></span>
+        <span class="eyebrow-t">2026年・国内で公表された情報漏洩</span>
+        <span class="eyebrow-u">毎朝 自動収集　最終更新 <b id="h-updated">—</b></span>
+      </p>
+
+      <h1>あなたは何件<br>漏洩した？</h1>
+
+      <div class="bignum">
+        <p class="bn-k">2026年に漏洩した個人情報</p>
+        <div class="bn-v">
+          <span class="bn-n" id="h-records">0</span><span class="bn-u">件</span>
         </div>
-        <div class="trust">
-          <span>メールの本文は読みません</span>
-          <span>情報は外部に送信しません</span>
-          <span>完全無料・登録不要・広告なし</span>
-          <span>漏洩データを毎朝自動収集</span>
+        <p class="bn-n2">日本の人口の<b id="h-mult">—</b>倍<span>　重複を含む延べ件数です</span></p>
+      </div>
+
+      <div class="hrow">
+        <div class="hs">
+          <div class="v" id="h-cases">—</div>
+          <div class="k">公表された事案</div>
+        </div>
+        <div class="hs">
+          <div class="v" id="h-cos">—</div>
+          <div class="k">企業・団体</div>
+        </div>
+        <div class="hs">
+          <div class="v" id="h-official">—</div>
+          <div class="k">公式発表を確認済み</div>
         </div>
       </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#use">無料で使う</a>
+        <a class="btn btn-ghost" href="https://leakscan.matsunai.com/list">漏洩企業一覧</a>
+      </div>
+
+      <ul class="trust">
+        <li>メールの本文は読みません</li>
+        <li>情報は外部に送信しません</li>
+        <li>完全無料・登録不要・広告なし</li>
+      </ul>
 
     </div>
   </div>
@@ -796,10 +1142,15 @@ section > .wrap > h2 { color: #fff; }
     <div class="split">
       <div class="split-l">
         <h2>入れて、押すだけ</h2>
+        <div class="review-now">
+          <b>いまウェブストアの審査中です。</b>
+          審査を待たずに使いたい方へ、提出したものと同じファイルと手順を置いています。
+          <a href="install">自分で入れる手順 →</a>
+        </div>
         <ol class="inst">
           <li>
             <b>Chromeに追加</b>
-            ウェブストアから追加します。
+            ウェブストアから追加します。審査中は<a href="install">手動で入れる</a>こともできます。
           </li>
           <li>
             <b>スキャン開始</b>
@@ -857,6 +1208,7 @@ section > .wrap > h2 { color: #fff; }
       </div>
       <nav class="foot-links" aria-label="フッター">
         <a href="https://leakscan.matsunai.com/list">漏洩企業一覧</a>
+        <a href="install">自分で入れる</a>
         <a href="https://leakscan.matsunai.com/privacy">プライバシーポリシー</a>
         <a href="https://github.com/M2AI-jp/leakscan">GitHub</a>
         <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・お問い合わせ</a>
@@ -951,6 +1303,42 @@ section > .wrap > h2 { color: #fff; }
     if (n >= 10000) return Math.round(n / 10000).toLocaleString('ja-JP') + '万件';
     return n.toLocaleString('ja-JP') + '件';
   };
+  /** 大きな数は丸めず全桁で出す。桁区切りは <i> にして薄く見せる。 */
+  LeakScan.bigNum = function (n) {
+    const s = Math.round(Number(n) || 0).toLocaleString('en-US');
+    return LeakScan.esc(s).replace(/,/g, '<i>,</i>');
+  };
+  /** 0から実数までカウントアップする。動きを減らす設定なら即座に確定値を出す。 */
+  LeakScan.countUp = function (el, to, ms) {
+    const target = Number(to) || 0;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !target || typeof requestAnimationFrame !== 'function') {
+      el.innerHTML = LeakScan.bigNum(target);
+      return;
+    }
+    const dur = ms || 1600;
+    const t0 = performance.now();
+    (function step(t) {
+      const p = Math.min(1, (t - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 4);
+      el.innerHTML = LeakScan.bigNum(target * e);
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  };
+  /** 桁が増えても1行に収まるよう、実測して文字サイズを決める。
+   *  サイズ指定はすべて em 基準なので、幅は文字サイズに比例する。 */
+  LeakScan.fitBig = function (el) {
+    const box = el.parentElement;
+    const wrap = box && box.parentElement;
+    if (!box || !wrap) return;
+    box.style.fontSize = '';
+    const avail = wrap.clientWidth;
+    const base = parseFloat(getComputedStyle(box).fontSize) || 100;
+    const need = box.scrollWidth;
+    if (avail > 0 && need > avail) {
+      box.style.fontSize = Math.max(20, Math.floor(base * (avail / need) * 0.99)) + 'px';
+    }
+  };
   LeakScan.fmtDate = function (iso) {
     if (!iso) return '';
     const [y, m, d] = iso.split('-');
@@ -1018,9 +1406,29 @@ window.LeakScan.load = async function () { return {"meta":{"schema":1,"name":"Le
     const sum = entries.reduce((a, e) => a + (e.records_num || 0), 0);
     document.getElementById('count-line').textContent =
       `収録 ${entries.length}件 / ${window.LeakScan.fmtNum(sum)}`;
-    document.getElementById('h-records').textContent = window.LeakScan.fmtNum(sum);
+    const bigEl = document.getElementById('h-records');
+    bigEl.innerHTML = window.LeakScan.bigNum(sum);   // 確定値で測ってから
+    window.LeakScan.fitBig(bigEl);
+    window.LeakScan.countUp(bigEl, sum);
+    let fitT;
+    window.addEventListener('resize', function () {
+      clearTimeout(fitT);
+      fitT = setTimeout(function () {
+        bigEl.innerHTML = window.LeakScan.bigNum(sum);
+        window.LeakScan.fitBig(bigEl);
+      }, 120);
+    });
     document.getElementById('h-cases').textContent = entries.length + '件';
     document.getElementById('h-cos').textContent = new Set(entries.map((e) => e.company)).size + '社';
+    // 日本の人口（概数）との比。延べ件数なので「倍」は規模の目安として出す。
+    const JP_POP = 124000000;
+    document.getElementById('h-mult').textContent =
+      (sum / JP_POP).toFixed(1).replace(/\.0$/, '');
+    const official = entries.filter((e) => window.LeakScan.hasOfficial(e)).length;
+    document.getElementById('h-official').textContent =
+      Math.round((official / entries.length) * 100) + '%';
+    document.getElementById('h-updated').textContent =
+      String(meta.updated || '').slice(5).replace('-', '/');
     document.getElementById('updated').textContent = window.LeakScan.fmtDate(meta.updated);
     document.getElementById('n-all').textContent = entries.length;
     var esc = window.LeakScan.esc;
