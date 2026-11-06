@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeakScan ストア申請シート</title>
+<style>
+:root{
+  --bg:#0c0f14;--elev:#141923;--elev2:#1b2130;--line:#222a37;--line2:#37425a;
+  --fg:#e8ecf3;--muted:#9aa5b8;--dim:#6b7688;--accent:#4da3ff;--ok:#5ddba4;--warn:#ffb454;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --sans:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,-apple-system,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
+  --bg:#f7f8fa;--elev:#fff;--elev2:#f0f2f6;--line:#e3e5ea;--line2:#cfd3da;
+  --fg:#15181f;--muted:#5a6478;--dim:#8a93a5;--accent:#0b63ce;--ok:#0f7a56;--warn:#96600a;}}
+:root[data-theme="dark"]{--bg:#0c0f14;--elev:#141923;--elev2:#1b2130;--line:#222a37;--line2:#37425a;
+  --fg:#e8ecf3;--muted:#9aa5b8;--dim:#6b7688;--accent:#4da3ff;--ok:#5ddba4;--warn:#ffb454;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.8;
+  font-feature-settings:"palt" 1;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);padding:38px 0 30px;margin-bottom:34px}
+h1{margin:0 0 10px;font-size:clamp(22px,3.4vw,30px);letter-spacing:-.03em;font-weight:800}
+.sub{color:var(--muted);font-size:14px;margin:0}
+.sub b{color:var(--fg)}
+h2{font-size:17px;letter-spacing:-.02em;margin:46px 0 6px;font-weight:800;
+  display:flex;align-items:center;gap:10px}
+h2 .num{width:24px;height:24px;border-radius:999px;background:var(--accent);color:var(--bg);
+  display:grid;place-items:center;font-size:12px;flex:none}
+.h2n{color:var(--dim);font-size:13px;font-weight:400;margin:0 0 22px 34px}
+.f{background:var(--elev);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.fh{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line);
+  background:var(--elev2)}
+.fl{font-size:13.5px;font-weight:700;letter-spacing:-.01em}
+.fn{font-size:11.5px;color:var(--dim)}
+.cp{margin-left:auto;background:none;border:1px solid var(--line2);color:var(--muted);
+  border-radius:7px;padding:5px 13px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;
+  white-space:nowrap;transition:all .12s}
+.cp:hover{color:var(--fg);border-color:var(--fg)}
+.cp.done{color:var(--ok);border-color:var(--ok)}
+.fb{padding:14px 16px;font-size:13px;color:var(--muted);white-space:pre-wrap;
+  max-height:230px;overflow:auto;font-family:var(--mono);line-height:1.75}
+.fb.short{font-family:var(--sans);font-size:14.5px;color:var(--fg);font-weight:600;max-height:none}
+.grid{display:grid;gap:10px}
+@media(min-width:680px){.grid.two{grid-template-columns:1fr 1fr}}
+.note{background:var(--elev);border:1px solid var(--line);border-left:3px solid var(--warn);
+  border-radius:8px;padding:15px 17px;font-size:13.5px;color:var(--muted);margin:16px 0}
+.note b{color:var(--fg)}
+ul.chk{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+ul.chk li{font-size:13.5px;color:var(--muted);padding-left:26px;position:relative}
+ul.chk li::before{content:"☑";position:absolute;left:0;color:var(--ok);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+td{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
+td:first-child{color:var(--fg);font-weight:700;width:42%;padding-right:14px}
+td code{font-family:var(--mono);font-size:12.5px;background:var(--elev2);border:1px solid var(--line);
+  border-radius:4px;padding:1px 6px}
+footer{margin:56px 0 70px;padding-top:26px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--dim);line-height:1.9}
+.tt{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(16px);
+  background:var(--ok);color:var(--bg);font-weight:800;font-size:13px;padding:10px 20px;
+  border-radius:999px;opacity:0;pointer-events:none;transition:all .2s}
+.tt.on{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Chrome ウェブストア 申請シート</h1>
+  <p class="sub">LeakScan v0.1.2 ／ 各項目の<b>コピー</b>を押してフォームに貼ってください。画像は <b>Downloads/leakscan-store</b> にあります。</p>
+</header>
+
+<h2><span class="num">1</span>ストアの掲載情報</h2>
+<p class="h2n">「商品の詳細」タブ</p>
+
+<div class="f">
+  <div class="fh"><span class="fl">説明</span><span class="fn">必須・16,000文字まで</span>
+    <button class="cp" data-t="desc">コピー</button></div>
+  <div class="fb" id="desc">LeakScanは、あなたが使っているサービスのうち、どれが情報漏洩を公表したかを調べる無料のツールです。
+
+■ 何をするか
+
+ボタンを1回押すと、Gmailの検索機能を使って、漏洩を公表した企業からのメールが届いていないかを確認します。届いていれば、あなたはそのサービスを使っている可能性が高く、その漏洩はあなたに関係があります。
+
+結果として、次の2つを表示します。
+
+・何が漏れたのか（メールアドレスだけか、クレジットカードや口座情報までか）
+・あなたが今すべきこと（優先度つき）
+
+■ プライバシー
+
+・メールの件名・本文・添付ファイルは読みません。検索結果一覧に表示される差出人の名前とアドレスのみを参照します
+・取得した情報を外部に送信しません。照合はすべてブラウザ内で完結します
+・Gmail APIもOAuthも使いません。Googleアカウントの連携やパスワード入力は不要です
+・スキャン結果はブラウザのローカル保存領域にのみ保存され、開発者が閲覧することはできません
+・アクセス解析、広告、トラッキングは一切ありません
+
+■ 収録データ
+
+2026年に日本で公表された情報漏洩事案137件を収録しています（2026年11月6日時点）。各事案には出典を明記し、「漏洩を確認」「漏洩の可能性」「調査中」を区別しています。データは毎日更新されます。
+
+データセットはCC BY 4.0で公開しており、誰でも取得・再利用できます。
+https://leakscan.matsunai.com/data/breaches.json
+
+■ ソースコードについて
+
+本拡張機能のコードは生成AIにより作成されたもので、人間による詳細なコードレビューを経ていません。動作・内容・安全性についていかなる保証も行いません。
+
+その代わり、ソースコードは全文を公開しています。JavaScript約1,200行、外部ライブラリは一切使用していません。難読化も圧縮もしていないため、配布物とGitHub上のコードは同一です。ご自身で検証したうえでご利用ください。
+https://github.com/M2AI-jp/leakscan
+
+■ 注意点
+
+・「該当あり」は、そのサービスを利用していた可能性が高いことを示すもので、あなた個人のデータが流出したことを意味しません。対象かどうかは各社の公式発表でご確認ください
+・「該当なし」は安全の証明ではありません。別のメールアドレスで登録したサービスや、メールが届いていないサービスは検出できません
+・Gmail（mail.google.com）専用です
+
+■ 運営
+
+マツナイ合同会社
+https://leakscan.matsunai.com</div>
+</div>
+
+<div class="grid two">
+  <div class="f">
+    <div class="fh"><span class="fl">ホームページ URL</span><button class="cp" data-t="hp">コピー</button></div>
+    <div class="fb short" id="hp">https://leakscan.matsunai.com</div>
+  </div>
+  <div class="f">
+    <div class="fh"><span class="fl">サポート URL</span><button class="cp" data-t="sp">コピー</button></div>
+    <div class="fb short" id="sp">https://github.com/M2AI-jp/leakscan/issues</div>
+  </div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">選択するだけの項目</span></div>
+  <div class="fb short" style="padding:4px 16px 10px">
+    <table>
+      <tr><td>カテゴリ</td><td>仕事効率化</td></tr>
+      <tr><td>言語</td><td>日本語</td></tr>
+      <tr><td>成人向けコンテンツ</td><td>含まない</td></tr>
+      <tr><td>公式 URL</td><td>なし（Search Console未登録なら空のまま）</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">プロモーション動画 YouTube URL</span><span class="fn">限定公開でアップ済み</span>
+    <button class="cp" data-t="yt">コピー</button></div>
+  <div class="fb short" id="yt">https://www.youtube.com/watch?v=-7foss5Po_Y</div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">画像アセット</span><span class="fn">Downloads/leakscan-store</span></div>
+  <div class="fb short" style="padding:4px 16px 10px">
+    <table>
+      <tr><td>ショップアイコン</td><td><code>icon128.png</code> 128×128・アルファなしに作り直し済み</td></tr>
+      <tr><td>スクリーンショット</td><td><code>2-popup.png</code> ← 1枚だけならこれ<br><code>1-results.png</code> / <code>3-selftest.png</code> / <code>4-site.png</code></td></tr>
+      <tr><td>プロモタイル</td><td>任意。未作成でも申請できます</td></tr>
+    </table>
+  </div>
+</div>
+
+<h2><span class="num">2</span>プライバシーへの取り組み</h2>
+<p class="h2n">審査で落ちるとしたらここ。Gmailを操作する拡張機能は厳しく見られます</p>
+
+<div class="f">
+  <div class="fh"><span class="fl">単一用途の説明</span><button class="cp" data-t="sp1">コピー</button></div>
+  <div class="fb" id="sp1">公表された情報漏洩事案のデータベースと、ユーザーのGmailに届いているメールの差出人を照合し、ユーザーが利用しているサービスで発生した漏洩を特定して通知すること。</div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">storage の権限が必要な理由</span><button class="cp" data-t="p1">コピー</button></div>
+  <div class="fb" id="p1">漏洩事案データのキャッシュ、ユーザー設定（対象アカウント番号など）、およびスキャン結果の保存に使用します。保存先はchrome.storage.localのみで、外部への送信は行いません。</div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">mail.google.com のホスト権限が必要な理由</span><span class="fn">最重要</span>
+    <button class="cp" data-t="p2">コピー</button></div>
+  <div class="fb" id="p2">本拡張機能の中心的な機能のために必要です。ユーザーが明示的に「スキャン開始」を押したときのみ、Gmailのタブを開いて同サービスの検索機能を実行し、検索結果一覧に表示される差出人のメールアドレスと表示名のみを読み取ります。
+
+メールの件名、本文、添付ファイルにはアクセスしません。これらを取得するコードは実装されていません。読み取った差出人情報は、拡張機能に同梱された漏洩事案データとユーザーのブラウザ内で照合され、外部に送信されることはありません。
+
+Gmail APIおよびOAuthは使用しておらず、ユーザーの認証情報を取得・保持しません。</div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">leakscan.matsunai.com のホスト権限が必要な理由</span><button class="cp" data-t="p3">コピー</button></div>
+  <div class="fb" id="p3">漏洩事案のデータセット（静的なJSONファイル）を取得するために使用します。取得は読み取り専用のGETリクエストのみで、ユーザーを識別する情報やリクエストパラメータは一切含みません。このドメインへのデータ送信は行いません。</div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">プライバシーポリシー URL</span><button class="cp" data-t="pp">コピー</button></div>
+  <div class="fb short" id="pp">https://leakscan.matsunai.com/privacy</div>
+</div>
+
+<div class="f">
+  <div class="fh"><span class="fl">データ使用の申告</span></div>
+  <div class="fb short" style="padding:12px 16px">
+    <div style="margin-bottom:12px">下の8項目は<b style="color:var(--fg)">すべて「いいえ」</b></div>
+    <table>
+      <tr><td>個人情報</td><td>いいえ</td></tr>
+      <tr><td>健康情報</td><td>いいえ</td></tr>
+      <tr><td>金融・決済情報</td><td>いいえ</td></tr>
+      <tr><td>認証情報</td><td>いいえ</td></tr>
+      <tr><td>個人の連絡先情報</td><td>いいえ</td></tr>
+      <tr><td>所在地</td><td>いいえ</td></tr>
+      <tr><td>ユーザーの操作履歴</td><td>いいえ</td></tr>
+      <tr><td>ウェブサイトの閲覧履歴</td><td>いいえ</td></tr>
+      <tr><td>リモートコードの使用</td><td>使用しない</td></tr>
+    </table>
+    <div style="margin:16px 0 10px"><b style="color:var(--fg)">チェックボックス3つはすべてオン</b></div>
+    <ul class="chk">
+      <li>承認された用途と関係のない第三者へのデータ販売・譲渡を行わない</li>
+      <li>本拡張機能の主要機能と関係のない目的でデータを使用または転送しない</li>
+      <li>信用調査・融資目的でのデータ使用または転送を行わない</li>
+    </ul>
+  </div>
+</div>
+
+<div class="note">
+  <b>なぜ「収集しない」で通るか：</b>
+  差出人情報はユーザーの端末内でのみ処理され、開発者を含む外部に送信されません。
+  ウェブストアの定義における「収集」は外部への送信を伴うものを指すため、該当しません。
+  審査で問われたらこの理屈をそのまま返してください。
+</div>
+
+<footer>
+  アップロードするファイル: <code style="font-family:var(--mono)">leakscan-extension.zip</code>（v0.1.2 / 137件・最新2026-11-06のデータ同梱 / permissions は storage のみ）<br>
+  差し戻された場合は理由をそのまま共有してください。文面を調整します。
+</footer>
+
+</div>
+<div class="tt" id="tt">コピーしました</div>
+
+<script>
+(function(){
+  var tt=document.getElementById('tt'),timer;
+  document.querySelectorAll('.cp').forEach(function(b){
+    b.addEventListener('click',function(){
+      var el=document.getElementById(b.dataset.t);
+      if(!el)return;
+      var txt=el.textContent;
+      var done=function(){
+        b.textContent='コピー済';b.classList.add('done');
+        tt.classList.add('on');clearTimeout(timer);
+        timer=setTimeout(function(){tt.classList.remove('on');b.textContent='コピー';b.classList.remove('done');},1800);
+      };
+      try{
+        navigator.clipboard.writeText(txt).then(done,function(){fallback(txt,done,b);});
+      }catch(e){fallback(txt,done,b);}
+    });
+  });
+  function fallback(txt,done,b){
+    try{
+      var ta=document.createElement('textarea');
+      ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();
+      var ok=document.execCommand('copy');document.body.removeChild(ta);
+      if(ok){done();return;}
+    }catch(e){}
+    b.textContent='手動で選択';
+    setTimeout(function(){b.textContent='コピー';},1800);
+  }
+})();
+</script>
+</body>
+</html>

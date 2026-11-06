@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LeakScan — あなたは何件？ 使っているサービスの情報漏洩を1分で</title>
+<title>LeakScan — あなたは何件漏洩した？</title>
 <meta name="description" content="Gmailの差出人を公表済みの漏洩事案と自動照合し、あなたが使っているサービスの漏洩だけを表示します。データは毎日更新。無料・登録不要・メール本文は読みません。">
-<meta property="og:title" content="LeakScan — あなたは何件？">
+<meta property="og:title" content="LeakScan — あなたは何件漏洩した？">
 <meta property="og:description" content="Gmailの差出人を公表済みの漏洩事案と自動照合。毎日更新・無料・登録不要。">
 <meta property="og:type" content="website">
 <meta name="color-scheme" content="dark light">
@@ -21,9 +21,9 @@
       LeakScan
     </a>
     <nav class="nav">
-      <a class="anchor-nav" href="#use">使い方</a>
-      <a class="anchor-nav" href="#faq">質問</a>
-      <a href="list">企業一覧</a>
+      <a class="anchor-nav" href="#data">漏洩データ</a>
+      <a class="anchor-nav" href="#use">導入</a>
+      <a href="list">漏洩企業一覧</a>
       <button class="theme-toggle" id="theme" type="button">☾ Dark</button>
     </nav>
   </div>
@@ -34,42 +34,38 @@
     <div class="grid">
       <div>
         <span class="kicker">2026年 国内で公表された漏洩 <b id="n-hero">79件</b></span>
-        <h1>あなたは<br>何件？</h1>
-        <p class="one">
-          Gmailの差出人を照合して、あなたが使っているサービスの漏洩だけを割り出します。
-        </p>
+        <h1>あなたは何件<br>漏洩した？</h1>
         <div class="cta-row">
           <a class="btn btn-primary" href="#use">無料で使う</a>
-          <a class="btn btn-ghost" href="list">企業一覧</a>
+          <a class="btn btn-ghost" href="list">漏洩企業一覧</a>
         </div>
         <div class="trust">
-          <span>無料</span>
-          <span>登録不要</span>
-          <span>本文は読まない</span>
-          <span>外部送信なし</span>
-          <span id="freq">毎日更新</span>
+          <span>メールの本文は読みません</span>
+          <span>情報は外部に送信しません</span>
+          <span>完全無料・登録不要・広告なし</span>
+          <span>漏洩データは毎日更新</span>
         </div>
       </div>
 
       <div class="shot">
-        <span class="cap">こう出ます</span>
+        <span class="cap">結果の表示例（社名は伏せています）</span>
         <div class="m2" aria-label="結果画面の例">
           <div class="bar"><i></i><i></i><i></i><span>LeakScan</span></div>
           <div class="body">
             <div class="big">あなたが使っている<em>6件</em>で<br>漏洩が公表されています</div>
             <div class="r">
-              <span class="nm">skyticket</span><span class="bg sev-3">危険度 高</span>
+              <span class="nm">○○トラベル</span><span class="bg sev-3">危険度 高</span>
               <span class="wh">クレジットカード・銀行口座</span>
             </div>
             <div class="r">
-              <span class="nm">KDDI</span><span class="bg sev-3">危険度 高</span>
+              <span class="nm">○○モバイル</span><span class="bg sev-3">危険度 高</span>
               <span class="wh">メールアドレスとパスワード</span>
             </div>
             <div class="r">
-              <span class="nm">MUJI passport</span><span class="bg sev-2">危険度 中</span>
+              <span class="nm">○○ストア</span><span class="bg sev-2">危険度 中</span>
               <span class="wh">メールアドレス・生年月日</span>
             </div>
-            <div class="act"><b>今すぐ:</b> カードの利用明細を確認する</div>
+            <div class="todo"><span class="n">3</span>やるべき対応が3件<span class="ar">→</span></div>
           </div>
         </div>
       </div>
@@ -77,255 +73,76 @@
   </div>
 </div>
 
+<!-- ① 実データ＝このサイトの中身そのもの -->
+<section id="data">
+  <div class="wrap">
+    <div class="data-head">
+      <h2>2026年に公表された漏洩</h2>
+      <a class="data-all" href="list">全<b id="n-all">79</b>件 →</a>
+    </div>
+    <div class="feed" id="feed"></div>
+    <div class="data-foot">
+      各事案に出典を付けて毎日更新しています。
+      <a href="data/breaches.json">JSON</a>・<a href="data/breaches.csv">CSV</a> で誰でも再利用できます（CC BY 4.0）。
+      記載の誤りは<a href="https://github.com/M2AI-jp/leakscan/issues">こちら</a>へ。
+    </div>
+  </div>
+</section>
+
+<!-- ② 導入と、権限の実物 -->
 <section id="use">
   <div class="wrap">
-    <h2>使い方</h2>
-    <p class="sec-lead">所要5分・3ステップ</p>
-    <div class="howto tight">
-      <div class="step">
-        <span class="n">1</span>
-        <h3>ダウンロード</h3>
-        <p><a href="https://github.com/M2AI-jp/leakscan/releases/latest/download/leakscan-extension.zip"><strong>zipを取得</strong></a>して、ダブルクリックで展開。</p>
-      </div>
-      <div class="step">
-        <span class="n">2</span>
-        <h3>Chromeに入れる</h3>
-        <p><span class="kbd">chrome://extensions</span> を開く →「デベロッパーモード」をオン →「パッケージ化されていない拡張機能を読み込む」→ 展開したフォルダを選ぶ。</p>
-      </div>
-      <div class="step">
-        <span class="n">3</span>
-        <h3>ボタンを押す</h3>
-        <p>Gmailにログインした状態で、アイコン →「スキャン開始」。1〜2分で結果が出ます。</p>
-      </div>
-    </div>
-    <p class="sec-lead" style="margin-top:16px;font-size:13.5px">
-      うまくいかないときは、設定画面の「セルフテスト」を押してください。
-    </p>
-  </div>
-</section>
-
-<section id="safe">
-  <div class="wrap">
-    <h2>安全です</h2>
-    <p class="sec-lead">まず結論から。そのあとに根拠と、ご自身で確かめる方法を書きます。</p>
-
-    <div class="three">
-      <div>
-        <span class="i">🔒</span>
-        <b>本文は読みません</b>
-        <p>見るのは差出人の名前とアドレスだけです。件名も本文も添付も参照しません。</p>
-      </div>
-      <div>
-        <span class="i">🚫</span>
-        <b>外部に送りません</b>
-        <p>照合はあなたのパソコンの中だけで完結します。結果もどこにも送信されません。</p>
-      </div>
-      <div>
-        <span class="i">🔑</span>
-        <b>ログイン不要</b>
-        <p>Googleアカウントとの連携もパスワード入力もありません。</p>
-      </div>
-    </div>
-
-    <h2 style="margin-top:52px">なぜ、そう言い切れるのか</h2>
-    <p class="sec-lead">「安全です」という主張ではなく、構造としてそうなっています。</p>
-
-    <div class="why">
-      <div class="q">
-        <h3><span class="mk">1</span>そもそも本文を取得する処理が存在しません</h3>
-        <p>
-          LeakScanがGmailで行うのは<strong>検索の実行</strong>だけです。Gmailの検索結果の一覧画面には、
-          件名の断片は出ても本文は表示されません。拡張機能が読み取るのは、その一覧の行に埋め込まれた
-          <strong>差出人のアドレスと表示名の属性値</strong>だけです。
-        </p>
-        <p>
-          メールを開く処理も、本文を取得する処理も、<strong>コードとして書かれていません</strong>。
-          「読まないようにしている」のではなく、<strong>読む機能がありません</strong>。
-        </p>
-        <div class="pf"><b>確認方法:</b> ソース内で本文取得に使う API を検索しても、該当箇所は0件です。</div>
-      </div>
-
-      <div class="q">
-        <h3><span class="mk">2</span>データを送信するコードが1行もありません</h3>
-        <p>
-          通信は<strong>1種類だけ</strong>です。このサイトから漏洩データの一覧（静的なJSONファイル）を
-          <strong>ダウンロードする</strong>通信のみで、そのリクエストにあなたの情報は一切含まれません。
-          URLは固定で、パラメータも付きません。
-        </p>
-        <p>
-          <strong>アップロードする処理そのものが存在しません。</strong>
-          送信先となるサーバーを我々は持っておらず、受け取る口がありません。
-        </p>
-        <div class="pf"><b>確認方法:</b> Chromeの開発者ツール（F12）のネットワークタブを開いたままスキャンを実行すると、発生する外部通信が <code>breaches.json</code> の取得だけであることが見えます。</div>
-      </div>
-
-      <div class="q">
-        <h3><span class="mk">3</span>Googleアカウントの認証情報を預かりません</h3>
-        <p>
-          多くの類似ツールはGmail APIを使い、OAuthであなたのアカウントへのアクセス権を取得します。
-          その場合、事業者側に<strong>アクセストークンが保管され</strong>、それが漏れればメールを読まれます。
-        </p>
-        <p>
-          LeakScanはGmail APIを使いません。<strong>あなたが既にブラウザで開いているGmailの画面を、
-          そのまま見るだけ</strong>です。アクセス権を受け取らないので、<strong>漏れる資格情報が存在しません</strong>。
-          連携の確認画面が出ないのはこのためです。
+    <div class="split">
+      <div class="split-l">
+        <h2>入れて、押すだけ</h2>
+        <ol class="inst">
+          <li>
+            <b>zipを取得して展開</b>
+            <a href="https://github.com/M2AI-jp/leakscan/releases/latest/download/leakscan-extension.zip">ダウンロード</a>
+          </li>
+          <li>
+            <b>Chromeに読み込む</b>
+            <code>chrome://extensions</code> → デベロッパーモードをオン →
+            「パッケージ化されていない拡張機能を読み込む」
+          </li>
+          <li>
+            <b>スキャン開始</b>
+            Gmailにログインした状態でアイコンをクリック。1〜2分で結果が出ます。
+          </li>
+        </ol>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/M2AI-jp/leakscan/releases/latest/download/leakscan-extension.zip">ダウンロード</a>
+          <a class="btn btn-ghost" href="https://github.com/M2AI-jp/leakscan">ソースを読む</a>
+        </div>
+        <p class="inst-n">
+          ウェブストア申請中のため、この手順が必要です。うまくいかないときは設定画面の「セルフテスト」で診断できます。
         </p>
       </div>
 
-      <div class="q">
-        <h3><span class="mk">4</span>Chromeに要求している権限が最小です</h3>
-        <p>
-          拡張機能は、インストール時にChromeが権限を表示します。LeakScanが求めるのは
-          <code>storage</code>（結果の保存）と、<code>mail.google.com</code> および
-          このサイトへのアクセスだけです。
+      <div class="split-r">
+        <p class="split-lead">
+          Gmailの検索結果一覧に本文は表示されません。読むのは行に埋め込まれた差出人のアドレスと表示名だけで、
+          <b>メールを開く処理も本文を取得する処理もコードに存在しません</b>。
+          通信は漏洩データを取得する1種類のみ。アップロード処理がなく、受け取るサーバーも持っていません。
         </p>
-        <p>
-          <strong>「すべてのウェブサイトのデータを読み取る」権限は要求していません。</strong>
-          したがって、Gmail以外のサイト（ネットバンキング、SNS、業務システムなど）の内容を
-          LeakScanが見ることは、Chromeの仕組み上できません。
-        </p>
-        <div class="pf"><b>確認方法:</b> <code>chrome://extensions</code> でLeakScanの「詳細」を開くと、許可されている権限の一覧が確認できます。</div>
-      </div>
-
-      <div class="q">
-        <h3><span class="mk">5</span>結果はあなたのブラウザから出ません</h3>
-        <p>
-          スキャン結果は、Chromeが拡張機能ごとに用意する保存領域に置かれます。
-          <strong>この領域は同じブラウザの同じプロフィールからしか読めません。</strong>
-          他の端末にも同期されず、我々も閲覧できません。
-        </p>
-        <p>
-          設定画面の「スキャン結果を削除する」でいつでも消せます。拡張機能ごと削除すれば、
-          保存領域も一緒に消えます。
-        </p>
-      </div>
-
-      <div class="q">
-        <h3><span class="mk">6</span>何をしているか、全て公開しています</h3>
-        <p>
-          拡張機能のソースコードは <strong>JavaScript 約1,200行</strong>、外部ライブラリは
-          <strong>1つも使っていません</strong>。依存パッケージがないということは、
-          <strong>この1,200行を読めば、動作の全てが分かる</strong>ということです。
-        </p>
-        <p>
-          難読化も圧縮もしていません。配布しているzipの中身と、GitHubで公開しているコードは同一です。
-        </p>
-      </div>
-    </div>
-
-    <h2 style="margin-top:52px">ご自身で確かめる方法</h2>
-    <p class="sec-lead">我々を信用していただく必要はありません。</p>
-
-    <div class="verify">
-      <ol>
-        <li>
-          <b>通信を見る</b>
-          スキャン実行中に <code>F12</code> → ネットワークタブ。外部への通信が
-          <code>leakscan.matsunai.com</code> からのダウンロード1件だけであることを確認できます。
-        </li>
-        <li>
-          <b>権限を見る</b>
-          <code>chrome://extensions</code> → LeakScanの「詳細」。
-          Gmail以外のサイトへのアクセス権がないことを確認できます。
-        </li>
-        <li>
-          <b>コードを読む</b>
-          <a href="https://github.com/M2AI-jp/leakscan/tree/main/extension">GitHubの extension フォルダ</a>。
-          約1,200行、依存ゼロです。不安な箇所があれば
-          <a href="https://github.com/M2AI-jp/leakscan/issues">Issue</a> でご指摘ください。
-        </li>
-        <li>
-          <b>通信を遮断して試す</b>
-          機内モードやオフラインでもスキャンは動きます（同梱のデータが使われます）。
-          外部とのやり取りに依存していないことが確認できます。
-        </li>
-      </ol>
-    </div>
-
-    <div class="note" style="margin-top:28px">
-      <h3>正直に書いておきます（限界）</h3>
-      <ul>
-        <li><strong>「該当なし」は安全の証明ではありません。</strong>別のメールアドレスで登録したサービスや、メールが届いていないサービスは検出できません。</li>
-        <li><strong>該当しても、あなたのデータが必ず流出したとは限りません。</strong>「そのサービスを使っていた可能性が高い」ことを示すだけです。対象かどうかは各社の公式発表でご確認ください。</li>
-        <li><strong>コードは100%AIが生成したもので、人間による詳細なレビューを経ていません。</strong>動作・内容について保証はできません。だからこそ全文を公開しています。</li>
-      </ul>
-    </div>
-
-    <div class="operator">
-      <b>運営について</b><br>
-      本サイトおよび拡張機能は、マツナイ合同会社が運営しています。広告収入もデータ販売も行っておらず、
-      あなたの情報を収集する動機がありません。運用費は静的サイトのホスティングのみで、月額0円です。
-      <dl>
-        <dt>運営</dt><dd>マツナイ合同会社</dd>
-        <dt>連絡先</dt><dd><a href="https://github.com/M2AI-jp/leakscan/issues">GitHub Issues</a> ／ <a href="https://x.com/m2ai_jp" rel="noopener">X @m2ai_jp</a></dd>
-        <dt>ソース</dt><dd><a href="https://github.com/M2AI-jp/leakscan">github.com/M2AI-jp/leakscan</a></dd>
-        <dt>方針</dt><dd><a href="privacy">プライバシーポリシー</a></dd>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap narrow">
-    <h2>よくある質問</h2>
-    <div class="faq">
-      <details>
-        <summary>本当に無料？</summary>
-        <div class="a"><p>無料です。課金の仕組みがありません。登録もメールアドレスの入力も不要です。</p></div>
-      </details>
-      <details>
-        <summary>メールを読まれない？</summary>
-        <div class="a"><p>件名も本文も読みません。検索結果の一覧に出る差出人だけを見て、あなたのパソコンの中で照合します。</p></div>
-      </details>
-      <details>
-        <summary>該当が出たら何をすれば？</summary>
-        <div class="a"><p>やるべきことが優先順位つきで結果画面に出ます。パスワードが漏れたなら変更、カードなら明細確認、メールアドレスだけなら偽メールに警戒、が目安です。</p></div>
-      </details>
-      <details>
-        <summary>「該当なし」なら安心？</summary>
-        <div class="a"><p>いいえ。別のアドレスで登録したサービスは見つけられません。安全の証明ではありません。</p></div>
-      </details>
-      <details>
-        <summary>やめたいときは？</summary>
-        <div class="a"><p>Chromeから削除すれば、結果ごと完全に消えます。</p></div>
-      </details>
-      <details>
-        <summary>掲載情報が間違っている（企業の方へ）</summary>
-        <div class="a"><p>訂正のご依頼を歓迎します。<a href="https://github.com/M2AI-jp/leakscan/issues">こちら</a>からお知らせください。公式発表と食い違う記載は確認でき次第直します。</p></div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="tech">
-  <div class="wrap narrow">
-    <div class="tech">
-      <h2>技術的なことが気になる方へ</h2>
-      <p>
-        <strong>Gmail APIもOAuthも外部サーバーもAIも使いません。</strong>
-        ログイン済みのGmailで検索を実行し、結果一覧の差出人要素だけを読んで、ブラウザ内で静的データと照合しているだけです。
-        権限は <code>storage</code> と <code>mail.google.com</code> のみ。
-      </p>
-      <p><strong>ソースもデータも全公開です。信じる前にご確認ください。</strong></p>
-
-      <div class="ai-note">
-        <h3>このプロジェクトのコードは 100% AIが書いています</h3>
-        <p>
-          拡張機能もサイトもデータ整形も、すべてAIが生成したものです。
-          人間による詳細なコードレビューは経ていません。
-          <strong>動作・内容・安全性について、いかなる保証もしません。</strong>
-          利用はご自身の判断でお願いします。
-        </p>
-        <p>
-          その代わり、<strong>隠しているものは何もありません。</strong>
-          コードは <strong>MITライセンス</strong>、データは <strong>CC BY 4.0</strong> で全文公開しています。
-          検証も改変も再配布も自由です。
-        </p>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://github.com/M2AI-jp/leakscan">GitHub</a>
-        <a class="btn btn-ghost" href="data/breaches.json">データ</a>
+        <div class="spec">
+          <div class="spec-h">要求している権限</div>
+          <dl>
+            <dt>storage</dt><dd>結果と設定の保存（端末内）</dd>
+            <dt>mail.google.com</dt><dd>検索結果の差出人の読み取り</dd>
+            <dt>leakscan.matsunai.com</dt><dd>漏洩データの取得</dd>
+          </dl>
+          <div class="spec-n">「すべてのサイトのデータを読み取る」権限は要求していません。Gmail以外は仕組み上読めません。</div>
+        </div>
+        <div class="spec">
+          <div class="spec-h">自分で確かめる</div>
+          <ul class="spec-ul">
+            <li><code>F12</code> のネットワークタブ … 通信は1件だけ</li>
+            <li><code>chrome://extensions</code> の詳細 … 権限一覧</li>
+            <li><a href="https://github.com/M2AI-jp/leakscan/tree/main/extension">GitHub</a> … 約1,200行・依存ゼロ</li>
+            <li>オフラインでも動作 … 外部に依存していない</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -339,10 +156,10 @@
           <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           LeakScan
         </span>
-        <p>Gmailの差出人を公表済みの漏洩事案と照合する無料ツール</p>
+        <p>Gmailの差出人を公表済みの漏洩事案と照合する無料ツール。マツナイ合同会社が運営しています。</p>
       </div>
       <nav class="foot-links" aria-label="フッター">
-        <a href="list">企業一覧</a>
+        <a href="list">漏洩企業一覧</a>
         <a href="privacy">プライバシーポリシー</a>
         <a href="https://github.com/M2AI-jp/leakscan">GitHub</a>
         <a href="https://github.com/M2AI-jp/leakscan/issues">訂正・お問い合わせ</a>
@@ -351,22 +168,27 @@
       </nav>
     </div>
 
-    <div class="foot-note">
-      <strong>本プロジェクトのコードは100%AIが生成したもので、動作・内容について一切の保証をしません（MITライセンス）。</strong>
-      掲載内容は各社の公表資料・報道をもとにした二次情報です。件数や漏洩項目は公表時点のもので、続報により変わります。
-      確定した事実は各社の公式発表をご確認ください。掲載企業を非難する目的ではありません。
+    <div class="foot-cols">
+      <div>
+        <h4>このツールの限界</h4>
+        <p>「該当なし」は安全の証明ではありません。別アドレスで登録したサービスは検出できません。該当＝流出確定でもなく、対象かは各社の公式発表でご確認ください。</p>
+      </div>
+      <div>
+        <h4>無保証について</h4>
+        <p>コードは100%AIが生成したもので、人間による詳細なレビューを経ていません。動作・内容・安全性について一切保証しません。その代わり全文を公開しています（コード MIT / データ CC BY 4.0）。</p>
+      </div>
+      <div>
+        <h4>掲載データについて</h4>
+        <p>各社の公表資料・報道をもとにした二次情報です。件数や漏洩項目は公表時点のもので、続報により変わります。掲載企業を非難する目的ではありません。</p>
+      </div>
     </div>
 
     <div class="foot-meta">
       <span id="count-line">—</span>
-      <span class="dot">・</span>
-      <span><b>毎日 8:00 更新</b></span>
-      <span class="dot">・</span>
-      <span>最終更新 <span id="updated">—</span></span>
-      <span class="dot">・</span>
-      <span>解析・Cookieなし</span>
+      <span class="dot">・</span><span><b>毎日 8:00 更新</b></span>
+      <span class="dot">・</span><span>最終更新 <span id="updated">—</span></span>
+      <span class="dot">・</span><span>解析・Cookieなし</span>
     </div>
-
     <div class="copyright">© 2024 マツナイ合同会社</div>
   </div>
 </footer>
@@ -382,6 +204,19 @@
       `収録 ${entries.length}件 / ${window.LeakScan.fmtNum(sum)}`;
     document.getElementById('n-hero').textContent = `${entries.length}件`;
     document.getElementById('updated').textContent = window.LeakScan.fmtDate(meta.updated);
+    document.getElementById('n-all').textContent = entries.length;
+    var esc = window.LeakScan.esc;
+    var rows = entries.slice().sort(function (a, b) { return (b.disclosed || '').localeCompare(a.disclosed || ''); }).slice(0, 12);
+    document.getElementById('feed').innerHTML = rows.map(function (e) {
+      var sev = window.LeakScan.severity(e.categories);
+      var cats = (e.categories || []).slice(0, 3).map(function (c) { return meta.categories[c] || c; }).join('・');
+      return '<a class="fr" href="list#' + esc(e.id) + '">' +
+        '<span class="fd">' + esc(e.disclosed.slice(5).replace('-', '/')) + '</span>' +
+        '<span class="fn">' + esc(e.company) + '<i>' + esc(e.service) + '</i></span>' +
+        '<span class="fc">' + esc(cats) + '</span>' +
+        '<span class="fv-n">' + esc(e.records) + '</span>' +
+        '<span class="fb sev-' + sev + '">' + esc(window.LeakScan.sevLabel[sev]) + '</span></a>';
+    }).join('');
   } catch (e) { console.error(e); }
 })();
 </script>

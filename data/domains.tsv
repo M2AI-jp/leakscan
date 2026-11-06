@@ -1,14 +1,22 @@
 domain	id	service	company	disclosed
+0101.co.jp	marui-2026-11	デジタル債	丸井グループ	2026-11-02
+7now.jp	seven-7now-2026-11	7NOW デリバリー	セブン‐イレブン・ジャパン	2026-11-03
 aena.co.jp	aena-2026-10	アエナ オンラインショップ	アエナ	2026-10-14
 aflac.co.jp	aflac-2026-08	アフラック 契約者情報	アフラック生命保険	2026-08-01
+airdo.jp	airdo-2026-11	メール配信	AIRDO	2026-11-04
 animate-onlineshop.jp	animate-2026-10	アニメイト（Cuenote FC経由）	アニメイト	2026-10-28
 animate.co.jp	animate-2026-10	アニメイト（Cuenote FC経由）	アニメイト	2026-10-28
 arara.com	arara-message-2026-10	アララ メッセージ（メール配信基盤）	アララ	2026-10-31
 arcadia.co.jp	arcadia-raiden-2026-10	SpeeCAN RAIDEN（自治体の防災・防犯メール配信）	アルカディア	2026-10-13
 asahi-kasei.co.jp	asahikasei-pharmadigital-2026-10	Pharma DIGITAL（医療従事者向け）	旭化成ファーマ（旭化成セラピューティクス）	2026-10-06
+asahi-life.co.jp	asahi-life-2026-11	メール配信	朝日生命保険	2026-11-05
+asoview.com	asoview-2026-11	アソビュー!（レジャー予約）	アソビュー	2026-11-03
 au.com	kddi-isp-mail-2026-07	ISPメールシステム（au one net 等）	KDDI	2026-07-06
 auone-net.jp	kddi-isp-mail-2026-07	ISPメールシステム（au one net 等）	KDDI	2026-07-06
+axel-enter.co.jp	axel-enter-2026-11	メール配信	アクセルエンターメディア	2026-11-04
 baitoru.com	dip-baitoru-2026-10	バイトル / バイトルNEXT	ディップ	2026-10-09
+belluna.co.jp	beluna-notice-2026-11	ベルーナノーティス	サンステージ	2026-11-02
+biccamera.com	biccamera-2026-11	メールマガジン	ビックカメラ / コジマ / ソフマップ	2026-11-02
 big-echo.jp	daiichikosho-2026-10	ビッグエコー / 第一興商 会員サービス	第一興商	2026-10-08
 blastmail.jp	blastmail-2026-10	ブラストメール（BlastMail）	ラクスライトクラウド	2026-10-21
 bookoff.co.jp	bookoff-2026-10	ブックオフ 会員サービス	ブックオフグループホールディングス	2026-10-09
@@ -17,22 +25,31 @@ burgerking.co.jp	burgerking-jp-2026-10	バーガーキング公式アプリ	ビ�
 capcom.co.jp	capcom-id-2026-10	CAPCOM ID	カプコン	2026-10-22
 capcom.com	capcom-id-2026-10	CAPCOM ID	カプコン	2026-10-22
 carsensor.net	recruit-carsensor-2026-10	カーセンサーnet / C-MATCH	リクルート	2026-10-21
+chobirich.com	chobirich-2026-11	ちょびリッチ	ちょびリッチ	2026-11-04
 club-t.com	club-tourism-2026-10	クラブツーリズム インターネット会員	クラブツーリズム	2026-10-31
 cmoa.jp	nttsolmare-cmoa-2026-10	コミックシーモア	NTTソルマーレ	2026-10-21
 coconala.com	coconala-2026-10	ココナラ	ココナラ	2026-10-09
 commmune.com	commune-2026-10	commune / commune for work（企業コミュニティ）	コミューン	2026-10-21
 communeinc.com	commune-2026-10	commune / commune for work（企業コミュニティ）	コミューン	2026-10-21
+cosme.net	istyle-cosme-2026-11	@cosme（アットコスメ）	アイスタイル	2026-11-02
 crypton.co.jp	kripton-sonicwire-2026-10	SONICWIRE / D2R	クリプトン・フューチャー・メディア	2026-10-19
 cuenote.jp	ymirlink-cuenote-2026-10	Cuenote FC（メール配信基盤）	ユミルリンク	2026-10-19
 dai-ichi-life.co.jp	dai-ichi-life-2026-10	人事システム（従業員・関係者情報）	第一生命保険	2026-10-02
 daiki-suisan.co.jp	taiki-suisan-2026-10	大起水産 公式アプリ	大起水産	2026-10-05
 degica.com	komoju-2026-10	KOMOJU	DEGICA	2026-10-22
+demae-can.co.jp	demaecan-2026-11	出前館	出前館	2026-11-03
+demae-can.com	demaecan-2026-11	出前館	出前館	2026-11-03
+dennys.jp	dennys-2026-11	デニーズ公式アプリ	デニーズジャパン	2026-11-03
 dhc.co.jp	dhc-2026-10	DHC オンラインショップ	DHC	2026-10-30
 digital.go.jp	digital-agency-gss-2026-09	GSS（政府共通システム）	デジタル庁	2026-09-11
 dip-net.co.jp	dip-baitoru-2026-10	バイトル / バイトルNEXT	ディップ	2026-10-09
 dkkaraoke.co.jp	daiichikosho-2026-10	ビッグエコー / 第一興商 会員サービス	第一興商	2026-10-08
+duskin.co.jp	duskin-2026-11	DDuet（会員サイト）	ダスキン	2026-11-04
 eki-net.com	jreast-2026-10	JRE POINT / えきねっと 関連	東日本旅客鉄道（JR東日本）	2026-10-09
+ekitan.com	ekitan-2026-11	駅探メール配信	駅探	2026-11-03
+eneos.co.jp	eneos-2026-11	ENEOSカーリース / Charge Plus	ENEOS	2026-11-02
 estore.jp	estore-shopserve-2026-10	ショップサーブ（ECプラットフォーム）	Eストアー	2026-10-16
+fancrew.jp	fancrew-2026-11	ファンくる（モニターサイト）	ファンくる	2026-11-02
 gmo-pg.com	gmo-onamae-desktopcloud-2026-10	お名前.com デスクトップクラウド	GMOインターネットグループ	2026-10-21
 gmo-research.ai	gmo-research-infoq-2026-10	infoQ（アンケートモニター）	GMOリサーチ&AI	2026-10-05
 gmo-research.jp	gmo-research-infoq-2026-10	infoQ（アンケートモニター）	GMOリサーチ&AI	2026-10-05
@@ -42,12 +59,18 @@ goodsmile.com	goodsmile-2026-10	グッドスマイルオンラインショップ
 goodsmileshop.com	goodsmile-2026-10	グッドスマイルオンラインショップ	グッドスマイルカンパニー	2026-10-01
 gyazo.com	gyazo-2026-09	Gyazo	Helpfeel	2026-09-16
 h2o-kaiin.com	hankyu-hanshin-dept-2026-10	H2O ID / 阪急百貨店・阪神百貨店 会員	阪急阪神百貨店	2026-10-19
+hange.jp	hange-2026-11	ハンゲ（hange）	エンセイピア	2026-11-03
 hankyu-hanshin-dept.co.jp	hankyu-hanshin-dept-2026-10	H2O ID / 阪急百貨店・阪神百貨店 会員	阪急阪神百貨店	2026-10-19
 helpfeel.com	gyazo-2026-09	Gyazo	Helpfeel	2026-09-16
+hottomotto.com	hottomotto-2026-11	ほっともっと	プレナス	2026-11-05
 i-ask.jp	scala-iask-2026-10	i-ask（企業向け問い合わせフォーム基盤）	スカラコミュニケーションズ	2026-10-06
 i879.com	hanacupid-2026-10	花キューピット	日本フローラルネットワーク	2026-10-28
 idcf.jp	idc-frontier-2026-10	IDCFクラウド（東日本リージョン1）	IDCフロンティア	2026-10-07
 infoq.jp	gmo-research-infoq-2026-10	infoQ（アンケートモニター）	GMOリサーチ&AI	2026-10-05
+irisohyama.co.jp	irisohyama-2026-11	アイリスプラザ	アイリスオーヤマ	2026-11-05
+irisplaza.co.jp	irisohyama-2026-11	アイリスプラザ	アイリスオーヤマ	2026-11-05
+istyle.co.jp	istyle-cosme-2026-11	@cosme（アットコスメ）	アイスタイル	2026-11-02
+japanpost.jp	japanpost-2026-11	委託先経由	日本郵便	2026-11-05
 japanticket.com	japanticket-2026-10	Japanticket	ジャパンチケット	2026-10-30
 jfnc.co.jp	hanacupid-2026-10	花キューピット	日本フローラルネットワーク	2026-10-28
 joshin.co.jp	joshin-2026-10	Joshin web / ジョーシン会員	上新電機	2026-10-26
@@ -55,26 +78,44 @@ jr-central.co.jp	jr-central-market-2026-10	JR東海MARKET	東海旅客鉄道（J
 jreast.co.jp	jreast-2026-10	JRE POINT / えきねっと 関連	東日本旅客鉄道（JR東日本）	2026-10-09
 jrepoint.jp	jreast-2026-10	JRE POINT / えきねっと 関連	東日本旅客鉄道（JR東日本）	2026-10-09
 jrkyushu.co.jp	jrkyushu-2026-10	JR九州 会員サービス	九州旅客鉄道（JR九州）	2026-10-09
+kakaku.com	kakaku-2026-11	価格.com / 食べログ 等	カカクコム	2026-11-05
+kaldi.co.jp	kaldi-2026-11	カルディコーヒーファーム オンラインストア	キャメル珈琲	2026-11-03
 kddi.com	kddi-isp-mail-2026-07	ISPメールシステム（au one net 等）	KDDI	2026-07-06
+kintetsu-hotels.jp	miyako-hotels-2026-11	都プラス	近鉄・都ホテルズ	2026-11-02
+kobe-np.co.jp	kobe-np-2026-11	神戸新聞NEXT メールマガジン	神戸新聞社	2026-11-02
+kojima.net	biccamera-2026-11	メールマガジン	ビックカメラ / コジマ / ソフマップ	2026-11-02
 komoju.com	komoju-2026-10	KOMOJU	DEGICA	2026-10-22
+kracie.co.jp	kracie-2026-11	Kampoful Life	クラシエ薬品	2026-11-04
 ktaiwork.jp	arcadia-raiden-2026-10	SpeeCAN RAIDEN（自治体の防災・防犯メール配信）	アルカディア	2026-10-13
 kuronekoyamato.co.jp	yamato-atobarai-2026-10	クロネコあと払い	ヤマト運輸	2026-10-16
+kuzefuku.com	stcousair-2026-11	St.Cousair / 久世福商店	サンクゼール	2026-11-03
 lawson.co.jp	lawson-id-2026-10	ローソンID / ローソンアプリ	ローソン	2026-10-08
 lifecard.co.jp	lifecard-2026-10	ライフカード（Cuenote FC経由）	ライフカード	2026-10-28
+lifecorp.jp	lifecorp-2026-11	ライフ公式アプリ / ネットスーパー	ライフコーポレーション	2026-11-06
 m3.com	m3-mrkun-2026-10	MR君（医師向けプラットフォーム）	エムスリー	2026-10-23
+maruigroup.jp	marui-2026-11	デジタル債	丸井グループ	2026-11-02
+matsui.co.jp	matsui-sec-2026-11	メール配信	松井証券	2026-11-05
 matsuyafoods.co.jp	matsuyafoods-2026-10	松屋フーズ公式アプリ / オンラインサービス	松屋フーズ	2026-10-30
 medley.jp	medley-atlink-2026-10	＠link（医療機関向け）	メドレー	2026-10-23
 medley.life	medley-atlink-2026-10	＠link（医療機関向け）	メドレー	2026-10-23
 metpo.jp	tokyometro-metpo-2026-09	メトポ（Tokyo Metro ポイント）	東京メトロ	2026-09-30
+mitsuifudosan.co.jp	mitsui-fudosan-2026-11	&BIZ メールマガジン	三井不動産	2026-11-05
+miyakohotels.ne.jp	miyako-hotels-2026-11	都プラス	近鉄・都ホテルズ	2026-11-02
 monitas.co.jp	monitas-qzoo-2026-10	Qzoo（アンケートモニター）	モニタス	2026-10-21
 monogatari.co.jp	yakinikuking-2026-10	焼肉きんぐ公式アプリ	物語コーポレーション	2026-10-05
+monteroza.co.jp	monteroza-2026-11	白木屋・魚民 等 メールマガジン	モンテローザ	2026-11-04
+mos.co.jp	mos-burger-2026-11	モスバーガー	モスフードサービス	2026-11-04
+mos.jp	mos-burger-2026-11	モスバーガー	モスフードサービス	2026-11-04
 mrmax.co.jp	mrmax-2026-10	ミスターマックス 会員・アプリ	ミスターマックス	2026-10-06
 muji.com	ryohin-keikaku-muji-2026-10	MUJI passport / 無印良品ネットストア	良品計画	2026-10-30
 muji.net	ryohin-keikaku-muji-2026-10	MUJI passport / 無印良品ネットストア	良品計画	2026-10-30
 murauchi.co.jp	murauchi-2026-09	MURAUCHI.com	村内ファニチャーアクセス	2026-09-15
 murauchi.com	murauchi-2026-09	MURAUCHI.com	村内ファニチャーアクセス	2026-09-15
+navac.co.jp	navac-2026-11	RESERVE GATEα（宿泊予約）	ナバック	2026-11-04
 nec.co.jp	nec-vendor-2026-10	委託先端末経由の不正アクセス	日本電気（NEC）	2026-10-20
 nec.com	nec-vendor-2026-10	委託先端末経由の不正アクセス	日本電気（NEC）	2026-10-20
+netdreamers.co.jp	netdreamers-2026-11	競馬新聞デイリー馬三郎	ネットドリーマーズ	2026-11-02
+netmile.co.jp	wills-netmile-2026-11	ネットマイル / すぐたま	ウィルズ	2026-11-02
 netprotections.co.jp	np-atobarai-2026-10	NP後払い（請求書再発行システム）	ネットプロテクションズ	2026-10-22
 newspicks.com	newspicks-2026-10	NewsPicks	ユーザベース	2026-10-08
 nifty.com	nifty-2026-10	＠nifty 回線申込・受付システム	ニフティ	2026-10-19
@@ -83,10 +124,14 @@ nihon-kotsu.co.jp	nippon-kotsu-2026-10	日本交通 関連サービス	日本交
 nikkei.co.jp	nikkei-devcloud-2026-10	日経ID 関連（開発用クラウド）	日本経済新聞社	2026-10-16
 nikkei.com	nikkei-devcloud-2026-10	日経ID 関連（開発用クラウド）	日本経済新聞社	2026-10-16
 nikkeibp.co.jp	nikkei-devcloud-2026-10	日経ID 関連（開発用クラウド）	日本経済新聞社	2026-10-16
+nojima.co.jp	nojima-2026-11	ノジマオンライン / 中古端末買取	ノジマ	2026-11-02
 nota.jp	gyazo-2026-09	Gyazo	Helpfeel	2026-09-16
 np-atobarai.jp	np-atobarai-2026-10	NP後払い（請求書再発行システム）	ネットプロテクションズ	2026-10-22
+nttdocomo.co.jp	docomo-2026-11	My docomo / ドコモオンラインショップ	NTTドコモ	2026-11-05
 nttsolmare.com	nttsolmare-cmoa-2026-10	コミックシーモア	NTTソルマーレ	2026-10-21
+odakyu-travel.co.jp	odakyu-travel-2026-11	メール配信	小田急トラベル	2026-11-02
 onamae.com	gmo-onamae-desktopcloud-2026-10	お名前.com デスクトップクラウド	GMOインターネットグループ	2026-10-21
+osakagas.co.jp	osakagas-fitdish-2026-11	FitDish	大阪ガス	2026-11-02
 ozmall.co.jp	ozmall-2026-09	OZmall（オズモール）	スターツ出版	2026-09-26
 park24.co.jp	timescar-2026-09	タイムズカー / タイムズカーシェア	タイムズモビリティ	2026-09-28
 paycloud.jp	paycloud-valuecard-2026-10	Value Card / ハウス電子マネー	バリューデザイン（Paycloud）	2026-10-22
@@ -94,35 +139,64 @@ pharma-digital.jp	asahikasei-pharmadigital-2026-10	Pharma DIGITAL（医療従事
 pizzahut.co.jp	pizzahut-jp-2026-10	ピザハットオンライン	日本ピザハット	2026-10-23
 pizzahut.jp	pizzahut-jp-2026-10	ピザハットオンライン	日本ピザハット	2026-10-23
 plala.or.jp	sonet-plala-2026-10	So-net / plala	ソニーネットワークコミュニケーションズ	2026-10-27
+plenus.co.jp	hottomotto-2026-11	ほっともっと	プレナス	2026-11-05
+post.japanpost.jp	japanpost-2026-11	委託先経由	日本郵便	2026-11-05
+prestige-cs.co.jp	prestige-core-2026-11	ロードサービス（グループ業務システム）	プレステージ・コアソリューション	2026-11-02
+promise.co.jp	smbc-cf-2026-11	プロミス 等（保証業務システム）	SMBCコンシューマーファイナンス	2026-11-05
 qzoo.jp	monitas-qzoo-2026-10	Qzoo（アンケートモニター）	モニタス	2026-10-21
 ragtag.jp	world-ragtag-2026-10	RAGTAG / Tin Pan Alley	ワールド子会社（ティンパンアレイ）	2026-10-30
 raksul.com	blastmail-2026-10	ブラストメール（BlastMail）	ラクスライトクラウド	2026-10-21
+rakuten-sec.co.jp	rakuten-sec-2026-11	メール配信	楽天証券	2026-11-05
 recruit.co.jp	recruit-carsensor-2026-10	カーセンサーnet / C-MATCH	リクルート	2026-10-21
+rikuden.co.jp	rikuden-2026-11	ほくリンク	北陸電力	2026-11-02
+ryugin.co.jp	ryugin-2026-11	repica 経由のメール配信	琉球銀行	2026-11-02
 sagawa-exp.co.jp	sagawa-2026-10	お荷物問い合わせサービス	佐川急便	2026-10-23
+saisoncard.co.jp	saison-mujicard-2026-11	MUJIカード	クレディセゾン	2026-11-04
 sakura.ad.jp	sakura-internet-2026-09	さくらのレンタルサーバ 等	さくらインターネット	2026-09-10
 sakura.ne.jp	sakura-internet-2026-09	さくらのレンタルサーバ 等	さくらインターネット	2026-09-10
+samantha.co.jp	samantha-2026-11	公式オンラインショップ	サマンサタバサジャパンリミテッド	2026-11-05
 scalacom.jp	scala-iask-2026-10	i-ask（企業向け問い合わせフォーム基盤）	スカラコミュニケーションズ	2026-10-06
+sega.jp	segafave-2026-11	ALL.Net / Aime	セガフェイブ	2026-11-02
+segafave.co.jp	segafave-2026-11	ALL.Net / Aime	セガフェイブ	2026-11-02
 seicomart.co.jp	seicomart-2026-09	セイコーマート 会員サービス	セコマ	2026-09-29
+seijoishii.com	seijoishii-2026-11	成城石井オンラインショップ	成城石井	2026-11-04
+sej.co.jp	seven-7now-2026-11	7NOW デリバリー	セブン‐イレブン・ジャパン	2026-11-03
 shopserve.jp	estore-shopserve-2026-10	ショップサーブ（ECプラットフォーム）	Eストアー	2026-10-16
 skyticket.com	skyticket-2026-10	skyticket（スカイチケット）	アドベンチャー	2026-10-09
 skyticket.jp	skyticket-2026-10	skyticket（スカイチケット）	アドベンチャー	2026-10-09
+smartnews.com	smartnews-2026-11	ポイント・特典システム	スマートニュース	2026-11-01
+smbc-cf.com	smbc-cf-2026-11	プロミス 等（保証業務システム）	SMBCコンシューマーファイナンス	2026-11-05
+smbc.co.jp	smbc-bank-2026-11	アララメッセージ経由のメール配信	三井住友銀行	2026-11-05
 so-net.ne.jp	sonet-plala-2026-10	So-net / plala	ソニーネットワークコミュニケーションズ	2026-10-27
+sofmap.com	biccamera-2026-11	メールマガジン	ビックカメラ / コジマ / ソフマップ	2026-11-02
+solaseedair.jp	solaseed-2026-11	メール配信	ソラシドエア	2026-11-04
 sonicwire.com	kripton-sonicwire-2026-10	SONICWIRE / D2R	クリプトン・フューチャー・メディア	2026-10-19
 sonynetwork.co.jp	sonet-plala-2026-10	So-net / plala	ソニーネットワークコミュニケーションズ	2026-10-27
 sourcenext.co.jp	sourcenext-2026-10	会員情報（ソースネクスト・eSIM等）	ソースネクスト	2026-10-15
 sourcenext.com	sourcenext-2026-10	会員情報（ソースネクスト・eSIM等）	ソースネクスト	2026-10-15
 starts-pub.jp	ozmall-2026-09	OZmall（オズモール）	スターツ出版	2026-09-26
+stcousair.co.jp	stcousair-2026-11	St.Cousair / 久世福商店	サンクゼール	2026-11-03
 studio.design	studio-design-2026-10	STUDIO（ノーコードCMS・フォーム）	STUDIO	2026-10-16
+subway.co.jp	subway-jp-2026-11	サブウェイ	WATAMI FAST CASUAL MANAGEMENT	2026-11-02
+sugutama.jp	wills-netmile-2026-11	ネットマイル / すぐたま	ウィルズ	2026-11-02
+sumitomo-rd.co.jp	sumitomo-rd-2026-11	マンション問い合わせ	住友不動産	2026-11-04
+suntory.co.jp	suntory-2026-11	外部クラウドサービス	サントリーホールディングス	2026-11-02
+tabelog.com	kakaku-2026-11	価格.com / 食べログ 等	カカクコム	2026-11-05
 times-info.net	timescar-2026-09	タイムズカー / タイムズカーシェア	タイムズモビリティ	2026-09-28
 timescar.jp	timescar-2026-09	タイムズカー / タイムズカーシェア	タイムズモビリティ	2026-09-28
+tkc.jp	tkc-2026-11	自治体向けメール配信	TKC	2026-11-02
 tokyometro.jp	tokyometro-metpo-2026-09	メトポ（Tokyo Metro ポイント）	東京メトロ	2026-09-30
 travel.rakuten.co.jp	rakuten-travel-2026-10	楽天トラベル（海外ホテル・多言語サイト）	楽天グループ	2026-10-26
 treasure-f.com	treasure-factory-2026-10	トレファク 会員・オンラインストア	トレジャー・ファクトリー	2026-10-23
 trustlogin.com	gmo-trustlogin-2026-10	トラスト・ログイン	GMOグローバルサイン・ホールディングス	2026-10-31
+uchicomi.com	uchicomi-2026-11	ウチコミ!	ウチコミ	2026-11-04
+ucoop.or.jp	ucoop-2026-11	ユーコープ	生活協同組合ユーコープ	2026-11-02
 uzabase.com	newspicks-2026-10	NewsPicks	ユーザベース	2026-10-08
 valuedesign.jp	paycloud-valuecard-2026-10	Value Card / ハウス電子マネー	バリューデザイン（Paycloud）	2026-10-22
 whiteessence.com	whiteessence-2026-10	ホワイトエッセンス 会員	ホワイトエッセンス	2026-10-01
+workman.co.jp	workman-2026-11	メールマガジン	ワークマン	2026-11-04
 world.co.jp	world-ragtag-2026-10	RAGTAG / Tin Pan Alley	ワールド子会社（ティンパンアレイ）	2026-10-30
 yakult.co.jp	yakult-2026-10	ヤクルト 問い合わせ窓口	ヤクルト本社	2026-10-30
 yamato-hd.co.jp	yamato-atobarai-2026-10	クロネコあと払い	ヤマト運輸	2026-10-16
 ymir.co.jp	ymirlink-cuenote-2026-10	Cuenote FC（メール配信基盤）	ユミルリンク	2026-10-19
+zaif.jp	zaif-2026-11	Zaif	カイカエクスチェンジ	2026-11-02

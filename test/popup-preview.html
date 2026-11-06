@@ -7,6 +7,24 @@
 <link rel="stylesheet" href="/extension/ui/style.css">
 <script>
 const FAKE = ['kddi-isp-mail-2026-07','skyticket-2026-10','ryohin-keikaku-muji-2026-10','lawson-id-2026-10','arcadia-raiden-2026-10','nttsolmare-cmoa-2026-10'].map(id=>({id,hits:[{email:'x@y.jp',name:'',how:'domain'}]}));
+
+const MASK = {
+  'kddi-isp-mail-2026-07':        { service: '○○モバイル ISPメール', company: '○○通信' },
+  'skyticket-2026-10':            { service: '○○トラベル',           company: '○○トラベル株式会社' },
+  'ryohin-keikaku-muji-2026-10':  { service: '○○ストア アプリ',       company: '○○ストア' },
+  'lawson-id-2026-10':            { service: '○○コンビニ ID',        company: '○○リテール' },
+  'arcadia-raiden-2026-10':       { service: '○○メール配信',         company: '○○システムズ' },
+  'nttsolmare-cmoa-2026-10':      { service: '○○ブックス',           company: '○○デジタル' }
+};
+function maskEntries(entries) {
+  return entries.map(function (e) {
+    var m = MASK[e.id];
+    if (!m) return e;
+    var c = Object.assign({}, e, m);
+    c.sources = [{ title: '（表示例のため出典は省略）', url: 'https://leakscan.matsunai.com/' }];
+    return c;
+  });
+}
 window.chrome = {
   runtime: {
     getURL: p => '/extension/' + p,
@@ -15,7 +33,7 @@ window.chrome = {
       let res;
       if (msg.type === 'LEAKSCAN_GET_VIEW') res = { state:{status:'done'}, options:{}, db:{count:79,version:'2026.11.06',source:'remote',stale:false},
         report:{generatedAt:Date.now(),dbVersion:'2026.11.06',dbSource:'remote',accountIndex:0,scanned:79,queries:14,matches:FAKE} };
-      else if (msg.type === 'LEAKSCAN_GET_DB') res = { meta:await fetch('/extension/data/meta.json').then(r=>r.json()), entries:await fetch('/extension/data/breaches.json').then(r=>r.json()) };
+      else if (msg.type === 'LEAKSCAN_GET_DB') res = { meta:await fetch('/extension/data/meta.json').then(r=>r.json()), entries:maskEntries(await fetch('/extension/data/breaches.json').then(r=>r.json())) };
       else res = { ok:true };
       if (cb) cb(res); return res;
     },

@@ -82,13 +82,13 @@
       ]
     },
     "disclosed": "2026-10-31",
-    "records": "最大約7,700万件のメールアドレス",
+    "records": "最大約7,700万件のメールアドレス（利用企業への波及が11月も継続）",
     "records_num": 77000000,
     "categories": [
       "email"
     ],
     "status": "possible",
-    "scope": "同社のメール配信基盤を利用する多数の企業の配信先アドレス。利用企業側で個別に公表が続いている",
+    "scope": "同社のメール配信基盤を利用する多数の企業の配信先アドレス。11月に入りビックカメラ・モスバーガー・アソビュー・カカクコム・三井住友銀行・TKC経由の自治体など数十社が相次いで公表した、国内最大規模の連鎖事案",
     "cause": "saas",
     "ai_link": "unconfirmed",
     "sources": [
@@ -2665,6 +2665,2128 @@
       {
         "title": "10月のハッキングの嵐に名前がつきました。その名も「ブラック・オクトーバー」（ギズモード・ジャパン）",
         "url": "https://www.gizmodo.jp/article/2611-black-october-cyber-security-2026/"
+      }
+    ]
+  },
+  {
+    "id": "istyle-cosme-2026-11",
+    "company": "アイスタイル",
+    "service": "@cosme（アットコスメ）",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "cosme.net",
+        "istyle.co.jp"
+      ],
+      "names": [
+        "@cosme",
+        "アットコスメ",
+        "アイスタイル"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約300万人",
+    "records_num": 3000000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "dob",
+      "gender"
+    ],
+    "status": "possible",
+    "scope": "10月28日の不正アクセス。肌質・髪質など一部の属性情報を含む",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "nojima-2026-11",
+    "company": "ノジマ",
+    "service": "ノジマオンライン / 中古端末買取",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "nojima.co.jp"
+      ],
+      "names": [
+        "ノジマ",
+        "nojima"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約700万件",
+    "records_num": 7000000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address",
+      "dob",
+      "login_credential",
+      "password_hash"
+    ],
+    "status": "possible",
+    "scope": "会員システムへの不正アクセス。暗号化されたパスワードを含む",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "biccamera-2026-11",
+    "company": "ビックカメラ / コジマ / ソフマップ",
+    "service": "メールマガジン",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "biccamera.com",
+        "kojima.net",
+        "sofmap.com"
+      ],
+      "names": [
+        "ビックカメラ",
+        "コジマ",
+        "ソフマップ"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約1,490万件",
+    "records_num": 14900000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララのメール配信基盤の侵害に起因。カード情報・ログイン情報は含まれない",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "asoview-2026-11",
+    "company": "アソビュー",
+    "service": "アソビュー!（レジャー予約）",
+    "sector": "予約・チケット",
+    "match": {
+      "domains": [
+        "asoview.com"
+      ],
+      "names": [
+        "アソビュー",
+        "asoview"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "15,821,184件",
+    "records_num": 15821184,
+    "categories": [
+      "email",
+      "name",
+      "phone",
+      "dob",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因。パスワード・カード情報は含まれない",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "wills-netmile-2026-11",
+    "company": "ウィルズ",
+    "service": "ネットマイル / すぐたま",
+    "sector": "ポイント",
+    "match": {
+      "domains": [
+        "netmile.co.jp",
+        "sugutama.jp"
+      ],
+      "names": [
+        "ネットマイル",
+        "すぐたま",
+        "netmile"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大約549万人",
+    "records_num": 5490000,
+    "categories": [
+      "name",
+      "email",
+      "point_balance"
+    ],
+    "status": "possible",
+    "scope": "ポイント交換情報を含む",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "kakaku-2026-11",
+    "company": "カカクコム",
+    "service": "価格.com / 食べログ 等",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "kakaku.com",
+        "tabelog.com"
+      ],
+      "names": [
+        "価格.com",
+        "カカクコム",
+        "食べログ"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "約570万件",
+    "records_num": 5700000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "hottomotto-2026-11",
+    "company": "プレナス",
+    "service": "ほっともっと",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "hottomotto.com",
+        "plenus.co.jp"
+      ],
+      "names": [
+        "ほっともっと",
+        "プレナス",
+        "Hotto Motto"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大700万件",
+    "records_num": 7000000,
+    "categories": [
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "委託先への不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "irisohyama-2026-11",
+    "company": "アイリスオーヤマ",
+    "service": "アイリスプラザ",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "irisohyama.co.jp",
+        "irisplaza.co.jp"
+      ],
+      "names": [
+        "アイリスオーヤマ",
+        "アイリスプラザ"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大770万人",
+    "records_num": 7700000,
+    "categories": [
+      "name",
+      "email",
+      "phone",
+      "address"
+    ],
+    "status": "possible",
+    "scope": "オンラインストアの顧客情報",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "mos-burger-2026-11",
+    "company": "モスフードサービス",
+    "service": "モスバーガー",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "mos.co.jp",
+        "mos.jp"
+      ],
+      "names": [
+        "モスバーガー",
+        "モスフード",
+        "MOS BURGER"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "750万件",
+    "records_num": 7500000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因。カード情報は含まれない",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "prestige-core-2026-11",
+    "company": "プレステージ・コアソリューション",
+    "service": "ロードサービス（グループ業務システム）",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "prestige-cs.co.jp"
+      ],
+      "names": [
+        "プレステージ・コアソリューション"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大約550万件（重複含む）",
+    "records_num": 5500000,
+    "categories": [
+      "name",
+      "address",
+      "phone",
+      "bank"
+    ],
+    "status": "possible",
+    "scope": "損保ジャパン・JA共済連・ジャックス・アクサ損保・ENEOSなど利用各社に波及",
+    "cause": "saas",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "smbc-cf-2026-11",
+    "company": "SMBCコンシューマーファイナンス",
+    "service": "プロミス 等（保証業務システム）",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "promise.co.jp",
+        "smbc-cf.com"
+      ],
+      "names": [
+        "プロミス",
+        "SMBCコンシューマーファイナンス"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大320,118名",
+    "records_num": 320118,
+    "categories": [
+      "name",
+      "address",
+      "dob",
+      "id_document",
+      "employment"
+    ],
+    "status": "possible",
+    "scope": "運転免許証番号・勤務先情報を含む。十八親和銀行・福岡銀行・北洋銀行などの保証先にも波及",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "workman-2026-11",
+    "company": "ワークマン",
+    "service": "メールマガジン",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "workman.co.jp"
+      ],
+      "names": [
+        "ワークマン",
+        "WORKMAN"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "最大約145万件",
+    "records_num": 1450000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因。氏名・住所・カード情報は保有していない",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "subway-jp-2026-11",
+    "company": "WATAMI FAST CASUAL MANAGEMENT",
+    "service": "サブウェイ",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "subway.co.jp"
+      ],
+      "names": [
+        "サブウェイ",
+        "SUBWAY",
+        "Subway"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大1,107,494件",
+    "records_num": 1107494,
+    "categories": [
+      "email",
+      "dob"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因。失効済みプリペイドカード番号を含む",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "fancrew-2026-11",
+    "company": "ファンくる",
+    "service": "ファンくる（モニターサイト）",
+    "sector": "リサーチ",
+    "match": {
+      "domains": [
+        "fancrew.jp"
+      ],
+      "names": [
+        "ファンくる"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "1,030,741件",
+    "records_num": 1030741,
+    "categories": [
+      "member_id",
+      "email",
+      "password_hash",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "会員情報APIの脆弱性を悪用",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "saison-mujicard-2026-11",
+    "company": "クレディセゾン",
+    "service": "MUJIカード",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "saisoncard.co.jp"
+      ],
+      "names": [
+        "セゾン",
+        "クレディセゾン",
+        "MUJIカード"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "約109万件",
+    "records_num": 1090000,
+    "categories": [
+      "card",
+      "dob"
+    ],
+    "status": "possible",
+    "scope": "良品計画のシステムへの不正アクセスに起因。カード番号を含む",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "matsui-sec-2026-11",
+    "company": "松井証券",
+    "service": "メール配信",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "matsui.co.jp"
+      ],
+      "names": [
+        "松井証券"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大83万件",
+    "records_num": 830000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "stcousair-2026-11",
+    "company": "サンクゼール",
+    "service": "St.Cousair / 久世福商店",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "stcousair.co.jp",
+        "kuzefuku.com"
+      ],
+      "names": [
+        "サンクゼール",
+        "久世福商店",
+        "St.Cousair"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "878,343件",
+    "records_num": 878343,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "kaldi-2026-11",
+    "company": "キャメル珈琲",
+    "service": "カルディコーヒーファーム オンラインストア",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "kaldi.co.jp"
+      ],
+      "names": [
+        "カルディ",
+        "KALDI",
+        "キャメル珈琲"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "820,420件",
+    "records_num": 820420,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "duskin-2026-11",
+    "company": "ダスキン",
+    "service": "DDuet（会員サイト）",
+    "sector": "サービス",
+    "match": {
+      "domains": [
+        "duskin.co.jp"
+      ],
+      "names": [
+        "ダスキン",
+        "DDuet"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "657,886件",
+    "records_num": 657886,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララ repica の侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "chobirich-2026-11",
+    "company": "ちょびリッチ",
+    "service": "ちょびリッチ",
+    "sector": "ポイント",
+    "match": {
+      "domains": [
+        "chobirich.com"
+      ],
+      "names": [
+        "ちょびリッチ"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "1,348,525件",
+    "records_num": 1348525,
+    "categories": [
+      "email",
+      "member_id",
+      "dob"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "axel-enter-2026-11",
+    "company": "アクセルエンターメディア",
+    "service": "メール配信",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "axel-enter.co.jp"
+      ],
+      "names": [
+        "アクセルエンターメディア"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "1,086,098件",
+    "records_num": 1086098,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因。パスワード・カード情報は含まれない",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "solaseed-2026-11",
+    "company": "ソラシドエア",
+    "service": "メール配信",
+    "sector": "交通",
+    "match": {
+      "domains": [
+        "solaseedair.jp"
+      ],
+      "names": [
+        "ソラシドエア",
+        "SOLASEED"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "約49万件",
+    "records_num": 490000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "メールサーバの一部への不正アクセス",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "airdo-2026-11",
+    "company": "AIRDO",
+    "service": "メール配信",
+    "sector": "交通",
+    "match": {
+      "domains": [
+        "airdo.jp"
+      ],
+      "names": [
+        "AIRDO",
+        "エア・ドゥ"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "約67万件",
+    "records_num": 670000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "委託先への不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "rikuden-2026-11",
+    "company": "北陸電力",
+    "service": "ほくリンク",
+    "sector": "エネルギー",
+    "match": {
+      "domains": [
+        "rikuden.co.jp"
+      ],
+      "names": [
+        "北陸電力",
+        "ほくリンク"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約55万件",
+    "records_num": 550000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "メール配信事業者への不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "docomo-2026-11",
+    "company": "NTTドコモ",
+    "service": "My docomo / ドコモオンラインショップ",
+    "sector": "通信",
+    "match": {
+      "domains": [
+        "nttdocomo.co.jp"
+      ],
+      "names": [
+        "NTTドコモ",
+        "ドコモオンラインショップ",
+        "My docomo"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大約30万件",
+    "records_num": 300000,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "外部からの不正アクセスの疑い。サービスを一時停止して調査中",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "smbc-bank-2026-11",
+    "company": "三井住友銀行",
+    "service": "アララメッセージ経由のメール配信",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "smbc.co.jp"
+      ],
+      "names": [
+        "三井住友銀行",
+        "SMBC"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "227,216件",
+    "records_num": 227216,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因。口座番号・暗証番号は含まれない",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "tkc-2026-11",
+    "company": "TKC",
+    "service": "自治体向けメール配信",
+    "sector": "SaaS・共通基盤",
+    "match": {
+      "domains": [
+        "tkc.jp"
+      ],
+      "names": [
+        "TKC自治体",
+        "TKCシステム"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大223万812件",
+    "records_num": 2230812,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因。横浜市・大阪市・川崎市など多数の自治体に波及",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "mitsui-fudosan-2026-11",
+    "company": "三井不動産",
+    "service": "&BIZ メールマガジン",
+    "sector": "不動産",
+    "match": {
+      "domains": [
+        "mitsuifudosan.co.jp"
+      ],
+      "names": [
+        "三井不動産"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "133,323件",
+    "records_num": 133323,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "sumitomo-rd-2026-11",
+    "company": "住友不動産",
+    "service": "マンション問い合わせ",
+    "sector": "不動産",
+    "match": {
+      "domains": [
+        "sumitomo-rd.co.jp"
+      ],
+      "names": [
+        "住友不動産"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "約205,208件",
+    "records_num": 205208,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "rakuten-sec-2026-11",
+    "company": "楽天証券",
+    "service": "メール配信",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "rakuten-sec.co.jp"
+      ],
+      "names": [
+        "楽天証券"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "2,109件",
+    "records_num": 2109,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "asahi-life-2026-11",
+    "company": "朝日生命保険",
+    "service": "メール配信",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "asahi-life.co.jp"
+      ],
+      "names": [
+        "朝日生命"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "約19,000件",
+    "records_num": 19000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "japanpost-2026-11",
+    "company": "日本郵便",
+    "service": "委託先経由",
+    "sector": "物流",
+    "match": {
+      "domains": [
+        "post.japanpost.jp",
+        "japanpost.jp"
+      ],
+      "names": [
+        "日本郵便",
+        "ゆうびん"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "3,763件",
+    "records_num": 3763,
+    "categories": [
+      "name",
+      "address",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "委託先への不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "seven-7now-2026-11",
+    "company": "セブン‐イレブン・ジャパン",
+    "service": "7NOW デリバリー",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "sej.co.jp",
+        "7now.jp"
+      ],
+      "names": [
+        "セブン‐イレブン",
+        "セブンイレブン",
+        "7NOW"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "169,151件",
+    "records_num": 169151,
+    "categories": [
+      "name",
+      "address",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "配送委託先 CBcloud への不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "demaecan-2026-11",
+    "company": "出前館",
+    "service": "出前館",
+    "sector": "EC",
+    "match": {
+      "domains": [
+        "demae-can.com",
+        "demae-can.co.jp"
+      ],
+      "names": [
+        "出前館"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "氏名799件・住所794件 等",
+    "records_num": 799,
+    "categories": [
+      "name",
+      "address",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "配送委託先 CBcloud への不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "osakagas-fitdish-2026-11",
+    "company": "大阪ガス",
+    "service": "FitDish",
+    "sector": "エネルギー",
+    "match": {
+      "domains": [
+        "osakagas.co.jp"
+      ],
+      "names": [
+        "大阪ガス",
+        "FitDish"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "34,489件",
+    "records_num": 34489,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "ryugin-2026-11",
+    "company": "琉球銀行",
+    "service": "repica 経由のメール配信",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "ryugin.co.jp"
+      ],
+      "names": [
+        "琉球銀行"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "96,477件",
+    "records_num": 96477,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララ repica の侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "seijoishii-2026-11",
+    "company": "成城石井",
+    "service": "成城石井オンラインショップ",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "seijoishii.com"
+      ],
+      "names": [
+        "成城石井"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "最大約160,000件",
+    "records_num": 160000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "委託先への不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "dennys-2026-11",
+    "company": "デニーズジャパン",
+    "service": "デニーズ公式アプリ",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "dennys.jp"
+      ],
+      "names": [
+        "デニーズ",
+        "Denny's"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "member_id",
+      "email",
+      "dob"
+    ],
+    "status": "investigating",
+    "scope": "第三者が認証情報を作成し一部アカウントにアクセス",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "lifecorp-2026-11",
+    "company": "ライフコーポレーション",
+    "service": "ライフ公式アプリ / ネットスーパー",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "lifecorp.jp"
+      ],
+      "names": [
+        "ライフコーポレーション",
+        "ライフネットスーパー"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "アプリ298名 / メルマガ133,330件",
+    "records_num": 133330,
+    "categories": [
+      "name",
+      "email",
+      "address",
+      "phone",
+      "dob"
+    ],
+    "status": "possible",
+    "scope": "アプリは大量の自動ログイン試行、メルマガはアララの侵害に起因",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "odakyu-travel-2026-11",
+    "company": "小田急トラベル",
+    "service": "メール配信",
+    "sector": "旅行",
+    "match": {
+      "domains": [
+        "odakyu-travel.co.jp"
+      ],
+      "names": [
+        "小田急トラベル"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "63,006件",
+    "records_num": 63006,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "miyako-hotels-2026-11",
+    "company": "近鉄・都ホテルズ",
+    "service": "都プラス",
+    "sector": "旅行",
+    "match": {
+      "domains": [
+        "miyakohotels.ne.jp",
+        "kintetsu-hotels.jp"
+      ],
+      "names": [
+        "都ホテルズ",
+        "近鉄ホテル",
+        "都プラス"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "129,153件",
+    "records_num": 129153,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "zaif-2026-11",
+    "company": "カイカエクスチェンジ",
+    "service": "Zaif",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "zaif.jp"
+      ],
+      "names": [
+        "Zaif",
+        "ザイフ"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "380,536件",
+    "records_num": 380536,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "ucoop-2026-11",
+    "company": "生活協同組合ユーコープ",
+    "service": "ユーコープ",
+    "sector": "小売",
+    "match": {
+      "domains": [
+        "ucoop.or.jp"
+      ],
+      "names": [
+        "ユーコープ"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "210,495件",
+    "records_num": 210495,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララ repica の侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "samantha-2026-11",
+    "company": "サマンサタバサジャパンリミテッド",
+    "service": "公式オンラインショップ",
+    "sector": "アパレル",
+    "match": {
+      "domains": [
+        "samantha.co.jp"
+      ],
+      "names": [
+        "サマンサタバサ",
+        "Samantha"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "434,414件",
+    "records_num": 434414,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララ repica の侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "kracie-2026-11",
+    "company": "クラシエ薬品",
+    "service": "Kampoful Life",
+    "sector": "医療・ヘルスケア",
+    "match": {
+      "domains": [
+        "kracie.co.jp"
+      ],
+      "names": [
+        "クラシエ",
+        "Kampoful"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "59,428件",
+    "records_num": 59428,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララ repica の侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "eneos-2026-11",
+    "company": "ENEOS",
+    "service": "ENEOSカーリース / Charge Plus",
+    "sector": "エネルギー",
+    "match": {
+      "domains": [
+        "eneos.co.jp"
+      ],
+      "names": [
+        "ENEOS",
+        "エネオス"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大8,500件",
+    "records_num": 8500,
+    "categories": [
+      "name",
+      "address",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "プレステージ・コアソリューションへの不正アクセスに起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "marui-2026-11",
+    "company": "丸井グループ",
+    "service": "デジタル債",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "0101.co.jp",
+        "maruigroup.jp"
+      ],
+      "names": [
+        "丸井",
+        "マルイ",
+        "OIOI"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大9,086名",
+    "records_num": 9086,
+    "categories": [
+      "name",
+      "address",
+      "phone",
+      "email",
+      "dob",
+      "gender",
+      "bank"
+    ],
+    "status": "possible",
+    "scope": "委託先 Securitize Japan のサーバへの不正アクセス。54件の口座番号を含む",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "suntory-2026-11",
+    "company": "サントリーホールディングス",
+    "service": "外部クラウドサービス",
+    "sector": "食品",
+    "match": {
+      "domains": [
+        "suntory.co.jp"
+      ],
+      "names": [
+        "サントリー",
+        "SUNTORY"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約10万6千名",
+    "records_num": 106000,
+    "categories": [
+      "name",
+      "email",
+      "employment"
+    ],
+    "status": "possible",
+    "scope": "従業員・応募者・顧客の情報。ファイルがダウンロードされた",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "smartnews-2026-11",
+    "company": "スマートニュース",
+    "service": "ポイント・特典システム",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "smartnews.com"
+      ],
+      "names": [
+        "スマートニュース",
+        "SmartNews"
+      ]
+    },
+    "disclosed": "2026-11-01",
+    "records": "調査中",
+    "records_num": null,
+    "categories": [
+      "point_balance"
+    ],
+    "status": "investigating",
+    "scope": "ポイントシステムへの不正操作",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "uchicomi-2026-11",
+    "company": "ウチコミ",
+    "service": "ウチコミ!",
+    "sector": "不動産",
+    "match": {
+      "domains": [
+        "uchicomi.com"
+      ],
+      "names": [
+        "ウチコミ"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "142,591アカウント",
+    "records_num": 142591,
+    "categories": [
+      "name",
+      "email",
+      "dob",
+      "address",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "サーバがランサムウェアに感染",
+    "cause": "ransomware",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "ekitan-2026-11",
+    "company": "駅探",
+    "service": "駅探メール配信",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "ekitan.com"
+      ],
+      "names": [
+        "駅探"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "kobe-np-2026-11",
+    "company": "神戸新聞社",
+    "service": "神戸新聞NEXT メールマガジン",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "kobe-np.co.jp"
+      ],
+      "names": [
+        "神戸新聞"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約4万件",
+    "records_num": 40000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "アララの侵害に起因",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "monteroza-2026-11",
+    "company": "モンテローザ",
+    "service": "白木屋・魚民 等 メールマガジン",
+    "sector": "飲食",
+    "match": {
+      "domains": [
+        "monteroza.co.jp"
+      ],
+      "names": [
+        "モンテローザ",
+        "白木屋",
+        "魚民"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "625,429件",
+    "records_num": 625429,
+    "categories": [
+      "email",
+      "dob"
+    ],
+    "status": "possible",
+    "scope": "委託先Webサーバの脆弱性を悪用。31,333件は生年月日等を含む",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "navac-2026-11",
+    "company": "ナバック",
+    "service": "RESERVE GATEα（宿泊予約）",
+    "sector": "予約・チケット",
+    "match": {
+      "domains": [
+        "navac.co.jp"
+      ],
+      "names": [
+        "ナバック",
+        "RESERVE GATE"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "最大約35万件",
+    "records_num": 350000,
+    "categories": [
+      "name",
+      "address",
+      "phone",
+      "email",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "脆弱性の悪用",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "beluna-notice-2026-11",
+    "company": "サンステージ",
+    "service": "ベルーナノーティス",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "belluna.co.jp"
+      ],
+      "names": [
+        "ベルーナ",
+        "サンステージ"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大46,497名",
+    "records_num": 46497,
+    "categories": [
+      "name",
+      "address",
+      "phone",
+      "email",
+      "bank"
+    ],
+    "status": "possible",
+    "scope": "申込サイトへの不正アクセス",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "netdreamers-2026-11",
+    "company": "ネットドリーマーズ",
+    "service": "競馬新聞デイリー馬三郎",
+    "sector": "メディア",
+    "match": {
+      "domains": [
+        "netdreamers.co.jp"
+      ],
+      "names": [
+        "ネットドリーマーズ",
+        "馬三郎"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "最大約15万2,500件",
+    "records_num": 152500,
+    "categories": [
+      "email",
+      "password",
+      "dob",
+      "name",
+      "address",
+      "bank"
+    ],
+    "status": "possible",
+    "scope": "2026年4〜7月の不正アクセス。パスワードを含む",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "segafave-2026-11",
+    "company": "セガフェイブ",
+    "service": "ALL.Net / Aime",
+    "sector": "ゲーム",
+    "match": {
+      "domains": [
+        "sega.jp",
+        "segafave.co.jp"
+      ],
+      "names": [
+        "セガ",
+        "SEGA",
+        "Aime"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "調査中",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "一部サーバへの不正アクセス。11月1日にサービス停止",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
+      }
+    ]
+  },
+  {
+    "id": "hange-2026-11",
+    "company": "エンセイピア",
+    "service": "ハンゲ（hange）",
+    "sector": "ゲーム",
+    "match": {
+      "domains": [
+        "hange.jp"
+      ],
+      "names": [
+        "ハンゲ",
+        "hange"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "調査中",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "外部からの不正アクセス。サービス停止",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "sources": [
+      {
+        "title": "2026年11月の不正アクセス・情報漏えい（seory）",
+        "url": "https://incidents.seory.co.jp/monthly/2026-11/"
+      },
+      {
+        "title": "個人情報の漏洩・恐れを公表した企業など 随時更新（日本経済新聞）",
+        "url": "https://www.nikkei.com/article/DGXZQODL160R40W6A011C2000000/"
       }
     ]
   }

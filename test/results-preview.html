@@ -8,13 +8,31 @@
 <script>
 /* Dev-only harness: stubs the chrome.* APIs so the results page can be
    rendered in an ordinary browser with a synthetic report. */
+
+const MASK = {
+  'kddi-isp-mail-2026-07':        { service: '○○モバイル ISPメール', company: '○○通信' },
+  'skyticket-2026-10':            { service: '○○トラベル',           company: '○○トラベル株式会社' },
+  'ryohin-keikaku-muji-2026-10':  { service: '○○ストア アプリ',       company: '○○ストア' },
+  'lawson-id-2026-10':            { service: '○○コンビニ ID',        company: '○○リテール' },
+  'arcadia-raiden-2026-10':       { service: '○○メール配信',         company: '○○システムズ' },
+  'nttsolmare-cmoa-2026-10':      { service: '○○ブックス',           company: '○○デジタル' }
+};
+function maskEntries(entries) {
+  return entries.map(function (e) {
+    var m = MASK[e.id];
+    if (!m) return e;
+    var c = Object.assign({}, e, m);
+    c.sources = [{ title: '（表示例のため出典は省略）', url: 'https://leakscan.matsunai.com/' }];
+    return c;
+  });
+}
 const FAKE_MATCHES = [
-  { id: 'kddi-isp-mail-2026-07', hits: [{ email: 'info@au.com', name: 'au', date: '2026年10月2日', how: 'domain' }] },
-  { id: 'skyticket-2026-10',     hits: [{ email: 'noreply@skyticket.jp', name: 'skyticket', date: '2026年9月18日', how: 'domain' }] },
-  { id: 'ryohin-keikaku-muji-2026-10', hits: [{ email: 'info@muji.net', name: '無印良品', date: '2026年10月30日', how: 'domain' }] },
-  { id: 'lawson-id-2026-10',     hits: [{ email: 'news@lawson.co.jp', name: 'ローソン', date: '2026年10月8日', how: 'domain' }] },
-  { id: 'arcadia-raiden-2026-10', hits: [{ email: 'bousai@city.example.lg.jp', name: '防災メール', date: '2026年10月13日', how: 'name' }] },
-  { id: 'nttsolmare-cmoa-2026-10', hits: [{ email: 'info@cmoa.jp', name: 'コミックシーモア', date: '2026年7月2日', how: 'domain' }] }
+  { id: 'kddi-isp-mail-2026-07', hits: [{ email: 'info@example-mobile.jp', name: '○○モバイル', date: '2026年10月2日', how: 'domain' }] },
+  { id: 'skyticket-2026-10',     hits: [{ email: 'noreply@example-travel.jp', name: '○○トラベル', date: '2026年9月18日', how: 'domain' }] },
+  { id: 'ryohin-keikaku-muji-2026-10', hits: [{ email: 'info@example-store.jp', name: '○○ストア', date: '2026年10月30日', how: 'domain' }] },
+  { id: 'lawson-id-2026-10',     hits: [{ email: 'news@example-cvs.jp', name: '○○コンビニ', date: '2026年10月8日', how: 'domain' }] },
+  { id: 'arcadia-raiden-2026-10', hits: [{ email: 'bousai@example-city.lg.jp', name: '○○防災メール', date: '2026年10月13日', how: 'name' }] },
+  { id: 'nttsolmare-cmoa-2026-10', hits: [{ email: 'info@example-books.jp', name: '○○ブックス', date: '2026年7月2日', how: 'domain' }] }
 ];
 window.chrome = {
   runtime: {
@@ -30,7 +48,7 @@ window.chrome = {
           fetch('/extension/data/meta.json').then(r => r.json()),
           fetch('/extension/data/breaches.json').then(r => r.json())
         ]);
-        res = { meta, entries };
+        res = { meta, entries: maskEntries(entries) };
       } else { res = { ok: true }; }
       if (cb) cb(res);
       return res;
