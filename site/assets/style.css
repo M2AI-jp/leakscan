@@ -212,3 +212,96 @@ footer a { color: var(--fg-muted); }
   .nav { gap: 12px; font-size: 13px; }
   .brand { font-size: 16px; }
 }
+
+/* ===================== landing page ===================== */
+.plain { font-size: clamp(16px, 2vw, 18px); }
+.lede { font-size: clamp(17px, 2.3vw, 21px); color: var(--fg-muted); line-height: 1.8; }
+.lede strong { color: var(--fg); }
+
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.pill { font-size: 13px; font-weight: 700; padding: 6px 13px; border-radius: 999px;
+        background: var(--bg-elev); border: 1px solid var(--border-strong); color: var(--fg-muted); }
+.pill.good { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, transparent); background: var(--ok-bg); }
+
+/* three big steps */
+.howto { display: grid; gap: 18px; margin-top: 32px; counter-reset: h; }
+@media (min-width: 820px) { .howto { grid-template-columns: repeat(3, 1fr); } }
+.howto .step { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px 24px; counter-increment: h; }
+.howto .step .n { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 999px;
+  background: var(--accent); color: var(--accent-fg); font-weight: 800; font-size: 16px; margin-bottom: 14px; }
+.howto .step h3 { font-size: 17px; margin: 0 0 8px; }
+.howto .step p { font-size: 14.5px; color: var(--fg-muted); margin: 0; }
+.howto .step .kbd { display: inline-block; font-family: var(--mono); font-size: 12.5px;
+  background: var(--bg-elev-2); border: 1px solid var(--border-strong); border-radius: 6px; padding: 2px 7px; margin: 0 2px; }
+.howto .step .tip { margin-top: 12px; font-size: 13px; color: var(--fg-dim); border-top: 1px dashed var(--border); padding-top: 10px; }
+
+/* "what you get" mock */
+.mock { background: var(--bg-elev); border: 1px solid var(--border-strong); border-radius: var(--radius-lg);
+        overflow: hidden; margin-top: 28px; box-shadow: 0 18px 40px -24px rgba(0,0,0,.5); }
+.mock .bar { display: flex; align-items: center; gap: 7px; padding: 11px 16px; background: var(--bg-elev-2); border-bottom: 1px solid var(--border); }
+.mock .bar i { width: 10px; height: 10px; border-radius: 999px; background: var(--border-strong); display: block; }
+.mock .bar span { margin-left: 8px; font-size: 12px; color: var(--fg-dim); font-family: var(--mono); }
+.mock .body { padding: 26px 24px; }
+.mock .verdict { font-size: clamp(19px, 3vw, 25px); font-weight: 800; line-height: 1.45; margin-bottom: 6px; }
+.mock .verdict em { font-style: normal; color: var(--danger); }
+.mock .sub { font-size: 12.5px; color: var(--fg-dim); margin-bottom: 20px; }
+.mock .row { display: flex; gap: 12px; align-items: baseline; padding: 11px 0; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.mock .row .nm { font-weight: 700; font-size: 15px; }
+.mock .row .co { font-size: 12.5px; color: var(--fg-dim); }
+.mock .row .bg { margin-left: auto; font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.mock .row .what { flex-basis: 100%; font-size: 13px; color: var(--fg-muted); }
+.mock .todo { margin-top: 22px; padding: 16px 18px; border-radius: var(--radius); background: var(--danger-bg);
+  border: 1px solid color-mix(in srgb, var(--danger) 32%, transparent); }
+.mock .todo b { display: block; font-size: 14px; color: var(--danger); margin-bottom: 4px; }
+.mock .todo p { margin: 0; font-size: 13.5px; color: var(--fg-muted); }
+
+/* does / doesn't */
+.dd { display: grid; gap: 16px; margin-top: 28px; }
+@media (min-width: 760px) { .dd { grid-template-columns: 1fr 1fr; } }
+.dd > div { border-radius: var(--radius-lg); padding: 24px; border: 1px solid var(--border); background: var(--bg-elev); }
+.dd h3 { font-size: 16px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.dd ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 11px; }
+.dd li { font-size: 14.5px; color: var(--fg-muted); padding-left: 26px; position: relative; line-height: 1.65; }
+.dd li::before { position: absolute; left: 0; top: 0; font-weight: 800; }
+.dd .no { border-color: color-mix(in srgb, var(--ok) 30%, var(--border)); }
+.dd .no h3 { color: var(--ok); }
+.dd .no li::before { content: "✕"; color: var(--ok); }
+.dd .yes h3 { color: var(--accent); }
+.dd .yes li::before { content: "✓"; color: var(--accent); }
+
+/* faq */
+.faq { margin-top: 26px; display: grid; gap: 10px; }
+.faq details { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); }
+.faq summary { cursor: pointer; padding: 16px 20px; font-weight: 700; font-size: 15px; list-style: none; display: flex; gap: 12px; align-items: center; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::before { content: "Q"; flex: none; width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center;
+  background: var(--bg-elev-2); border: 1px solid var(--border-strong); color: var(--accent); font-size: 12px; font-weight: 800; }
+.faq details[open] summary { border-bottom: 1px solid var(--border); }
+.faq .a { padding: 16px 20px 18px 54px; font-size: 14.5px; color: var(--fg-muted); line-height: 1.8; }
+.faq .a p { margin: 0 0 .8em; }
+.faq .a p:last-child { margin: 0; }
+
+/* technical strip */
+.tech { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 26px; }
+.tech h2 { font-size: 19px; margin-bottom: .5em; }
+.tech p { font-size: 14.5px; color: var(--fg-muted); }
+.tech .facts { display: grid; gap: 9px; margin: 18px 0 20px; padding: 0; list-style: none; }
+.tech .facts li { font-size: 14px; color: var(--fg-muted); padding-left: 24px; position: relative; }
+.tech .facts li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+.tech code { background: var(--bg-elev-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
+
+/* mobile header: keep the brand on one line, drop in-page anchors */
+.brand { white-space: nowrap; }
+.nav .theme-toggle { white-space: nowrap; }
+@media (max-width: 680px) {
+  .site-header .wrap { gap: 10px; }
+  .nav { gap: 10px; }
+  .nav a.anchor-nav { display: none; }
+  .nav a { font-size: 12.5px; white-space: nowrap; }
+  .howto .step { padding: 22px 20px; }
+  .mock .body { padding: 20px 16px; }
+  .mock .row .bg { margin-left: 0; }
+  .faq summary { padding: 14px 16px; font-size: 14.5px; }
+  .faq .a { padding: 14px 16px 16px 16px; }
+  .tech { padding: 22px 18px; }
+}
