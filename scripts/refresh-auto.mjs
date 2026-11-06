@@ -13,14 +13,14 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { fetchFeed, categoriesOf, causeOf, statusOf, recordsOf, scopeOf } from './lib/source-feed.mjs';
+import { fetchFeedOrSkip, categoriesOf, causeOf, statusOf, recordsOf, scopeOf } from './lib/source-feed.mjs';
 import { guessSector, sectorFromDomain } from './lib/sector.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const db = JSON.parse(readFileSync(join(ROOT, 'data/breaches.json'), 'utf8'));
 const meta = JSON.parse(readFileSync(join(ROOT, 'data/meta.json'), 'utf8'));
 
-const feed = await fetchFeed();
+const feed = await fetchFeedOrSkip('自動追記分の同期');
 const byId = new Map(feed.incidents.map((i) => [i.id, i]));
 
 let touched = 0, sectors = 0, missing = 0;

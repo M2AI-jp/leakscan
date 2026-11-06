@@ -68,12 +68,17 @@ let resolved = 0, official = 0, skipped = [];
 for (const e of targets) {
   const src = e.sources.find((s) => s.url.includes('incidents.seory.co.jp'));
   await new Promise((r) => setTimeout(r, 700));   // 相手サーバへの配慮
-  let html;
-  try {
-    const res = await fetch(src.url, { headers: UA, signal: AbortSignal.timeout(25000) });
-    if (!res.ok) { skipped.push(`${e.company}: HTTP ${res.status}`); continue; }
-    html = await res.text();
-  } catch (err) { skipped.push(`${e.company}: ${err.message || err}`); continue; }
+  /* 情報源は断続的に 403 を返すので、1件あたり2回まで試す */
+  let html = null, why = '';
+  for (let attempt = 0; attempt < 2 && html === null; attempt++) {
+    if (attempt) await new Promise((r) => setTimeout(r, 4000));
+    try {
+      const res = await fetch(src.url, { headers: UA, signal: AbortSignal.timeout(25000) });
+      if (!res.ok) { why = `HTTP ${res.status}`; continue; }
+      html = await res.text();
+    } catch (err) { why = String(err.message || err); }
+  }
+  if (html === null) { skipped.push(`${e.company}: ${why}`); continue; }
 
   const links = [...html.matchAll(/<a[^>]+href="(https?:\/\/[^"]+)"/g)].map((m) => unwrap(m[1]));
   let picked = null, pickedUrl = null;

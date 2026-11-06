@@ -4,13 +4,13 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { fetchFeed, isPersonal, knownIndex, isKnown, recordsOf, categoriesOf, causeOf, statusOf } from './lib/source-feed.mjs';
+import { fetchFeedOrSkip, isPersonal, knownIndex, isKnown, recordsOf, categoriesOf, causeOf, statusOf } from './lib/source-feed.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const db = JSON.parse(readFileSync(join(ROOT, 'data/breaches.json'), 'utf8'));
 const MAX_AGE_DAYS = Number(process.env.MAX_AGE_DAYS || 0);   // 0 = 制限なし
 
-const feed = await fetchFeed();
+const feed = await fetchFeedOrSkip('未収録の事案の収集');
 const idx = knownIndex(db);
 const cutoff = MAX_AGE_DAYS
   ? new Date(Date.now() - MAX_AGE_DAYS * 86400000).toISOString().slice(0, 10)

@@ -38,6 +38,7 @@ jobs:
         run: |
           node scripts/collect.mjs | tee /tmp/collect.txt
           echo "found=$(grep -c '^CAND' /tmp/collect.txt || true)" >> "$GITHUB_OUTPUT"
+          echo "skipped=$(grep -c '^SKIP' /tmp/collect.txt || true)" >> "$GITHUB_OUTPUT"
 
       - name: 事案を自動追記
         id: autoadd
@@ -105,7 +106,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: 要確認のIssueを作成・更新
-        if: steps.watch.outputs.changed != '0' || steps.links.outcome == 'failure'
+        if: steps.watch.outputs.changed != '0' || steps.collect.outputs.skipped != '0' || steps.links.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

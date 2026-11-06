@@ -198,13 +198,51 @@ export function isKnown(inc, idx) {
   return '';
 }
 
-/** 情報源のJSONを取得する */
-export async function fetchFeed() {
-  const res = await fetch(FEED_URL, { headers: UA, signal: AbortSignal.timeout(60000) });
-  if (!res.ok) throw new Error(`情報源の取得に失敗: HTTP ${res.status}`);
-  const j = await res.json();
-  if (!j || !Array.isArray(j.incidents)) throw new Error('情報源の形が想定と違う');
-  return j;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * 情報源のJSONを取得する。
+ *
+ * 情報源は断続的に 403 を返す（レート制限とみられる）。1回の失敗で
+ * その日の更新を丸ごと落とさないよう、間隔を空けて数回試す。
+ * それでも駄目なら例外を投げ、呼び出し側はその日の処理を飛ばす。
+ */
+export async function fetchFeed(opts) {
+  const tries = (opts && opts.tries) || 4;
+  const base = (opts && opts.delayMs) || 4000;
+  let last = '';
+
+  for (let i = 0; i < tries; i++) {
+    if (i) {
+      const wait = base * Math.pow(2, i - 1);
+      console.log(`情報源の取得を${Math.round(wait / 1000)}秒後に再試行します（${i}/${tries - 1}）: ${last}`);
+      await sleep(wait);
+    }
+    try {
+      const res = await fetch(FEED_URL, { headers: UA, signal: AbortSignal.timeout(60000) });
+      if (!res.ok) { last = `HTTP ${res.status}`; continue; }
+      const j = await res.json();
+      if (!j || !Array.isArray(j.incidents)) { last = '形が想定と違う'; continue; }
+      return j;
+    } catch (e) {
+      last = String((e && e.message) || e);
+    }
+  }
+  throw new Error(`情報源の取得に失敗: ${last}`);
+}
+
+/**
+ * 情報源が取れなかった日は、その処理を飛ばして終了する。
+ * データは前日のまま残り、翌日の実行でまた試される。
+ */
+export async function fetchFeedOrSkip(label) {
+  try {
+    return await fetchFeed();
+  } catch (e) {
+    console.log(`SKIP\t${label}: ${(e && e.message) || e}`);
+    console.log('情報源に届かなかったため、この処理は飛ばします。データは変更していません。');
+    process.exit(0);
+  }
 }
 
 /** 組織の同一性を見るための鍵。

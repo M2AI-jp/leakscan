@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import {
-  fetchFeed, isPersonal, knownIndex, isKnown, normCompany,
+  fetchFeedOrSkip, isPersonal, knownIndex, isKnown, normCompany,
   categoriesOf, causeOf, statusOf, recordsOf, scopeOf
 } from './lib/source-feed.mjs';
 import { guessSector } from './lib/sector.mjs';
@@ -47,7 +47,7 @@ function shortName(name) {
     .trim();
 }
 
-const feed = await fetchFeed();
+const feed = await fetchFeedOrSkip('事案の自動追記');
 const idx = knownIndex(db);
 const cutoff = MAX_AGE_DAYS
   ? new Date(Date.now() - MAX_AGE_DAYS * 86400000).toISOString().slice(0, 10)
