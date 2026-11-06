@@ -1,24 +1,24 @@
 {
   "generated": "2026-11-06",
   "version": "2026.11.06",
-  "incidents": 149,
-  "companies": 148,
-  "records_total": 550715891,
+  "incidents": 197,
+  "companies": 196,
+  "records_total": 566614735,
   "records_note": "重複を含む延べ件数。公表値の単純合計で、実人数ではない。",
   "by_status": {
-    "possible": 111,
+    "possible": 126,
     "confirmed": 16,
-    "investigating": 22
+    "investigating": 55
   },
   "by_cause": {
-    "unauthorized_access": 84,
-    "unknown": 1,
+    "unauthorized_access": 124,
+    "unknown": 2,
     "saas": 5,
-    "vulnerability": 9,
+    "vulnerability": 11,
     "vendor": 43,
     "api": 1,
-    "credential": 3,
-    "misconfiguration": 1,
+    "credential": 6,
+    "misconfiguration": 3,
     "ransomware": 2
   },
   "by_sector": {
@@ -53,14 +53,14 @@
     "サービス": 1,
     "エネルギー": 3,
     "不動産": 3,
-    "未分類": 12
+    "未分類": 60
   },
   "by_ai_link": {
-    "unconfirmed": 148,
+    "unconfirmed": 196,
     "supply_chain": 1
   },
-  "high_severity": 29,
-  "matchable": 149,
+  "high_severity": 41,
+  "matchable": 197,
   "domains": 201,
   "earliest": "2026-07-06",
   "latest": "2026-11-06"

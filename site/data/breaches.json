@@ -5153,5 +5153,1495 @@
         "url": "https://incidents.seory.co.jp/incidents/20261105-1191fa/"
       }
     ]
+  },
+  {
+    "id": "auto-20261105-269a33",
+    "company": "株式会社あしたのチーム",
+    "service": "株式会社あしたのチーム",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "あしたのチーム",
+        "株式会社あしたのチーム"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "209名",
+    "records_num": 209,
+    "categories": [
+      "name",
+      "employment"
+    ],
+    "status": "possible",
+    "scope": "ウェルネス・コミュニケーションズは、子会社あしたのチームが販売する組織サーベイ「あしたのサーベイ」のOEM提供元である株式会社ラフールのシステムへの不正アクセスで、顧客企業3社の209名分の氏名、所属部署、従業員番号、ストレスチェック結果等が不正に取得されたと発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-269a33/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-f21f7c",
+    "company": "総務省",
+    "service": "総務省",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "総務省"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "775件",
+    "records_num": 775,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "possible",
+    "scope": "総務省は、英文ニューズレター「ICT × Japan」の配信業務を請け負うアララ株式会社のメール配信サービスが第三者による不正アクセスを受け、登録者のメールアドレス775件と、うち登録時に氏名を記入した21件の氏名が流出したとの報告を受けたと発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-f21f7c/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-d8c845",
+    "company": "エムオーテックス株式会社",
+    "service": "エムオーテックス株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "エムオーテックス",
+        "エムオーテックス株式会社"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "京セラコミュニケーションシステムは、子会社エムオーテックス(MOTEX)のWebサイトで2026年11月2日に第三者による不正アクセスを確認し、コーポレートサイトやLANSCOPE製品サイトなどを停止したと発表した。お客様情報の外部流出は現時点で確認されておらず、調査を進めているとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-d8c845/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-bd342e",
+    "company": "株式会社電通総研",
+    "service": "株式会社電通総研",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "電通総研",
+        "株式会社電通総研"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "possible",
+    "scope": "電通総研は、開発・提供する「FACERE」を利用する特定企業の環境で、同社のアクセス権限の設定不備により保管データが第三者に閲覧可能な状態にあり、2026年9月10日に不正アクセスが行われ個人情報が流出した可能性があると発表した。他の利用企業の環境では設定不備は見つかっていないとしている。",
+    "cause": "misconfiguration",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-bd342e/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-b7e27f",
+    "company": "山梨県",
+    "service": "山梨県",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "山梨県"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "15,821,184件 / 197,556人",
+    "records_num": 15821184,
+    "categories": [
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "山梨県は、令和7・8年度の富士山吉田ルート通行予約システムの受託企業アソビューから、同社がメール配信に使うアララの「アララメッセージ」が不正アクセスを受け、会員情報15,821,184件の流出が確認されたと報告を受けたと発表した。システム利用者(最大計197,556人)の情報が含まれるかは同社が調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-b7e27f/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-b70cf9",
+    "company": "東京都島嶼町村一部事務組合",
+    "service": "東京都島嶼町村一部事務組合",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "東京都島嶼町村一部事務組合"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "3,021件",
+    "records_num": 3021,
+    "categories": [
+      "email",
+      "name",
+      "address",
+      "phone",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "東京都島嶼町村一部事務組合は、島嶼会館の宿泊予約に使う株式会社ナバックの「RESERVE GATEα」が不正アクセスを受け、ホームページから予約した客の氏名、住所、電話番号、メールアドレスなど3,021件が漏えいした可能性があると発表した。電話予約は含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-b70cf9/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-aa5b99",
+    "company": "オシロ株式会社",
+    "service": "オシロ株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "オシロ",
+        "オシロ株式会社"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "最大12,661人 / 1,101人",
+    "records_num": 12661,
+    "categories": [
+      "member_id"
+    ],
+    "status": "possible",
+    "scope": "オシロは、コミュニティプラットフォーム「OSIRO」で会員ID、表示名、アイコン画像URLがログインせずに利用できる設定になっており、外部者が複数のコミュニティの会員一覧にアクセスしたと発表した。対象は最大12,661人で、うち1,101人は本名が知られたおそれがあるとしている。",
+    "cause": "misconfiguration",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-aa5b99/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-9feec6",
+    "company": "野村インベスター・リレーションズ株式会社",
+    "service": "野村インベスター・リレーションズ株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "野村インベスター・リレーションズ",
+        "野村インベスター・リレーションズ株式会社"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "野村インベスター・リレーションズは、機関投資家・アナリスト向けIR情報提供サービス「機関Navi」のシステムで2026年11月2日に第三者による不正アクセスを確認し、その後情報が外部に漏えいしたことを確認したと発表した。氏名やメールアドレス等が含まれる可能性があり調査中で、同じサーバー上の「MIR@I」も予防的に停止したとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-9feec6/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-9c8f2e",
+    "company": "株式会社はせがわ",
+    "service": "株式会社はせがわ",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "はせがわ",
+        "株式会社はせがわ"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "305件",
+    "records_num": 305,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "はせがわは、利用するメール配信サービスと連携するアララ株式会社の「repica」のサーバーが第三者による不正アクセスを受け、メールアドレスが漏えいしたと発表した。第2報で、対象は2026年10月10日から31日に配信したメールの305件、漏えいした情報はメールアドレスのみと確定したとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-9c8f2e/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-607fa3",
+    "company": "株式会社Shippio",
+    "service": "株式会社Shippio",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "Shippio",
+        "株式会社Shippio"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "約1,300件",
+    "records_num": 1300,
+    "categories": [
+      "address",
+      "phone",
+      "password",
+      "login_credential"
+    ],
+    "status": "investigating",
+    "scope": "Shippioは、貿易業務の「Shippio Platform」が社内業務ツールに保存されていた認証情報を使った不正アクセスを受け、全顧客の会社名・電話番号・住所やシップメント情報が閲覧され、書類ファイル約1,300件がダウンロードされたと発表した。第二報で、サービスを再開し全ユーザーのパスワードをリセットしたとしている。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-607fa3/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-6059ea",
+    "company": "株式会社インテージ",
+    "service": "株式会社インテージ",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "インテージ",
+        "株式会社インテージ"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "インテージは、サービスで利用しているアンケートシステムで外部からの不正アクセスが確認されたため、システムを停止して緊急メンテナンスを実施していると発表した。現時点の調査では個人情報とアンケート回答データの漏洩は確認されていないとし、影響範囲を調査しているとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-6059ea/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-47db2d",
+    "company": "JA共済連",
+    "service": "JA共済連",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "JA共済連"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "name",
+      "address",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "JA共済連は、レッカー・ロードサービスの業務委託先である株式会社プレステージ・コアソリューションが管理するシステムが第三者による不正アクセスを受け、サービスを利用した一部の利用者の氏名、住所、電話番号等が漏えいした可能性があると発表した。詳細は確認中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-47db2d/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-46c79b",
+    "company": "株式会社ジャックス",
+    "service": "株式会社ジャックス",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "ジャックス",
+        "株式会社ジャックス"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "card"
+    ],
+    "status": "possible",
+    "scope": "株式会社ジャックスは、クレジットカードの付帯サービスとして提供するロードサービスの業務委託先、株式会社プレステージ・コアソリューションのシステムが不正アクセスを受け、委託業務に関わる顧客の個人情報が外部に漏えいしたことが判明したと発表した。対象はCLUB AJカードなど。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-46c79b/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261104-3f2343",
+    "company": "板橋区",
+    "service": "板橋区",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "板橋区"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "板橋区は、いたばしPayで利用するアララ株式会社のメール配信サービス「アララメッセージ」のサーバーが第三者による不正アクセスを受けたと実施主体の板橋区商店街振興組合連合会から報告を受けたと発表した。いたばしPayの登録情報が流出の対象に含まれるかは判明しておらず、確認を進めているとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-3f2343/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-ec51ac",
+    "company": "大津市",
+    "service": "大津市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "大津市"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "id_document",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "大津市は、マイナンバーカード交付予約・管理システムの委託先である株式会社TKCがメール配信に使う外部サービス「アララメッセージ」が不正アクセスを受け、カードの受取を予約した市民のメールアドレスが漏えいした可能性があるとの報告を受けたと発表した。マイナンバーの漏えいはないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-ec51ac/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-e812dc",
+    "company": "大阪市",
+    "service": "大阪市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "大阪市"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "大阪市は、行政オンラインシステムの提供事業者 TKC が利用するアララのメール配信サービスが不正アクセスを受け、システム利用者のメールアドレス等が漏えいした可能性があると報告を受けたと発表した。第2報では、漏えいした可能性のある情報はメールアドレスのみで、申請情報等は漏えいしていないとの報告を受けたとし、利用者分が含まれるかは確認中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-e812dc/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-ad0c64",
+    "company": "三井住友海上火災保険株式会社",
+    "service": "三井住友海上火災保険株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "三井住友海上火災保険",
+        "三井住友海上火災保険株式会社"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "possible",
+    "scope": "三井住友海上火災保険は、当社システムに対する第三者からの不正アクセスを検知したことに伴い、お客さま情報の保護と被害の拡大防止、影響調査のため、ご契約者さま専用ページやインターネット事故受付など一部のサービスを一時停止していると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-ad0c64/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-9eed92",
+    "company": "豊橋市",
+    "service": "豊橋市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "豊橋市"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "id_document",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "豊橋市は、マイナンバーカード交付予約・管理システムの提供事業者 TKC から、同システムが利用するアララの「アララメッセージ」が不正アクセスを受け情報が漏えいしたと連絡を受けたと発表した。予約時に登録されたメールアドレスが漏えいした恐れがあり、市の情報が含まれるかを調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-9eed92/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-5bae04",
+    "company": "横浜市",
+    "service": "横浜市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "横浜市"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "横浜市は、電子申請・届出システムが使うアララ株式会社のメール送信サービスが第三者による不正アクセスを受け、委託先TKCから同システムも影響を受ける対象と報告があったと発表した。利用者のメールアドレス、利用者名などが漏えいした可能性があり、件数や影響の有無は確認中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-5bae04/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-5326aa",
+    "company": "横浜ゴム株式会社",
+    "service": "横浜ゴム株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "横浜ゴム",
+        "横浜ゴム株式会社"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "横浜ゴムは、ニュースリリースなどのメール配信に利用している「アララメッセージ」の提供元アララ株式会社で第三者による不正アクセスが発生し、ニュースリリース配信・ニュースメール配信の登録者の会社名とメールアドレスが漏洩したとの連絡を受けたと発表した。配信を停止し、個人情報保護委員会に報告したとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-5326aa/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-4cb414",
+    "company": "京都市",
+    "service": "京都市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "京都市"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "login_credential"
+    ],
+    "status": "possible",
+    "scope": "京都市は、東本願寺前市民緑地(お東さん広場)の指定管理者である植彌加藤造園株式会社が運用するメールアカウントの認証情報が第三者に不正利用されて迷惑メールが送信され、保存されていたメールに含まれる施設利用者の個人情報が流出した可能性があると発表した。流出は確認されていないとしている。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-4cb414/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-458731",
+    "company": "岡山県",
+    "service": "岡山県",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "岡山県"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "最大2,240件",
+    "records_num": 2240,
+    "categories": [
+      "email",
+      "medical"
+    ],
+    "status": "investigating",
+    "scope": "岡山県は、医療安全情報や感染症情報の発信に使うアララ株式会社のメールマガジン配信サービス「アララメッセージ」が不正アクセスを受け、県が管理する登録者のメールアドレスが外部に流出したことが判明したと発表した。件数は最大2,240件で、流出の詳細は運営事業者が調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-458731/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261103-309a57",
+    "company": "あいおいニッセイ同和損保",
+    "service": "あいおいニッセイ同和損保",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "あいおいニッセイ同和損保"
+      ]
+    },
+    "disclosed": "2026-11-03",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "possible",
+    "scope": "あいおいニッセイ同和損保は、当社システムに対する第三者からの不正アクセスを検知したことに伴い、お客さま情報の保護と被害の拡大防止、影響調査のため、ご契約者さま専用ページやウェブサイトからの事故のご連絡など一部のサービスを一時停止していると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261103-309a57/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-e64983",
+    "company": "MNインターファッション株式会社",
+    "service": "MNインターファッション株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "MNインターファッション",
+        "MNインターファッション株式会社"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "19,933件",
+    "records_num": 19933,
+    "categories": [
+      "name",
+      "address",
+      "phone",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "MNインターファッションは、良品計画から受託する無印良品のオーダーカーテン関連業務で利用していたシステムについて、委託先の株式会社ナノテックが管理するサーバーが不正アクセスを受け、2018年4月から2022年1月の注文者の氏名・住所・電話番号など19,933件が流出した可能性があると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-e64983/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-dd0c22",
+    "company": "姫路市",
+    "service": "姫路市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "姫路市"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "id_document",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "姫路市は、委託先TKCがメール配信を再委託するアララの「アララメッセージ」への不正アクセスで、オンライン手続きポータルサイトの登録者の情報が漏えいした可能性があると発表した。第2報で、マイナンバーカード交付予約・管理システムも同サービスを使っていたが、漏えいの可能性はメールアドレスのみとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-dd0c22/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-dc22e8",
+    "company": "川崎市",
+    "service": "川崎市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "川崎市"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "川崎市は、オンライン申請システム「オンライン手続かわさき(e-KAWASAKI)」の委託先TKCが利用するアララ株式会社の外部メール送信サービスで第三者による不正アクセスが確認されたと発表した。漏えいした情報に市民の情報が含まれるかは調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-dc22e8/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-d9399e",
+    "company": "宇都宮市",
+    "service": "宇都宮市",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "宇都宮市"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約31,000人",
+    "records_num": 31000,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "宇都宮市は、電子申請共通システムが利用するアララの外部メール送信サービス「アララメッセージ」で不正アクセスが確認され、登録者(個人アカウント約31,000人、事業者アカウント約5,800団体)のメールアドレス、氏名、メール本文が漏えいしたおそれがあると発表した。TKC などが調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-d9399e/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-d8f37a",
+    "company": "CBcloud株式会社",
+    "service": "CBcloud株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "CBcloud",
+        "CBcloud株式会社"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "CBcloudは、運営する配送サービス「ピックゴー」の法人向けサービスで2026年11月1日に第三者による不正アクセスを確認したと発表した。荷主とパートナードライバーの個人情報を含む情報の一部が外部に流出した可能性があり、範囲と件数を調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-d8f37a/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-cf71dc",
+    "company": "井筒まい泉株式会社",
+    "service": "井筒まい泉株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "井筒まい泉",
+        "井筒まい泉株式会社"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "name",
+      "purchase_history",
+      "employment"
+    ],
+    "status": "investigating",
+    "scope": "井筒まい泉は、利用する外部クラウドサービスに第三者による不正アクセスがあり、ダウンロードされたファイルの一部に宅配を注文した顧客と配送した従業員の氏名・お届け先の位置情報96名分が含まれ、第三者への漏えいを確認したと発表した。決済情報は含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-cf71dc/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-cd1671",
+    "company": "公益財団法人日本アンチ・ドーピング機構",
+    "service": "公益財団法人日本アンチ・ドーピング機構",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "日本アンチ・ドーピング機構",
+        "公益財団法人日本アンチ・ドーピング機構"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "1,792名",
+    "records_num": 1792,
+    "categories": [
+      "email",
+      "name",
+      "address",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "日本アンチ・ドーピング機構は、経費管理システムの一部機能にログインを経ずに登録情報を取得できる脆弱性があり、外部の第三者がこれを利用して登録者1,792名の氏名・住所・電話番号・メールアドレスなどを取得したことが判明したと発表した。アスリートの検査関連情報は含まれないとしている。",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-cd1671/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-c57031",
+    "company": "GMOペイメントゲートウェイ株式会社",
+    "service": "GMOペイメントゲートウェイ株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "GMOペイメントゲートウェイ",
+        "GMOペイメントゲートウェイ株式会社"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name",
+      "address",
+      "phone",
+      "card"
+    ],
+    "status": "possible",
+    "scope": "GMOペイメントゲートウェイは、ライフカードに提供するイシュイングサポートサービスの個別機能で2026年10月30日に不正なユーザーによる行為があり、氏名、メールアドレス、電話番号、住所の一部やVプリカ番号・セキュリティコード・有効期限など合計69アカウントの情報が窃取された可能性があると発表した。他のサービスへの影響はないとしている。",
+    "cause": "unknown",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-c57031/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-bd46c8",
+    "company": "キンコーズ・ジャパン株式会社",
+    "service": "キンコーズ・ジャパン株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "キンコーズ・ジャパン",
+        "キンコーズ・ジャパン株式会社"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "キンコーズ・ジャパンは、メールマガジン配信に使うアララ株式会社の「アララメッセージ」が第三者による不正アクセスを受け、スマートメンバーシップ会員のメールアドレスが流出したことが確認されたと発表した。件数は確認中で、氏名など他の登録情報の流出は現時点で確認されていないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-bd46c8/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-aa7dd4",
+    "company": "株式会社バリューゴルフ",
+    "service": "株式会社バリューゴルフ",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "バリューゴルフ",
+        "株式会社バリューゴルフ"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "バリューゴルフは、ゴルフ場予約サービス「1人予約ランド」が第三者による不正アクセスを受け、利用者のログイン用メールアドレスが閲覧または取得された可能性があると発表した。氏名などメールアドレス以外の登録情報は含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-aa7dd4/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-96470a",
+    "company": "株式会社 Fanplus",
+    "service": "株式会社 Fanplus",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "Fanplus",
+        "株式会社 Fanplus"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "Fanplusとチケットプラスは、アララ株式会社のメール配信サービス「アララメッセージ」への不正アクセスにより、グループの共通ID「Plus member ID」でサービスを利用する一部の顧客のメールアドレスが漏えいしたことが判明したと発表した。対象件数は調査中としている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-96470a/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-7e6c5c",
+    "company": "島根県",
+    "service": "島根県",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "島根県"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "約150件",
+    "records_num": 150,
+    "categories": [
+      "email",
+      "name",
+      "address",
+      "phone",
+      "dob",
+      "employment"
+    ],
+    "status": "possible",
+    "scope": "島根県は、「しまねの古代文化探訪ツアー企画造成業務」の委託先であるクラブツーリズム株式会社への第三者による不正アクセスにより、令和5〜8年度のツアー応募者約150件の氏名、生年月日、住所、電話番号、メールアドレスなどが外部流出した可能性があると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-7e6c5c/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-7c61ca",
+    "company": "アクサ損害保険株式会社",
+    "service": "アクサ損害保険株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "アクサ損害保険",
+        "アクサ損害保険株式会社"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "アクサ損害保険は、ロードサービス業務を委託する株式会社プレステージ・コアソリューションで第三者による不正アクセスが発生し、同社のシステムに含まれる当社顧客の情報が外部に流出した可能性について調査していると発表した。流出の有無と影響範囲は現時点で確認できていないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-7c61ca/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-4ef6ed",
+    "company": "朝日放送テレビ株式会社",
+    "service": "朝日放送テレビ株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "朝日放送テレビ",
+        "朝日放送テレビ株式会社"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name",
+      "address",
+      "password",
+      "card"
+    ],
+    "status": "possible",
+    "scope": "朝日放送テレビは、ふるさと納税ポータルサイト「ふるラボ」で、不正に入手されたメールアドレスとパスワードによる不正ログインがあり、会員8名の氏名、住所、カード情報の一部などが閲覧できる状態にあったと発表した。カード番号全体やセキュリティコードは含まれないとし、金銭的な被害は確認されていないとしている。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-4ef6ed/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-38de14",
+    "company": "株式会社JTBパブリッシング",
+    "service": "株式会社JTBパブリッシング",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "JTBパブリッシング",
+        "株式会社JTBパブリッシング"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "gender",
+      "purchase_history"
+    ],
+    "status": "possible",
+    "scope": "JTBパブリッシングは、熊本県から受託したARスタンプラリー「くまモンテクテク」の事務局業務の委託先palanへの第三者による不正アクセスにより、参加申込者のメールアドレス、居住地、年代、性別が漏えいしたことが判明したと発表した。palanのデータ分析ツールの脆弱性が悪用されたとしている。",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-38de14/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261102-25c25d",
+    "company": "株式会社テレビ東京ダイレクト",
+    "service": "株式会社テレビ東京ダイレクト",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "テレビ東京ダイレクト",
+        "株式会社テレビ東京ダイレクト"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "card"
+    ],
+    "status": "investigating",
+    "scope": "テレビ東京、BSテレビ東京、テレビ東京ダイレクトは、テレビ東京ダイレクトが運営する通販サイト「テレ東マート」で第三者による不正アクセスが確認され、サイトを一時閉鎖したと発表した。現時点で個人情報・クレジットカード情報の漏えいは確認されていないとし、調査を進めているとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-25c25d/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-e3f9e8",
+    "company": "カゴメ株式会社",
+    "service": "カゴメ株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "カゴメ",
+        "カゴメ株式会社"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "109名",
+    "records_num": 109,
+    "categories": [
+      "name",
+      "address",
+      "phone",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "カゴメは、2023年発行のデジタル特典付き社債の申込に使っていた、NTTデータの委託先が提供するデジタル証券プラットフォームへの不正アクセスにより、購入者109名の氏名、住所、電話番号などが漏えいした可能性があると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-e3f9e8/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-e33ec1",
+    "company": "野村證券株式会社",
+    "service": "野村證券株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "野村證券",
+        "野村證券株式会社"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "password",
+      "bank"
+    ],
+    "status": "investigating",
+    "scope": "野村證券は、委託先NTTデータの委託先が提供するデジタル証券プラットフォームへの不正アクセスにより、デジタル特典付き社債を購入した一部の顧客の情報が漏えいした可能性があると発表した。漏えいした可能性のある項目は確認中で、証券口座番号やパスワードは含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-e33ec1/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-dac272",
+    "company": "株式会社NTTデータ",
+    "service": "株式会社NTTデータ",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "NTTデータ",
+        "株式会社NTTデータ"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "unknown"
+    ],
+    "status": "investigating",
+    "scope": "NTTデータは、提供するSTdirectServicesで利用している委託先のSaaSサービスで第三者による不正アクセスが発生し、サービスを停止していると発表した。委託先のサービスで取り扱う個人情報が漏えいした可能性があるとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-dac272/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-da22a8",
+    "company": "三菱UFJモルガン・スタンレー証券株式会社",
+    "service": "三菱UFJモルガン・スタンレー証券株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "三菱UFJモルガン・スタンレー証券",
+        "三菱UFJモルガン・スタンレー証券株式会社"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "三菱UFJモルガン・スタンレー証券は、近鉄グループホールディングスの第135回無担保社債の特典申込などに使われる、NTTデータの外部委託先が提供するシステムへの不正アクセスにより、購入者95名のカナ氏名、メールアドレス、購入金額が漏えいした可能性があると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-da22a8/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-d952a7",
+    "company": "近鉄グループホールディングス株式会社",
+    "service": "近鉄グループホールディングス株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "近鉄グループホールディングス",
+        "近鉄グループホールディングス株式会社"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "2,678件",
+    "records_num": 2678,
+    "categories": [
+      "email",
+      "name",
+      "password",
+      "bank",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "近鉄グループホールディングスは、第135回無担保社債の特典申込に使う、NTTデータの委託先が提供するデジタル証券プラットフォームへの不正アクセスにより、100万円以上を購入した投資家2,678件の氏名(カタカナ)、購入金額、メールアドレスが持ち出された可能性があると発表した。証券口座番号やパスワードは含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-d952a7/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-cdfeac",
+    "company": "西日本旅客鉄道株式会社",
+    "service": "西日本旅客鉄道株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "西日本旅客鉄道",
+        "西日本旅客鉄道株式会社"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "公表されていない",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name",
+      "address",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "西日本旅客鉄道は、第80回無担保社債の募集で利用した外部サービスの提供元NTTデータの委託先が提供するデジタル証券プラットフォームへの不正アクセスにより、投資家2件の氏名、住所、電話番号、メールアドレスなどが漏えいした可能性があると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-cdfeac/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-b17f3d",
+    "company": "株式会社SBI証券",
+    "service": "株式会社SBI証券",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "SBI証券",
+        "株式会社SBI証券"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "1,169名",
+    "records_num": 1169,
+    "categories": [
+      "email",
+      "name",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "SBI証券は、近鉄グループホールディングスの第135回無担保社債の特典申込等に使われる、NTTデータの委託先が提供するデジタル証券プラットフォームへの不正アクセスにより、購入者1,169名のカナ氏名、メールアドレス、購入金額が漏えいした可能性があると発表した(11月2日更新)。証券口座へのアクセスに必要な情報は含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-b17f3d/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261031-1e1ac2",
+    "company": "フィリップ・キャピタル証券株式会社",
+    "service": "フィリップ・キャピタル証券株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "フィリップ・キャピタル証券",
+        "フィリップ・キャピタル証券株式会社"
+      ]
+    },
+    "disclosed": "2026-10-31",
+    "records": "162名",
+    "records_num": 162,
+    "categories": [
+      "email",
+      "name",
+      "address",
+      "dob",
+      "bank"
+    ],
+    "status": "possible",
+    "scope": "フィリップ・キャピタル証券は、デジタル証券に関連する外部委託先1社のシステムへの不正アクセスにより、顧客162名の氏名や取引数量などが外部に漏洩したと発表した。一部の顧客は投資家ID、メールアドレス、生年月日、住所も対象としている。銀行口座情報は含まれないとしている。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261031-1e1ac2/"
+      }
+    ]
+  },
+  {
+    "id": "auto-20261030-f6a1cb",
+    "company": "三重県",
+    "service": "三重県",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "三重県"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "156人",
+    "records_num": 156,
+    "categories": [
+      "email",
+      "name",
+      "purchase_history"
+    ],
+    "status": "investigating",
+    "scope": "三重県は、移住セミナーの運営委託先である株式会社サンケイリビング新聞社がメール送信に使うユミルリンク株式会社のシステムへの不正アクセスにより、セミナー申込者のべ156人の氏名とメールアドレスが流出した可能性があると発表した。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "不正アクセス・情報漏えい事案（seory）",
+        "url": "https://incidents.seory.co.jp/incidents/20261030-f6a1cb/"
+      }
+    ]
   }
 ]

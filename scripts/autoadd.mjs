@@ -74,14 +74,22 @@ function recordsNum(s) {
   return Number.isFinite(n) && n > 0 ? n : null;
 }
 
-/* ── 照合用の表示名（社名から法人格を落とす） ── */
+/* ── 照合用の表示名（社名から法人格を落とす） ──
+ * validate.mjs と同じ長さの規則を適用する。日本語を含めば2文字以上、
+ * 英字のみなら4文字以上。ここで弾いておかないと検証で全体が落ちる。 */
+const CJK = /[\u3040-\u30ff\u4e00-\u9fff]/;
+function okName(n) {
+  const norm = String(n).normalize('NFKC').toLowerCase()
+    .replace(/[\s\u3000・,，.。'"“”’`]/g, '');
+  return norm.length >= (CJK.test(norm) ? 2 : 4);
+}
 function displayNames(org) {
   const base = String(org)
     .replace(/株式会社|有限会社|合同会社|一般社団法人|公益財団法人|生活協同組合|地方独立行政法人/g, '')
     .trim();
   const out = [];
-  if (base.length >= 2) out.push(base);
-  if (org !== base && org.length >= 4) out.push(org);
+  if (okName(base)) out.push(base);
+  if (org !== base && okName(org)) out.push(org);
   return [...new Set(out)];
 }
 
