@@ -49,14 +49,18 @@ for (const src of watch) {
     if (prev && prev.fingerprint !== fp) changed.push(src);
     else if (!prev) changed.push({ ...src, first: true });
   } catch (e) {
+    /* Some sources block datacenter IPs outright. Flag them in sources.json so
+       a permanent 403 doesn't file the same issue every morning. */
     failed.push({ ...src, error: String(e.message || e) });
     if (lock[src.url]) next[src.url] = lock[src.url];
   }
 }
 
+const actionableFailures = failed.filter((f) => !f.expect_block);
 for (const c of changed) console.log(`CHANGED\t${c.weight}\t${c.name}\t${c.url}${c.first ? '\t(初回)' : ''}`);
-for (const f of failed) console.log(`FAILED\t${f.name}\t${f.url}\t${f.error}`);
-if (!changed.length && !failed.length) console.log('変更なし');
+for (const f of actionableFailures) console.log(`FAILED\t${f.name}\t${f.url}\t${f.error}`);
+for (const f of failed.filter((x) => x.expect_block)) console.log(`BLOCKED\t${f.name}\t${f.url}\t(bot遮断・手動確認)`);
+if (!changed.length && !actionableFailures.length) console.log('要対応の変更なし');
 
 if (!checkOnly) writeFileSync(LOCK, JSON.stringify(next, null, 2) + '\n');
-if (checkOnly && changed.length) process.exit(1);
+if (checkOnly && (changed.length || actionableFailures.length)) process.exit(1);

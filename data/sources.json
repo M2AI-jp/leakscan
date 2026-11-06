@@ -1,5 +1,5 @@
 {
-  "note": "日次ジョブが更新を監視する情報源。ここが更新されたらIssueが立つので、人間が新規事案を確認して data/breaches.json に追記する。自動で事案を追加することはしない（誤った企業名の公開を防ぐため）。",
+  "note": "日次ジョブが更新を監視する情報源。ここが更新されたらIssueが立つので、人間が新規事案を確認して data/breaches.json に追記する。自動で事案を追加することはしない（誤った企業名の公開を防ぐため）。 expect_block が true の情報源はbot遮断のため自動検出できず、Issueの対象外（手動確認が必要）。",
   "watch": [
     {
       "name": "個人情報保護委員会 漏えい等の報告",
@@ -11,7 +11,9 @@
       "name": "セキュリティ対策Lab（ロケットボーイズ）",
       "url": "https://rocket-boys.co.jp/security-measures-lab/",
       "kind": "roundup",
-      "weight": "high"
+      "weight": "high",
+      "expect_block": true,
+      "note": "プログラムからのアクセスを403で遮断するため、更新検出はできない。ブラウザで定期的に手動確認すること。"
     },
     {
       "name": "CVE Registry ブログ",
