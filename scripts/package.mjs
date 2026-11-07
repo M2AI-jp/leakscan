@@ -104,6 +104,36 @@ writeFileSync(
   ) + '\n'
 );
 
+/* ---- 申請シートの数字を実物に合わせる ----
+ * ここは手で書いていた。だから 590件のzipを上げるときに、シートは 574件のまま。
+ * 申請フォームに貼る文章なので、ずれたまま出すと公開情報が間違う。
+ * 版・件数・ハッシュは、いまここで分かる。だからここで入れる。 */
+const subPath = join(ROOT, 'store/submit.html');
+try {
+  const st = JSON.parse(readFileSync(join(ROOT, 'data/stats.json'), 'utf8'));
+  const mt = JSON.parse(readFileSync(join(ROOT, 'data/meta.json'), 'utf8'));
+  const [yy, mm, dd] = String(mt.updated).split('-').map(Number);
+  const vals = {
+    name: mf.name,
+    version: mf.version,
+    zip: name,
+    sha8: zipSha.slice(0, 8),
+    size: `${(size / 1024).toFixed(0)}KB`,
+    incidents: String(st.incidents),
+    oku: (st.records_total / 1e8).toFixed(2),
+    asof: `${yy}年${mm}月${dd}日`
+  };
+  let filled = 0;
+  const html = readFileSync(subPath, 'utf8').replace(
+    /(<(?:span|code)[^>]* data-sub="([a-z0-9]+)"[^>]*>)[^<]*(<\/(?:span|code)>)/g,
+    (all, open, key, close) => (key in vals ? (filled++, open + vals[key] + close) : all)
+  );
+  writeFileSync(subPath, html);
+  console.log(`申請シート: store/submit.html の ${filled} 箇所を更新`);
+} catch (e) {
+  console.log(`申請シート: 更新できませんでした（${e.message}）`);
+}
+
 console.log(`${mf.name} v${mf.version}`);
 console.log(`ファイル ${files.length} 件 / 同梱事案 ${entries} 件`);
 console.log(`dist/${name}  ${(size / 1024).toFixed(0)} KB`);

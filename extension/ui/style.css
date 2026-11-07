@@ -82,9 +82,14 @@ code, .mono { font-family: var(--mono); font-size: .9em; }
   border-bottom: 1px solid var(--border);
 }
 .site-header .wrap { display: flex; align-items: center; gap: 20px; height: 60px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .14em; font-size: 18px; color: var(--fg); }
+.brand { display: flex; align-items: center; gap: 9px; font-weight: 800; letter-spacing: .01em; font-size: 17px; color: var(--fg); }
 .brand:hover { text-decoration: none; }
 .brand .logo { width: 26px; height: 26px; flex: none; }
+/* 名前が日本語になったので字間を詰めた（.14em は欧文用）。
+   年は小さく添える。名前の一部なので省かない。 */
+.brand .bt { display: inline-flex; align-items: baseline; gap: 4px; }
+.brand .bt i { font-style: normal; font-size: 12px; font-weight: 700;
+  letter-spacing: .04em; color: var(--fg-muted); }
 .nav { margin-left: auto; display: flex; gap: 18px; align-items: center; font-size: 14px; }
 .nav a { color: var(--fg-muted); }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--fg); }
@@ -210,7 +215,8 @@ footer a { color: var(--fg-muted); }
   section { padding: 40px 0; }
   .entry-head .date { margin-left: 0; width: 100%; }
   .nav { gap: 12px; font-size: 13px; }
-  .brand { font-size: 16px; }
+  .brand { font-size: 15px; }
+  .brand .bt i { font-size: 11px; }
 }
 
 /* ===================== extension-specific ===================== */
@@ -244,7 +250,7 @@ body.ext { padding-bottom: 0; }
 body.popup { width: 384px; min-height: 180px; }
 body.popup .pad { padding: 16px 18px 18px; }
 body.popup .ptop { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-body.popup .ptop .brand { font-size: 15px; letter-spacing: .12em; }
+body.popup .ptop .brand { font-size: 14px; letter-spacing: .01em; }
 body.popup .ptop .gear { margin-left: auto; color: var(--fg-dim); font-size: 12px; }
 body.popup h1 { font-size: 17px; margin: 0 0 6px; line-height: 1.45; }
 body.popup h1 em { font-style: normal; color: var(--danger); }

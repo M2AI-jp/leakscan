@@ -351,7 +351,7 @@
         <div class="box">
           <div class="bi">
             <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="#4da3ff" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="#4da3ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            LeakScan
+            情報漏洩チェッカー2026
           </div>
           <h2 id="ttl">漏洩データベースと照合しています</h2>
           <p id="desc">Gmailの検索機能で、該当サービスからのメールがあるかだけを確認しています。本文は読み取りません。このタブは触らずにお待ちください。</p>

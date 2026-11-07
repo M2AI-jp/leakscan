@@ -22,7 +22,8 @@ body{background:#0c0f14;color:#e8ecf3;
   padding:66px 72px;display:flex;flex-direction:column;justify-content:space-between}
 .top{display:flex;align-items:center;gap:13px}
 .top svg{width:38px;height:38px}
-.top b{font-size:30px;font-weight:800;letter-spacing:-.02em;color:#fff}
+.top b{font-size:30px;font-weight:800;letter-spacing:-.01em;color:#fff}
+.top b i{font-style:normal;font-size:20px;color:#6b7688;padding-left:4px}
 .k{font-size:33px;font-weight:800;color:#9aa5b8;letter-spacing:-.01em;margin-bottom:14px}
 .n{font-size:128px;font-weight:800;line-height:1;letter-spacing:-.045em;color:#fff;
   font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:12px}
@@ -38,7 +39,7 @@ body{background:#0c0f14;color:#e8ecf3;
   <svg viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#141923"/>
   <path d="M16 4.5 6 8.4v8.9c0 5.5 4.1 9.5 10 10.7 5.9-1.2 10-5.2 10-10.7V8.4L16 4.5Z" fill="none" stroke="#4da3ff" stroke-width="2.2" stroke-linejoin="round"/>
   <path d="M11.6 16.4l3.3 3.3 6-6.2" fill="none" stroke="#4da3ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  <b>LeakScan</b>
+  <b>情報漏洩チェッカー<i>2026</i></b>
 </div>
 <div>
   <div class="k">2026年に漏洩した個人情報</div>

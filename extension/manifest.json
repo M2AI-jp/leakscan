@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "LeakScan — 個人情報流出チェッカー",
-  "version": "0.1.7",
+  "name": "情報漏洩チェッカー2026",
+  "version": "0.1.8",
   "description": "公表された国内の情報漏洩事案とGmailの送信元だけをブラウザ内で照合し、自分が使っているサービスの漏洩を特定します。外部送信なし。",
   "minimum_chrome_version": "102",
   "content_security_policy": {
@@ -21,7 +21,7 @@
   },
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "LeakScan — 個人情報流出チェッカー",
+    "default_title": "情報漏洩チェッカー2026",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
@@ -49,5 +49,5 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "short_name": "LeakScan"
+  "short_name": "情報漏洩チェッカー"
 }

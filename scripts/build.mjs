@@ -128,6 +128,45 @@ try {
     : `共有画像: ${og.records_total.toLocaleString('en-US')}件のまま。いまは ${stats.records_total.toLocaleString('en-US')}件 → node scripts/og.mjs で作り直してください`;
 } catch (_) {}
 
+/* ---- 画面見本の数字 ----
+ * test/*-preview.html の「574件の事案を照合」は手で書いてあった。
+ * この見本はストアの掲載画像のもとでもあるので、ここが古いと
+ * 公開する画像に古い件数が焼き込まれる（実際そうなっていた）。
+ * データから入れ直す。中身から決まる値なので、CIの再生成確認は通る。 */
+const PREVIEWS = ['test/popup-preview.html', 'test/results-preview.html', 'test/options-preview.html'];
+let previewFixed = 0;
+for (const f of PREVIEWS) {
+  try {
+    const before = readFileSync(d(f), 'utf8');
+    const after = before
+      .replace(/\b(scanned\s*:\s*)\d+/g, `$1${stats.incidents}`)
+      .replace(/\b(count\s*:\s*)\d+/g, `$1${stats.incidents}`)
+      .replace(/\b((?:db)?[Vv]ersion\s*:\s*')[\d.]+(')/g, `$1${meta.version}$2`);
+    if (after !== before) { writeFileSync(d(f), after); previewFixed++; }
+  } catch (_) {}
+}
+
+/* ---- 商品名に入れた年と、データの年が合っているか ----
+ * 名前を「情報漏洩チェッカー2026」にした。収集スクリプトは年で絞っていないので、
+ * 2027年の事案が公表されれば自動で入ってくる。そのとき名前とサイトの見出しは
+ * 手で直すしかない。放っておけば、今日直したのと同じ間違い
+ * （誰も書き換えない手書きの値）になる。だからずれたらここで言う。
+ *
+ * 年は商品名そのものから読む。ここにもう一度 '2026' と書くと、
+ * 名前を変えたときに片方だけ古くなるため。 */
+const brandName = JSON.parse(readFileSync(d('extension/manifest.json'), 'utf8')).name;
+const brandYear = (brandName.match(/20\d\d/) || [])[0] || '';
+const dataYears = [...new Set(entries
+  .map((e) => String(e.disclosed || '').slice(0, 4))
+  .filter((y) => /^20\d\d$/.test(y)))].sort();
+const strayYears = brandYear ? dataYears.filter((y) => y !== brandYear) : [];
+const yearNote = !brandYear
+  ? `収録年: ${dataYears.join('・')}（商品名に年は入っていません）`
+  : strayYears.length
+    ? `収録年に ${strayYears.join('・')} が混ざっています。商品名は「${brandName}」のまま。`
+      + ' extension/manifest.json と site/*.html の見出し・タイトル、scripts/og.mjs を見直してください'
+    : `収録年: ${dataYears.join('・')}（商品名の ${brandYear} と一致）`;
+
 console.log(`${entries.length} 件 / ${stats.companies} 社 / ドメイン ${stats.domains} 件`);
 console.log('生成: data/breaches.csv, data/domains.tsv, data/stats.json');
 console.log(stamped
@@ -137,3 +176,7 @@ console.log('同期: site/data/, extension/data/');
 console.log(`CSP: ページ内スクリプト ${csp.hashes.length} 件のハッシュ` +
   (csp.changed ? ' → site/_headers を更新' : '（site/_headers は最新）'));
 console.log(ogNote);
+console.log(yearNote);
+console.log(previewFixed
+  ? `画面見本: ${previewFixed}ファイルの件数を ${stats.incidents} に直した → node scripts/shots.mjs で撮り直してください`
+  : `画面見本: ${stats.incidents}件（最新）`);

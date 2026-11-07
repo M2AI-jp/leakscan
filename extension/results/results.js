@@ -146,11 +146,11 @@
       const SITE = 'https://leakscan.matsunai.com';
       let text;
       if (n === 0) {
-        text = `LeakScanでGmailを調べたら、使っているサービスの漏洩は0件でした。`
+        text = `情報漏洩チェッカー2026でGmailを調べたら、使っているサービスの漏洩は0件でした。`
              + `（${report.scanned}件の公表事案と照合）`;
       } else {
         const hi = high ? `うち危険度「高」が${high}件。` : '';
-        text = `LeakScanでGmailを調べたら、使っているサービスのうち${n}件で情報漏洩が公表されていました。${hi}`
+        text = `情報漏洩チェッカー2026でGmailを調べたら、使っているサービスのうち${n}件で情報漏洩が公表されていました。${hi}`
              + `（${report.scanned}件の公表事案と照合）`;
       }
       const full = `${text}\n${SITE}`;

@@ -107,7 +107,7 @@ curl -I https://leakscan.matsunai.com/data/breaches.json | grep -i access-contro
 1. Chromeで `chrome://extensions` を開く
 2. 右上の「デベロッパーモード」をオン
 3. 「パッケージ化されていない拡張機能を読み込む」→ `extension/` フォルダを選択
-4. Gmailにログインした状態で、ツールバーのLeakScanアイコン → 「スキャン開始」
+4. Gmailにログインした状態で、ツールバーの拡張機能アイコン → 「スキャン開始」
 
 ### 配布用zipを作る
 

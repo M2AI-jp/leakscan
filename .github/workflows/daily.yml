@@ -73,7 +73,9 @@ jobs:
           node scripts/build.mjs | tee /tmp/build.txt
           # 共有画像の作り直しにはブラウザが要るのでここでは作れない。
           # 件数がずれたら下のIssueで知らせる。
-          echo "og_stale=$(grep -cE '作り直してください|記録がありません' /tmp/build.txt || true)" >> "$GITHUB_OUTPUT"
+          echo "og_stale=$(grep -cE '作り直してください|記録がありません|撮り直してください' /tmp/build.txt || true)" >> "$GITHUB_OUTPUT"
+          # 商品名に「2026」が入っている。2027年の事案が入ったら名前を直す必要がある。
+          echo "year_stray=$(grep -c '混ざっています' /tmp/build.txt || true)" >> "$GITHUB_OUTPUT"
           node test/match.test.js
           node test/domains.test.mjs
           node test/feed.test.mjs
@@ -120,7 +122,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: 要確認のIssueを作成・更新
-        if: steps.watch.outputs.changed != '0' || steps.collect.outputs.skipped != '0' || steps.links.outcome == 'failure' || steps.gen.outputs.og_stale != '0'
+        if: steps.watch.outputs.changed != '0' || steps.collect.outputs.skipped != '0' || steps.links.outcome == 'failure' || steps.gen.outputs.og_stale != '0' || steps.gen.outputs.year_stray != '0'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -143,7 +145,7 @@ jobs:
             echo
             echo "## 生成物"
             echo '```'
-            tail -6 /tmp/build.txt 2>/dev/null || echo "（なし）"
+            tail -8 /tmp/build.txt 2>/dev/null || echo "（なし）"
             echo '```'
             echo
             echo "## 出典リンクの生存確認"
@@ -157,6 +159,7 @@ jobs:
             echo "3. \`data/breaches.json\` に追記し、\`node scripts/validate.mjs && node scripts/build.mjs\` を実行"
             echo "4. リンク切れがあれば出典URLを差し替える（魚拓も可）"
             echo "5. 上の「生成物」が共有画像の作り直しを求めていたら \`node scripts/og.mjs\` を実行してコミットする"
+            echo "6. 上の「生成物」が年のずれを言っていたら、商品名とサイトの見出しの年を直す"
           } > /tmp/body.md
           EXISTING=$(gh issue list --label triage --state open --limit 1 --json number --jq '.[0].number // empty')
           if [ -n "$EXISTING" ]; then

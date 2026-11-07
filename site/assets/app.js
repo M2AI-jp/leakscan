@@ -15,7 +15,17 @@
       const dark = document.documentElement.dataset.theme
         ? document.documentElement.dataset.theme === 'dark'
         : matchMedia('(prefers-color-scheme: dark)').matches;
-      btn.textContent = dark ? '☀ Light' : '☾ Dark';
+      /* 記号と文字を分けておく。名前を日本語にしてヘッダが横に伸びたので、
+         狭い画面では文字のほうだけCSSで畳む。記号だけでも分かるよう名前を付ける。 */
+      const span = (cls, txt) => {
+        const el = document.createElement('span');
+        el.className = cls;
+        el.textContent = txt;
+        return el;
+      };
+      btn.replaceChildren(span('tt-i', dark ? '☀' : '☾'),
+                          span('tt-l', dark ? ' Light' : ' Dark'));
+      btn.setAttribute('aria-label', dark ? 'ライトモードにする' : 'ダークモードにする');
     };
     paint();
     btn.addEventListener('click', () => {

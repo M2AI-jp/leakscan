@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>LeakScan</title>
+<title>情報漏洩チェッカー2026</title>
 <meta name="color-scheme" content="dark light">
 <link rel="stylesheet" href="/extension/ui/style.css">
 <script>
@@ -31,8 +31,8 @@ window.chrome = {
     openOptionsPage(){},
     sendMessage: async (msg, cb) => {
       let res;
-      if (msg.type === 'LEAKSCAN_GET_VIEW') res = { state:{status:'done'}, options:{}, db:{count:574,version:'2026.11.06',source:'remote',stale:false},
-        report:{generatedAt:Date.now(),dbVersion:'2026.11.06',dbSource:'remote',accountIndex:0,scanned:574,queries:37,matches:FAKE} };
+      if (msg.type === 'LEAKSCAN_GET_VIEW') res = { state:{status:'done'}, options:{}, db:{count:590,version:'2026.11.07',source:'remote',stale:false},
+        report:{generatedAt:Date.now(),dbVersion:'2026.11.07',dbSource:'remote',accountIndex:0,scanned:590,queries:37,matches:FAKE} };
       else if (msg.type === 'LEAKSCAN_GET_DB') res = { meta:await fetch('/extension/data/meta.json').then(r=>r.json()), entries:maskEntries(await fetch('/extension/data/breaches.json').then(r=>r.json())) };
       else res = { ok:true };
       if (cb) cb(res); return res;
@@ -48,7 +48,7 @@ window.chrome = {
   <div class="ptop">
     <span class="brand">
       <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 4.5 7v10.2c0 6.3 4.7 10.9 11.5 12.3 6.8-1.4 11.5-6 11.5-12.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 16.2l3.6 3.6L21.5 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      LeakScan
+      <span class="bt">情報漏洩チェッカー<i>2026</i></span>
     </span>
     <a class="gear" href="#" id="opts">設定</a>
   </div>

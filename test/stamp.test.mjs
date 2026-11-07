@@ -2,6 +2,8 @@
  *
  *   node test/stamp.test.mjs
  *
+ * 商品名に入れた年とデータの年がずれたときに気づけるかも、ここで見る。
+ *
  * これが無かったあいだ、data/meta.json の updated は手で書いた値のままだった。
  * 日次ジョブが事案を追記してもサイトの「最終更新」は動かず、
  * 新しい事案が古い日付のまま出ていた。気づけなかったのはテストが無かったため。
@@ -109,6 +111,48 @@ ok('確認日は更新日より古く表示されない', () => {
   assert.equal(lastChecked({ updated: '2026-11-06', checked: '2026-11-01' }), '2026-11-06', '逆転していたら新しい方');
 });
 
+/* ---------------------------------------------- 商品名の年 */
+/* 名前に「2026」が入っている。収集は年で絞っていないので、2027年の事案は自動で入る。
+ * 名前とサイトの見出しは手で直すしかないので、ずれたら build.mjs が言うこと。 */
+const manifestPath = join(WORK, 'extension/manifest.json');
+const setName = (name) => {
+  const m = JSON.parse(readFileSync(manifestPath, 'utf8'));
+  m.name = name;
+  writeFileSync(manifestPath, JSON.stringify(m, null, 2) + '\n');
+};
+const brandName = JSON.parse(readFileSync(manifestPath, 'utf8')).name;
+
+ok('商品名に年が入っている（この検査が意味を持つ前提）', () => {
+  assert.match(brandName, /20\d\d/, `商品名「${brandName}」に年がない`);
+});
+
+ok('いまのデータは商品名の年と一致している', () => {
+  assert.match(build(), /収録年: .*（商品名の 20\d\d と一致）/);
+});
+
+ok('別の年の事案が入ると知らせる', () => {
+  const list = JSON.parse(readFileSync(bpath, 'utf8'));
+  const next = String(Number(brandName.match(/20\d\d/)[0]) + 1);
+  list.push({ ...list[0], id: 'test-' + next, disclosed: next + '-01-15' });
+  writeFileSync(bpath, JSON.stringify(list, null, 2) + '\n');
+  const out = build();
+  assert.match(out, new RegExp(`収録年に ${next} が混ざっています`));
+  assert.ok(out.includes(brandName), '直す場所として商品名を出すこと');
+});
+
+ok('年が混ざっていても生成自体は止めない（データの配信を優先する）', () => {
+  const m = JSON.parse(readFileSync(join(WORK, 'site/data/meta.json'), 'utf8'));
+  assert.ok(m.updated, 'site/data/meta.json が書かれていない');
+});
+
+ok('商品名から年を外したら、ずれの指摘はしない', () => {
+  setName('情報漏洩チェッカー');
+  const out = build();
+  assert.match(out, /商品名に年は入っていません/);
+  assert.doesNotMatch(out, /混ざっています/);
+  setName(brandName);
+});
+
 rmSync(WORK, { recursive: true, force: true });
-console.log(`検査（更新日の押し方）: ${pass} 件合格` + (fail ? ` / ${fail} 件失敗` : ''));
+console.log(`検査（更新日と商品名の年）: ${pass} 件合格` + (fail ? ` / ${fail} 件失敗` : ''));
 process.exit(fail ? 1 : 0);
