@@ -71,6 +71,7 @@
         'beforeend',
         sectors(entries).map((s) => `<option value="${window.LeakScan.esc(s)}">${window.LeakScan.esc(s)}</option>`).join('')
       );
+      $('#checked').textContent = window.LeakScan.fmtDate(window.LeakScan.lastChecked(meta));
       $('#updated').textContent = window.LeakScan.fmtDate(meta.updated);
       fillMethod(entries, meta);
       ['input', 'change'].forEach((ev) => {

@@ -47,7 +47,7 @@
       <p class="eyebrow">
         <span class="live" aria-hidden="true"></span>
         <span class="eyebrow-t">2026年・国内で公表された情報漏洩</span>
-        <span class="eyebrow-u">毎朝 自動収集　最終更新 <b id="h-updated">—</b></span>
+        <span class="eyebrow-u">毎朝 自動収集　最終確認 <b id="h-checked">—</b></span>
       </p>
 
       <div class="bignum">
@@ -199,7 +199,8 @@
     <div class="foot-meta">
       <span id="count-line">—</span>
       <span class="dot">・</span><span><b>毎朝 8:00 自動収集</b></span>
-      <span class="dot">・</span><span>最終更新 <span id="updated">—</span></span>
+      <span class="dot">・</span><span>最終確認 <span id="checked">—</span></span>
+      <span class="dot">・</span><span>データ更新 <span id="updated">—</span></span>
       <span class="dot">・</span><span>解析・Cookieなし</span>
     </div>
     <div class="copyright">© 2024 マツナイ合同会社</div>
@@ -236,8 +237,9 @@
     const official = entries.filter((e) => window.LeakScan.hasOfficial(e)).length;
     document.getElementById('h-official').textContent =
       Math.round((official / entries.length) * 100) + '%';
-    document.getElementById('h-updated').textContent =
-      String(meta.updated || '').slice(5).replace('-', '/');
+    const checked = window.LeakScan.lastChecked(meta);
+    document.getElementById('h-checked').textContent = checked.slice(5).replace('-', '/');
+    document.getElementById('checked').textContent = window.LeakScan.fmtDate(checked);
     document.getElementById('updated').textContent = window.LeakScan.fmtDate(meta.updated);
     document.getElementById('n-all').textContent = entries.length;
     var esc = window.LeakScan.esc;

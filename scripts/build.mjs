@@ -2,6 +2,7 @@
 /* LeakScan — derive publishable artifacts from data/ and sync them to the
  * site and the extension. Run after editing data/breaches.json. */
 import { readFileSync, writeFileSync, copyFileSync, mkdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { updateHeaders } from './csp.mjs';
@@ -18,6 +19,25 @@ const { hasOfficialSource } = await import('./lib/sources.mjs');
  * 出典から機械的に決まるので、データを直す必要はない。 */
 for (const e of entries) e.official = hasOfficialSource(e);
 writeFileSync(d('data/breaches.json'), JSON.stringify(entries, null, 2) + '\n');
+
+/* ---- derived: updated / version ----
+ * ここは data/meta.json に手で書いていた。だから日次ジョブが事案を追記しても
+ * サイトの「最終更新」は動かず、新しい事案が古い日付のまま出ていた。
+ *
+ * 中身の指紋を meta.json に持たせ、指紋が変わった時だけ日付を押す。
+ * 同じデータで何度ビルドしても差分は出ないので、CIの「生成物が最新か確認」は通る。
+ * 指紋の対象は事案そのもの（この日付が答えるのは「表示しているデータはいつのものか」で、
+ * 区分値の訳語を直したときに動いてほしくはない）。
+ * 日付は日本時間で取る。収集が走るのは日本の朝で、CIはUTCのため。 */
+const fingerprint = createHash('sha256').update(JSON.stringify(entries)).digest('hex').slice(0, 16);
+const jstToday = () => new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+const stamped = meta.fingerprint !== fingerprint;
+if (stamped) {
+  meta.fingerprint = fingerprint;
+  meta.updated = jstToday();
+  meta.version = meta.updated.replace(/-/g, '.');
+  writeFileSync(d('data/meta.json'), JSON.stringify(meta, null, 2) + '\n');
+}
 
 const csvCell = (v) => {
   const s = v == null ? '' : String(v);
@@ -99,6 +119,9 @@ const csp = updateHeaders();
 
 console.log(`${entries.length} 件 / ${stats.companies} 社 / ドメイン ${stats.domains} 件`);
 console.log('生成: data/breaches.csv, data/domains.tsv, data/stats.json');
+console.log(stamped
+  ? `更新日: ${meta.updated} に押した（事案の中身が変わったため）`
+  : `更新日: ${meta.updated} のまま（事案の中身は変わっていない）`);
 console.log('同期: site/data/, extension/data/');
 console.log(`CSP: ページ内スクリプト ${csp.hashes.length} 件のハッシュ` +
   (csp.changed ? ' → site/_headers を更新' : '（site/_headers は最新）'));

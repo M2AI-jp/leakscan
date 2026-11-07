@@ -62,4 +62,4 @@
   Cross-Origin-Opener-Policy: same-origin
   Permissions-Policy: accelerometer=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()
   # 次の行は node scripts/csp.mjs が書き換える（ページ内スクリプトのハッシュを含むため、手で直さない）
-  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-iHT+P7bdnn33v3SQ6zkQaX+nMWDjC52GTlb6VoNqMvg=' 'sha256-a/nXMhcu+7B3Y7bWTwwx7nxV0iIrXcgwEaAUZdSeNG0=' 'sha256-QT9vxYyipykBiIjbVgVonRhcgJnUjWB5syHZY5khfGA='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-2kHTPzMvbZ4qkLfE3I9aYDWE8xKDAZ1ZKgOMukCgb1E=' 'sha256-a/nXMhcu+7B3Y7bWTwwx7nxV0iIrXcgwEaAUZdSeNG0=' 'sha256-QT9vxYyipykBiIjbVgVonRhcgJnUjWB5syHZY5khfGA='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests

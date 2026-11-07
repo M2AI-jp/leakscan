@@ -120,6 +120,15 @@
       box.style.fontSize = Math.max(20, Math.floor(base * (avail / need) * 0.99)) + 'px';
     }
   };
+  /** 最後に情報源を見にいった日。
+   *  meta.checked は日次ジョブが毎日押す。updated はデータが変わった日だけ動く。
+   *  古い配信物に checked が無い場合もあるので updated に落とす。
+   *  「確認」が「更新」より古く見えるのはおかしいので、新しい方を採る。 */
+  LeakScan.lastChecked = function (meta) {
+    const u = String((meta && meta.updated) || '');
+    const c = String((meta && meta.checked) || '');
+    return c > u ? c : u;
+  };
   LeakScan.fmtDate = function (iso) {
     if (!iso) return '';
     const [y, m, d] = iso.split('-');

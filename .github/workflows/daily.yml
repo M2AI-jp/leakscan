@@ -2,7 +2,12 @@ name: Daily update
 
 on:
   schedule:
+    # GitHubの定時実行は「できれば動かす」扱いで、混雑時は遅れるか流れる。
+    # 1日1回だけだと流れた日が丸ごと落ちるので、拾い直す窓を置いてある。
+    # 2回目以降は、新しい事案が無ければ何も変わらず、コミットもしない。
     - cron: '0 23 * * *'   # 08:00 JST
+    - cron: '0 2 * * *'    # 11:00 JST（8時の回が流れたとき）
+    - cron: '0 6 * * *'    # 15:00 JST（それも流れたとき）
   workflow_dispatch:
 
 permissions:
@@ -62,6 +67,7 @@ jobs:
 
       - name: データセットを検証して生成物を更新
         run: |
+          node scripts/stamp.mjs
           node scripts/validate.mjs
           node scripts/build.mjs
           node test/match.test.js
@@ -69,6 +75,7 @@ jobs:
           node test/feed.test.mjs
           node test/db-mirror.test.mjs
           node test/sanitize.test.mjs
+          node test/stamp.test.mjs
 
       - name: 検証に失敗したら自動追記を取り消す
         if: failure()
