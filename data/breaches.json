@@ -731,16 +731,16 @@
       ]
     },
     "disclosed": "2026-11-05",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "最大8,532件（可能性）",
+    "records_num": 8532,
     "categories": [
       "address",
       "email",
       "name",
       "phone"
     ],
-    "status": "investigating",
-    "scope": "ecocoが公表した認証情報の悪用・不正ログインによる事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。詳細は出典の公式発表を参照。",
+    "status": "possible",
+    "scope": "ecocoが公表した認証情報の悪用・不正ログインによる事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。公表件数は最大8,532件（可能性）。詳細は出典の公式発表を参照。",
     "cause": "credential",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -2631,13 +2631,17 @@
       ]
     },
     "disclosed": "2026-11-03",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "444,000件",
+    "records_num": 444000,
     "categories": [
-      "unknown"
+      "address",
+      "bank",
+      "email",
+      "name",
+      "phone"
     ],
-    "status": "investigating",
-    "scope": "あいおいニッセイ同和損保が公表した不正アクセスによる事案。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "あいおいニッセイ同和損保が公表した不正アクセスによる事案。漏洩した情報は住所、銀行口座情報、メールアドレス、氏名、電話番号。公表件数は444,000件。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
     "cause": "unauthorized_access",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -2779,11 +2783,10 @@
     "records": "公表なし",
     "records_num": null,
     "categories": [
-      "email",
-      "name"
+      "email"
     ],
     "status": "investigating",
-    "scope": "横浜市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス、氏名。発覚は2026年11月1日。詳細は出典の公式発表を参照。",
+    "scope": "横浜市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。発覚は2026年11月1日。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -2850,13 +2853,16 @@
       ]
     },
     "disclosed": "2026-11-03",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "37,000件",
+    "records_num": 37000,
     "categories": [
-      "unknown"
+      "address",
+      "email",
+      "name",
+      "phone"
     ],
-    "status": "investigating",
-    "scope": "三井住友海上火災保険株式会社が公表した不正アクセスによる事案。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "三井住友海上火災保険株式会社が公表した不正アクセスによる事案。漏洩した情報は住所、メールアドレス、氏名、電話番号。公表件数は37,000件。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
     "cause": "unauthorized_access",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -3226,7 +3232,7 @@
       "unknown"
     ],
     "status": "investigating",
-    "scope": "株式会社テレビ東京ダイレクトが公表した不正アクセスによる事案。詳細は出典の公式発表を参照。",
+    "scope": "株式会社テレビ東京ダイレクトが公表した不正アクセスによる事案。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
     "cause": "unauthorized_access",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -3413,13 +3419,13 @@
       ]
     },
     "disclosed": "2026-11-02",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "4,430,000件",
+    "records_num": 4430000,
     "categories": [
       "email"
     ],
-    "status": "investigating",
-    "scope": "株式会社 Fanplusが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "株式会社 Fanplusが公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は4,430,000件。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -5251,13 +5257,13 @@
       ]
     },
     "disclosed": "2026-10-30",
-    "records": "最大110,000件（可能性）",
-    "records_num": 110000,
+    "records": "30,337件",
+    "records_num": 30337,
     "categories": [
       "email"
     ],
-    "status": "possible",
-    "scope": "株式会社JERAが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大110,000件（可能性）。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "株式会社JERAが公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は30,337件。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -7709,8 +7715,8 @@
       ]
     },
     "disclosed": "2026-10-28",
-    "records": "最大1,557件（可能性）",
-    "records_num": 1557,
+    "records": "最大1,687件（可能性）",
+    "records_num": 1687,
     "categories": [
       "address",
       "dob",
@@ -7720,7 +7726,7 @@
       "phone"
     ],
     "status": "possible",
-    "scope": "特定非営利活動法人大学コンソーシアム大阪が公表した脆弱性の悪用による事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、ログイン認証情報、電話番号。公表件数は最大1,557件（可能性）。発覚は2026年10月21日。詳細は出典の公式発表を参照。",
+    "scope": "特定非営利活動法人大学コンソーシアム大阪が公表した脆弱性の悪用による事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、ログイン認証情報、電話番号。公表件数は最大1,687件（可能性）。発覚は2026年10月21日。詳細は出典の公式発表を参照。",
     "cause": "vulnerability",
     "ai_link": "unconfirmed",
     "auto": true,

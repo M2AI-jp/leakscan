@@ -2,12 +2,12 @@
   "version": "2026.11.07",
   "incidents": 590,
   "companies": 555,
-  "records_total": 640139728,
+  "records_total": 644979727,
   "records_note": "重複を含む延べ件数。公表値の単純合計で、実人数ではない。",
   "by_status": {
     "possible": 281,
-    "confirmed": 134,
-    "investigating": 175
+    "confirmed": 138,
+    "investigating": 171
   },
   "by_cause": {
     "unauthorized_access": 142,
@@ -62,7 +62,7 @@
     "unconfirmed": 589,
     "supply_chain": 1
   },
-  "high_severity": 95,
+  "high_severity": 96,
   "official_sources": 410,
   "auto_added": 453,
   "matchable": 590,

@@ -15,18 +15,18 @@
     "name": "CVE Registry ブログ",
     "weight": "high",
     "fingerprint": "ca859f71400a9277b0462fbcabc5269d",
-    "checked": "2026-11-07T01:59:33.200Z"
+    "checked": "2026-11-07T02:28:17.804Z"
   },
   "https://cacco.co.jp/frauddetection/media/news/3522/": {
     "name": "Cacco 個人情報漏洩事件まとめ",
     "weight": "medium",
-    "fingerprint": "985756760908c4ffce53f1c01bd5144f",
-    "checked": "2026-11-07T01:59:35.317Z"
+    "fingerprint": "28ecc80bd7fe87a70294bc00dc9e94a3",
+    "checked": "2026-11-07T02:28:18.822Z"
   },
   "https://www.gate02.ne.jp/lab/": {
     "name": "サイバーセキュリティラボ（gate02）",
     "weight": "medium",
     "fingerprint": "b77853a11d289602879053e3816a37b4",
-    "checked": "2026-11-07T01:59:36.436Z"
+    "checked": "2026-11-07T02:28:20.812Z"
   }
 }
