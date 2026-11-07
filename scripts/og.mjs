@@ -5,7 +5,7 @@
  * 数字は data/stats.json から入れるので、件数が増えれば作り直すだけで追従する。
  * Chromium は おことづけの広告工場のものを借りる（あちらには書き込まない）。 */
 import { createRequire } from 'node:module';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -60,4 +60,25 @@ await page.waitForTimeout(300);
 mkdirSync(join(ROOT, 'site/assets'), { recursive: true });
 await page.screenshot({ path: join(ROOT, 'site/assets/og.png') });
 await browser.close();
+
+/* 画像の中の数字と og:image:alt が食い違わないよう、alt はここで書く。
+ * 手で写すと、件数が増えたときに必ずどちらかが取り残される。 */
+const plain = stats.records_total.toLocaleString('en-US');
+const alt = `2026年に漏洩した個人情報 ${plain}件`;
+let touched = 0;
+const SITE = join(ROOT, 'site');
+for (const f of readdirSync(SITE).filter((x) => x.endsWith('.html')).sort()) {
+  const path = join(SITE, f);
+  const before = readFileSync(path, 'utf8');
+  const after = before.replace(/(<meta property="og:image:alt" content=")[^"]*(">)/, `$1${alt}$2`);
+  if (after !== before) { writeFileSync(path, after); touched++; }
+}
+
+/* 何件で作った画像かを残す。build.mjs がこれを見て、古くなっていたら教える
+ * （画像の生成にはブラウザが要るので、CIでは作り直せない）。 */
+writeFileSync(join(ROOT, 'site/assets/og.json'),
+  JSON.stringify({ records_total: stats.records_total, incidents: stats.incidents }, null, 2) + '\n');
+
 console.log('生成: site/assets/og.png (1200x630)');
+console.log(`alt: ${alt}` + (touched ? ` → ${touched}ページを更新` : '（変更なし）'));
+console.log('記録: site/assets/og.json');

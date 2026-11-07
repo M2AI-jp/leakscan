@@ -117,6 +117,17 @@ for (const f of ['breaches.csv', 'domains.tsv', 'stats.json']) {
    生成物の一つとして扱う。 */
 const csp = updateHeaders();
 
+/* ---- 共有画像が古くなっていないか ----
+ * SNSに貼ったときに出る画像には件数が焼き込んである。作り直しにはブラウザが要るので
+ * CIでは作れない。せめて、ずれたことに気づけるようにしておく。 */
+let ogNote = '共有画像: 記録がありません（node scripts/og.mjs で作れます）';
+try {
+  const og = JSON.parse(readFileSync(d('site/assets/og.json'), 'utf8'));
+  ogNote = og.records_total === stats.records_total
+    ? `共有画像: ${og.records_total.toLocaleString('en-US')}件（最新）`
+    : `共有画像: ${og.records_total.toLocaleString('en-US')}件のまま。いまは ${stats.records_total.toLocaleString('en-US')}件 → node scripts/og.mjs で作り直してください`;
+} catch (_) {}
+
 console.log(`${entries.length} 件 / ${stats.companies} 社 / ドメイン ${stats.domains} 件`);
 console.log('生成: data/breaches.csv, data/domains.tsv, data/stats.json');
 console.log(stamped
@@ -125,3 +136,4 @@ console.log(stamped
 console.log('同期: site/data/, extension/data/');
 console.log(`CSP: ページ内スクリプト ${csp.hashes.length} 件のハッシュ` +
   (csp.changed ? ' → site/_headers を更新' : '（site/_headers は最新）'));
+console.log(ogNote);
