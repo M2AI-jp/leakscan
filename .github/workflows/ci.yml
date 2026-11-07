@@ -26,6 +26,7 @@ jobs:
           node test/db-mirror.test.mjs
           node test/sanitize.test.mjs
           node test/stamp.test.mjs
+          node test/site-load.test.mjs
 
       - name: 生成物が最新か確認
         run: |

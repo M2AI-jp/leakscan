@@ -49,19 +49,42 @@
       .catch(() => null);
   }
 
+  /** 配信元が乗っ取られても画面に変な文字を出さないよう、日付は形で絞る。 */
+  const DATE_OK = /^\d{4}-\d{2}-\d{2}$/;
+  /* typeof で文字列に限る。String(v) で寄せると、toString を持つ値まで
+     日付として通ってしまう（本物のJSONには現れないが、絞っておく方が安い）。 */
+  const day = (v) => (typeof v === 'string' && DATE_OK.test(v) ? v : '');
+
   LeakScan.load = async function () {
     const [meta, entries, ghMeta] = await Promise.all([
       fetch('data/meta.json', { cache: 'no-cache' }).then((r) => r.json()),
       fetch('data/breaches.json', { cache: 'no-cache' }).then((r) => r.json()),
       ghFetch('meta.json')
     ]);
-    if (ghMeta && ghMeta.updated && String(ghMeta.updated) > String(meta.updated)) {
+    const site = { meta, entries, from: 'site' };
+    if (!ghMeta || typeof ghMeta !== 'object') return site;
+
+    /* あちらのデータが新しい日。事案ごと取り直す。 */
+    if (day(ghMeta.updated) > day(meta.updated)) {
       const ghEntries = await ghFetch('breaches.json');
       if (Array.isArray(ghEntries) && ghEntries.length) {
         return { meta: ghMeta, entries: ghEntries, from: 'github' };
       }
+      return site;
     }
-    return { meta, entries, from: 'site' };
+
+    /* 新しい事案が無かった日。データは同じだが「情報源を見にいった日」は進んでいる。
+       事案を取り直す必要はないが、日付だけは新しい方を出す。
+       さもないと、自動収集が毎朝動いていても、デプロイした日のまま古く見える
+       （配信物はデプロイした時にしか変わらないため）。 */
+    const ghChecked = day(ghMeta.checked);
+    if (ghChecked && ghChecked > LeakScan.lastChecked(meta)) {
+      const merged = {};
+      for (const k in meta) merged[k] = meta[k];
+      merged.checked = ghChecked;
+      return { meta: merged, entries, from: 'site+gh' };
+    }
+    return site;
   };
 
   /* ---------- severity ----------
