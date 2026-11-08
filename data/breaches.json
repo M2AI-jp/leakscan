@@ -1,5 +1,73 @@
 [
   {
+    "id": "auto-20261107-715e4a",
+    "company": "株式会社シグナルトーク",
+    "service": "株式会社シグナルトーク",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "株式会社シグナルトーク",
+        "シグナルトーク"
+      ]
+    },
+    "disclosed": "2026-11-07",
+    "records": "1,855,578件",
+    "records_num": 1855578,
+    "categories": [
+      "email",
+      "login_credential"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社シグナルトークが公表した不正アクセスによる事案。漏洩した情報はメールアドレス、ログイン認証情報。公表件数は1,855,578件。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "シグナルトークの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261107-715e4a/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261107-d67706",
+    "company": "使えるねっと",
+    "service": "使えるねっと",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "tsukaeru.net"
+      ],
+      "names": [
+        "使えるねっと"
+      ]
+    },
+    "disclosed": "2026-11-07",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "login_credential"
+    ],
+    "status": "investigating",
+    "scope": "使えるねっとが公表した不正アクセスによる事案。漏洩した可能性がある情報はログイン認証情報。発覚は2026年11月6日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "使えるねっと 公式発表",
+        "url": "https://www.tsukaeru.net/news/20261107/"
+      },
+      {
+        "title": "使えるねっとの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261107-d67706/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261106-0f5839",
     "company": "特定非営利活動法人日本ネットワークセキュリティ協会",
     "service": "特定非営利活動法人日本ネットワークセキュリティ協会",
@@ -264,6 +332,47 @@
     "official": true
   },
   {
+    "id": "auto-20261106-a33aef",
+    "company": "株式会社山陰合同銀行",
+    "service": "株式会社山陰合同銀行",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "gogin.co.jp"
+      ],
+      "names": [
+        "株式会社山陰合同銀行",
+        "山陰合同銀行"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "1,585件",
+    "records_num": 1585,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社山陰合同銀行が公表した委託先・サプライヤの侵害による事案。漏洩した情報は住所、生年月日、メールアドレス、氏名、電話番号。公表件数は1,585件。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社山陰合同銀行 公式発表",
+        "url": "https://www.gogin.co.jp/newsrelease/common/attachmentfile/attachmentfile-file-5028.pdf"
+      },
+      {
+        "title": "山陰合同銀行の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-a33aef/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261106-a72aa1",
     "company": "パシフィックリーグマーケティング株式会社",
     "service": "パシフィックリーグマーケティング株式会社",
@@ -376,6 +485,79 @@
     "official": false
   },
   {
+    "id": "auto-20261105-010cc4",
+    "company": "小田原市立総合医療センター",
+    "service": "小田原市立総合医療センター",
+    "sector": "医療・ヘルスケア",
+    "match": {
+      "domains": [],
+      "names": [
+        "小田原市立総合医療センター"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大22,000件（可能性）",
+    "records_num": 22000,
+    "categories": [
+      "dob",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "小田原市立総合医療センターが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は生年月日、氏名、電話番号。公表件数は最大22,000件（可能性）。発覚は2026年10月18日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "小田原市立総合医療センターの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-010cc4/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261105-034555",
+    "company": "株式会社北洋銀行",
+    "service": "株式会社北洋銀行",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "hokuyobank.co.jp"
+      ],
+      "names": [
+        "株式会社北洋銀行",
+        "北洋銀行"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "株式会社北洋銀行が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、電話番号。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社北洋銀行 公式発表",
+        "url": "https://www.hokuyobank.co.jp/announcement/pdf/20261105_076991.pdf"
+      },
+      {
+        "title": "北洋銀行の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-034555/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261105-1191fa",
     "company": "鈴鹿市",
     "service": "鈴鹿市",
@@ -441,6 +623,46 @@
       {
         "title": "不正アクセス・情報漏えい事案（seory）",
         "url": "https://incidents.seory.co.jp/incidents/20261105-1278c3/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261105-248dbd",
+    "company": "株式会社日産フィナンシャルサービス",
+    "service": "株式会社日産フィナンシャルサービス",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "nissan-fs.co.jp"
+      ],
+      "names": [
+        "株式会社日産フィナンシャルサービス",
+        "日産フィナンシャルサービス"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大236,000件（可能性）",
+    "records_num": 236000,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社日産フィナンシャルサービスが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。公表件数は最大236,000件（可能性）。発覚は2026年11月4日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社日産フィナンシャルサービス 公式発表",
+        "url": "https://www.nissan-fs.co.jp/info_list/pdf/261105.pdf"
+      },
+      {
+        "title": "日産フィナンシャルサービスの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-248dbd/"
       }
     ],
     "official": true
@@ -561,6 +783,46 @@
     "official": true
   },
   {
+    "id": "auto-20261105-692064",
+    "company": "株式会社はとや",
+    "service": "株式会社はとや",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "hatoya.co.jp"
+      ],
+      "names": [
+        "株式会社はとや",
+        "はとや"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "1,085件",
+    "records_num": 1085,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社はとやが公表した委託先・サプライヤの侵害による事案。漏洩した情報は住所、メールアドレス、氏名、電話番号。公表件数は1,085件。発覚は2026年11月4日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社はとや 公式発表",
+        "url": "https://hatoya.co.jp/shop-infomation/20261105"
+      },
+      {
+        "title": "はとやの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-692064/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261105-775bde",
     "company": "NTTタウンページ株式会社",
     "service": "NTTタウンページ株式会社",
@@ -675,6 +937,44 @@
     "official": true
   },
   {
+    "id": "auto-20261105-a88047",
+    "company": "寺田倉庫株式会社",
+    "service": "寺田倉庫株式会社",
+    "sector": "物流",
+    "match": {
+      "domains": [
+        "terrada.co.jp"
+      ],
+      "names": [
+        "寺田倉庫株式会社",
+        "寺田倉庫"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "寺田倉庫株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス、氏名。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "寺田倉庫株式会社 公式発表",
+        "url": "https://www.terrada.co.jp/ja/news/17123/"
+      },
+      {
+        "title": "寺田倉庫の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-a88047/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261105-aeb3da",
     "company": "東京海上ダイレクト損害保険株式会社",
     "service": "東京海上ダイレクト損害保険株式会社",
@@ -713,6 +1013,49 @@
       {
         "title": "不正アクセス・情報漏えい事案（seory）",
         "url": "https://incidents.seory.co.jp/incidents/20261105-aeb3da/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261105-b12edc",
+    "company": "株式会社駿河屋",
+    "service": "株式会社駿河屋",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "suruga-ya.co.jp"
+      ],
+      "names": [
+        "株式会社駿河屋",
+        "駿河屋"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "最大5,500件（可能性）",
+    "records_num": 5500,
+    "categories": [
+      "address",
+      "bank",
+      "dob",
+      "email",
+      "name",
+      "login_credential",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社駿河屋が公表した不正アクセスによる事案。漏洩した可能性がある情報は住所、銀行口座情報、生年月日、メールアドレス、氏名、ログイン認証情報、電話番号。公表件数は最大5,500件（可能性）。発覚は2026年10月30日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社駿河屋 公式発表",
+        "url": "https://www.suruga-ya.co.jp/ja/node/2544"
+      },
+      {
+        "title": "駿河屋の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-b12edc/"
       }
     ],
     "official": true
@@ -1649,6 +1992,78 @@
       {
         "title": "BOATRACE振興会の事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261104-8ca7fb/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261104-989fa9",
+    "company": "松戸市",
+    "service": "松戸市",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.matsudo.chiba.jp"
+      ],
+      "names": [
+        "松戸市"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "最大136,000件（可能性）",
+    "records_num": 136000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "松戸市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大136,000件（可能性）。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "松戸市 公式発表",
+        "url": "https://www.city.matsudo.chiba.jp/shisei/keikaku-kousou/digital/online-sinsei.html"
+      },
+      {
+        "title": "松戸市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-989fa9/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261104-9a9971",
+    "company": "郡山市",
+    "service": "郡山市",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.koriyama.lg.jp"
+      ],
+      "names": [
+        "郡山市"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "郡山市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "郡山市 公式発表",
+        "url": "https://www.city.koriyama.lg.jp/uploaded/attachment/132827.pdf"
+      },
+      {
+        "title": "郡山市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-9a9971/"
       }
     ],
     "official": true

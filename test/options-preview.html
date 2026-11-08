@@ -8,7 +8,7 @@
 <script>
 window.chrome = { runtime: { sendMessage: async (msg, cb) => {
   let res;
-  if (msg.type === 'LEAKSCAN_GET_VIEW') res = { options:{accountIndex:0,includeSpamTrash:false,batchSize:16,dbBase:'https://leakscan.matsunai.com/data/'}, db:{count:590,source:'remote'}, state:{status:'idle'}, report:null };
+  if (msg.type === 'LEAKSCAN_GET_VIEW') res = { options:{accountIndex:0,includeSpamTrash:false,batchSize:16,dbBase:'https://leakscan.matsunai.com/data/'}, db:{count:601,source:'remote'}, state:{status:'idle'}, report:null };
   else if (msg.type === 'LEAKSCAN_SELFTEST') { await new Promise(r=>setTimeout(r,400));
     res = { ok:true, searchBoxFound:true, resetOk:true, noResultsDetected:true, rowSelector:'tr.zA', rowCount:50, senderCount:63, senderAttrsOk:true, paginationDetectable:true, elapsedMs:2140, error:null }; }
   else res = { ok:true };
