@@ -1,28 +1,28 @@
 {
   "version": "2026.11.08",
-  "incidents": 601,
-  "companies": 566,
-  "records_total": 647237475,
+  "incidents": 605,
+  "companies": 569,
+  "records_total": 648237766,
   "records_note": "重複を含む延べ件数。公表値の単純合計で、実人数ではない。",
   "by_status": {
     "confirmed": 141,
-    "investigating": 175,
-    "possible": 285
+    "investigating": 177,
+    "possible": 287
   },
   "by_cause": {
-    "unauthorized_access": 145,
+    "unauthorized_access": 144,
     "malware": 15,
-    "vendor": 289,
+    "vendor": 293,
     "misconfiguration": 45,
     "credential": 32,
-    "vulnerability": 38,
+    "vulnerability": 39,
     "ransomware": 20,
     "unknown": 11,
     "saas": 5,
     "api": 1
   },
   "by_sector": {
-    "未分類": 214,
+    "未分類": 216,
     "IT・ソフトウェア": 16,
     "リサーチ": 10,
     "金融・保険": 43,
@@ -34,7 +34,7 @@
     "物流": 3,
     "飲食": 12,
     "EC": 11,
-    "メディア": 28,
+    "メディア": 29,
     "不動産": 6,
     "アパレル": 4,
     "交通": 15,
@@ -47,7 +47,7 @@
     "エネルギー": 13,
     "旅行": 10,
     "SaaS・共通基盤": 12,
-    "食品": 4,
+    "食品": 5,
     "教育": 14,
     "開発ツール": 1,
     "電子書籍": 1,
@@ -59,14 +59,14 @@
     "メディア・予約": 1
   },
   "by_ai_link": {
-    "unconfirmed": 600,
+    "unconfirmed": 604,
     "supply_chain": 1
   },
   "high_severity": 99,
-  "official_sources": 419,
-  "auto_added": 464,
-  "matchable": 601,
-  "domains": 578,
+  "official_sources": 422,
+  "auto_added": 468,
+  "matchable": 605,
+  "domains": 581,
   "earliest": "2026-01-07",
   "latest": "2026-11-07"
 }
