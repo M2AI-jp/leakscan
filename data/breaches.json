@@ -1,5 +1,120 @@
 [
   {
+    "id": "auto-20261108-117f2e",
+    "company": "株式会社teket",
+    "service": "株式会社teket",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "teket.jp"
+      ],
+      "names": [
+        "株式会社teket",
+        "teket"
+      ]
+    },
+    "disclosed": "2026-11-08",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "株式会社teketが公表した不正アクセスによる事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、電話番号。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社teket 公式発表",
+        "url": "https://corporate.teket.jp/news/privacy_261108"
+      },
+      {
+        "title": "teketの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261108-117f2e/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261107-123ed2",
+    "company": "アソビシステム株式会社",
+    "service": "アソビシステム株式会社",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "asobisystem.com"
+      ],
+      "names": [
+        "アソビシステム株式会社",
+        "アソビシステム"
+      ]
+    },
+    "disclosed": "2026-11-07",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "アソビシステム株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "アソビシステム株式会社 公式発表",
+        "url": "https://asobisystem.com/news/77602/"
+      },
+      {
+        "title": "アソビシステムの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261107-123ed2/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261107-32e3cb",
+    "company": "サトフードサービス株式会社",
+    "service": "サトフードサービス株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "sato-res.com"
+      ],
+      "names": [
+        "サトフードサービス株式会社",
+        "サトフードサービス"
+      ]
+    },
+    "disclosed": "2026-11-07",
+    "records": "318,513件",
+    "records_num": 318513,
+    "categories": [
+      "email"
+    ],
+    "status": "confirmed",
+    "scope": "サトフードサービス株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は318,513件。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "サトフードサービス株式会社 公式発表",
+        "url": "https://www.sato-res.com/blogs/news/n-20261107"
+      },
+      {
+        "title": "サトフードサービスの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261107-32e3cb/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261107-715e4a",
     "company": "株式会社シグナルトーク",
     "service": "株式会社シグナルトーク",
@@ -30,6 +145,48 @@
       }
     ],
     "official": false
+  },
+  {
+    "id": "auto-20261107-bb48ad",
+    "company": "ステップゴルフ株式会社",
+    "service": "ステップゴルフ株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "stepgolf.co.jp"
+      ],
+      "names": [
+        "ステップゴルフ株式会社",
+        "ステップゴルフ"
+      ]
+    },
+    "disclosed": "2026-11-07",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "bank",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "ステップゴルフ株式会社が公表した不正アクセスによる事案。漏洩した可能性がある情報は住所、銀行口座情報、生年月日、メールアドレス、氏名、電話番号。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "ステップゴルフ株式会社 公式発表",
+        "url": "https://www.stepgolf.co.jp/news/261107"
+      },
+      {
+        "title": "ステップゴルフの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261107-bb48ad/"
+      }
+    ],
+    "official": true
   },
   {
     "id": "auto-20261107-d67706",
@@ -102,6 +259,83 @@
       {
         "title": "日本ネットワークセキュリティ協会の事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261106-0f5839/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-199c18",
+    "company": "堺市",
+    "service": "堺市",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.sakai.lg.jp"
+      ],
+      "names": [
+        "堺市"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大292,600件（可能性）",
+    "records_num": 292600,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "possible",
+    "scope": "堺市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス、氏名。公表件数は最大292,600件（可能性）。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "堺市 公式発表",
+        "url": "https://www.city.sakai.lg.jp/sangyo/shienyuushi/shien/premium.files/premium.pdf"
+      },
+      {
+        "title": "堺市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-199c18/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-24379f",
+    "company": "株式会社REXEV",
+    "service": "株式会社REXEV",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "rexev.co.jp"
+      ],
+      "names": [
+        "株式会社REXEV",
+        "REXEV"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "547件",
+    "records_num": 547,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社REXEVが公表した委託先・サプライヤの侵害による事案。漏洩した情報は住所、メールアドレス、氏名、電話番号。公表件数は547件。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社REXEV 公式発表",
+        "url": "https://rexev.co.jp/2026/11/06/post-15282/"
+      },
+      {
+        "title": "REXEVの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-24379f/"
       }
     ],
     "official": true
@@ -257,6 +491,83 @@
     "official": true
   },
   {
+    "id": "auto-20261106-40fc67",
+    "company": "株式会社SUBARU",
+    "service": "株式会社SUBARU",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "subaru.co.jp"
+      ],
+      "names": [
+        "株式会社SUBARU",
+        "SUBARU"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "株式会社SUBARUが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、氏名、電話番号。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社SUBARU 公式発表",
+        "url": "https://www.subaru.co.jp/pdf/info/2026_1106_2026-11-06-135049.pdf"
+      },
+      {
+        "title": "SUBARUの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-40fc67/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-4a44b5",
+    "company": "株式会社資生堂",
+    "service": "株式会社資生堂",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "shiseido.com"
+      ],
+      "names": [
+        "株式会社資生堂",
+        "資生堂"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "2,515件",
+    "records_num": 2515,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社資生堂が公表した不正アクセスによる事案。漏洩した情報はメールアドレス、氏名。公表件数は2,515件。発覚は2026年10月27日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社資生堂 公式発表",
+        "url": "https://corp.shiseido.com/jp/notice/20261106.html"
+      },
+      {
+        "title": "資生堂の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-4a44b5/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261106-53ac75",
     "company": "株式会社チームスピリット",
     "service": "株式会社チームスピリット",
@@ -296,6 +607,45 @@
     "official": true
   },
   {
+    "id": "auto-20261106-576315",
+    "company": "株式会社沖縄銀行",
+    "service": "株式会社沖縄銀行",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "okinawa-bank.co.jp"
+      ],
+      "names": [
+        "株式会社沖縄銀行",
+        "沖縄銀行"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大211件（可能性）",
+    "records_num": 211,
+    "categories": [
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社沖縄銀行が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス、氏名、電話番号。公表件数は最大211件（可能性）。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社沖縄銀行 公式発表",
+        "url": "https://www.okinawa-bank.co.jp/news_release/2026110600037/file_contents/nr.pdf"
+      },
+      {
+        "title": "沖縄銀行の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-576315/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261106-5b2340",
     "company": "仙台市",
     "service": "仙台市",
@@ -327,6 +677,199 @@
       {
         "title": "仙台市の事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261106-5b2340/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-663fc4",
+    "company": "株式会社小学館",
+    "service": "株式会社小学館",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "shogakukan.co.jp"
+      ],
+      "names": [
+        "株式会社小学館",
+        "小学館"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大1,993,665件（可能性）",
+    "records_num": 1993665,
+    "categories": [
+      "dob",
+      "email"
+    ],
+    "status": "possible",
+    "scope": "株式会社小学館が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は生年月日、メールアドレス。公表件数は最大1,993,665件（可能性）。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社小学館 公式発表",
+        "url": "https://www.shogakukan.co.jp/storage/files/article/2026/261106%E3%80%8C%E3%82%A2%E3%83%A9%E3%83%A9%E7%A4%BE%E3%80%8D%E3%81%B8%E3%81%AE%20%20%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AE%E3%81%8A%E3%81%9D%E3%82%8C%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B2%E3%82%99%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf"
+      },
+      {
+        "title": "小学館の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-663fc4/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-7c38cd",
+    "company": "ソニー少額短期保険株式会社",
+    "service": "ソニー少額短期保険株式会社",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "sonyfg.co.jp"
+      ],
+      "names": [
+        "ソニー少額短期保険株式会社",
+        "ソニー少額短期保険"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "108件",
+    "records_num": 108,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "ソニー少額短期保険株式会社が公表した脆弱性の悪用による事案。漏洩した情報は住所、生年月日、メールアドレス、氏名、電話番号。公表件数は108件。詳細は出典の公式発表を参照。",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "ソニー少額短期保険株式会社 公式発表",
+        "url": "https://www.sonyfg.co.jp/ja/notice/article/261106_01.pdf"
+      },
+      {
+        "title": "ソニー少額短期保険の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-7c38cd/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-7ce45c",
+    "company": "株式会社IDOM",
+    "service": "株式会社IDOM",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "idom-inc.com"
+      ],
+      "names": [
+        "株式会社IDOM",
+        "IDOM"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大1,663件（可能性）",
+    "records_num": 1663,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社IDOMが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。公表件数は最大1,663件（可能性）。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社IDOM 公式発表",
+        "url": "https://idom-inc.com/news/press/20261106-38772.html"
+      },
+      {
+        "title": "IDOMの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-7ce45c/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-838b6d",
+    "company": "スバルファイナンス株式会社",
+    "service": "スバルファイナンス株式会社",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [],
+      "names": [
+        "スバルファイナンス株式会社",
+        "スバルファイナンス"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大3,117件（可能性）",
+    "records_num": 3117,
+    "categories": [
+      "address",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "スバルファイナンス株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、氏名、電話番号。公表件数は最大3,117件（可能性）。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "スバルファイナンスの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-838b6d/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261106-9969d3",
+    "company": "株式会社IDOM",
+    "service": "株式会社IDOM",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "idom-inc.com"
+      ],
+      "names": [
+        "株式会社IDOM",
+        "IDOM"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大694件（可能性）",
+    "records_num": 694,
+    "categories": [
+      "address",
+      "bank",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社IDOMが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、銀行口座情報、メールアドレス、氏名、電話番号。公表件数は最大694件（可能性）。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社IDOM 公式発表",
+        "url": "https://idom-inc.com/news/press/20261106-38772.html"
+      },
+      {
+        "title": "IDOMの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-9969d3/"
       }
     ],
     "official": true
@@ -405,6 +948,48 @@
       {
         "title": "パシフィックリーグマーケティングの事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261106-a72aa1/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-d0edad",
+    "company": "株式会社エディオン",
+    "service": "株式会社エディオン",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "edion.co.jp"
+      ],
+      "names": [
+        "株式会社エディオン",
+        "エディオン"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大9,554件（可能性）",
+    "records_num": 9554,
+    "categories": [
+      "address",
+      "dob",
+      "card",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社エディオンが公表した脆弱性の悪用による事案。漏洩した可能性がある情報は住所、生年月日、クレジットカード情報、メールアドレス、氏名、電話番号。公表件数は最大9,554件（可能性）。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社エディオン 公式発表",
+        "url": "https://www.edion.co.jp/system/files/news-release/pdf/ja/2026-11/20261106_pr_1.pdf"
+      },
+      {
+        "title": "エディオンの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-d0edad/"
       }
     ],
     "official": true
@@ -1772,6 +2357,42 @@
     "official": false
   },
   {
+    "id": "auto-20261104-199c18",
+    "company": "堺市",
+    "service": "堺市",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.sakai.lg.jp"
+      ],
+      "names": [
+        "堺市"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "最大290,000件（可能性）",
+    "records_num": 290000,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "堺市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大290,000件（可能性）。発覚は2026年10月31日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "堺市 公式発表",
+        "url": "https://www.city.sakai.lg.jp/shisei/gyosei/it/20261104_denshishinsei.html"
+      },
+      {
+        "title": "堺市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-199c18/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261104-290d01",
     "company": "インヴェンティット株式会社",
     "service": "インヴェンティット株式会社",
@@ -2029,6 +2650,42 @@
       {
         "title": "不正アクセス・情報漏えい事案（seory）",
         "url": "https://incidents.seory.co.jp/incidents/20261104-607fa3/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261104-611726",
+    "company": "福島市",
+    "service": "福島市",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.fukushima.fukushima.jp"
+      ],
+      "names": [
+        "福島市"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "福島市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "福島市 公式発表",
+        "url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1029/1/20778.html"
+      },
+      {
+        "title": "福島市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-611726/"
       }
     ],
     "official": true
@@ -3703,6 +4360,42 @@
     "official": false
   },
   {
+    "id": "auto-20261102-199c18",
+    "company": "堺市",
+    "service": "堺市",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.sakai.lg.jp"
+      ],
+      "names": [
+        "堺市"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "堺市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "堺市 公式発表",
+        "url": "https://www.city.sakai.lg.jp/shisei/koho/koho/merumaga/index.html"
+      },
+      {
+        "title": "堺市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-199c18/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261102-25c25d",
     "company": "株式会社テレビ東京ダイレクト",
     "service": "株式会社テレビ東京ダイレクト",
@@ -3976,13 +4669,15 @@
       ]
     },
     "disclosed": "2026-11-02",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "266,395件",
+    "records_num": 266395,
     "categories": [
-      "email"
+      "dob",
+      "email",
+      "name"
     ],
-    "status": "investigating",
-    "scope": "キンコーズ・ジャパン株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "キンコーズ・ジャパン株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した情報は生年月日、メールアドレス、氏名。公表件数は266,395件。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -4107,6 +4802,43 @@
       {
         "title": "不正アクセス・情報漏えい事案（seory）",
         "url": "https://incidents.seory.co.jp/incidents/20261102-cf71dc/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261102-d6cf40",
+    "company": "近鉄不動産株式会社",
+    "service": "近鉄不動産株式会社",
+    "sector": "不動産",
+    "match": {
+      "domains": [
+        "kintetsu-re.co.jp"
+      ],
+      "names": [
+        "近鉄不動産株式会社",
+        "近鉄不動産"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "49,213件",
+    "records_num": 49213,
+    "categories": [
+      "email"
+    ],
+    "status": "confirmed",
+    "scope": "近鉄不動産株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は49,213件。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "近鉄不動産株式会社 公式発表",
+        "url": "https://www.kintetsu-re.co.jp/r/pdf/261102.pdf"
+      },
+      {
+        "title": "近鉄不動産の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-d6cf40/"
       }
     ],
     "official": true
@@ -5911,6 +6643,44 @@
       {
         "title": "不正アクセス・情報漏えい事案（seory）",
         "url": "https://incidents.seory.co.jp/incidents/20261030-27d1e5/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261030-2b3610",
+    "company": "株式会社ウィル",
+    "service": "株式会社ウィル",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "wills.co.jp"
+      ],
+      "names": [
+        "株式会社ウィル",
+        "ウィル"
+      ]
+    },
+    "disclosed": "2026-10-30",
+    "records": "102,369件",
+    "records_num": 102369,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社ウィルが公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス、氏名。公表件数は102,369件。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社ウィル 公式発表",
+        "url": "https://www.wills.co.jp/corp/news/1893/"
+      },
+      {
+        "title": "ウィルの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261030-2b3610/"
       }
     ],
     "official": true
@@ -14368,6 +15138,40 @@
     "official": true
   },
   {
+    "id": "auto-20261021-27a5a6",
+    "company": "株式会社ティエスエスリンク",
+    "service": "株式会社ティエスエスリンク",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "株式会社ティエスエスリンク",
+        "ティエスエスリンク"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name",
+      "login_credential",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "株式会社ティエスエスリンクが公表したマルウェア感染による事案。漏洩した可能性がある情報はメールアドレス、氏名、ログイン認証情報、電話番号。発覚は2026年10月13日。詳細は出典の公式発表を参照。",
+    "cause": "malware",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "ティエスエスリンクの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261021-27a5a6/"
+      }
+    ],
+    "official": false
+  },
+  {
     "id": "auto-20261021-57f505",
     "company": "クレシード株式会社",
     "service": "クレシード株式会社",
@@ -16232,6 +17036,70 @@
       }
     ],
     "official": true
+  },
+  {
+    "id": "auto-20261014-199c18",
+    "company": "堺市",
+    "service": "堺市",
+    "sector": "公共",
+    "match": {
+      "domains": [],
+      "names": [
+        "堺市"
+      ]
+    },
+    "disclosed": "2026-10-14",
+    "records": "最大7,950件（可能性）",
+    "records_num": 7950,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "堺市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。公表件数は最大7,950件（可能性）。発覚は2026年10月13日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "堺市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261014-199c18/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261014-611726",
+    "company": "福島市",
+    "service": "福島市",
+    "sector": "公共",
+    "match": {
+      "domains": [],
+      "names": [
+        "福島市"
+      ]
+    },
+    "disclosed": "2026-10-14",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "福島市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス、氏名。発覚は2026年10月13日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "福島市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261014-611726/"
+      }
+    ],
+    "official": false
   },
   {
     "id": "auto-20261014-a7767b",

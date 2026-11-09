@@ -32,8 +32,8 @@ window.chrome = {
       let res;
       if (msg.type === 'LEAKSCAN_GET_VIEW') {
         res = { state:{status:'done'}, options:{}, db:{},
-          report:{ generatedAt:Date.now(), dbVersion:'2026.11.08', dbSource:'remote',
-                   accountIndex:0, includeSpamTrash:false, scanned:605, queries:37, matches:FAKE_MATCHES } };
+          report:{ generatedAt:Date.now(), dbVersion:'2026.11.09', dbSource:'remote',
+                   accountIndex:0, includeSpamTrash:false, scanned:628, queries:37, matches:FAKE_MATCHES } };
       } else if (msg.type === 'LEAKSCAN_GET_DB') {
         res = { meta: await fetch('/extension/data/meta.json').then(r=>r.json()),
                 entries: maskEntries(await fetch('/extension/data/breaches.json').then(r=>r.json())) };
