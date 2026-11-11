@@ -1089,3 +1089,31 @@ section > .wrap > h2 { color: var(--fg-strong); }
   .site-header .brand { font-size: 13px; gap: 6px; }
   .nav a.nav-cta { font-size: 11.5px; padding: 5px 9px; }
 }
+
+/* ═══ 照合の3段階（#match） ═══
+   どの段階で当たったかを、拡張機能の結果画面と同じ言葉で見せる。
+   確度の強い順に上から並べる。弱い一致を隠さないことが要点なので、
+   3つは同じ大きさで出し、強さは色の付いた語のほうで示す。
+   枠で囲まず罫線だけにしてあるのは、このページの他の節と揃えるため。 */
+.tiers { margin: 26px 0 0; border-top: 1px solid var(--hair); }
+.tier { padding: 17px 0 18px; border-bottom: 1px solid var(--hair); }
+.tier-h { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+.tier-s { font-size: 11px; font-weight: 800; letter-spacing: .12em; color: var(--fg-dim); }
+.tier-s.s-strong { color: var(--ok); }
+.tier-s.s-check { color: var(--warn); }
+.tier p { margin: 0; font-size: 13.5px; line-height: 1.95; color: var(--fg-muted); }
+.tier p b { color: var(--fg); font-weight: 700; }
+#match code, .tier code { font-family: var(--mono); font-size: 12px; color: var(--fg);
+  background: var(--bg-elev-2); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px;
+  /* 狭い画面でアドレスが折り返すと、枠が片側だけ消えて壊れて見える。
+     clone で、折り返した先にも枠と余白を付ける。 */
+  -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+#match .sec-lead code { background: none; border: 0; padding: 0; color: var(--fg-muted); font-size: 12.5px; }
+#match .method { margin-top: 22px; }
+@media (max-width: 560px) {
+  .tier { padding: 14px 0 15px; }
+  .tier p, #match .method dd { font-size: 13px; }
+}
+/* フッタの「限界」から節へ繋ぐリンク。既定では本文と同じ色で、
+   リンクだと分からなかった。 */
+.foot-cols p a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }

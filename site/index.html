@@ -160,6 +160,68 @@
   </div>
 </section>
 
+<!-- ③ 照合そのものの説明。
+     3段階の区別は拡張機能の結果画面にしか書いていなかった。入れてスキャンするまで
+     読めないのでは、照合が雑だという指摘に何も答えられない。入れる前に読める所に出す。
+     件数は実行時に breaches.json を数えて入れる。手で書けば必ず古くなる。
+     数え方は拡張機能と同じ assets/match.js（extension/lib/match.js の写し）を使う。 -->
+<section id="match">
+  <div class="wrap">
+    <h2>どう照合しているか</h2>
+    <p class="sec-lead">
+      Gmailの検索欄に <code>from:(ドメイン OR ブランド語 OR "表示名")</code> という検索を投げ、
+      結果一覧の行に出る差出人のアドレス・表示名・日付だけを読みます。1回に16社ぶんをまとめます（設定で変更できます）。
+      一致は1種類にまとめず、確度で3段階に分けて表示します。
+    </p>
+
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-h"><span class="badge">アドレス一致</span><span class="tier-s s-strong">強い</span></div>
+        <p><b>送信元ドメインが登録と完全一致、またはそのサブドメイン。</b>
+          登録が <code>example.co.jp</code> なら、<code>info@example.co.jp</code> と <code>news@mail.example.co.jp</code> が当たります。
+          この登録ドメインは、公式発表が置かれていたURLから機械的に取り出したものだけを使っています。</p>
+      </div>
+      <div class="tier">
+        <div class="tier-h"><span class="badge">関連ドメイン一致</span><span class="tier-s s-check">要確認</span></div>
+        <p><b>ドメインは違うが、ブランド部分が一致。</b>
+          <code>news@example-mail.com</code> のような配信専用の別ドメインを拾うためです。
+          <b>同じ語を使う別会社の可能性があります。</b>結果画面には差出人アドレスをそのまま並べるので、そこで確かめてください。</p>
+      </div>
+      <div class="tier">
+        <div class="tier-h"><span class="badge">表示名一致</span><span class="tier-s s-weak">弱い</span></div>
+        <p><b>ドメインは一致せず、差出人の表示名だけが一致。</b>
+          <b>その名前を騙るフィッシングメールも、名前が一部重なる別会社も当たります。</b>
+          消さずに、いちばん弱い一致という印を付けたまま出します。</p>
+      </div>
+    </div>
+
+    <details class="method">
+      <summary>照合の限界 — 拾いすぎるもの、読み落とすもの</summary>
+      <div class="method-b">
+        <dl>
+          <dt>一致は「あなたの情報が流出した」という意味ではありません</dt>
+          <dd>一致が示すのは<b>そのサービスを使っていた可能性が高い</b>ことだけです。漏洩の対象は「特定の期間に登録した会員」のように範囲が切られていることが多く、<b>自分がその範囲に入っていたかは、各社の公式発表と個別の通知にしか書かれていません。</b>差出人しか読まないこの作りでは、そこは原理的に判定できません。</dd>
+
+          <dt>「該当なし」は安全の証明ではありません</dt>
+          <dd>別のメールアドレスで登録したサービス、メールを一度も受け取っていないサービス（店頭や紙で登録したものなど）、メールを消したサービスは検出できません。ゴミ箱と迷惑メールは既定では検索しません（設定で含められます）。</dd>
+
+          <dt>拾いすぎる側</dt>
+          <dd>表示名は<b>部分一致</b>で、日本語は2文字から照合します。そのため登録名を含む別会社の差出人も、その名前を騙るメールも当たります。全<span id="mt-cases">—</span>件のうち<b><span id="mt-nodomain">—</span>件（<span id="mt-nodomain-pct">—</span>%）は公表資料からドメインを取り出せず、表示名だけが頼りです。</b>関連ドメイン一致も、同じ語を使う別会社を拾うことがあります。いずれも<b>消さずに、どの段階で当たったかを必ず表示する</b>方針です。弱い一致を黙って強い一致に混ぜないことが、この作りでできる唯一の正直さだと考えています。</dd>
+
+          <dt>読み落とす側</dt>
+          <dd>拾いすぎを抑えるために、意図的に広げていない所があります。ブランド部分が<span id="mt-minbrand">—</span>文字以下のドメイン（<span id="mt-short">—</span>件）は広げません。短い英字は無関係な語に当たるためで、その代わり <code>abc.co.jp</code> が登録されていても <code>abc-card.co.jp</code> は一致しません。自治体・政府系のドメイン（<span id="mt-geo">—</span>件）も広げません。<code>pref.◯◯.jp</code> と <code>city.◯◯.◯◯.jp</code> は別の組織なのに、ブランド部分はどちらも同じ県名になってしまうからです。<code>mail</code>・<code>news</code>・<code>group</code> のような一般語も照合に使いません。</dd>
+
+          <dt>データ側の限界</dt>
+          <dd>収録しているのは<b>日本国内で公表された事案だけ</b>で、海外サービスの漏洩は入っていません。照合に使っているのはドメイン<span id="mt-domains">—</span>件と表示名<span id="mt-names">—</span>件です。<b>グループ会社・親会社・プレスリリース配信サイト・業界共用ドメイン（信用金庫の共用ドメインなど）・省庁ドメインは、無関係な組織の利用者まで巻き込むため除外しています。</b>件数や漏洩項目は公表時点の値で、続報により変わります。集め方は<a href="list">一覧ページ</a>に書いています。</dd>
+
+          <dt>自分で確かめる</dt>
+          <dd>照合は <a href="https://github.com/M2AI-jp/leakscan/blob/main/extension/lib/match.js">extension/lib/match.js</a> の1ファイルに全部入っています。通信もDOM操作もしない純粋な関数で、<a href="https://github.com/M2AI-jp/leakscan/blob/main/test/match.test.js">検査</a>も公開しています。<b>上の件数は、このページが読み込んだ <a href="data/breaches.json">breaches.json</a> を、拡張機能とまったく同じコードで数えた値です。</b>手で書いた数字ではないので、データが増えれば勝手に変わります。</dd>
+        </dl>
+      </div>
+    </details>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="foot-top">
@@ -184,7 +246,7 @@
     <div class="foot-cols">
       <div>
         <h4>このツールの限界</h4>
-        <p>「該当なし」は安全の証明ではありません。別アドレスで登録したサービスは検出できません。該当＝流出確定でもなく、対象かは各社の公式発表でご確認ください。</p>
+        <p>「該当なし」は安全の証明ではありません。別アドレスで登録したサービスは検出できません。該当＝流出確定でもなく、対象かは各社の公式発表でご確認ください。 <a href="#match">照合の仕組みと限界</a></p>
       </div>
       <div>
         <h4>無保証について</h4>
@@ -207,6 +269,7 @@
   </div>
 </footer>
 
+<script src="assets/match.js"></script>
 <script src="assets/app.js"></script>
 <script>
 (async function () {
@@ -254,6 +317,37 @@
         '<span class="fv-n">' + esc(e.records) + '</span>' +
         '<span class="fb sev-' + sev + '">' + esc(window.LeakScan.sevLabel[sev]) + '</span></a>';
     }).join('');
+    /* 照合の件数は、拡張機能とまったく同じ照合コードで数える
+       （assets/match.js は extension/lib/match.js の写しで、build.mjs が同期する）。
+       ここに数字を手で書くと、データが増えた日に古い値だけが残る。 */
+    var MT = window.LEAKSCAN_MATCH;
+    if (MT) {
+      var mt = { domains: 0, names: 0, nodomain: 0, short: 0, geo: 0 };
+      entries.forEach(function (e) {
+        var ds = (e.match && e.match.domains) || [];
+        var ns = (e.match && e.match.names) || [];
+        mt.domains += ds.length;
+        mt.names += ns.length;
+        if (!ds.length) mt.nodomain++;
+        ds.forEach(function (d) {
+          if (MT.isGeoOrGov(d)) { mt.geo++; return; }
+          if (MT.brandLabel(d).length < MT.MIN_BRAND) mt.short++;
+        });
+      });
+      var putMt = function (id, v) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = v;
+      };
+      var jp = function (n) { return n.toLocaleString('ja-JP'); };
+      putMt('mt-cases', jp(entries.length));
+      putMt('mt-domains', jp(mt.domains));
+      putMt('mt-names', jp(mt.names));
+      putMt('mt-nodomain', jp(mt.nodomain));
+      putMt('mt-nodomain-pct', entries.length ? Math.round((mt.nodomain / entries.length) * 100) : 0);
+      putMt('mt-minbrand', MT.MIN_BRAND - 1);
+      putMt('mt-short', jp(mt.short));
+      putMt('mt-geo', jp(mt.geo));
+    }
   } catch (e) { console.error(e); }
 })();
 </script>

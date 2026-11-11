@@ -111,6 +111,9 @@ for (const dir of ['site/data', 'extension/data']) {
 for (const f of ['breaches.csv', 'domains.tsv', 'stats.json']) {
   copyFileSync(d('data/' + f), d('site/data/' + f));
 }
+/* 照合のコードもサイトへ写す。サイトの「どう照合しているか」の件数は、
+   拡張機能と同じこのコードで数えている。二重に書くと必ずずれるため、写しを置く。 */
+copyFileSync(d('extension/lib/match.js'), d('site/assets/match.js'));
 
 /* ---- CSPのハッシュもここで合わせる ----
    ページ内スクリプトを直すとハッシュが変わる。手で写すと必ず忘れるので、

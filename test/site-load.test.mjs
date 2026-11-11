@@ -157,5 +157,44 @@ await ok('lastChecked は新しい方を返し、checked が無くても動く',
   assert.equal(L.lastChecked(null), '');
 });
 
+/* ---------------------------------------------- 照合の説明（#match）
+ * サイトの「どう照合しているか」の件数は、ページ内スクリプトが breaches.json を
+ * 拡張機能と同じコードで数えて埋める。埋め先のidと埋める側が食い違うと、
+ * 画面には「—」が出たまま誰も気づかない。手書きの数字と同じ壊れ方なので、ここで見る。 */
+const HTML = readFileSync(new URL('../site/index.html', import.meta.url), 'utf8');
+/* 節そのものを切り出して見る。フッタにも似た文があるので、
+   ページ全体を見ていると節が消えても気づけない。 */
+const SEC = (HTML.match(/<section id="match">[\s\S]*?<\/section>/) || [''])[0];
+
+await ok('件数の埋め先と埋める側のidが一致している', async () => {
+  const slots = [...HTML.matchAll(/id="(mt-[a-z-]+)"/g)].map((m) => m[1]).sort();
+  const fills = [...HTML.matchAll(/putMt\('(mt-[a-z-]+)'/g)].map((m) => m[1]).sort();
+  assert.ok(slots.length >= 6, '埋め先が見つからない（節が消えた？）: ' + slots.length);
+  assert.deepEqual(slots, fills, '片方にしかないidがある');
+});
+
+await ok('サイトは拡張機能と同じ照合コードを読んでいる', async () => {
+  assert.match(HTML, /<script src="assets\/match\.js"><\/script>/, 'match.js を読んでいない');
+  const a = readFileSync(new URL('../extension/lib/match.js', import.meta.url), 'utf8');
+  const b = readFileSync(new URL('../site/assets/match.js', import.meta.url), 'utf8');
+  assert.equal(b, a, 'site/assets/match.js が古い → node scripts/build.mjs');
+});
+
+await ok('3段階の呼び名が、拡張機能の画面と同じ言葉になっている', async () => {
+  const res = readFileSync(new URL('../extension/results/results.js', import.meta.url), 'utf8');
+  for (const label of ['アドレス一致', '関連ドメイン一致', '表示名一致']) {
+    assert.ok(SEC.includes(label), '節に「' + label + '」がない');
+    assert.ok(res.includes(label), '拡張機能の画面に「' + label + '」がない（片方だけ改名した）');
+  }
+});
+
+await ok('限界の記述が節に残っている', async () => {
+  assert.ok(SEC.includes('「該当なし」は安全の証明ではありません'), '「該当なし」の記述が消えた');
+  assert.ok(/一致が示すのは[^。]*そのサービスを使っていた可能性が高い/.test(SEC),
+    '一致の意味の説明が消えた');
+  assert.ok(SEC.includes('拾いすぎる側') && SEC.includes('読み落とす側'),
+    '偽陽性・取りこぼしの節が消えた');
+});
+
 console.log(`検査（サイトがどちらのデータを出すか）: ${pass} 件合格` + (fail ? ` / ${fail} 件失敗` : ''));
 process.exit(fail ? 1 : 0);
