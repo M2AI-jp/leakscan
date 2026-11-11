@@ -1,5 +1,279 @@
 [
   {
+    "id": "auto-20261110-5485ce",
+    "company": "キリンビール株式会社、キリンビバレッジ株式会社",
+    "service": "キリンビール株式会社、キリンビバレッジ株式会社",
+    "sector": "食品",
+    "match": {
+      "domains": [
+        "kirinholdings.com"
+      ],
+      "names": [
+        "キリンビール株式会社、キリンビバレッジ株式会社",
+        "キリンビール株式会社、キリンビバレッジ"
+      ]
+    },
+    "disclosed": "2026-11-10",
+    "records": "329件",
+    "records_num": 329,
+    "categories": [
+      "name"
+    ],
+    "status": "confirmed",
+    "scope": "キリンビール株式会社、キリンビバレッジ株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した情報は氏名。公表件数は329件。発覚は2026年11月6日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "キリンビール株式会社、キリンビバレッジ株式会社 公式発表",
+        "url": "https://www.kirinholdings.com/jp/newsroom/release/2026/1110_03.pdf"
+      },
+      {
+        "title": "キリンビール株式会社、キリンビバレッジの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261110-5485ce/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261110-9d23f9",
+    "company": "株式会社アイル",
+    "service": "株式会社アイル",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "ill.co.jp"
+      ],
+      "names": [
+        "株式会社アイル",
+        "アイル"
+      ]
+    },
+    "disclosed": "2026-11-10",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "株式会社アイルが公表した認証情報の悪用・不正ログインによる事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、電話番号。発覚は2026年11月7日。詳細は出典の公式発表を参照。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社アイル 公式発表",
+        "url": "https://www.ill.co.jp/info/261110/"
+      },
+      {
+        "title": "アイルの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261110-9d23f9/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261110-c3c81b",
+    "company": "一般財団法人広南会広南病院",
+    "service": "一般財団法人広南会広南病院",
+    "sector": "医療・ヘルスケア",
+    "match": {
+      "domains": [
+        "kohnan-sendai.or.jp"
+      ],
+      "names": [
+        "一般財団法人広南会広南病院",
+        "広南会広南病院"
+      ]
+    },
+    "disclosed": "2026-11-10",
+    "records": "124件",
+    "records_num": 124,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "一般財団法人広南会広南病院が公表した不正アクセスによる事案。漏洩した情報は住所、生年月日、メールアドレス、氏名、電話番号。公表件数は124件。発覚は2026年10月30日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "一般財団法人広南会広南病院 公式発表",
+        "url": "https://www.kohnan-sendai.or.jp/news/patient/jyouhou.html"
+      },
+      {
+        "title": "広南会広南病院の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261110-c3c81b/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261110-ce76fe",
+    "company": "東京都",
+    "service": "東京都",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "metro.tokyo.lg.jp"
+      ],
+      "names": [
+        "東京都"
+      ]
+    },
+    "disclosed": "2026-11-10",
+    "records": "134件",
+    "records_num": 134,
+    "categories": [
+      "email",
+      "name"
+    ],
+    "status": "confirmed",
+    "scope": "東京都が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス、氏名。公表件数は134件。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "東京都 公式発表",
+        "url": "https://www.metro.tokyo.lg.jp/information/press/2026/11/2026111005"
+      },
+      {
+        "title": "東京都の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261110-ce76fe/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261110-d80b15",
+    "company": "学校法人京都外国語大学",
+    "service": "学校法人京都外国語大学",
+    "sector": "教育",
+    "match": {
+      "domains": [
+        "kufs.ac.jp"
+      ],
+      "names": [
+        "学校法人京都外国語大学",
+        "京都外国語大学"
+      ]
+    },
+    "disclosed": "2026-11-10",
+    "records": "最大5,376件（可能性）",
+    "records_num": 5376,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "medical",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "学校法人京都外国語大学が公表したマルウェア感染による事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、医療・健康に関する情報、氏名、電話番号。公表件数は最大5,376件（可能性）。発覚は2026年10月30日。詳細は出典の公式発表を参照。",
+    "cause": "malware",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "学校法人京都外国語大学 公式発表",
+        "url": "https://www.kufs.ac.jp/cms_image/file/file_1794271641.pdf"
+      },
+      {
+        "title": "京都外国語大学の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261110-d80b15/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261110-e10f18",
+    "company": "株式会社ソフト99コーポレーション",
+    "service": "株式会社ソフト99コーポレーション",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [],
+      "names": [
+        "株式会社ソフト99コーポレーション",
+        "ソフト99コーポレーション"
+      ]
+    },
+    "disclosed": "2026-11-10",
+    "records": "最大136,968件（可能性）",
+    "records_num": 136968,
+    "categories": [
+      "address",
+      "dob",
+      "card",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社ソフト99コーポレーションが公表したマルウェア感染による事案。漏洩した可能性がある情報は住所、生年月日、クレジットカード情報、メールアドレス、氏名、電話番号。公表件数は最大136,968件（可能性）。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "cause": "malware",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "ソフト99コーポレーションの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261110-e10f18/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261110-e6b5c4",
+    "company": "日本商工会議所",
+    "service": "日本商工会議所",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "jcci.or.jp"
+      ],
+      "names": [
+        "日本商工会議所"
+      ]
+    },
+    "disclosed": "2026-11-10",
+    "records": "最大1,970,000件（可能性）",
+    "records_num": 1970000,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "日本商工会議所が公表したマルウェア感染による事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、電話番号。公表件数は最大1,970,000件（可能性）。発覚は2026年11月4日。詳細は出典の公式発表を参照。",
+    "cause": "malware",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "日本商工会議所 公式発表",
+        "url": "https://www.jcci.or.jp/news/news/2026/1110170000.html"
+      },
+      {
+        "title": "日本商工会議所の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261110-e6b5c4/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261109-0751c6",
     "company": "株式会社オープンドア",
     "service": "株式会社オープンドア",
@@ -375,6 +649,44 @@
     "official": true
   },
   {
+    "id": "auto-20261109-c5966e",
+    "company": "株式会社PEPPY",
+    "service": "株式会社PEPPY",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "peppy.co.jp"
+      ],
+      "names": [
+        "株式会社PEPPY",
+        "PEPPY"
+      ]
+    },
+    "disclosed": "2026-11-09",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "株式会社PEPPYが公表した認証情報の悪用・不正ログインによる事案。漏洩した可能性がある情報は住所、氏名。発覚は2026年11月4日。詳細は出典の公式発表を参照。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社PEPPY 公式発表",
+        "url": "https://peppy.co.jp/%E5%BD%93%E7%A4%BE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8/"
+      },
+      {
+        "title": "PEPPYの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261109-c5966e/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261109-c8a171",
     "company": "住友生命保険相互会社",
     "service": "住友生命保険相互会社",
@@ -447,6 +759,122 @@
       {
         "title": "オープンドアの事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261109-cd3b93/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261109-e6d98d",
+    "company": "株式会社リロクラブ",
+    "service": "株式会社リロクラブ",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "reloclub.jp"
+      ],
+      "names": [
+        "株式会社リロクラブ",
+        "リロクラブ"
+      ]
+    },
+    "disclosed": "2026-11-09",
+    "records": "4,741件",
+    "records_num": 4741,
+    "categories": [
+      "medical",
+      "name"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社リロクラブが公表した委託先・サプライヤの侵害による事案。漏洩した情報は医療・健康に関する情報、氏名。公表件数は4,741件。発覚は2026年10月30日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社リロクラブ 公式発表",
+        "url": "https://www.reloclub.jp/news/20261109"
+      },
+      {
+        "title": "リロクラブの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261109-e6d98d/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261109-ed8d4e",
+    "company": "一般社団法人四国クリエイト協会",
+    "service": "一般社団法人四国クリエイト協会",
+    "sector": "団体",
+    "match": {
+      "domains": [
+        "sk-create.jp"
+      ],
+      "names": [
+        "一般社団法人四国クリエイト協会",
+        "四国クリエイト協会"
+      ]
+    },
+    "disclosed": "2026-11-09",
+    "records": "最大146件（可能性）",
+    "records_num": 146,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "一般社団法人四国クリエイト協会が公表した脆弱性の悪用による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。公表件数は最大146件（可能性）。発覚は2026年11月4日。詳細は出典の公式発表を参照。",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "一般社団法人四国クリエイト協会 公式発表",
+        "url": "https://www.sk-create.jp/archives/9323"
+      },
+      {
+        "title": "四国クリエイト協会の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261109-ed8d4e/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261109-f720d3",
+    "company": "株式会社ラフール",
+    "service": "株式会社ラフール",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "lafool.co.jp"
+      ],
+      "names": [
+        "株式会社ラフール",
+        "ラフール"
+      ]
+    },
+    "disclosed": "2026-11-09",
+    "records": "24,232件",
+    "records_num": 24232,
+    "categories": [
+      "medical",
+      "name"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社ラフールが公表した認証情報の悪用・不正ログインによる事案。漏洩した情報は医療・健康に関する情報、氏名。公表件数は24,232件。発覚は2026年10月27日。詳細は出典の公式発表を参照。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社ラフール 公式発表",
+        "url": "https://corp.lafool.co.jp/news/information/172/"
+      },
+      {
+        "title": "ラフールの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261109-f720d3/"
       }
     ],
     "official": true
@@ -650,8 +1078,8 @@
       ]
     },
     "disclosed": "2026-11-07",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "最大114,605件（可能性）",
+    "records_num": 114605,
     "categories": [
       "address",
       "bank",
@@ -660,8 +1088,8 @@
       "name",
       "phone"
     ],
-    "status": "investigating",
-    "scope": "ステップゴルフ株式会社が公表した不正アクセスによる事案。漏洩した可能性がある情報は住所、銀行口座情報、生年月日、メールアドレス、氏名、電話番号。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "status": "possible",
+    "scope": "ステップゴルフ株式会社が公表した不正アクセスによる事案。漏洩した可能性がある情報は住所、銀行口座情報、生年月日、メールアドレス、氏名、電話番号。公表件数は最大114,605件（可能性）。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
     "cause": "unauthorized_access",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -808,16 +1236,15 @@
       ]
     },
     "disclosed": "2026-11-06",
-    "records": "547件",
-    "records_num": 547,
+    "records": "530件",
+    "records_num": 530,
     "categories": [
-      "address",
       "email",
       "name",
       "phone"
     ],
     "status": "confirmed",
-    "scope": "株式会社REXEVが公表した委託先・サプライヤの侵害による事案。漏洩した情報は住所、メールアドレス、氏名、電話番号。公表件数は547件。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "scope": "株式会社REXEVが公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス、氏名、電話番号。公表件数は530件。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -984,6 +1411,44 @@
     "official": true
   },
   {
+    "id": "auto-20261106-33427f",
+    "company": "中央アルプス観光株式会社",
+    "service": "中央アルプス観光株式会社",
+    "sector": "旅行",
+    "match": {
+      "domains": [
+        "chuo-alps.com"
+      ],
+      "names": [
+        "中央アルプス観光株式会社",
+        "中央アルプス観光"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "中央アルプス観光株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は氏名、電話番号。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "中央アルプス観光株式会社 公式発表",
+        "url": "https://chuo-alps.com/%E5%A4%96%E9%83%A8%E4%BA%88%E7%B4%84%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%80%8C%E3%83%AA%E3%82%B6%E3%83%BC%E3%83%96%E3%82%B2%E3%83%BC%E3%83%88%E3%80%8D%E3%81%A7%E7%99%BA%E7%94%9F/"
+      },
+      {
+        "title": "中央アルプス観光の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-33427f/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261106-3d2a92",
     "company": "株式会社2りんかんイエローハット",
     "service": "株式会社2りんかんイエローハット",
@@ -1055,6 +1520,46 @@
       {
         "title": "SUBARUの事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261106-40fc67/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-44fbcd",
+    "company": "コーナン商事株式会社",
+    "service": "コーナン商事株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "hc-kohnan.com"
+      ],
+      "names": [
+        "コーナン商事株式会社",
+        "コーナン商事"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "949件",
+    "records_num": 949,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "コーナン商事株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した情報は住所、メールアドレス、氏名、電話番号。公表件数は949件。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "コーナン商事株式会社 公式発表",
+        "url": "https://www.hc-kohnan.com/wp-content/uploads/2026/11/%E3%80%8C%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%B3%E8%87%AA%E8%BB%A2%E8%BB%8A%E3%81%82%E3%82%93%E3%81%97%E3%82%93%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8D%E6%A5%AD%E5%8B%99%E5%86%8D%E5%A7%94%E8%A8%97%E5%85%88%E3%81%B8%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%81%8A%E5%AE%A2%E6%A7%98%E6%83%85%E5%A0%B1%E6%BC%8F%E6%B4%A9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf"
+      },
+      {
+        "title": "コーナン商事の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-44fbcd/"
       }
     ],
     "official": true
@@ -1245,6 +1750,44 @@
       {
         "title": "小学館の事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261106-663fc4/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261106-7702b0",
+    "company": "厚生労働省",
+    "service": "厚生労働省",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "janis.mhlw.go.jp"
+      ],
+      "names": [
+        "厚生労働省"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "最大11,652件（可能性）",
+    "records_num": 11652,
+    "categories": [
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "厚生労働省が公表したマルウェア感染による事案。漏洩した可能性がある情報はメールアドレス、氏名、電話番号。公表件数は最大11,652件（可能性）。詳細は出典の公式発表を参照。",
+    "cause": "malware",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "厚生労働省 公式発表",
+        "url": "https://janis.mhlw.go.jp/"
+      },
+      {
+        "title": "厚生労働省の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-7702b0/"
       }
     ],
     "official": true
@@ -1497,8 +2040,8 @@
       ]
     },
     "disclosed": "2026-11-06",
-    "records": "最大9,554件（可能性）",
-    "records_num": 9554,
+    "records": "最大13,685件（可能性）",
+    "records_num": 13685,
     "categories": [
       "address",
       "dob",
@@ -1509,7 +2052,7 @@
       "phone"
     ],
     "status": "possible",
-    "scope": "株式会社エディオンが公表した脆弱性の悪用による事案。漏洩した可能性がある情報は住所、生年月日、クレジットカード情報、メールアドレス、氏名、ログイン認証情報、電話番号。公表件数は最大9,554件（可能性）。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
+    "scope": "株式会社エディオンが公表した脆弱性の悪用による事案。漏洩した可能性がある情報は住所、生年月日、クレジットカード情報、メールアドレス、氏名、ログイン認証情報、電話番号。公表件数は最大13,685件（可能性）。発覚は2026年11月5日。詳細は出典の公式発表を参照。",
     "cause": "vulnerability",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -2512,6 +3055,43 @@
     "official": true
   },
   {
+    "id": "auto-20261105-f41351",
+    "company": "株式会社フレイトリンクスジャパン",
+    "service": "株式会社フレイトリンクスジャパン",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "ones-closet.com"
+      ],
+      "names": [
+        "株式会社フレイトリンクスジャパン",
+        "フレイトリンクスジャパン"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "株式会社フレイトリンクスジャパンが公表したマルウェア感染による事案。漏洩した可能性がある情報は氏名。詳細は出典の公式発表を参照。",
+    "cause": "malware",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社フレイトリンクスジャパン 公式発表",
+        "url": "https://ones-closet.com/page/incident/2611-1"
+      },
+      {
+        "title": "フレイトリンクスジャパンの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-f41351/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "docomo-2026-11",
     "company": "NTTドコモ",
     "service": "My docomo / ドコモオンラインショップ",
@@ -3083,13 +3663,13 @@
       ]
     },
     "disclosed": "2026-11-04",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "最大168,194件（可能性）",
+    "records_num": 168194,
     "categories": [
       "email"
     ],
-    "status": "investigating",
-    "scope": "株式会社メディカ出版が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "status": "possible",
+    "scope": "株式会社メディカ出版が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大168,194件（可能性）。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -3474,6 +4054,43 @@
     "official": true
   },
   {
+    "id": "auto-20261104-9d23f9",
+    "company": "株式会社アイル",
+    "service": "株式会社アイル",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "ill.co.jp"
+      ],
+      "names": [
+        "株式会社アイル",
+        "アイル"
+      ]
+    },
+    "disclosed": "2026-11-04",
+    "records": "最大42,285件（可能性）",
+    "records_num": 42285,
+    "categories": [
+      "email"
+    ],
+    "status": "possible",
+    "scope": "株式会社アイルが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大42,285件（可能性）。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社アイル 公式発表",
+        "url": "https://www.ill.co.jp/info/261104/"
+      },
+      {
+        "title": "アイルの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261104-9d23f9/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261104-9feec6",
     "company": "野村インベスター・リレーションズ株式会社",
     "service": "野村インベスター・リレーションズ株式会社",
@@ -3564,12 +4181,13 @@
     "records_num": 3021,
     "categories": [
       "address",
+      "dob",
       "email",
       "name",
       "phone"
     ],
     "status": "possible",
-    "scope": "東京都島嶼町村一部事務組合が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。公表件数は最大3,021件（可能性）。詳細は出典の公式発表を参照。",
+    "scope": "東京都島嶼町村一部事務組合が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、電話番号。公表件数は最大3,021件（可能性）。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -8730,13 +9348,14 @@
       ]
     },
     "disclosed": "2026-10-29",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "47,216件",
+    "records_num": 47216,
     "categories": [
-      "email"
+      "email",
+      "name"
     ],
-    "status": "investigating",
-    "scope": "公益社団法人土木学会が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。発覚は2026年10月29日。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "公益社団法人土木学会が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス、氏名。公表件数は47,216件。発覚は2026年10月29日。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -8886,13 +9505,13 @@
       ]
     },
     "disclosed": "2026-10-29",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "107,923件",
+    "records_num": 107923,
     "categories": [
       "email"
     ],
-    "status": "investigating",
-    "scope": "株式会社e-CHANNELが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "株式会社e-CHANNELが公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は107,923件。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -9508,6 +10127,45 @@
       {
         "title": "ドン・キホーテ、株式会社長崎屋、株式会社橘百貨店、UD リテールの事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261028-5d4438/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261028-5f823c",
+    "company": "渋谷区",
+    "service": "渋谷区",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.shibuya.tokyo.jp"
+      ],
+      "names": [
+        "渋谷区"
+      ]
+    },
+    "disclosed": "2026-10-28",
+    "records": "218件",
+    "records_num": 218,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name"
+    ],
+    "status": "confirmed",
+    "scope": "渋谷区が公表した脆弱性の悪用による事案。漏洩した情報は住所、生年月日、メールアドレス、氏名。公表件数は218件。発覚は2026年10月20日。詳細は出典の公式発表を参照。",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "渋谷区 公式発表",
+        "url": "https://www.city.shibuya.tokyo.jp/kusei/koho/shibuya-portal/unauthorized_access_202610.html"
+      },
+      {
+        "title": "渋谷区の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261028-5f823c/"
       }
     ],
     "official": true
@@ -15181,14 +15839,14 @@
       ]
     },
     "disclosed": "2026-10-22",
-    "records": "253,000件",
-    "records_num": 253000,
+    "records": "245,347件",
+    "records_num": 245347,
     "categories": [
       "email",
       "name"
     ],
     "status": "confirmed",
-    "scope": "新潟日報社が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス、氏名。公表件数は253,000件。発覚は2026年10月21日。詳細は出典の公式発表を参照。",
+    "scope": "新潟日報社が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス、氏名。公表件数は245,347件。発覚は2026年10月21日。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -15849,6 +16507,39 @@
       }
     ],
     "official": true
+  },
+  {
+    "id": "auto-20261021-1d71a9",
+    "company": "イオンスマートテクノロジー株式会社",
+    "service": "イオンスマートテクノロジー株式会社",
+    "sector": "小売",
+    "match": {
+      "domains": [],
+      "names": [
+        "イオンスマートテクノロジー株式会社",
+        "イオンスマートテクノロジー"
+      ]
+    },
+    "disclosed": "2026-10-21",
+    "records": "414件",
+    "records_num": 414,
+    "categories": [
+      "address",
+      "name",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "イオンスマートテクノロジー株式会社が公表した不正アクセスによる事案。漏洩した情報は住所、氏名、電話番号。公表件数は414件。発覚は2026年10月20日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "イオンスマートテクノロジーの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261021-1d71a9/"
+      }
+    ],
+    "official": false
   },
   {
     "id": "auto-20261021-27a5a6",
