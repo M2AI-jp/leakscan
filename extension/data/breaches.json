@@ -1,5 +1,451 @@
 [
   {
+    "id": "auto-20261112-6f5f72",
+    "company": "ENSAPIA Tokyo株式会社",
+    "service": "ENSAPIA Tokyo株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "ensapia-tokyo.com"
+      ],
+      "names": [
+        "ENSAPIA Tokyo株式会社",
+        "ENSAPIA Tokyo"
+      ]
+    },
+    "disclosed": "2026-11-12",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "ENSAPIA Tokyo株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。発覚は2026年11月10日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "ENSAPIA Tokyo株式会社 公式発表",
+        "url": "https://ensapia-tokyo.com/news/topics/id=21395/"
+      },
+      {
+        "title": "ENSAPIA Tokyoの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261112-6f5f72/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261112-ba3762",
+    "company": "ENSAPIA Tokyo株式会社",
+    "service": "ENSAPIA Tokyo株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "ensapia-tokyo.com"
+      ],
+      "names": [
+        "ENSAPIA Tokyo株式会社",
+        "ENSAPIA Tokyo"
+      ]
+    },
+    "disclosed": "2026-11-12",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "dob",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "ENSAPIA Tokyo株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、生年月日、メールアドレス、氏名、電話番号。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "ENSAPIA Tokyo株式会社 公式発表",
+        "url": "https://ensapia-tokyo.com/news/topics/id=21395/"
+      },
+      {
+        "title": "ENSAPIA Tokyoの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261112-ba3762/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-0ea9ca",
+    "company": "靖國神社",
+    "service": "靖國神社",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "yasukuni.or.jp"
+      ],
+      "names": [
+        "靖國神社"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "14,500件",
+    "records_num": 14500,
+    "categories": [
+      "email",
+      "name",
+      "login_credential"
+    ],
+    "status": "confirmed",
+    "scope": "靖國神社が公表した不正アクセスによる事案。漏洩した情報はメールアドレス、氏名、ログイン認証情報。公表件数は14,500件。発覚は2026年10月28日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "靖國神社 公式発表",
+        "url": "https://www.yasukuni.or.jp/news_detail.html?id=734"
+      },
+      {
+        "title": "靖國神社の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-0ea9ca/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-128830",
+    "company": "公益財団法人日本サッカー協会",
+    "service": "公益財団法人日本サッカー協会",
+    "sector": "団体",
+    "match": {
+      "domains": [
+        "jfa.jp"
+      ],
+      "names": [
+        "公益財団法人日本サッカー協会",
+        "日本サッカー協会"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "11件",
+    "records_num": 11,
+    "categories": [
+      "email"
+    ],
+    "status": "confirmed",
+    "scope": "公益財団法人日本サッカー協会が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は11件。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "公益財団法人日本サッカー協会 公式発表",
+        "url": "https://www.jfa.jp/about_jfa/news/00037015/"
+      },
+      {
+        "title": "日本サッカー協会の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-128830/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-235c11",
+    "company": "株式会社電通デジタル",
+    "service": "株式会社電通デジタル",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "dentsudigital.co.jp"
+      ],
+      "names": [
+        "株式会社電通デジタル",
+        "電通デジタル"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "dob",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "株式会社電通デジタルが公表した認証情報の悪用・不正ログインによる事案。漏洩した可能性がある情報は生年月日、氏名。発覚は2026年11月10日。詳細は出典の公式発表を参照。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社電通デジタル 公式発表",
+        "url": "https://www.dentsudigital.co.jp/news/updates/services/2026-1111-001111"
+      },
+      {
+        "title": "電通デジタルの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-235c11/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-3094e2",
+    "company": "三条市",
+    "service": "三条市",
+    "sector": "公共",
+    "match": {
+      "domains": [
+        "city.sanjo.niigata.jp"
+      ],
+      "names": [
+        "三条市"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "email"
+    ],
+    "status": "investigating",
+    "scope": "三条市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。発覚は2026年11月9日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "三条市 公式発表",
+        "url": "https://www.city.sanjo.niigata.jp/material/files/group/17/HP.pdf"
+      },
+      {
+        "title": "三条市の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-3094e2/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-3aa295",
+    "company": "株式会社テレビ東京コミュニケーションズ",
+    "service": "株式会社テレビ東京コミュニケーションズ",
+    "sector": "メディア",
+    "match": {
+      "domains": [],
+      "names": [
+        "株式会社テレビ東京コミュニケーションズ",
+        "テレビ東京コミュニケーションズ"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "株式会社テレビ東京コミュニケーションズが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "テレビ東京コミュニケーションズの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-3aa295/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261111-5a31d6",
+    "company": "株式会社FABRIC TOKYO",
+    "service": "株式会社FABRIC TOKYO",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "fabric-tokyo.com"
+      ],
+      "names": [
+        "株式会社FABRIC TOKYO",
+        "FABRIC TOKYO"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "最大699件（可能性）",
+    "records_num": 699,
+    "categories": [
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社FABRIC TOKYOが公表した認証情報の悪用・不正ログインによる事案。漏洩した可能性がある情報はメールアドレス、氏名、電話番号。公表件数は最大699件（可能性）。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "credential",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社FABRIC TOKYO 公式発表",
+        "url": "https://fabric-tokyo.com/news/show/20261111-to-all-customers"
+      },
+      {
+        "title": "FABRIC TOKYOの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-5a31d6/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-a3d0dd",
+    "company": "SMBC日興証券株式会社",
+    "service": "SMBC日興証券株式会社",
+    "sector": "金融・保険",
+    "match": {
+      "domains": [
+        "smbcnikko.co.jp"
+      ],
+      "names": [
+        "SMBC日興証券株式会社",
+        "SMBC日興証券"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "最大56,487件（可能性）",
+    "records_num": 56487,
+    "categories": [
+      "address",
+      "bank",
+      "name"
+    ],
+    "status": "possible",
+    "scope": "SMBC日興証券株式会社が公表した不正アクセスによる事案。漏洩した可能性がある情報は住所、銀行口座情報、氏名。公表件数は最大56,487件（可能性）。発覚は2026年11月9日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "SMBC日興証券株式会社 公式発表",
+        "url": "https://www.smbcnikko.co.jp/news/release/2026/pdf/261111_01.pdf"
+      },
+      {
+        "title": "SMBC日興証券の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-a3d0dd/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-bbd79c",
+    "company": "株式会社オープンロジ",
+    "service": "株式会社オープンロジ",
+    "sector": "物流",
+    "match": {
+      "domains": [
+        "openlogi.com"
+      ],
+      "names": [
+        "株式会社オープンロジ",
+        "オープンロジ"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "株式会社オープンロジが公表した不正アクセスによる事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社オープンロジ 公式発表",
+        "url": "https://corp.openlogi.com/news/notice/notice-20261111/"
+      },
+      {
+        "title": "オープンロジの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-bbd79c/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261111-dd8aaf",
+    "company": "内閣府",
+    "service": "内閣府",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "内閣府"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "62,863件",
+    "records_num": 62863,
+    "categories": [
+      "email"
+    ],
+    "status": "confirmed",
+    "scope": "内閣府が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は62,863件。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "内閣府の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-dd8aaf/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261111-fed956",
+    "company": "HUMAN MADE 株式会社",
+    "service": "HUMAN MADE 株式会社",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "HUMAN MADE 株式会社",
+        "HUMAN MADE"
+      ]
+    },
+    "disclosed": "2026-11-11",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "investigating",
+    "scope": "HUMAN MADE 株式会社が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "HUMAN MADEの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261111-fed956/"
+      }
+    ],
+    "official": false
+  },
+  {
     "id": "auto-20261110-5485ce",
     "company": "キリンビール株式会社、キリンビバレッジ株式会社",
     "service": "キリンビール株式会社、キリンビバレッジ株式会社",
@@ -529,6 +975,44 @@
       }
     ],
     "official": false
+  },
+  {
+    "id": "auto-20261109-7dc0fc",
+    "company": "株式会社ブランジスタソリューション",
+    "service": "株式会社ブランジスタソリューション",
+    "sector": "IT・ソフトウェア",
+    "match": {
+      "domains": [
+        "ec-tencho.jp"
+      ],
+      "names": [
+        "株式会社ブランジスタソリューション",
+        "ブランジスタソリューション"
+      ]
+    },
+    "disclosed": "2026-11-09",
+    "records": "公表なし",
+    "records_num": null,
+    "categories": [
+      "address",
+      "name"
+    ],
+    "status": "investigating",
+    "scope": "株式会社ブランジスタソリューションが公表したマルウェア感染による事案。漏洩した可能性がある情報は住所、氏名。詳細は出典の公式発表を参照。",
+    "cause": "malware",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社ブランジスタソリューション 公式発表",
+        "url": "https://www.ec-tencho.jp/info/access/news/detail.html?tid=b0000835"
+      },
+      {
+        "title": "ブランジスタソリューションの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261109-7dc0fc/"
+      }
+    ],
+    "official": true
   },
   {
     "id": "auto-20261109-906938",
@@ -1907,6 +2391,42 @@
     "official": false
   },
   {
+    "id": "auto-20261106-9462fb",
+    "company": "ちば興銀",
+    "service": "ちば興銀",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "chibakogyo-bank.co.jp"
+      ],
+      "names": [
+        "ちば興銀"
+      ]
+    },
+    "disclosed": "2026-11-06",
+    "records": "171,260件",
+    "records_num": 171260,
+    "categories": [
+      "email"
+    ],
+    "status": "confirmed",
+    "scope": "ちば興銀が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は171,260件。発覚は2026年11月2日。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "ちば興銀 公式発表",
+        "url": "https://www.chibakogyo-bank.co.jp/news/important/of_ja_important_2.html"
+      },
+      {
+        "title": "ちば興銀の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261106-9462fb/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261106-9969d3",
     "company": "株式会社IDOM",
     "service": "株式会社IDOM",
@@ -2627,6 +3147,43 @@
     "official": true
   },
   {
+    "id": "auto-20261105-9eb348",
+    "company": "株式会社学研ホールディングス",
+    "service": "株式会社学研ホールディングス",
+    "sector": "未分類",
+    "match": {
+      "domains": [
+        "gakken.co.jp"
+      ],
+      "names": [
+        "株式会社学研ホールディングス",
+        "学研ホールディングス"
+      ]
+    },
+    "disclosed": "2026-11-05",
+    "records": "793,060件",
+    "records_num": 793060,
+    "categories": [
+      "email"
+    ],
+    "status": "confirmed",
+    "scope": "株式会社学研ホールディングスが公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は793,060件。詳細は出典の公式発表を参照。",
+    "cause": "vendor",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "株式会社学研ホールディングス 公式発表",
+        "url": "https://www.gakken.co.jp/ja/news/20269370289940467.html"
+      },
+      {
+        "title": "学研ホールディングスの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261105-9eb348/"
+      }
+    ],
+    "official": true
+  },
+  {
     "id": "auto-20261105-a0986e",
     "company": "三井ダイレクト損害保険株式会社",
     "service": "三井ダイレクト損害保険株式会社",
@@ -3069,13 +3626,13 @@
       ]
     },
     "disclosed": "2026-11-05",
-    "records": "公表なし",
-    "records_num": null,
+    "records": "最大1,670,000件（可能性）",
+    "records_num": 1670000,
     "categories": [
       "name"
     ],
-    "status": "investigating",
-    "scope": "株式会社フレイトリンクスジャパンが公表したマルウェア感染による事案。漏洩した可能性がある情報は氏名。詳細は出典の公式発表を参照。",
+    "status": "possible",
+    "scope": "株式会社フレイトリンクスジャパンが公表したマルウェア感染による事案。漏洩した可能性がある情報は氏名。公表件数は最大1,670,000件（可能性）。詳細は出典の公式発表を参照。",
     "cause": "malware",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -3960,13 +4517,13 @@
       ]
     },
     "disclosed": "2026-11-04",
-    "records": "最大136,000件（可能性）",
-    "records_num": 136000,
+    "records": "37,967件",
+    "records_num": 37967,
     "categories": [
       "email"
     ],
-    "status": "possible",
-    "scope": "松戸市が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大136,000件（可能性）。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "松戸市が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は37,967件。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -4329,13 +4886,14 @@
       ]
     },
     "disclosed": "2026-11-04",
-    "records": "最大983,458件（可能性）",
+    "records": "983,458件",
     "records_num": 983458,
     "categories": [
-      "email"
+      "email",
+      "name"
     ],
-    "status": "possible",
-    "scope": "株式会社インターネットイニシアティブが公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大983,458件（可能性）。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "株式会社インターネットイニシアティブが公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス、氏名。公表件数は983,458件。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -6282,6 +6840,47 @@
       {
         "title": "不正アクセス・情報漏えい事案（seory）",
         "url": "https://incidents.seory.co.jp/incidents/20261102-dd0c22/"
+      }
+    ],
+    "official": true
+  },
+  {
+    "id": "auto-20261102-e34ea0",
+    "company": "一般社団法人Mリーグ機構",
+    "service": "一般社団法人Mリーグ機構",
+    "sector": "団体",
+    "match": {
+      "domains": [
+        "m-league.jp"
+      ],
+      "names": [
+        "一般社団法人Mリーグ機構",
+        "Mリーグ機構"
+      ]
+    },
+    "disclosed": "2026-11-02",
+    "records": "9,502件",
+    "records_num": 9502,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "login_credential",
+      "phone"
+    ],
+    "status": "confirmed",
+    "scope": "一般社団法人Mリーグ機構が公表した不正アクセスによる事案。漏洩した情報は住所、メールアドレス、氏名、ログイン認証情報、電話番号。公表件数は9,502件。発覚は2026年10月29日。詳細は出典の公式発表を参照。",
+    "cause": "unauthorized_access",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "一般社団法人Mリーグ機構 公式発表",
+        "url": "https://m-league.jp/news/article/?id=article-8d1eb109-c366-444e-8525-c30a6e9ec8ff"
+      },
+      {
+        "title": "Mリーグ機構の事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261102-e34ea0/"
       }
     ],
     "official": true
@@ -9541,13 +10140,13 @@
       ]
     },
     "disclosed": "2026-10-29",
-    "records": "最大2,560件（可能性）",
-    "records_num": 2560,
+    "records": "2,400件",
+    "records_num": 2400,
     "categories": [
       "email"
     ],
-    "status": "possible",
-    "scope": "沖縄県が公表した委託先・サプライヤの侵害による事案。漏洩した可能性がある情報はメールアドレス。公表件数は最大2,560件（可能性）。詳細は出典の公式発表を参照。",
+    "status": "confirmed",
+    "scope": "沖縄県が公表した委託先・サプライヤの侵害による事案。漏洩した情報はメールアドレス。公表件数は2,400件。詳細は出典の公式発表を参照。",
     "cause": "vendor",
     "ai_link": "unconfirmed",
     "auto": true,
@@ -17221,6 +17820,40 @@
       {
         "title": "国土交通省の事案（情報源の記録）",
         "url": "https://incidents.seory.co.jp/incidents/20261020-9283ca/"
+      }
+    ],
+    "official": false
+  },
+  {
+    "id": "auto-20261020-9837a2",
+    "company": "株式会社たまのや",
+    "service": "株式会社たまのや",
+    "sector": "未分類",
+    "match": {
+      "domains": [],
+      "names": [
+        "株式会社たまのや",
+        "たまのや"
+      ]
+    },
+    "disclosed": "2026-10-20",
+    "records": "最大11,270件（可能性）",
+    "records_num": 11270,
+    "categories": [
+      "address",
+      "email",
+      "name",
+      "phone"
+    ],
+    "status": "possible",
+    "scope": "株式会社たまのやが公表した脆弱性の悪用による事案。漏洩した可能性がある情報は住所、メールアドレス、氏名、電話番号。公表件数は最大11,270件（可能性）。発覚は2026年9月10日。詳細は出典の公式発表を参照。",
+    "cause": "vulnerability",
+    "ai_link": "unconfirmed",
+    "auto": true,
+    "sources": [
+      {
+        "title": "たまのやの事案（情報源の記録）",
+        "url": "https://incidents.seory.co.jp/incidents/20261020-9837a2/"
       }
     ],
     "official": false
