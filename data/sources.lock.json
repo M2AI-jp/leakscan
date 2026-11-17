@@ -3,7 +3,7 @@
     "name": "個人情報保護委員会 漏えい等の報告",
     "weight": "high",
     "fingerprint": "8c9a752f9c503319b88116741a129d63",
-    "checked": "2026-11-12T14:56:31.577Z"
+    "checked": "2026-11-17T04:54:38.066Z"
   },
   "https://rocket-boys.co.jp/security-measures-lab/": {
     "name": "セキュリティ対策Lab（ロケットボーイズ）",
@@ -14,19 +14,19 @@
   "https://cvejp.com/blog": {
     "name": "CVE Registry ブログ",
     "weight": "high",
-    "fingerprint": "c4d4ad090e06b251dfce31899d0cbe25",
-    "checked": "2026-11-12T14:56:32.536Z"
+    "fingerprint": "71cfb42bd7522575e59326c276149423",
+    "checked": "2026-11-17T04:54:38.805Z"
   },
   "https://cacco.co.jp/frauddetection/media/news/3522/": {
     "name": "Cacco 個人情報漏洩事件まとめ",
     "weight": "medium",
-    "fingerprint": "d31d8419f7fe61889900eea2b248db50",
-    "checked": "2026-11-12T14:56:34.325Z"
+    "fingerprint": "a7892dce1192a9e165cd66060fc13daf",
+    "checked": "2026-11-17T04:54:41.247Z"
   },
   "https://www.gate02.ne.jp/lab/": {
     "name": "サイバーセキュリティラボ（gate02）",
     "weight": "medium",
-    "fingerprint": "f5cb265a99b3be3e106941d0a32af710",
-    "checked": "2026-11-12T14:56:35.487Z"
+    "fingerprint": "42837ba5bf5ed5afd77f060c9f4c59d4",
+    "checked": "2026-11-17T04:54:42.690Z"
   }
 }
